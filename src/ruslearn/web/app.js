@@ -16,13 +16,34 @@ function toast(msg) {
   setTimeout(() => (t.hidden = true), 1800);
 }
 
+// Russian voices (edge-tts). The choice is persisted so it sticks per device.
+const VOICES = { "ru-RU-SvetlanaNeural": "♀", "ru-RU-DmitryNeural": "♂" };
+function getVoice() {
+  return localStorage.getItem("voice") || "ru-RU-SvetlanaNeural";
+}
+function setVoice(v) {
+  localStorage.setItem("voice", v);
+  const btn = $("#voice");
+  if (btn) btn.textContent = VOICES[v];
+}
+function toggleVoice() {
+  setVoice(
+    getVoice() === "ru-RU-SvetlanaNeural"
+      ? "ru-RU-DmitryNeural"
+      : "ru-RU-SvetlanaNeural"
+  );
+}
+
 // Play the real Russian pronunciation (backend edge-tts, cached). Failures
 // (e.g. offline) are swallowed — audio is an enhancement, not a blocker.
+// `rate` < 1 slows playback for shadowing without re-synthesizing.
 let currentAudio = null;
-function playAudio(text) {
+function playAudio(text, rate = 1) {
   if (!text) return;
   if (currentAudio) currentAudio.pause();
-  currentAudio = new Audio(`/api/audio?text=${encodeURIComponent(text)}`);
+  const url = `/api/audio?text=${encodeURIComponent(text)}&voice=${encodeURIComponent(getVoice())}`;
+  currentAudio = new Audio(url);
+  currentAudio.playbackRate = rate;
   currentAudio.play().catch(() => {});
 }
 
@@ -90,7 +111,10 @@ function renderVocabCard(card) {
   stage.innerHTML = `
     <div class="qcard">
       <div class="big">${card.stressed}</div>
-      <button class="speak" id="rev-speak" aria-label="Play audio">🔊</button>
+      <div class="speak-row">
+        <button class="speak" id="rev-speak" aria-label="Play audio">🔊</button>
+        <button class="speak slow" id="rev-slow" aria-label="Play slowly" title="Slow 0.75×">🐢</button>
+      </div>
       <div class="hint">What does it mean?</div>
       <div class="answer" hidden>
         <div class="gloss">${card.gloss_en}</div>
@@ -101,6 +125,7 @@ function renderVocabCard(card) {
       <button class="btn reveal" id="reveal">Show answer</button>
     </div>`;
   $("#rev-speak").onclick = () => playAudio(card.stressed);
+  $("#rev-slow").onclick = () => playAudio(card.stressed, 0.75);
   $("#reveal").onclick = () => {
     stage.querySelector(".answer").hidden = false;
     playAudio(card.stressed);
@@ -156,7 +181,10 @@ function renderLetterCard(card) {
   stage.innerHTML = `
     <div class="qcard">
       <div class="big">${card.cyrillic}</div>
-      <button class="speak" id="alpha-speak" aria-label="Play audio">🔊</button>
+      <div class="speak-row">
+        <button class="speak" id="alpha-speak" aria-label="Play audio">🔊</button>
+        <button class="speak slow" id="alpha-slow" aria-label="Play slowly" title="Slow 0.75×">🐢</button>
+      </div>
       <div class="hint">How is it pronounced?</div>
       ${contrast}
       <div class="answer" hidden>
@@ -168,6 +196,7 @@ function renderLetterCard(card) {
       <button class="btn reveal" id="a-reveal">Show sound</button>
     </div>`;
   $("#alpha-speak").onclick = () => playAudio(card.example_word);
+  $("#alpha-slow").onclick = () => playAudio(card.example_word, 0.75);
   $("#a-reveal").onclick = () => {
     stage.querySelector(".answer").hidden = false;
     playAudio(card.example_word);
@@ -199,4 +228,6 @@ document.querySelectorAll(".mode[data-go]").forEach((btn) => {
   });
 });
 $("#back").addEventListener("click", () => show("home"));
+$("#voice").addEventListener("click", toggleVoice);
+setVoice(getVoice()); // initialize the ♀/♂ label from saved preference
 show("home");
