@@ -4,8 +4,33 @@ from ruslearn.api import create_app
 
 
 def _client(tmp_path):
-    app = create_app(db_path=tmp_path / "api.db")
+    app = create_app(db_path=tmp_path / "api.db", tts_cache_dir=tmp_path / "tts")
     return TestClient(app)
+
+
+def test_audio_endpoint_returns_mp3(tmp_path, monkeypatch):
+    import ruslearn.tts as tts_mod
+
+    class _Fake:
+        def __init__(self, text, voice):
+            pass
+
+        async def save(self, path):
+            with open(path, "wb") as fh:
+                fh.write(b"ID3FAKE")
+
+    monkeypatch.setattr(tts_mod.edge_tts, "Communicate", _Fake)
+    client = _client(tmp_path)
+    r = client.get("/api/audio", params={"text": "приве́т"})
+    assert r.status_code == 200
+    assert r.headers["content-type"].startswith("audio/mpeg")
+    assert r.content == b"ID3FAKE"
+
+
+def test_audio_endpoint_requires_text(tmp_path):
+    client = _client(tmp_path)
+    r = client.get("/api/audio", params={"text": "   "})
+    assert r.status_code == 400
 
 
 def test_state_endpoint_reports_seeded_counts(tmp_path):

@@ -5,7 +5,7 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from pathlib import Path
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
@@ -16,6 +16,7 @@ from ruslearn.db import init_db, make_engine, make_session_factory
 from ruslearn.lexicon import LexiconStore
 from ruslearn.seed import SeedImporter
 from ruslearn.srs import SRSService
+from ruslearn.tts import TTSService
 
 ROOT = Path(__file__).resolve().parents[2]
 WEB_DIR = Path(__file__).resolve().parent / "web"
@@ -35,11 +36,14 @@ def _now() -> datetime:
     return datetime.now(timezone.utc)
 
 
-def create_app(db_path: Path | str = DEFAULT_DB) -> FastAPI:
+def create_app(
+    db_path: Path | str = DEFAULT_DB, tts_cache_dir: Path | str | None = None
+) -> FastAPI:
     engine = make_engine(db_path)
     init_db(engine)
     factory = make_session_factory(engine)
     srs = SRSService()
+    tts = TTSService(tts_cache_dir or (DATA_DIR / "tts"))
 
     # One-time idempotent seeding.
     with factory() as s:
@@ -126,6 +130,16 @@ def create_app(db_path: Path | str = DEFAULT_DB) -> FastAPI:
             lk = AlphabetModule(s, srs).record_answer(letter_id, body.rating, _now())
             s.commit()
             return {"letter_id": letter_id, "state": lk.state}
+
+    @app.get("/api/audio")
+    async def audio(text: str, voice: str | None = None) -> FileResponse:
+        try:
+            path = await tts.synthesize(text, voice)
+        except ValueError:
+            raise HTTPException(status_code=400, detail="text is required")
+        except Exception:  # network / synthesis failure
+            raise HTTPException(status_code=502, detail="audio unavailable")
+        return FileResponse(path, media_type="audio/mpeg")
 
     @app.get("/")
     def index() -> FileResponse:

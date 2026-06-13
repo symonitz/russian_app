@@ -58,6 +58,12 @@ body {
 .r-good  { background:rgba(110,123,242,.20); border-color:rgba(110,123,242,.5); }
 .r-easy  { background:rgba(125,211,168,.18); border-color:rgba(125,211,168,.45); }
 
+.speak { display:block; margin:10px auto 0; width:46px; height:46px; border-radius:50%;
+  background:rgba(245,181,71,.15); border:1px solid rgba(245,181,71,.45); color:var(--amber);
+  font-size:20px; line-height:1; cursor:pointer; transition:transform .1s, background .15s; }
+.speak:hover { background:rgba(245,181,71,.26); }
+.speak:active { transform:scale(.92); }
+
 .empty { text-align:center; color:var(--muted); padding:60px 0; }
 .empty .add { margin-top:16px; }
 

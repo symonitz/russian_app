@@ -16,6 +16,16 @@ function toast(msg) {
   setTimeout(() => (t.hidden = true), 1800);
 }
 
+// Play the real Russian pronunciation (backend edge-tts, cached). Failures
+// (e.g. offline) are swallowed — audio is an enhancement, not a blocker.
+let currentAudio = null;
+function playAudio(text) {
+  if (!text) return;
+  if (currentAudio) currentAudio.pause();
+  currentAudio = new Audio(`/api/audio?text=${encodeURIComponent(text)}`);
+  currentAudio.play().catch(() => {});
+}
+
 const RATINGS = [
   { r: 1, label: "Again", cls: "r-again" },
   { r: 2, label: "Hard", cls: "r-hard" },
@@ -80,6 +90,7 @@ function renderVocabCard(card) {
   stage.innerHTML = `
     <div class="qcard">
       <div class="big">${card.stressed}</div>
+      <button class="speak" id="rev-speak" aria-label="Play audio">🔊</button>
       <div class="hint">What does it mean?</div>
       <div class="answer" hidden>
         <div class="gloss">${card.gloss_en}</div>
@@ -89,8 +100,10 @@ function renderVocabCard(card) {
     <div class="btn-row" id="rev-actions">
       <button class="btn reveal" id="reveal">Show answer</button>
     </div>`;
+  $("#rev-speak").onclick = () => playAudio(card.stressed);
   $("#reveal").onclick = () => {
     stage.querySelector(".answer").hidden = false;
+    playAudio(card.stressed);
     const row = $("#rev-actions");
     row.innerHTML = RATINGS.map(
       (x) => `<button class="btn ${x.cls}" data-r="${x.r}">${x.label}</button>`
@@ -143,6 +156,7 @@ function renderLetterCard(card) {
   stage.innerHTML = `
     <div class="qcard">
       <div class="big">${card.cyrillic}</div>
+      <button class="speak" id="alpha-speak" aria-label="Play audio">🔊</button>
       <div class="hint">How is it pronounced?</div>
       ${contrast}
       <div class="answer" hidden>
@@ -153,8 +167,10 @@ function renderLetterCard(card) {
     <div class="btn-row" id="alpha-actions">
       <button class="btn reveal" id="a-reveal">Show sound</button>
     </div>`;
+  $("#alpha-speak").onclick = () => playAudio(card.example_word);
   $("#a-reveal").onclick = () => {
     stage.querySelector(".answer").hidden = false;
+    playAudio(card.example_word);
     const row = $("#alpha-actions");
     row.innerHTML = RATINGS.map(
       (x) => `<button class="btn ${x.cls}" data-r="${x.r}">${x.label}</button>`
