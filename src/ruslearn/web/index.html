@@ -1,3 +1,57 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>ruslearn</title></head>
-<body><p>ruslearn — UI loads in Task 8.</p></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ruslearn — Russian</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <button class="back" id="back" hidden>‹</button>
+      <div class="title" id="title">READING&nbsp;·&nbsp;RUSSIAN</div>
+      <div class="spacer"></div>
+    </header>
+
+    <!-- HOME -->
+    <section class="view" id="view-home">
+      <h1 class="hello">Привет!</h1>
+      <p class="sub" id="day">Russian · offline core</p>
+      <div class="stats">
+        <div class="stat"><b id="s-known">0</b><span>known</span></div>
+        <div class="stat"><b id="s-due">0</b><span>due</span></div>
+        <div class="stat"><b id="s-new">0</b><span>new today</span></div>
+      </div>
+      <button class="mode" data-go="alphabet">
+        <span class="ic">Аа</span>
+        <span class="m-txt"><b>Alphabet</b><i>Learn to read Cyrillic</i></span>
+        <span class="badge" id="b-alpha">0 / 33</span>
+      </button>
+      <button class="mode primary" data-go="reviews">
+        <span class="ic">⟳</span>
+        <span class="m-txt"><b>Reviews</b><i>Words due right now</i></span>
+        <span class="badge" id="b-rev">0 due</span>
+      </button>
+      <button class="mode" data-go="reading" disabled>
+        <span class="ic">¶</span>
+        <span class="m-txt"><b>Reading</b><i>Generated passages</i></span>
+        <span class="badge soon">soon</span>
+      </button>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="view" id="view-reviews" hidden>
+      <div class="card-stage" id="rev-stage"></div>
+    </section>
+
+    <!-- ALPHABET -->
+    <section class="view" id="view-alphabet" hidden>
+      <div class="card-stage" id="alpha-stage"></div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" hidden></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
