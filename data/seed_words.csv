@@ -1,0 +1,46 @@
+cyrillic,stressed,translit,gloss_en,pos,is_cognate,freq_rank
+я,я,ya,I,pron,false,1
+ты,ты,ty,you,pron,false,2
+не,не,ne,not,part,false,3
+это,э́то,eto,this / it is,pron,false,4
+и,и,i,and,conj,false,5
+да,да,da,yes,part,false,6
+нет,нет,net,no,part,false,7
+он,он,on,he,pron,false,8
+она,она́,ona,she,pron,false,9
+мы,мы,my,we,pron,false,10
+хорошо,хорошо́,khorosho,good / well,adv,false,11
+спасибо,спаси́бо,spasibo,thank you,part,false,12
+привет,приве́т,privet,hi,interj,false,13
+пока,пока́,poka,bye,interj,false,14
+дом,дом,dom,house,noun,false,15
+друг,друг,drug,friend,noun,false,16
+город,го́род,gorod,city,noun,false,17
+вода,вода́,voda,water,noun,false,18
+книга,кни́га,kniga,book,noun,false,19
+мама,ма́ма,mama,mom,noun,false,20
+папа,па́па,papa,dad,noun,false,21
+кот,кот,kot,cat,noun,false,22
+собака,соба́ка,sobaka,dog,noun,false,23
+стол,стол,stol,table,noun,false,24
+окно,окно́,okno,window,noun,false,25
+хлеб,хлеб,khleb,bread,noun,false,26
+знать,знать,znat,to know,verb,false,27
+хотеть,хоте́ть,khotet,to want,verb,false,28
+говорить,говори́ть,govorit,to speak,verb,false,29
+кофе,ко́фе,kofe,coffee,noun,true,30
+такси,такси́,taksi,taxi,noun,true,31
+телефон,телефо́н,telefon,telephone,noun,true,32
+ресторан,рестора́н,restoran,restaurant,noun,true,33
+компьютер,компью́тер,kompyuter,computer,noun,true,34
+интернет,интерне́т,internet,internet,noun,true,35
+музыка,му́зыка,muzyka,music,noun,true,36
+парк,парк,park,park,noun,true,37
+банк,банк,bank,bank,noun,true,38
+спорт,спорт,sport,sport,noun,true,39
+доктор,до́ктор,doktor,doctor,noun,true,40
+студент,студе́нт,student,student,noun,true,41
+театр,теа́тр,teatr,theater,noun,true,42
+музей,музе́й,muzey,museum,noun,true,43
+проблема,пробле́ма,problema,problem,noun,true,44
+идея,иде́я,ideya,idea,noun,true,45
