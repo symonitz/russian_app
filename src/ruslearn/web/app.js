@@ -23,6 +23,13 @@ const RATINGS = [
   { r: 4, label: "Easy", cls: "r-easy" },
 ];
 
+// "Again" (rating 1) means the learner failed — resurface the card a few
+// cards later in this session instead of dropping it and pulling new material.
+const AGAIN = 1;
+function requeue(queue, card) {
+  queue.splice(Math.min(queue.length, 3), 0, card);
+}
+
 function show(view) {
   for (const id of ["home", "reviews", "alphabet"]) {
     $(`#view-${id}`).hidden = id !== view;
@@ -45,9 +52,11 @@ async function refreshHome() {
 }
 
 // ---- Reviews ----
+let revQueue = [];
+
 async function loadReviews() {
-  let due = (await api("/api/vocab/due")).cards;
-  if (due.length === 0) {
+  revQueue = (await api("/api/vocab/due")).cards;
+  if (revQueue.length === 0) {
     const intro = await api("/api/vocab/introduce", {
       method: "POST",
       body: JSON.stringify({ count: 5 }),
@@ -56,9 +65,14 @@ async function loadReviews() {
       $("#rev-stage").innerHTML = `<div class="empty">All caught up — nothing due.</div>`;
       return;
     }
-    due = (await api("/api/vocab/due")).cards;
+    revQueue = (await api("/api/vocab/due")).cards;
   }
-  renderVocabCard(due[0]);
+  nextReview();
+}
+
+function nextReview() {
+  if (revQueue.length === 0) return loadReviews(); // session cleared — refill
+  renderVocabCard(revQueue[0]);
 }
 
 function renderVocabCard(card) {
@@ -83,20 +97,25 @@ function renderVocabCard(card) {
     ).join("");
     row.querySelectorAll("button").forEach((b) => {
       b.onclick = async () => {
+        const rating = Number(b.dataset.r);
         await api(`/api/vocab/${card.id}/review`, {
           method: "POST",
-          body: JSON.stringify({ rating: Number(b.dataset.r) }),
+          body: JSON.stringify({ rating }),
         });
-        loadReviews();
+        revQueue.shift();
+        if (rating === AGAIN) requeue(revQueue, card);
+        nextReview();
       };
     });
   };
 }
 
 // ---- Alphabet ----
+let alphaQueue = [];
+
 async function loadAlphabet() {
-  let due = (await api("/api/alphabet/due")).cards;
-  if (due.length === 0) {
+  alphaQueue = (await api("/api/alphabet/due")).cards;
+  if (alphaQueue.length === 0) {
     const intro = await api("/api/alphabet/introduce", {
       method: "POST",
       body: JSON.stringify({ count: 5 }),
@@ -105,9 +124,14 @@ async function loadAlphabet() {
       $("#alpha-stage").innerHTML = `<div class="empty">Alphabet complete! 🎉</div>`;
       return;
     }
-    due = (await api("/api/alphabet/due")).cards;
+    alphaQueue = (await api("/api/alphabet/due")).cards;
   }
-  renderLetterCard(due[0]);
+  nextAlpha();
+}
+
+function nextAlpha() {
+  if (alphaQueue.length === 0) return loadAlphabet(); // session cleared — refill
+  renderLetterCard(alphaQueue[0]);
 }
 
 function renderLetterCard(card) {
@@ -137,11 +161,14 @@ function renderLetterCard(card) {
     ).join("");
     row.querySelectorAll("button").forEach((b) => {
       b.onclick = async () => {
+        const rating = Number(b.dataset.r);
         await api(`/api/alphabet/${card.id}/answer`, {
           method: "POST",
-          body: JSON.stringify({ rating: Number(b.dataset.r) }),
+          body: JSON.stringify({ rating }),
         });
-        loadAlphabet();
+        alphaQueue.shift();
+        if (rating === AGAIN) requeue(alphaQueue, card);
+        nextAlpha();
       };
     });
   };
