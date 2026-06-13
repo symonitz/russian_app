@@ -1,0 +1,732 @@
+{
+  "findings": [
+    {
+      "topic": "Comprehensible input and the \"i+1\" principle for adult L2 learners: lexical coverage thresholds, optimal new-word density, and how to operationalize a known-words + comprehensible-input engine (applied to a from-zero Russian app with English explanations and spaced repetition)",
+      "takeaways": [
+        "LEXICAL COVERAGE THRESHOLD: The most-cited figures come from Hu & Nation (2000). ~98% of the running words in a text should already be known for unassisted comprehension and good conditions for incidental learning; ~95% is the minimal/marginal threshold below which comprehension degrades sharply. Laufer frames 95% as minimal and 98% as optimal; Schmitt et al. (2011, n=661) found a roughly linear coverage-to-comprehension relationship and endorsed 98% as the comfortable-reading target. Nation (2006) stresses the last few percent (95% to 98%) have an outsized effect on comprehension.",
+        "DENSITY IN PLAIN TERMS: Coverage maps directly to unknown-word spacing. 98% coverage = about 1 unknown word in every 50 running words (~1 new word per 2-3 average sentences). 95% = 1 unknown in 20 (~1 per sentence). 90% = 1 in 10. For a from-zero app, the practical rule is: keep new/unknown words to roughly 1 in 50 of running words for comprehension-first reading, and allow up to ~1 in 20 only when you are deliberately pushing learning and providing support (glosses, audio, translation).",
+        "INCIDENTAL LEARNING IS SLOW AND NEEDS REPETITION: Brown, Waring & Donkaewbua (2008) measured pick-up from reading at only ~15% of target words (reading-while-listening ~16%, listening-only ~2%) on a meaning-recall test, and after 3 months only ~1 of 28 words survived without further exposure. Survey estimates of incidental pick-up range from ~1 word in 12 down to ~1 in 5. Words must recur: studies suggest 6, 8, 10, 12, or 20+ encounters are needed (Uchihara, Webb & Yanagisawa 2019), and harder-to-guess words need more. Implication: pure incidental reading alone is inefficient from zero; deliberate repetition (SRS) is essential, and CI should be the *practice/consolidation* layer, not the sole acquisition mechanism.",
+        "VOCABULARY SIZE FRAMING: Reaching 98% coverage of general texts requires ~8,000-9,000 word families; 95% needs ~3,000 (Nation 2006). For listening the bar is lower (~4,000 families for comfortable comprehension; Webb 2020). A from-zero learner has near-zero coverage, so authentic text is unusable early on - the engine MUST generate vocabulary-constrained text (graded-reader logic) rather than serve native material.",
+        "i+1 IS A USEFUL HEURISTIC BUT NOT A MEASURABLE QUANTITY: Krashen's input hypothesis says acquisition happens when learners understand input slightly beyond their current level ('i+1'), aided by a low 'affective filter.' Critics (McLaughlin 1978, Gregg) point out i and +1 were never operationally defined, making the hypothesis vague and effectively unfalsifiable. The 95-98% coverage research is the closest the field has to a concrete, testable operationalization of 'comprehensible input' / 'i+1.'",
+        "THRESHOLDS ARE PROBABILISTIC, NOT HARD CUTOFFS: A 2025 replication ('Lexical Coverage and Reading Comprehension Revisited', Reading in a Foreign Language, n=94 advanced learners) found NO statistically significant comprehension differences between 90%, 95%, and 98% coverage groups - only 100% coverage clearly outperformed; coverage and perceived difficulty together explained only modest variance (~11% and ~8%). Kremmel et al.'s replication of Hu & Nation also found more modest effects. Takeaway: treat 98%/95% as design defaults and tuning knobs, not magic numbers; comprehension also depends on topic familiarity, grammar, text length, and support tools.",
+        "INPUT ALONE IS INSUFFICIENT - OUTPUT, INTERACTION, AND EXPLICIT INSTRUCTION MATTER: Swain's output hypothesis and Long's interaction hypothesis argue production and negotiated interaction drive acquisition in ways comprehension cannot. Meta-analyses show explicit instruction yields significant accuracy gains, especially for complex features, and corrective feedback drives learning. A neuro-ecological critique (Frontiers in Psychology, 2025) adds that learners have 'spiky' profiles, so one fixed level is i+5 for one skill and i-1 for another - difficulty must be personalized per item/skill, not by a single global level.",
+        "SPACED REPETITION HAS STRONG EVIDENCE: Spaced practice beats massed practice substantially for retention. Cepeda et al. (2008, ~1,350 participants) found the optimal gap between reviews is roughly 10-20% of the desired retention interval; Kang and others support expanding intervals growing by factors of ~2.5-3.5 (e.g. 1, 3, 8, 20, 50 days). Expanding-interval SRS outperforms fixed intervals because harder retrieval after longer gaps deepens consolidation.",
+        "TEXT GENERATION FROM KNOWN WORDS IS AN ACTIVE, VALIDATED APPROACH: Graded readers already operationalize this manually (controlled vocabulary by frequency band, with target words repeated before they are forgotten). Recent NLP work generates vocabulary-constrained text automatically: 'SRS-Stories' (arXiv 2512.18362) generates multilingual stories restricted to words the learner knows, deliberately introducing a few selected new words used several times in meaningful context, explicitly tied to an SRS schedule - essentially the exact engine described in the request."
+      ],
+      "recommendations": [
+        "Set the generation target to ~98% known-word coverage by default (about 1 new/unknown word per ~50 running words). Expose it as a tunable 'new-word density' knob: tighten toward 98-99% for relaxed reading/listening, loosen toward ~95% (1 new word per ~20 words, i.e. roughly 1 per sentence) only for deliberate-learning sessions where you also show a gloss/translation. Never go below ~90% in generated text for a from-zero learner.",
+        "Maintain an explicit per-learner 'known-words' lexicon as the source of truth. Tag each word with an SRS state (new / learning / reviewing / mastered) and a strength/next-due timestamp. The generator's allowed vocabulary = words at or above a 'recognizable' threshold; everything else is treated as a candidate new word and must be supported.",
+        "Constrain generation at decode time, not just by prompting. LLMs do not reliably obey 'only use these words' from a prompt alone. Enforce the constraint: generate, then run a coverage check (tokenize -> lemmatize -> compare against the known-words set), reject/regenerate or post-edit any sentence that exceeds the new-word budget. For Russian specifically you MUST lemmatize before matching because of heavy inflection - use pymorphy2/pymorphy3 or spaCy's ru model so 'книга/книги/книгу/книге' all map to one lemma in the known-set.",
+        "Introduce only 1-3 genuinely new words per short text, and make each new word recur. Since ~6-12+ encounters are typically needed, schedule each new word to reappear multiple times within the same text and across subsequent generated texts before its SRS interval lapses. Treat 'introduce a word' as 'commit to engineering enough future encounters,' not a one-shot exposure.",
+        "Do not rely on incidental reading alone for acquisition from zero - pick-up is only ~1 in 5 to 1 in 12 words and decays fast. Pair the CI reading engine with an explicit deliberate-study front door: present each new word with its English gloss/form first (or inline on first occurrence), then let comprehensible input consolidate it. Use CI as the spaced-repetition delivery vehicle (words resurface inside meaningful sentences) rather than the discovery mechanism.",
+        "Implement expanding-interval spaced repetition. Use a proven scheduler (FSRS is the current state of the art and open-source; SM-2/Anki-style is a simpler fallback) rather than inventing intervals. Drive both flashcard reviews AND text generation from the same due-queue: when a word is coming due, bias the next generated story to include it, so review happens in context, not just on isolated cards.",
+        "Personalize difficulty per word/skill, not by a single global level. Track recognition vs. production separately, and let grammar features have their own progression. This directly answers the 'spiky profile' critique - a learner can be strong on vocabulary recognition but weak on case endings; the engine should be able to introduce a known lemma in a new grammatical form as its own 'i+1' step.",
+        "Add output and feedback, not just reading. Include cloze/fill-in tasks, short translation-into-Russian prompts, and (optionally) speaking with feedback. Swain/Long and recent meta-analyses show production + corrective feedback add what comprehension alone cannot. Even simple 'type the missing word' cloze inside generated sentences gives pushed output cheaply.",
+        "Provide explicit English explanations for grammar and word meaning alongside the implicit input. The request already plans English explanations - keep them: explicit instruction has solid meta-analytic support, especially for complex features like Russian case/aspect. Show a one-line English note on first exposure to a new grammatical pattern, then reinforce implicitly through CI.",
+        "Treat 95-98% as engineering defaults, not gospel, and instrument the app to verify them. Because the 2025 replication found weak coverage-comprehension effects above 90% for advanced learners, log per-text comprehension (via cloze accuracy or self-rated 'did you understand') against measured coverage and new-word density, and let the data tune your thresholds for your specific learner rather than hard-coding 98%.",
+        "Seed the early curriculum with a high-frequency Russian word-family/lemma frequency list (frequency bands) so the very first texts are built from the highest-utility words. Graded-reader practice shows controlled, frequency-ordered vocabulary plus repetition before forgetting is what makes from-zero reading possible.",
+        "Keep texts short, topically familiar, and optionally audio-paired. Reading-while-listening (~16% pick-up) beat reading-only and far beat listening-only (~2%) in Brown et al.; bundling generated text with TTS audio is cheap and improves uptake. Familiar topics also raise effective comprehension independent of raw coverage."
+      ],
+      "resources": [
+        {
+          "name": "Hu & Nation (2000), Unknown Vocabulary Density and Reading Comprehension (Wiley / Kremmel replication 2023)",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/lang.12622",
+          "note": "Origin of the 95%/98% coverage thresholds and a recent replication; replication found more modest effects than the original - good for both the headline numbers and the caveats."
+        },
+        {
+          "name": "Lexical Coverage and Reading Comprehension Revisited (Reading in a Foreign Language, Sep 2025)",
+          "url": "https://eric.ed.gov/?q=coverage&id=EJ1486674",
+          "note": "n=94; found no significant comprehension differences between 90/95/98% coverage (only 100% stood out). Strongest evidence that thresholds are soft defaults, not hard cutoffs."
+        },
+        {
+          "name": "Brown, Waring & Donkaewbua (2008), Incidental vocabulary acquisition from reading, reading-while-listening, and listening",
+          "url": "https://www2.hawaii.edu/~readfl/rfl/October2008/brown/brown.html",
+          "note": "Concrete pick-up rates (~15-16% reading, ~2% listening) and steep 3-month decay; the empirical basis for 'do not rely on incidental input alone' and for pairing text with audio."
+        },
+        {
+          "name": "How does lexical coverage affect the processing of L2 texts? (Applied Linguistics, Oxford, 2024)",
+          "url": "https://academic.oup.com/applij/article/45/6/953/7841943",
+          "note": "Recent peer-reviewed work on coverage effects during processing; useful for nuancing the threshold story beyond comprehension-question scores."
+        },
+        {
+          "name": "Input hypothesis (Wikipedia) - definitions and criticism",
+          "url": "https://en.wikipedia.org/wiki/Input_hypothesis",
+          "note": "Clean summary of i+1, comprehensible input, affective filter, and the McLaughlin/Gregg untestability critiques plus Swain output and Long interaction alternatives. Good orientation, follow its citations for primaries."
+        },
+        {
+          "name": "Beyond comprehensible input: a neuro-ecological critique of Krashen's hypothesis (Frontiers in Psychology, 2025)",
+          "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1636777/full",
+          "note": "Modern peer-reviewed critique: i+1 never empirically validated, ignores output/interaction/explicit instruction and spiky learner profiles. Directly informs the 'personalize per skill + add output' recommendations."
+        },
+        {
+          "name": "SRS-Stories: Vocabulary-constrained multilingual story generation for language learning (arXiv 2512.18362)",
+          "url": "https://arxiv.org/html/2512.18362",
+          "note": "Most directly applicable engineering reference: LLM-generated stories restricted to known words, introducing a few new words with repetition, tied to spaced repetition. Essentially a prior art of the engine being built."
+        },
+        {
+          "name": "Lexical Complexity Controlled Sentence Generation (arXiv 2211.14540)",
+          "url": "https://arxiv.org/pdf/2211.14540",
+          "note": "Technique reference for constraining lexical difficulty at generation time - relevant to enforcing the known-words constraint rather than only prompting for it."
+        },
+        {
+          "name": "Spacing Repetitions Over Long Timescales: A Review (Cepeda-style review, PMC)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5476736/",
+          "note": "Evidence base for spaced repetition intervals (gap ~10-20% of retention interval; expanding intervals). Use to justify the SRS scheduler choice."
+        },
+        {
+          "name": "FSRS (Free Spaced Repetition Scheduler) - open source",
+          "url": "https://github.com/open-spaced-repetition/fsrs4anki",
+          "note": "Production-ready, evidence-based scheduler to reuse instead of hand-rolling intervals; integrate with the known-words store to drive both reviews and text generation."
+        },
+        {
+          "name": "Incidental vocabulary learning overview (EAP Foundation)",
+          "url": "https://www.eapfoundation.com/vocab/learn/incidental/",
+          "note": "Accessible synthesis of encounter counts (6-20+) and the 8000-9000 (reading) / 4000 (listening) word-family coverage figures with citations to Webb and Uchihara et al."
+        }
+      ],
+      "sources": [
+        "https://onlinelibrary.wiley.com/doi/10.1111/lang.12622",
+        "https://eric.ed.gov/?q=coverage&id=EJ1486674",
+        "https://www2.hawaii.edu/~readfl/rfl/October2008/brown/brown.html",
+        "https://academic.oup.com/applij/article/45/6/953/7841943",
+        "https://en.wikipedia.org/wiki/Input_hypothesis",
+        "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1636777/full",
+        "https://arxiv.org/html/2512.18362",
+        "https://arxiv.org/pdf/2211.14540",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5476736/",
+        "https://www.eapfoundation.com/vocab/learn/incidental/",
+        "https://gianfrancoconti.com/2025/02/27/why-the-input-we-give-our-learners-must-be-95-98-comprehensible-in-order-to-enhance-language-acquisition-the-theory-and-the-research-evidence/",
+        "https://educationaldatamining.org/EDM2022/proceedings/2022.EDM-posters.99/",
+        "https://migaku.com/blog/language-fun/spaced-repetition-in-2026-how-it-actually-works"
+      ],
+      "uncertainties": [
+        "The exact coverage threshold is contested. Classic studies (Hu & Nation 2000, Schmitt et al. 2011) support ~98%, but the 2025 RFL replication (n=94, advanced learners) and Kremmel's replication found much weaker/non-significant differences below 100%. The 98% figure is a defensible default but should be validated against your own learner's comprehension data.",
+        "Most coverage research uses intermediate/advanced learners and existing texts; evidence for an absolute-beginner (from-zero) learner reading machine-generated graded text is thin. The thresholds are extrapolations into a regime they were not measured in.",
+        "Pick-up rates and encounter counts vary widely by study, test type (recall vs. recognition), word difficulty, and modality. '6-20+ encounters' and '1-in-5 to 1-in-12 pick-up' are ballparks, not precise targets - tune empirically.",
+        "Coverage figures are usually stated in word families for English. Russian's rich inflectional morphology complicates 'a word': you must decide whether your known-set is keyed on lemmas or surface forms, and whether a known lemma in an unseen case/aspect counts as 'known.' This materially affects your density math and is not settled by the English-based literature.",
+        "The relative contribution of output/interaction vs. input is still debated; the neuro-ecological critique is recent and partly theoretical. The safe design stance (combine CI + SRS + explicit instruction + some output) is well supported, but the optimal mix is not quantified.",
+        "Optimal SRS intervals (Cepeda's 10-20% rule, expanding-factor 2.5-3.5) come largely from lab studies of isolated facts/words; their transfer to words-encountered-in-generated-context is plausible but not directly validated for this specific app design.",
+        "Whether current LLMs can reliably hold to a tight known-words constraint at scale for Russian is an open engineering question; the SRS-Stories paper is promising but you should expect to need a hard post-generation coverage filter rather than trusting prompt-level constraints."
+      ]
+    },
+    {
+      "topic": "Spaced repetition for a personal from-zero Russian app: FSRS vs SM-2, the best Python SRS library, sensible defaults, and how to integrate reading-based exposure with flashcard review",
+      "takeaways": [
+        "FSRS (Free Spaced Repetition Scheduler) is the current state of the art and Anki's default since v23.10 (Nov 2023). It models memory with a three-component DSR model (Difficulty, Stability, Retrievability) instead of SM-2's single ease factor. On the open-spaced-repetition benchmark (~727M reviews from ~10k users), FSRS produces more accurate recall predictions than SM-2 for ~99.5% of users and needs roughly 20-30% fewer reviews to hit the same retention.",
+        "SM-2 (Wozniak, 1987; the classic Anki algorithm) is simple and well-documented but has a structural flaw often called 'ease hell': pressing Again repeatedly drives the ease factor toward its 1.3 floor, intervals stop growing, and the card resurfaces forever. Its intervals are fixed multipliers (I1=1 day, I2=6 days, then I_n = I_{n-1} * EF) and identical for everyone — it cannot adapt to your personal forgetting curve or handle long lapses gracefully. FSRS is reported as roughly on par with SuperMemo's proprietary SM-17.",
+        "The best-maintained Python library is py-fsrs (PyPI package name: `fsrs`), from the open-spaced-repetition org. It implements the FSRS-6 model, is actively released (v6.3.1, Mar 2026), and exposes a clean API: Scheduler(), Card(), Rating.{Again,Hard,Good,Easy}, and scheduler.review_card(card, rating) returning an updated card plus a review log. An optional optimizer (`pip install \"fsrs[optimizer]\"`) trains personalized parameters from your own review history once you have enough logged reviews.",
+        "FSRS's key tunable is desired_retention (probability you'll recall a card when it comes due). Default is 0.90; the practical range is ~0.80-0.95 (Anki allows 0.70-0.99). Higher retention = more reviews/day; lower = less work but more forgetting. For a beginner, 0.90 is the recommended starting point — do NOT chase 0.95+ early, as workload climbs steeply for marginal gains.",
+        "Vocabulary-acquisition research consistently shows a single encounter is far from enough: incidental learning through reading typically needs on the order of 8-18+ encounters (roughly ~8-10 for a chance at recognition, ~14 for solid receptive knowledge, ~18 for productive use), and it varies with context richness and learner level. This is the core reason reading alone is slow for low-frequency words.",
+        "Reading and SRS are complementary, not interchangeable. Krashen's comprehensible-input (i+1) framework and lexical-coverage research (Hu & Nation 2000; Laufer & Ravenhorst-Kalovski 2010) show comprehension requires knowing ~95% of running words minimally and ~98% for comfortable unassisted reading (roughly 4,000-5,000 word families for 95%, ~8,000 for 98%). From zero in Russian you won't hit that coverage by reading alone — SRS front-loads the high-frequency core so that reading becomes comprehensible, and then reading reinforces and contextualizes what SRS introduced.",
+        "Reading-based exposure genuinely behaves like spaced repetition — word occurrences are naturally spaced — but two caveats matter: (1) word frequency follows a Zipfian distribution, so common words get reviewed far more than they need while mid- and low-frequency words may not recur before you forget them, leaving gaps SRS must fill; (2) seeing a word in reading is mostly passive recognition with surrounding context as a crutch, not the deliberate active recall that makes SRS effective. So reading exposure should reinforce and adjust scheduling, but should not be treated as a full substitute for an active-recall review."
+      ],
+      "recommendations": [
+        "Build the SRS engine on py-fsrs (`pip install fsrs`, package import name `fsrs`). Wrap its Scheduler/Card/Rating/review_card in your own thin scheduling service so the rest of the app never touches FSRS internals directly. Persist each Card's full FSRS state (stability, difficulty, due, last_review, step/state) and every ReviewLog — you'll need the logs later for the optimizer. Do NOT implement SM-2 yourself; FSRS is strictly better and the library handles the math.",
+        "Start every learner at desired_retention = 0.90 with FSRS-6 default parameters (the library ships them). Expose retention as a single advanced slider (0.80-0.95) rather than raw parameters. Once the user has accumulated enough reviews (hundreds-plus), run the optional optimizer (`fsrs[optimizer]`) on their ReviewLogs to fit personalized parameters and, optionally, compute their workload-minimizing retention — keep this as a periodic background job, not something the beginner configures.",
+        "Map your review UI to the four FSRS ratings, not a 0-5 scale: Again (forgot) / Hard (recalled with serious effort) / Good (recalled after hesitation) / Easy (effortless). For a from-zero beginner, a 3-button or even 2-button (Again/Good) UI mapped onto these is fine — FSRS works well with binary pass/fail mapped to Again/Good — and reduces decision fatigue.",
+        "Seed the SRS deck in frequency order from a Russian frequency list (e.g., introduce the most frequent ~1,000-2,000 lemmas first) so SRS spends its effort exactly where it raises reading coverage fastest. Tie 'word is known' status to FSRS stability/retrievability (e.g., a word counts as known for the comprehensible-input engine once its stability exceeds a threshold or it has graduated out of the learning steps), and use the set of known words to select/grade reading passages toward the 95-98% coverage target.",
+        "Treat reading exposure as a scheduling signal, not a free review. Recommended design: when a word the user already has as an SRS card appears in a read-and-understood passage, log a lightweight 'passive exposure' event that can (a) nudge the card's next due date slightly later or refresh retrievability, but (b) NOT count as a graduating active-recall success on its own. Keep passive exposures in their own event stream so you can tune their weight later and never let them silently inflate mastery.",
+        "Convert reading into active recall where you safely can, instead of assuming exposure = review. When the user taps an unknown or shaky word in a text, that IS a recall failure signal — feed it as a Rating.Again-equivalent (or auto-create a new card for a brand-new word). When they read a sentence fluently and self-report understanding, that's weak positive evidence — weight it far below an actual flashcard pass. This keeps the active-recall integrity FSRS depends on while still letting reading inform scheduling.",
+        "Use reading primarily to (1) introduce new candidate words into the SRS queue (tap-to-add, frequency-ranked) and (2) consolidate/contextualize words SRS already taught, rather than as the primary memory test. Because incidental reading needs ~8-18+ encounters per word and low-frequency words recur rarely, lean on SRS for the high-frequency core and deliberate vocabulary, and lean on reading for breadth, collocations, and retention of words already in the system.",
+        "Log enough to evaluate the design empirically before over-engineering: per-card FSRS state + ReviewLogs, passive-exposure events with timestamps, and reading-session coverage stats. With a personal app you are your own dataset — after a few weeks you can run the FSRS optimizer and check whether counting reading exposures actually reduced review load without hurting recall, then tune the exposure weighting accordingly. Validate on a real batch of words/sessions, not a single card."
+      ],
+      "resources": [
+        {
+          "name": "py-fsrs (PyPI package: fsrs)",
+          "url": "https://github.com/open-spaced-repetition/py-fsrs",
+          "note": "Best-maintained Python SRS library. Install with `pip install fsrs`; optimizer extra via `pip install \"fsrs[optimizer]\"`. Implements FSRS-6; current v6.3.1 (Mar 2026). API: Scheduler, Card, Rating.{Again,Hard,Good,Easy}, scheduler.review_card(card, rating). This is what to build on."
+        },
+        {
+          "name": "fsrs on PyPI",
+          "url": "https://pypi.org/project/fsrs/",
+          "note": "Canonical package page confirming the import/install name `fsrs` and release history. Use to pin a version in pyproject.toml."
+        },
+        {
+          "name": "FSRS4Anki wiki — The Optimal Retention",
+          "url": "https://github.com/open-spaced-repetition/fsrs4anki/wiki/The-optimal-retention",
+          "note": "Primary explanation of desired_retention, the workload-vs-knowledge tradeoff, and how the optimizer computes a workload-minimizing retention (Brent's method). Background for the 0.90 default recommendation."
+        },
+        {
+          "name": "srs-benchmark (open-spaced-repetition)",
+          "url": "https://github.com/open-spaced-repetition/srs-benchmark",
+          "note": "Primary benchmark comparing FSRS, SM-2 and ~20 algorithms over ~727M reviews. Source for the 'FSRS beats SM-2 for ~99.5% of users / 20-30% fewer reviews' claims (RMSE/log-loss metrics)."
+        },
+        {
+          "name": "SuperMemo 2 algorithm (super-memory.com)",
+          "url": "https://super-memory.com/english/ol/sm2.htm",
+          "note": "Wozniak's original SM-2 spec: E-Factor, the EF update formula, and I(1)=1, I(2)=6, I(n)=I(n-1)*EF interval rule. Primary source for understanding the classic algorithm and ease hell."
+        },
+        {
+          "name": "Anki FAQ — spaced repetition algorithm",
+          "url": "https://faqs.ankiweb.net/what-spaced-repetition-algorithm",
+          "note": "Official Anki statement that FSRS is default since 23.10, why SM-2 gets stuck in 'low interval hell', and that FSRS is roughly on par with SM-17."
+        },
+        {
+          "name": "Expertium — A technical explanation of FSRS / Benchmark",
+          "url": "https://expertium.github.io/Algorithm.html",
+          "note": "Readable but rigorous walkthrough of the FSRS DSR model (Difficulty, Stability, Retrievability) and parameters; companion Benchmark.html covers metrics. Good for implementers."
+        },
+        {
+          "name": "Hacking Chinese — Reading is a lot like spaced repetition, only better",
+          "url": "https://www.hackingchinese.com/reading-is-a-lot-like-spaced-repetition-only-better/",
+          "note": "Argues reading is naturally spaced repetition but with Zipfian gaps for rare words, and concludes reading + flashcards are complementary. Directly relevant to the 'should reading count as reviews?' question."
+        },
+        {
+          "name": "Hu & Nation (2000) replication / lexical coverage (Kremmel 2023, Language Learning)",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/lang.12622",
+          "note": "Peer-reviewed support for the 95% (minimal) / 98% (optimal) lexical-coverage thresholds for reading comprehension — the basis for tying SRS progress to reading difficulty selection."
+        },
+        {
+          "name": "Laufer & Ravenhorst-Kalovski (2010) — Lexical threshold revisited",
+          "url": "https://files.eric.ed.gov/fulltext/EJ887873.pdf",
+          "note": "Peer-reviewed source mapping coverage thresholds to vocabulary size (~4,000-5,000 word families for 95%, ~8,000 for 98%). Use to set frequency-band targets for the from-zero Russian curriculum."
+        },
+        {
+          "name": "Word exposure frequency & incidental vocabulary acquisition (Academy Publication, TPLS)",
+          "url": "https://www.academypublication.com/issues2/tpls/vol05/05/11.pdf",
+          "note": "Evidence that incidental reading needs many encounters (commonly ~8-18+) to learn a word, supporting why SRS must front-load high-frequency vocabulary rather than relying on reading alone."
+        },
+        {
+          "name": "Krashen — Principles and Practice in SLA (input hypothesis, i+1)",
+          "url": "https://www.sdkrashen.com/content/books/principles_and_practice.pdf",
+          "note": "Primary text for the comprehensible-input (i+1) framing of the reading engine: input just beyond current level, resting on a base of already-known words."
+        }
+      ],
+      "sources": [
+        "https://github.com/open-spaced-repetition/py-fsrs",
+        "https://pypi.org/project/fsrs/",
+        "https://github.com/open-spaced-repetition/fsrs4anki/wiki/The-optimal-retention",
+        "https://github.com/open-spaced-repetition/srs-benchmark",
+        "https://github.com/ankitects/fsrs-benchmark",
+        "https://super-memory.com/english/ol/sm2.htm",
+        "https://faqs.ankiweb.net/what-spaced-repetition-algorithm",
+        "https://expertium.github.io/Algorithm.html",
+        "https://expertium.github.io/Benchmark.html",
+        "https://expertium.github.io/Retention.html",
+        "https://docs.ankiweb.net/deck-options.html",
+        "https://www.hackingchinese.com/reading-is-a-lot-like-spaced-repetition-only-better/",
+        "https://onlinelibrary.wiley.com/doi/10.1111/lang.12622",
+        "https://files.eric.ed.gov/fulltext/EJ887873.pdf",
+        "https://www.academypublication.com/issues2/tpls/vol05/05/11.pdf",
+        "https://www.sdkrashen.com/content/books/principles_and_practice.pdf",
+        "https://en.wikipedia.org/wiki/Input_hypothesis"
+      ],
+      "uncertainties": [
+        "The exact 'right' weighting for a reading exposure relative to a flashcard review is not settled by research — there is no published, validated formula for converting passive reading encounters into FSRS rating signals. The recommended approach (log exposures as a separate, lightly-weighted signal) is a reasoned design choice you must validate on your own data, not an evidence-backed constant.",
+        "Exposure-count figures (~8-18+ encounters) come from L2 studies dominated by English/European-language learners and classroom or controlled reading; their transfer to from-zero adult Russian (Cyrillic, rich inflectional morphology where one lemma surfaces as many word forms) is uncertain. Morphology especially complicates 'is this word known?' and coverage counting — decide early whether you track lemmas or surface forms.",
+        "FSRS's optimizer needs a non-trivial volume of personal review logs (commonly cited as roughly 1,000+ reviews) before personalized parameters beat the defaults; for a single-user from-zero app it may take weeks before optimization is meaningful, so plan to run on defaults initially.",
+        "The strong FSRS-vs-SM-2 numbers (20-30% fewer reviews, 99.5% of users) come from the open-spaced-repetition/Anki benchmark, which is run by the same community that develops FSRS. The results are large-scale and broadly credited, but they are not independent third-party replications, so treat the precise percentages as indicative rather than definitive.",
+        "Lexical-coverage thresholds (95%/98%) and the corresponding vocabulary-size estimates are averages with wide individual variation (Hu & Nation found some readers coped at 90-95% and others did not); they are good design targets but should not be treated as hard pass/fail gates for any individual learner.",
+        "Some supporting figures were read from search snippets and secondary summaries rather than the full primary PDFs; the headline claims are corroborated across multiple sources, but exact numbers (e.g., specific encounter counts per study) should be re-checked against the primary papers before quoting them in product copy."
+      ]
+    },
+    {
+      "topic": "Teaching the Russian Cyrillic alphabet to absolute-beginner English speakers: optimal letter order, true/false friends, recognition vs production, transliteration policy, and time-to-read — scoped for a from-zero personal Russian app with English explanations, a known-words + comprehensible-input engine, and spaced repetition.",
+      "takeaways": [
+        "The dominant pedagogical model groups the 33 letters by visual/phonetic relationship to Latin, not alphabetically, and teaches them in this order: (1) true friends that look AND sound like Latin, (2) 'false friends' that look Latin but sound different, (3) unfamiliar-looking letters with familiar sounds, (4) genuinely new letters/sounds and the two signs. Babbel, RussianLessons.net, the University of Arizona CMES academic module, and Polyglottist all converge on this same four-bucket sequence.",
+        "True friends (look the same, sound effectively the same): the high-consensus core is А К М О Т (a, k, m, o, t). Several sources also fold in С (s) and Б (b) as near-identical in sound; the conservative, safest 'true friend' set to introduce first is А К М О Т.",
+        "False friends (look like a Latin letter but sound different) are the single biggest source of decoding errors and English-reading interference. The canonical set is: В = v (not b), Н = n (not h), Р = r (not p), С = s (not c), У = oo/u (not y), Х = kh (not x), plus Е = ye (not 'ee'/'eh'). These must be taught explicitly AS contrasts ('looks like X, but is Y'), because the brain defaults to the Latin value.",
+        "Recognition (reading) should be trained before and far more than production (handwriting). The standard sequence is: read print → read cursive → (optionally, much later) write. Russian everyday handwriting is cursive and looks radically different from print; learners who only know print routinely cannot read handwritten Russian, so for a reading-focused app, cursive RECOGNITION matters but cursive PRODUCTION can be deferred or skipped.",
+        "Transliteration/romanization is useful only for the first few days as a pronunciation scaffold, then becomes a crutch that slows reading and entrenches bad pronunciation habits. Consensus across StoryLearning, Fluent in 3 Months, and Polyglottist: introduce Cyrillic from day one and phase transliteration out within the first ~3–7 days, replacing it with stress marks + audio rather than Latin spellings.",
+        "Learning to DECODE (sound out) Cyrillic is fast: practitioner consensus is ~2 hours to ~3–4 hours of focused study to learn the letter-sound mappings, and roughly 3–7 days (or up to ~2 weeks at 20–30 min/day) to decode reliably. Fluent, automatic reading is a separate, much longer skill.",
+        "Knowing the alphabet is NOT the same as reading. The hard transition is from conscious letter-by-letter decoding to automatic chunk/word recognition. Key levers: syllable-chunk drills (ма-мо-му-мы-ме; де-ву-шка), high-frequency word repetition (я, ты, это, спасибо, хорошо), explicit stress marking, vowel-reduction awareness (unstressed о → 'a'), and reading aloud.",
+        "Peer-reviewed SLA research sets clear lexical-coverage targets for a comprehensible-input engine: ~95% of words known is the MINIMUM for basic comprehension (Laufer 1989), and ~98% is needed for comfortable, unassisted comprehension (Hu & Nation 2000; Schmitt et al. 2011 found a near-linear coverage→comprehension relationship). Below 95%, comprehension drops sharply.",
+        "Cognates and English loanwords are a high-leverage shortcut: there are 100+ readily usable Russian-English cognates (музыка, театр, планета, гитара, физика, факт, идея, банан, металл, балет, опера) that become instantly readable the moment a learner can decode Cyrillic — ideal as the very first 'known words' so the payoff of learning letters is immediate.",
+        "Predictable suffix/letter-correspondence patterns make cognates scalable: -ция↔-tion (информация), -ика↔-ics (физика), -ура↔-ure, th↔т, and c↔ц. Teaching the pattern, not just the word, lets the engine generate large recognizable-vocabulary sets cheaply."
+      ],
+      "recommendations": [
+        "Order the alphabet lessons in the four research-backed buckets, not alphabetically: Lesson 1 = true friends А К М О Т (instant wins, build words like ТОМ, КОТ, МАК); Lesson 2 = false friends В Н Р С У Х plus Е, taught explicitly as 'looks like Latin X, sounds like Y' with side-by-side contrast cards; Lesson 3 = unfamiliar-shape/familiar-sound letters (Б Г Д З И Й Л П Ф Э and the iotated Ё Ю Я); Lesson 4 = new sounds Ж Ц Ч Ш Щ Ы and the hard/soft signs Ъ Ь.",
+        "Give false friends a dedicated, persistent treatment in the SRS: tag В Н Р С У Х Е as 'false friend' and surface them more often, and build minimal-pair confusion drills (e.g. show РОТ vs English-reading 'POT'; СОН vs 'CON') so the app actively overwrites the Latin default rather than just presenting the correct value once.",
+        "Make the first 'known words' a curated set of ~30–50 transparent cognates (музыка, театр, планета, гитара, физика, факт, идея, банан, металл, балет, опера, кофе, такси, спорт) so the learner reads real, meaningful Russian within the first session — this is the motivational payoff that letter drills alone lack.",
+        "Encode cognate-generation rules (-ция↔-tion, -ика↔-ics, -ура↔-ure, th↔т, c↔ц) so the known-words engine can expand the recognizable vocabulary set programmatically and explain WHY a word is guessable in English.",
+        "Tier the script-recognition curriculum: (1) read print fluently, (2) introduce reading of Russian cursive once print is solid (high value, low cost — many learners skip this and then can't read handwriting), (3) treat WRITING (especially cursive production) as optional/late for a reading-and-comprehension app. Default the app to recognition; gate production behind an explicit opt-in.",
+        "Adopt a strict transliteration sunset: show romanization (or better, stress-marked Cyrillic + audio) only during the first few sessions, then hard-cut it. Replace transliteration with stress marks (мо́жно), audio, and known-word context — never let Latin spellings persist as the primary reading path.",
+        "Drive the comprehensible-input engine to a known-word coverage target of 95–98% per text/sentence: gate any new sentence so the learner already knows ≥95% of its word tokens (aim for 98% for 'comfortable' mode), introducing at most one new/unknown item (the i+1 principle). Use the SRS to track which words count as 'known.'",
+        "Build an explicit decode→chunk→word progression rather than jumping from letters to sentences: after letters, drill syllable chunks (ма-мо-му-мы-ме, consonant+vowel tables) and the top high-frequency function words (я, ты, это, не, и, спасибо, хорошо) as whole-shape recognition targets in the SRS.",
+        "Teach vowel reduction and stress early as reading rules, not just pronunciation trivia: mark stress on every new word, flag that unstressed о→'a' and unstressed е/я reduce, and use audio so learners don't over-trust spelling. Tie this to the false-friend Е (ye) and the iotated vowels.",
+        "Set honest expectations in-app: surface a 'you can now sound out Cyrillic' milestone at ~2–4 hours / first few days of letter work, but frame fluent reading and comprehension as a separate, longer track powered by the spaced-repetition + comprehensible-input loop — so users don't conflate 'learned the alphabet' with 'can read Russian.'"
+      ],
+      "resources": [
+        {
+          "name": "University of Arizona CMES — Russian Language Module (alphabet & cognates)",
+          "url": "https://cmes.arizona.edu/sites/default/files/2023-07/Russian%2520Language%2520Module%2520%2528alphabet%2520%2526%2520cognates%2529.pdf",
+          "note": "Academic teaching module. Uses the exact four-bucket order (look+sound like Latin / look-Latin-sound-different / unfamiliar-look-familiar-sound / new) and ends with a cognate reading exercise (балет, опера, банан, краб). Good model for lesson sequencing."
+        },
+        {
+          "name": "RussianLessons.net — Lesson 1: The Russian Alphabet",
+          "url": "https://www.russianlessons.net/lessons/lesson1_main.php",
+          "note": "Clean, explicit true-friend (А К М О Т) vs false-friend (В Е Н Р С У Х) vs new-letter grouping with per-letter sounds. Directly usable as a lesson-structure template."
+        },
+        {
+          "name": "Babbel — How To Learn The Cyrillic Alphabet In Just Two Days",
+          "url": "https://www.babbel.com/en/magazine/learn-cyrillic-alphabet-two-days",
+          "note": "7-step grouping (5 familiar → 4 false friends → 4 more false friends → 5 Greek-derived → 3 new → 7 more → final vowels+signs) and a four-30-min-session-over-two-days schedule. Reputable vendor; good for the spaced micro-session cadence."
+        },
+        {
+          "name": "Polyglottist — 10 Cyrillic letters that look the same but sound different",
+          "url": "https://www.polyglottistlanguageacademy.com/language-culture-travelling-blog/2026/6/10/russian-cyrillic-vs-english-10-letters-that-look-the-same-but-sound-different",
+          "note": "Per-letter false-friend breakdown (В=v, Н=n, Р=r, С=s, У=oo, Х=kh, Е=ye) plus А/О/Т nuances (vowel reduction, aspiration). Source list for the confusion-drill content."
+        },
+        {
+          "name": "Polyglottist — Why You Still Can't Read Russian After Learning the Alphabet",
+          "url": "https://www.polyglottistlanguageacademy.com/language-culture-travelling-blog/2026/5/24/why-you-still-cant-read-russian-after-learning-the-alphabet",
+          "note": "The decode→chunk→fluency argument: syllable chunking, high-frequency-word repetition, stress, vowel reduction, reading aloud. Directly informs the post-alphabet SRS curriculum."
+        },
+        {
+          "name": "The Language Gym (Conti) — Why input must be 95–98% comprehensible",
+          "url": "https://gianfrancoconti.com/2025/02/27/why-the-input-we-give-our-learners-must-be-95-98-comprehensible-in-order-to-enhance-language-acquisition-the-theory-and-the-research-evidence/",
+          "note": "Synthesizes the peer-reviewed coverage research (Laufer 1989 ~95% min; Hu & Nation 2000 ~98% for full comprehension; Schmitt et al. 2011 near-linear coverage→comprehension). The empirical basis for the engine's 95–98% known-word gate."
+        },
+        {
+          "name": "StoryLearning — 121+ Russian Cognates / Romanization: Friend or Foe?",
+          "url": "https://storylearning.com/learn/russian/russian-tips/russian-cognates",
+          "note": "Cognate patterns (-ция/-tion, -ика/-ics, th→т, c→ц) and a beginner seed list (музыка, театр, планета, гитара, физика, факт, идея). Companion piece argues to drop romanization early for simple alphabets like Russian."
+        },
+        {
+          "name": "Polyglottist — Russian Handwriting vs. Printed Letters",
+          "url": "https://www.polyglottistlanguageacademy.com/language-culture-travelling-blog/2025/4/12/russian-handwriting-vs-printed-letters-how-to-read-and-write-cursive",
+          "note": "Rationale for recognition-before-production and for teaching cursive READING (not just print) because handwritten Russian is cursive and otherwise illegible to print-only learners."
+        },
+        {
+          "name": "sdkrashen.com — Principles and Practice in Second Language Acquisition (full PDF)",
+          "url": "https://www.sdkrashen.com/content/books/principles_and_practice.pdf",
+          "note": "Primary source for the comprehensible-input / i+1 hypothesis underpinning the input engine. Treat as theory (criticized as non-falsifiable); pair with the empirical 95–98% coverage studies above for the actual gating math."
+        }
+      ],
+      "sources": [
+        "https://cmes.arizona.edu/sites/default/files/2023-07/Russian%2520Language%2520Module%2520%2528alphabet%2520%2526%2520cognates%2529.pdf",
+        "https://www.russianlessons.net/lessons/lesson1_main.php",
+        "https://www.babbel.com/en/magazine/learn-cyrillic-alphabet-two-days",
+        "https://www.polyglottistlanguageacademy.com/language-culture-travelling-blog/2026/6/10/russian-cyrillic-vs-english-10-letters-that-look-the-same-but-sound-different",
+        "https://www.polyglottistlanguageacademy.com/language-culture-travelling-blog/2026/5/24/why-you-still-cant-read-russian-after-learning-the-alphabet",
+        "https://www.polyglottistlanguageacademy.com/language-culture-travelling-blog/2025/4/12/russian-handwriting-vs-printed-letters-how-to-read-and-write-cursive",
+        "https://gianfrancoconti.com/2025/02/27/why-the-input-we-give-our-learners-must-be-95-98-comprehensible-in-order-to-enhance-language-acquisition-the-theory-and-the-research-evidence/",
+        "https://storylearning.com/learn/russian/russian-tips/russian-cognates",
+        "https://storylearning.com/romanization",
+        "https://www.fluentin3months.com/learn-russian-cyrillic-alphabet/",
+        "https://www.sdkrashen.com/content/books/principles_and_practice.pdf",
+        "https://en.wikipedia.org/wiki/Input_hypothesis",
+        "https://blog.rosettastone.com/cyrillic-alphabet/",
+        "https://en.wikipedia.org/wiki/Russian_cursive"
+      ],
+      "uncertainties": [
+        "Time-to-read figures (~2–4 hours to decode; 3–7 days to read reliably) come from language-learning vendors and practitioners, not controlled studies. They are consistent across sources but should be treated as motivational rough guides, not measured outcomes; actual time varies with daily practice and prior exposure to other Cyrillic/Greek scripts.",
+        "The 95% (Laufer) and 98% (Hu & Nation, Schmitt) coverage thresholds were established for reading comprehension of running text (often at intermediate+ levels), not specifically for absolute-beginner alphabet-stage decoding. They are the right target for the comprehensible-input ENGINE once a learner has some vocabulary, but the very first lessons will necessarily sit below 95% known-words and should lean on cognates and audio to compensate.",
+        "Membership of 'true friends' is slightly fuzzy: А К М О Т are universally agreed, but sources differ on whether С (s) and Б (b) count as true friends or false friends (С looks like Latin C, which is ambiguous in English; Б has no Latin lookalike). Recommend treating С as a false friend (it looks like C but is always /s/) and the conservative true-friend set as А К М О Т.",
+        "Krashen's i+1 / comprehensible-input hypothesis is influential but criticized in the literature as vague and hard to operationalize/falsify (see the Frontiers 2025 neuro-ecological critique). The empirical 95–98% coverage studies are the more defensible basis for concrete engine thresholds; cite Krashen for framing, not as hard proof.",
+        "How early to introduce cursive READING is a judgment call, not settled by evidence. For a reading/comprehension app whose corpus is printed/digital text, cursive recognition may be low priority; it becomes important only if the user expects to read handwritten Russian. Worth making configurable rather than assuming.",
+        "Some letters straddle categories depending on the source's phonetic granularity (e.g., Е is sometimes 'false friend', sometimes grouped with iotated vowels; Г/В are sometimes 'Greek-derived' rather than plain 'false friends'). The four-bucket model is a teaching heuristic, not a strict taxonomy — minor regroupings are defensible."
+      ]
+    },
+    {
+      "topic": "Hard parts of Russian for from-zero English-speaking learners (stress, vowel reduction, palatalization, cases, aspect) — how a comprehensible-input + spaced-repetition app should sequence/handle them, and where to obtain stress-marked Russian data",
+      "takeaways": [
+        "STRESS is the keystone problem: Russian stress is lexically unpredictable (can fall on any syllable) and MOBILE (it shifts across a word's inflectional paradigm, e.g. between root and ending). It is also phonemic in some pairs and contrastive in homographs. There is no reliable rule set; stress must be learned per lexeme and per form. (Jouravlev & Lupker 2015; Phonology/Cambridge default-stress study)",
+        "VOWEL REDUCTION is a CONSEQUENCE of stress, not an independent skill: unstressed /o/ and /a/ reduce toward [a]/[ə] (akanye) and unstressed front vowels reduce toward [i]/[ɪ] (ikanye). Because the realization of every unstressed vowel depends on where the stress is, you cannot teach correct pronunciation of a word without first knowing its stress. This couples stress + reduction into one unit. (Wikipedia: Vowel reduction in Russian / Akanye, citing standard phonology)",
+        "PALATALIZATION (hard vs soft consonants) is a genuinely persistent L2 problem for English speakers. It is phonemic (мать /matʲ/ 'mother' vs мат /mat/ 'checkmate') and pairs ~15 consonants for the feature. Electropalatography/acoustic studies show even advanced learners with immersion often fail to produce or perceive the contrast, and explicit training improved acoustics but not identification. Expect this to remain imperfect for a long time. (Kochetov et al., Journal of Phonetics 2015, ScienceDirect S0095447015000777)",
+        "The 6 CASES are the central morphological hurdle, but there is NO consensus teaching order — textbooks variously start with accusative, prepositional, or genitive. Two competing pedagogies exist: 'horizontal' (master all endings/meanings of one case at once) vs 'concentric/spiral' (introduce a case's most frequent use, then revisit and expand). Nominative is the citation/dictionary form and the base; accusative is the next most frequent and pairs naturally with simple transitive sentences. (OCERINT case-system paper 97.pdf; usage-based instruction study; StoryLearning)",
+        "VERB ASPECT (imperfective vs perfective) is repeatedly described as one of the hardest parts of Russian grammar for foreigners because it has no clean English mapping and pervades past and future. Crucially, aspect is largely irrelevant in the PRESENT tense (present is formed from imperfective only), so a beginner can speak in the present without confronting the aspect choice. This is the natural deferral point. (russianlessons.net; russianforeveryone.com; StoryLearning)",
+        "The real-text vs learner-text mismatch is structural: stress marks (acute accents) appear ONLY in dictionaries and learner materials; native books, news, and signage carry NO stress marks (ё is also frequently written as е). So an app must own its own stress annotation layer and plan an explicit weaning step where accents are progressively removed as words become 'known'. (russianstepbystep.com; learnrussianstepbystep.com; WordReference)",
+        "Comprehensible-input thresholds are quantified: Hu & Nation (2000) found L2 readers need ~98% known-word coverage for adequate unaided comprehension and that 95% leaves many learners struggling; 1 unknown word in 50 ≈ 98%. This directly sets the known-words gate for the CI engine and was partially replicated by Kremmel et al. (2023, Language Learning). Coverage maps to vocabulary size: ~2-3k word families ≈ 95%, ~8-9k ≈ 98% for written text. (Hu & Nation 2000, Reading in a Foreign Language; Kremmel 2023)",
+        "High-quality, openly licensed Russian data with stress already exists. OpenRussian / Badestrand 'russian-dictionary' (CC-BY-SA 4.0) gives accented declensions/conjugations + Tatoeba example sentences. Automatic stress placement is solved well enough to use: RUAccent (COLING 2025, ~0.97 non-homograph / 0.96 homograph accuracy, pip ruaccent-predictor) and the Vuizur/FreeLanguageTools epub stresser (~93-96%, AGPL, Wiktionary-based) can annotate arbitrary text. StimulStat (free, 52k lemmas / 1.7M forms, >70 variables incl. stress position in symbols+syllables AND whether stress shifts in the paradigm) is ideal as a reference DB. Lyashevskaya & Sharoff RNC frequency list gives the frequency ranking to drive vocab sequencing. (aclanthology.org/2025.coling-main.444; github Vuizur/Badestrand; StimulStat Springer 2017; HSE Lyashevskaya)"
+      ],
+      "recommendations": [
+        "Treat STRESS as a first-class, per-word-FORM attribute in your data model, not a display nicety. Store stress on the lemma AND on each inflected form, plus a boolean 'mobile/stress-shift' flag (StimulStat exposes exactly this). Mark stress in ALL learner-facing Russian from day one, because correct pronunciation and vowel reduction are unrecoverable without it.",
+        "Bundle STRESS + VOWEL REDUCTION into a single 'how this word actually sounds' unit. Since reduction is fully determined by stress, do not teach reduction as separate rules; instead pair every stressed display with audio (TTS or recorded) and a short English explanation of the akanye/ikanye effect on the unstressed syllables of that specific word. Introduce the concept extremely early (first ~20 words) so learners never internalize spelling-based pronunciation.",
+        "Introduce PALATALIZATION early as a listening/contrast skill but set low mastery expectations for production. Front-load minimal pairs (мать/мат, брат/брать, угол/уголь) with audio in SRS, frame the soft sign ь and the soft-vowel letters (я е ё ю и) as the orthographic signal of softness, and keep accepting imperfect learner production — research says perception lags for years, so don't gate progress on it.",
+        "Sequence CASES by frequency-of-use and one-function-at-a-time, not by traditional grammar-table order. Suggested from-zero path: (1) Nominative (citation form, 'this is X', subject); (2) Accusative for direct objects of common transitive verbs + 'я хочу/люблю X'; (3) Prepositional for location 'в/на X' (very high frequency, endings are simple); (4) Genitive (possession, 'нет X', 'много X') because it is high-frequency and unlocks negation/quantity; then (5) Dative and (6) Instrumental. Use the spiral approach: introduce each case's single most frequent function, let the CI engine surface it in context, and expand endings/uses later rather than dumping a full paradigm table.",
+        "DEFER verb ASPECT past the initial phase. Build early speaking/reading around the PRESENT tense (imperfective only) where the aspect choice does not arise, plus a small set of memorized perfective-future/past chunks as whole lexical items. Introduce explicit imperfective/perfective contrast only once past and future tense become productive needs, and teach it through paired example sentences (process vs result) rather than rules. Tag every verb in your DB with its aspect and its aspectual partner so the engine can later present pairs.",
+        "Also DEFER: full case-ending paradigm tables, numerals + case agreement (notoriously irregular), verbs of motion with prefixes, participles/gerunds, and the masculine/neuter/feminine + plural ending matrix presented all-at-once. Let frequency + comprehensible input introduce forms; use SRS to drill the specific forms that actually appear in the learner's texts.",
+        "Implement an explicit STRESS-MARK WEANING mechanism tied to known-words state. Show acute accents on any word not yet 'known'; once a word crosses your mastery threshold, render it unaccented (as real text does) so the learner trains toward authentic unmarked text. This is the bridge between learner-material conventions and real Russian, and it should be automatic and per-word.",
+        "Drive text selection with the ~95-98% known-word coverage rule (Hu & Nation): only surface a sentence/passage when the learner already knows >=95% of its tokens (target 98% for unaided reading), introducing roughly one new word at a time. Compute coverage on inflected forms (lemmatize first), and order vocabulary acquisition by the Lyashevskaya/Sharoff RNC frequency ranking so early coverage gains are maximal.",
+        "Build the data layer on existing open assets rather than hand-rolling: seed the dictionary from OpenRussian/Badestrand (CC-BY-SA 4.0, accented forms + Tatoeba sentences), use StimulStat for stress-position + stress-mobility + frequency + syllable metadata, use the Lyashevskaya & Sharoff RNC frequency list for sequencing, and run RUAccent (high accuracy, MIT-style pip package) or the Vuizur stresser to auto-annotate any imported/learner-supplied text. Respect AGPL (Vuizur) vs CC-BY-SA (OpenRussian) license obligations in a personal app.",
+        "Add per-word audio for every SRS item (the stress+reduction pairing is only learnable with sound). If recorded audio is unavailable, use a Russian TTS that respects stress marks, and feed it the accented form so it reduces vowels correctly; verify a sample because some TTS engines mis-stress unmarked input."
+      ],
+      "resources": [
+        {
+          "name": "OpenRussian / Badestrand russian-dictionary (GitHub)",
+          "url": "https://github.com/Badestrand/russian-dictionary",
+          "note": "CC-BY-SA 4.0 open dataset: nouns/verbs/adjectives CSVs with accented declensions & conjugations, plus Tatoeba example sentences. Full DB (incl. 350k+ sentences) browsable/exportable via TogetherDB. Best primary seed for a stress-annotated dictionary + sentence bank."
+        },
+        {
+          "name": "StimulStat lexical database",
+          "url": "http://stimul.cognitivestudies.ru",
+          "note": "Free. 52k lemmas / 1.7M word forms, >70 psycholinguistic variables including stress position (in symbols AND syllables) and a flag for whether stress shifts in the inflectional paradigm, plus frequency and homonymy. Ideal reference for the stress + stress-mobility data model. (Alexeeva, Slioussar & Chernova 2018, Behavior Research Methods.)"
+        },
+        {
+          "name": "RUAccent (ruaccent-predictor)",
+          "url": "https://aclanthology.org/2025.coling-main.444/",
+          "note": "State-of-the-art automatic stress placement (COLING 2025): char-level Transformer + morphology + homograph resolution + ё-restoration. ~0.97 non-homograph / 0.96 homograph accuracy. Available as pip 'ruaccent-predictor'. Use to annotate arbitrary imported text."
+        },
+        {
+          "name": "Vuizur / FreeLanguageTools add-stress-to-epub",
+          "url": "https://github.com/Vuizur/add-stress-to-epub",
+          "note": "AGPL-3.0 tool that stresses whole Russian ebooks/text and restores ё using parsed Wiktionary (kaikki.org) + grammatical analysis; ~93-96% accuracy. Underlying reusable DB built via ebook_dictionary_creator. Good fallback / batch annotator (mind AGPL copyleft)."
+        },
+        {
+          "name": "russtress / StressRNN (PyPI + GitHub)",
+          "url": "https://pypi.org/project/russtress/",
+          "note": "LSTM/BiLSTM stress placement from the EMNLP-2017 'Automated Word Stress Detection in Russian' work; uses Zaliznyak's grammatical dictionary. Ships UD-treebank samples annotated with stress. Lighter-weight alternative to RUAccent; lower accuracy."
+        },
+        {
+          "name": "Lyashevskaya & Sharoff frequency lists (Russian National Corpus)",
+          "url": "https://en.wiktionary.org/wiki/Appendix:Frequency_dictionary_of_the_modern_Russian_language_(the_Russian_National_Corpus)",
+          "note": "The standard modern Russian frequency ranking (RNC, ~92M-word subcorpus; ~5k core lexemes published, full lemma list available). Use to order vocabulary introduction so early known-word coverage rises fastest."
+        },
+        {
+          "name": "Hu & Nation (2000), Unknown Vocabulary Density and Reading Comprehension",
+          "url": "https://nflrc.hawaii.edu/rfl/item/43",
+          "note": "Primary source for the 95-98% lexical-coverage threshold that should gate which texts your CI engine surfaces. Replicated by Kremmel et al. 2023 (Language Learning, doi:10.1111/lang.12622)."
+        },
+        {
+          "name": "Kochetov, Colantoni et al. (2015), Russian palatalized/unpalatalized coda consonants (Journal of Phonetics)",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0095447015000777",
+          "note": "Electropalatography + acoustic evidence that English-speaking L2 learners largely fail to produce the palatalization contrast even with immersion/training — justifies low production-mastery expectations and a perception-first approach."
+        },
+        {
+          "name": "Jouravlev & Lupker (2015), Predicting stress in an unpredictable stress language",
+          "url": "https://www.psychology.uwo.ca/faculty/lupkerpdfs/Jouravlev%20&%20Lupker,%202015a.pdf",
+          "note": "Peer-reviewed evidence on the unpredictability of Russian stress and the limited orthographic cues speakers use — grounds the 'store stress per form' design decision."
+        },
+        {
+          "name": "Wikipedia: Vowel reduction in Russian",
+          "url": "https://en.wikipedia.org/wiki/Vowel_reduction_in_Russian",
+          "note": "Clear reference describing akanye (unstressed o/a -> [a]/[ə]) and the front-vowel reduction (ikanye), showing reduction is fully determined by stress position. Good basis for the per-word pronunciation explanations."
+        },
+        {
+          "name": "easypronunciation.com Russian stress tool",
+          "url": "https://easypronunciation.com/en/add-stress-marks-to-russian-text",
+          "note": "Web tool that auto-adds stress marks and restores ё; useful as a sanity-check reference for your own annotation pipeline (not a primary data source / check licensing before any programmatic use)."
+        }
+      ],
+      "sources": [
+        "https://www.psychology.uwo.ca/faculty/lupkerpdfs/Jouravlev%20&%20Lupker,%202015a.pdf",
+        "https://www.researchgate.net/publication/281324275_Predicting_stress_patterns_in_an_unpredictable_stress_language_The_use_of_non-lexical_sources_of_evidence_for_stress_assignment_in_Russian",
+        "https://www.cambridge.org/core/journals/phonology/article/default-stress-assignment-in-russian-evidence-from-acquired-surface-dyslexia/1890076DCE1C2A7FBE45E77B620E82DF",
+        "https://en.wikipedia.org/wiki/Vowel_reduction_in_Russian",
+        "https://en.wikipedia.org/wiki/Akanye",
+        "https://www.sciencedirect.com/science/article/abs/pii/S0095447015000777",
+        "https://www.researchgate.net/publication/283580578_Russian_palatalized_and_unpalatalized_coda_consonants_An_electropalatographic_and_acoustic_analysis_of_native_speaker_and_L2_learner_productions",
+        "https://www.ocerints.org/intcess20_e-publication/papers/97.pdf",
+        "https://storylearning.com/learn/russian/russian-tips/russian-cases",
+        "https://www.jbe-platform.com/content/journals/10.1075/pl.24010.kis",
+        "https://www.russianlessons.net/grammar/verbs_aspect.php",
+        "http://www.russianforeveryone.com/Rufe/Lessons/Course1/Grammar/GramUnit13/GramUnit13_1.htm",
+        "https://storylearning.com/learn/russian/russian-tips/russian-verb-aspect",
+        "https://russianstepbystep.com/accent-mark-in-russian-textbooks/",
+        "https://learnrussianstepbystep.com/en/stress-marks-in-russian-words/",
+        "https://nflrc.hawaii.edu/rfl/item/43",
+        "https://onlinelibrary.wiley.com/doi/10.1111/lang.12622",
+        "https://files.eric.ed.gov/fulltext/EJ887873.pdf",
+        "https://github.com/Badestrand/russian-dictionary",
+        "https://en.openrussian.org/about",
+        "https://aclanthology.org/2025.coling-main.444/",
+        "https://github.com/Vuizur/add-stress-to-epub",
+        "https://github.com/FreeLanguageTools/stress-russian-books",
+        "https://pypi.org/project/russtress/",
+        "https://github.com/dbklim/StressRNN",
+        "https://arxiv.org/pdf/1907.05757",
+        "https://link.springer.com/article/10.3758/s13428-017-0994-3",
+        "https://pubmed.ncbi.nlm.nih.gov/29218589/",
+        "https://www.hse.ru/data/2013/05/15/1300026430/LyashevskayaON_Frequency_dictionary_of_inflectional_paradigms.pdf",
+        "https://en.wiktionary.org/wiki/Appendix:Frequency_dictionary_of_the_modern_Russian_language_(the_Russian_National_Corpus)",
+        "https://easypronunciation.com/en/add-stress-marks-to-russian-text"
+      ],
+      "uncertainties": [
+        "No empirical consensus exists on the single best teaching ORDER for the 6 cases; my recommended frequency-driven sequence (Nom->Acc->Prep->Gen->Dat->Inst) synthesizes textbook practice and frequency, but it is a reasoned design choice, not a result validated by a controlled SLA study.",
+        "The 95-98% coverage thresholds come from L2 ENGLISH reading research (Hu & Nation and replications). They are widely treated as cross-linguistic but have not, to my knowledge, been specifically validated for L2 Russian, whose rich inflection may shift the effective threshold when coverage is computed on lemmas vs forms.",
+        "Reported accuracy figures for the stress tools (RUAccent ~0.97/0.96; Vuizur ~93-96%; StressRNN ~90%) come from the projects' own papers/READMEs on their own test sets; real-world accuracy on your specific learner texts (esp. rare words, names, and homographs) will be lower and should be spot-checked.",
+        "Exact licensing/usage terms for the easypronunciation.com online tool and any rate limits/API were not confirmed (the page returned 403); verify before any programmatic use. OpenRussian data is CC-BY-SA 4.0 and the Vuizur epub tool is AGPL-3.0 — both impose attribution/copyleft obligations that matter even for a personal app if you ever distribute it.",
+        "I did not independently verify the exact field schema (whether stress accents are encoded on every inflected form) of the Badestrand CSV exports; the README and OpenRussian site indicate accented forms exist, but confirm the encoding (combining acute vs marker char) before building parsing on top of it.",
+        "Whether explicit, early instruction on palatalization meaningfully improves long-run learner outcomes is unresolved: the cited study shows training helped acoustics but not identification, so the ROI of heavy early drilling vs simple exposure is uncertain."
+      ]
+    },
+    {
+      "topic": "Open/free data resources for a from-zero Russian learning app: word frequency lists and English-Russian cognates/loanwords",
+      "takeaways": [
+        "FREQUENCY (best free, fully reusable): hermitdave/FrequencyWords on GitHub is the strongest practical option. It provides OpenSubtitles-2018-derived Russian frequency lists as plain `word count` text files. Russian path: content/2018/ru/ with ru_50k.txt (top 50k) and ru_full.txt (full list). Verified format example from ru_50k.txt: 'я 5081568', 'не 4334804', 'что 3552532'. License: MIT (code) + CC BY-SA 4.0 (the word-frequency data) — commercial use allowed with attribution + share-alike on the data.",
+        "FREQUENCY (Python-native, drop-in): rspeer/wordfreq (PyPI: `wordfreq`) gives Russian frequencies in code with zero scraping. It blends 5 sources (Wikipedia, OpenSubtitles, News, Web, Twitter), so it's robust against any single-source skew. Use top_n_list('ru', N), zipf_frequency(word,'ru'), word_frequency(word,'ru'), get_frequency_dict('ru'). License: Apache 2.0 (code), CC BY-SA 4.0 (data). Best if you want frequency as a ranking/weighting signal rather than a fixed list to ship.",
+        "FREQUENCY (learner-graded, CEFR — the highest-value pedagogical list): Serge Sharoff's Kelly project (Russian) maps ~9,000 most-frequent lemmas to CEFR levels A1–C2 (the frequency-ordered list was split into 6 equal bands = A1..C2) with ipm (instances per million). Download: ru_m3.xls from https://ssharoff.github.io/kelly/. License: CC BY-NC-SA 2.0 — NON-COMMERCIAL only. Perfect for a personal app: it directly answers 'what should I learn first, and is it A1 or B2?'.",
+        "FREQUENCY (RNC / Lyashevskaya-Sharoff): The canonical Russian National Corpus frequency dictionary (Lyashevskaya & Sharoff 2009, ~92M-word balanced corpus) underlies a Wiktionary appendix of the top 20,000 words ('Appendix:Frequency dictionary of the modern Russian language (the Russian National Corpus)'), reusable under Wiktionary's CC BY-SA 4.0. The original RNC *texts* are copyright-restricted (no redistribution), but the derived frequency list / lemma ranks are usable. The 2013 Routledge 'A Frequency Dictionary of Russian: Core Vocabulary for Learners' (5,000 lemmas, English glosses, CEFR-ish bands) is a COPYRIGHTED book, not a free dataset — useful reference, not a download.",
+        "FREQUENCY (Leeds web corpus / hingston mirror): hingston/russian on GitHub mirrors the University of Leeds internet-ru frequency analysis as the 100,000 most common Russian words, with convenient cuts: 100000-russian-words.txt, 50000-russian-words-cyrillic-only.txt, 10000-russian-words.txt, 10000-russian-words-cyrillic-only.txt. License: CC BY 2.5 (attribution only — most permissive of the lot, commercial OK). Good for a large clean Cyrillic-only vocabulary universe.",
+        "COGNATES (free + structured + reusable): The genuinely open cognate data lives on Wiktionary, not in learning blogs. 'Category:Russian terms borrowed from English' lists ~1,220 English-origin Russian words (e.g. компьютер, бизнес, менеджер) — exactly the 'almost-readable' set; plus 'Category:Russian internationalisms' captures Greek/Latin/French internationalisms (ресторан, телефон, театр, музей) shared with English. All Wiktionary content is CC BY-SA 4.0 and machine-harvestable via category dumps / the MediaWiki API.",
+        "COGNATES (curated examples, NOT free datasets): The well-known cognate compilations (hackyourrussian '500+ cognates', livefluent, StoryLearning '121+', YourDictionary) are readable web articles, mostly proprietary/no stated license and partly paywalled (hackyourrussian sells an 800-word audio guide). Treat them as inspiration/seed examples to hand-curate, not as datasets to ingest. They confirm ~2,000 useful English-Russian cognates exist.",
+        "DIRECTION CAVEAT for cognates: Wikipedia's 'List of English words of Russian origin' (CC BY-SA 4.0) is the REVERSE direction (vodka, sputnik, tsar) and is small/not useful for early Russian-reading wins. For your app you want English→Russian borrowings + internationalisms, which is the Wiktionary 'borrowed from English' + 'internationalisms' categories.",
+        "LICENSE BOTTOM LINE: For a personal/non-commercial app you can use everything above. If you ever go commercial, drop Kelly (NC) and lean on FrequencyWords / wordfreq / hingston (CC BY-SA / Apache / CC BY) plus Wiktionary (CC BY-SA) — all commercial-friendly with attribution (and share-alike on the data for the SA ones)."
+      ],
+      "recommendations": [
+        "Seed the core vocabulary engine from hermitdave/FrequencyWords content/2018/ru/ru_50k.txt — parse the simple 'word count' lines into (rank, lemma, count). This is your master frequency spine for ranking what to teach next and for weighting comprehensible-input sentence selection (prefer sentences whose unknown-word frequency rank is just beyond the learner's known set).",
+        "Layer CEFR levels onto that spine using the Kelly ru_m3.xls (A1–C2 bands + ipm). Join Kelly lemmas to your FrequencyWords spine to get 'frequency rank + CEFR level' per word — this gives you principled lesson gating (start A1, only introduce A2 once A1 coverage is high). Note Kelly is CC BY-NC-SA 2.0, so keep the app non-commercial or swap it out before monetizing.",
+        "Use the `wordfreq` Python package at runtime as the scoring function inside the comprehensible-input engine: compute zipf_frequency(token,'ru') for every token in a candidate sentence to estimate difficulty and to decide if a sentence is 'i+1' (mostly known words + one slightly-rarer target). It's pip-installable, Apache-2.0, and avoids shipping/maintaining a static list.",
+        "Build a 'quick early wins' cognate deck (your seed for fast motivation) by harvesting Wiktionary 'Category:Russian terms borrowed from English' (~1,220 entries) and 'Category:Russian internationalisms' via the MediaWiki API, then INTERSECT with the top ~3,000 of your frequency spine so you only surface cognates that are also common (ресторан, телефон, компьютер, банк, проблема, музей). This yields high-frequency, instantly-readable words for day-1 wins. Attribute Wiktionary (CC BY-SA 4.0).",
+        "Hand-curate the very first 50–100 cognate cards from the blog compilations (hackyourrussian, livefluent, StoryLearning) for quality/teaching order, but store only your own re-expression of them (word + your English explanation) rather than copying their text, since those pages have no open license.",
+        "Normalize across sources before joining: lowercase, strip stress marks (combining acute U+0301, e.g. телефо́н → телефон), and lemmatize. FrequencyWords/OpenSubtitles is surface-form and inflected; Kelly/RNC are lemma-based. Use pymorphy3 (Russian morphological analyzer) to lemmatize OpenSubtitles forms so they join cleanly to the lemma-based learner lists.",
+        "Keep a small per-source attribution/licenses file in the repo (FrequencyWords: CC BY-SA 4.0; wordfreq: Apache-2.0 + CC BY-SA 4.0 data; Kelly: CC BY-NC-SA 2.0; hingston/Leeds: CC BY 2.5; Wiktionary: CC BY-SA 4.0) so the share-alike/attribution obligations are satisfied and the non-commercial constraint on Kelly is tracked.",
+        "For the spaced-repetition scheduler, order new-card introduction by frequency rank (most frequent first) within CEFR band; for cognates, front-load them as 'free' early cards (lower initial difficulty) since recognition is near-instant for an English speaker — this maximizes early motivation without distorting the frequency-driven curriculum."
+      ],
+      "resources": [
+        {
+          "name": "hermitdave/FrequencyWords (Russian, OpenSubtitles 2018)",
+          "url": "https://github.com/hermitdave/FrequencyWords",
+          "note": "Plain-text 'word count' lists. Russian files: content/2018/ru/ru_50k.txt (top 50k) and content/2018/ru/ru_full.txt. Direct raw: https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/ru/ru_50k.txt . License: MIT (code) + CC BY-SA 4.0 (data). Commercial OK with attribution + share-alike on data. Best general-purpose free frequency spine."
+        },
+        {
+          "name": "wordfreq (rspeer) — PyPI package",
+          "url": "https://github.com/rspeer/wordfreq",
+          "note": "pip install wordfreq. Russian ('ru') blends Wikipedia+Subtitles+News+Web+Twitter. APIs: top_n_list, zipf_frequency, word_frequency, get_frequency_dict. License: Apache-2.0 (code) + CC BY-SA 4.0 (data). Use as runtime difficulty/scoring function."
+        },
+        {
+          "name": "Kelly project Russian list (Serge Sharoff) — CEFR-graded",
+          "url": "https://ssharoff.github.io/kelly/",
+          "note": "~9,000 lemmas with CEFR A1–C2 bands + ipm. Download: ru_m3.xls (linked on page). License: CC BY-NC-SA 2.0 (NON-COMMERCIAL). Highest pedagogical value for lesson gating."
+        },
+        {
+          "name": "Wiktionary: Frequency lists / Russian (hub + RNC 20k appendix)",
+          "url": "https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists/Russian",
+          "note": "Hub linking the OpenSubtitles 50k list and 'Appendix:Frequency dictionary of the modern Russian language (the Russian National Corpus)' = top 20,000 RNC (Lyashevskaya-Sharoff) words. License: CC BY-SA 4.0. RNC source texts themselves are copyright-restricted; the derived frequency ranks are reusable."
+        },
+        {
+          "name": "hingston/russian (University of Leeds internet corpus, 100k words)",
+          "url": "https://github.com/hingston/russian",
+          "note": "Files: 100000-russian-words.txt, 50000-russian-words-cyrillic-only.txt, 10000-russian-words.txt, 10000-russian-words-cyrillic-only.txt. License: CC BY 2.5 (attribution only; commercial OK). Source: corpus.leeds.ac.uk internet-ru frequency analysis."
+        },
+        {
+          "name": "Wiktionary Category: Russian terms borrowed from English (~1,220)",
+          "url": "https://en.wiktionary.org/wiki/Category:Russian_terms_borrowed_from_English",
+          "note": "Open, structured English→Russian loanword set (компьютер, бизнес, менеджер...). Harvest via MediaWiki API/category dumps. License CC BY-SA 4.0. Pair with Category:Russian_internationalisms for ресторан/телефон/театр-type internationalisms."
+        },
+        {
+          "name": "Wiktionary Category: Russian internationalisms",
+          "url": "https://en.wiktionary.org/wiki/Category:Russian_terms_by_etymology",
+          "note": "Internationalisms (Greek/Latin/French roots shared with English: телефон, театр, музей, проблема). Reach the internationalisms subcategory from the by-etymology index. CC BY-SA 4.0. Intersect with high-frequency list for instant-recognition early cards."
+        },
+        {
+          "name": "Wikipedia: List of English words of Russian origin (REVERSE direction)",
+          "url": "https://en.wikipedia.org/wiki/List_of_English_words_of_Russian_origin",
+          "note": "Russian-origin words in English (vodka, sputnik, tsar). CC BY-SA 4.0. Small and the WRONG direction for early Russian-reading wins — included only to clarify it is NOT the cognate source you want."
+        },
+        {
+          "name": "hackyourrussian / livefluent / StoryLearning cognate articles",
+          "url": "https://www.hackyourrussian.com/post/russian-english-similar-words-cognates",
+          "note": "Curated cognate example lists (~500+, ~2,000 estimated total). Web articles, no open license, partly paywalled. Use as hand-curation inspiration only; do not ingest their text."
+        }
+      ],
+      "sources": [
+        "https://github.com/hermitdave/FrequencyWords",
+        "https://github.com/hermitdave/FrequencyWords/blob/master/LICENSE",
+        "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/ru/ru_50k.txt",
+        "https://github.com/rspeer/wordfreq",
+        "https://ssharoff.github.io/kelly/",
+        "https://spraakbanken.gu.se/en/projects/kelly",
+        "https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists/Russian",
+        "https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists",
+        "https://github.com/hingston/russian",
+        "https://raw.githubusercontent.com/hingston/russian/master/LICENSE.md",
+        "http://corpus.leeds.ac.uk/list.html",
+        "https://en.wiktionary.org/wiki/Category:Russian_terms_borrowed_from_English",
+        "https://en.wiktionary.org/wiki/Category:Russian_terms_by_etymology",
+        "https://en.wikipedia.org/wiki/List_of_English_words_of_Russian_origin",
+        "https://www.hackyourrussian.com/post/russian-english-similar-words-cognates",
+        "https://www.semanticscholar.org/paper/A-Frequency-Dictionary-of-Russian:-core-vocabulary-Sharoff-Umanskaya/81eb5bb725445249e225403de74de952ce986dd2"
+      ],
+      "uncertainties": [
+        "Exact entry count of the FrequencyWords ru_full.txt was not measured (it is the unfiltered OpenSubtitles 2018 list, typically several hundred thousand surface forms incl. noise/typos); only ru_50k.txt (top 50k) was content-verified line-by-line.",
+        "Kelly Russian list size is stated as '~9,000 words' across the project's own page and the Språkbanken/academic descriptions; the precise row count in ru_m3.xls was not opened cell-by-cell. The CEFR banding is by equal-sized frequency sextiles, which is a coarse heuristic, not validated per-word difficulty.",
+        "Kelly's license is reported as CC BY-NC-SA 2.0 by the project page summary; confirm the exact CC version on the ru_m3.xls landing before relying on it, as NC is the binding constraint for any future commercialization.",
+        "The corpus.leeds.ac.uk frequency pages (list.html and frqc/internet-ru.num) timed out on fetch; Leeds list details (e.g., exact internet-ru.num columns) are inferred from the hingston mirror and secondary descriptions rather than directly read. Leeds usage terms generally require linking back to corpus.leeds.ac.uk for research use; the hingston mirror restates CC BY 2.5.",
+        "Wiktionary category counts (~1,220 'borrowed from English') drift over time as editors add entries; treat as approximate. Some category members are rare/technical, so intersect with a frequency list to keep only useful high-frequency cognates.",
+        "The estimate of ~2,000 total useful English-Russian cognates comes from a learning blog (hackyourrussian), not a peer-reviewed count; the true number depends on how loosely 'recognizable cognate' is defined."
+      ]
+    },
+    {
+      "topic": "Text-to-speech (TTS) options for Russian in a local, personal, low-cost web app for learning Russian from zero (English explanations, known-words + comprehensible-input engine with spaced repetition)",
+      "takeaways": [
+        "Browser Web Speech API (speechSynthesis) gives inconsistent Russian coverage and quality across browsers/OSes, so it cannot be relied on as a primary engine. Per readium.org's cross-browser/OS survey: Chrome desktop preloads only ~19 high-quality voices across 15 languages and they are ONLINE-ONLY; Edge preloads 250+ neural voices across 75 languages but also online-only; Safari does NOT expose downloadable/high-quality voices via the API and upgrading a voice can make it vanish from the list; Firefox ships no native voices and falls back to whatever the OS provides.",
+        "Offline browser Russian voices depend entirely on the user's OS. On macOS (the user's platform, Darwin) the bundled Russian voices (e.g. Milena, Yuri) are older formant/concatenative voices that sound noticeably robotic compared with modern neural TTS; Apple's higher-quality downloadable voices are often not exposed to the Web Speech API at all. MDN confirms each SpeechSynthesisVoice carries a localService boolean (true = on-device/offline, false = remote/network) and that the available set is whatever the underlying OS/browser service provides.",
+        "Because speechSynthesis voices, names, and quality vary unpredictably by machine and the good ones are network-dependent anyway, treating it as a primary source means the same Russian word can sound different (or robotic, or be unavailable) depending on which browser/OS the app happens to run on.",
+        "edge-tts (Python, rany2/edge-tts, GPL-3.0) is the standout free option: it reaches Microsoft Edge's online neural TTS with NO API key and NO cost, and provides two natural-sounding Russian neural voices, ru-RU-SvetlanaNeural (female) and ru-RU-DmitryNeural (male). These are modern neural voices, far better for Russian intonation/palatalization than browser OS voices. It outputs MP3 directly and can emit word-timing/subtitle (SRT) data, which is useful for highlighting words during comprehensible input.",
+        "edge-tts caveats: it requires an internet connection (no local models), it uses an unofficial/undocumented Microsoft endpoint, so it is not contractually guaranteed and could break or rate-limit. SSML is restricted to what Edge itself would generate. For a personal/local app these risks are acceptable, especially if audio is cached.",
+        "gTTS (Google Translate TTS) is free and trivial in Python but is the weakest quality option: it uses an unofficial, undocumented Google Translate endpoint (no published quota; community reports of soft rate-limiting around tens of thousands of characters per hour and HTTP 429s), produces flatter, less natural Russian than neural voices, and has a history of chunking bugs that broke Russian. Fine as a last-ditch fallback, not as a default.",
+        "Google Cloud Text-to-Speech is a legitimately high-quality, low-cost middle path with a genuinely generous perpetual free tier: roughly 1,000,000 chars/month for Neural2 voices and 4,000,000 chars/month for WaveNet voices, then ~$16/M (Neural2) and ~$4/M (WaveNet). It has official, supported ru-RU neural voices and full SSML (including IPA <phoneme> for correct Russian stress) - the key differentiator for a learning app, since Russian word stress is unpredictable and not written. Requires a Google Cloud account and API key.",
+        "OpenAI TTS (tts-1 at ~$15/M chars; gpt-4o-mini-tts at ~$0.60/M text in + ~$12/M audio out, ~1.5 cents/min) supports Russian, but its voices (alloy, nova, etc.) are English-optimized and OpenAI explicitly warns accent/quality varies in non-English languages - it can carry an English-tinged accent in Russian, which is undesirable for ear-training a beginner. MOS ~3.9. No SSML/phoneme stress control. Reasonable as a paid fallback you may already have a key for, but not ideal for Russian fidelity.",
+        "ElevenLabs has the most natural, native-sounding Russian voices but is the most expensive and most usage-constrained: free tier only ~10,000 chars/month (~10 min), and commercial/heavier use starts at $5/mo (Starter ~30,000 credits). For a high-volume comprehensible-input + SRS app that generates lots of audio, the character budget is too small to be a primary engine; best reserved for a small set of high-value, polished clips.",
+        "Quality/cost ranking for a personal Russian learner (best natural Russian per dollar): ElevenLabs > Google Cloud Neural2/WaveNet ~ edge-tts (both genuinely good and effectively free) > OpenAI TTS (English-accented risk) > gTTS (flat/unofficial) > browser OS voices on macOS (robotic, inconsistent). Only browser-local voices and on-device OS voices are truly offline; every cloud option (edge-tts, gTTS, Google, OpenAI, ElevenLabs) needs internet."
+      ],
+      "recommendations": [
+        "Default engine: edge-tts in the Python backend with ru-RU-SvetlanaNeural and ru-RU-DmitryNeural. It is free, no API key, high neural quality for Russian, and exposes word boundaries you can use to highlight the current word during comprehensible-input playback. Alternate the two voices so the learner hears both male and female pronunciation.",
+        "Cache every generated clip on disk keyed by (text, voice, rate) hash. Because your engine reuses known words and sentences across spaced-repetition reviews, caching turns a per-review network call into a one-time generation, removes latency, sidesteps edge-tts rate-limit/breakage risk, and lets review sessions work offline once a card's audio exists.",
+        "Fallback engine: Google Cloud Text-to-Speech (ru-RU Neural2/WaveNet). Wrap TTS behind a small provider interface (synthesize(text, voice, rate) -> mp3_bytes) so you can fail over from edge-tts to Google automatically when the unofficial endpoint errors or rate-limits. The free tier (~1M Neural2 / ~4M WaveNet chars/month) comfortably covers a single learner, and it is officially supported rather than a scraped endpoint.",
+        "Use SSML <phoneme> with IPA on the Google Cloud path for words where Russian stress matters or is ambiguous - store an optional per-word stress/IPA field in your known-words data model so the engine can render correct stress. This directly serves a from-zero learner since stress is not marked in written Russian and mispronouncing it is the most common beginner error. edge-tts's restricted SSML cannot do this, so route stress-sensitive items to Google.",
+        "Do NOT make the browser Web Speech API your primary or fallback for Russian. If you want a zero-dependency emergency path (e.g., backend unreachable), use speechSynthesis only as a last resort: at runtime filter voices by lang starting with 'ru', prefer localService===false (network) voices, and clearly accept that quality and availability will vary by the user's browser/OS. On the user's macOS, expect robotic results.",
+        "Control playback speed in the player, not by regenerating audio: let the learner slow native-rate neural audio to ~0.75x for shadowing/TORFL-style listening practice and ramp back to 1.0x. This is better pedagogy than synthesizing at a slow rate (which distorts neural prosody) and costs nothing.",
+        "Keep ElevenLabs as an optional, manually-triggered 'premium clip' source for a handful of showcase sentences (its ~10k chars/month free tier is too small for bulk SRS audio). Keep OpenAI TTS off the Russian default path because of its English-optimized accent risk; only use it if you already pay for OpenAI and need a quick cloud fallback.",
+        "Generate audio asynchronously and store it with each card so review sessions never block on TTS. Pre-synthesize audio for new known-words/sentences at the moment they enter the deck (or in a batch job), so by review time the clip is already cached locally."
+      ],
+      "resources": [
+        {
+          "name": "rany2/edge-tts (GitHub, recommended default engine)",
+          "url": "https://github.com/rany2/edge-tts",
+          "note": "Python module + CLI for Microsoft Edge neural TTS, no API key, free. Russian voices ru-RU-SvetlanaNeural (F) and ru-RU-DmitryNeural (M). Outputs MP3 + SRT word timings. GPL-3.0. Requires internet; uses an unofficial endpoint (restricted SSML)."
+        },
+        {
+          "name": "Google Cloud Text-to-Speech - supported voices & languages (recommended fallback)",
+          "url": "https://docs.cloud.google.com/text-to-speech/docs/list-voices-and-types",
+          "note": "Official ru-RU Neural2/WaveNet voices, full SSML including IPA <phoneme> for Russian stress control."
+        },
+        {
+          "name": "Google Cloud Text-to-Speech pricing / free tier",
+          "url": "https://cloud.google.com/text-to-speech/pricing",
+          "note": "Perpetual free tier ~1M chars/month Neural2 and ~4M chars/month WaveNet; then ~$16/M (Neural2), ~$4/M (WaveNet). Needs a GCP account + API key."
+        },
+        {
+          "name": "gTTS documentation (low-quality free fallback)",
+          "url": "https://gtts.readthedocs.io/",
+          "note": "Free Python TTS via unofficial Google Translate endpoint. Flatter Russian quality, undocumented rate limits, history of chunking bugs for Russian. Use only as last resort."
+        },
+        {
+          "name": "OpenAI Text-to-Speech guide & models",
+          "url": "https://platform.openai.com/docs/guides/text-to-speech",
+          "note": "tts-1 ~$15/M chars; gpt-4o-mini-tts ~1.5 cents/min. Russian supported but voices are English-optimized (accent risk); no phoneme/SSML stress control."
+        },
+        {
+          "name": "ElevenLabs Text-to-Speech (premium, limited free tier)",
+          "url": "https://elevenlabs.io/text-to-speech",
+          "note": "Most natural Russian voices; free tier only ~10k chars/month (~10 min); paid from $5/mo. Best for a few showcase clips, not bulk SRS audio."
+        },
+        {
+          "name": "MDN - SpeechSynthesisVoice (localService property)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice",
+          "note": "Authoritative: localService boolean distinguishes on-device (offline) vs remote (network) voices; available voice set is whatever the OS/browser provides."
+        },
+        {
+          "name": "Readium 'SpeechSynthesis in browsers and OSes' survey",
+          "url": "https://readium.org/speech/docs/WebSpeech.html",
+          "note": "Detailed cross-browser/OS audit: Chrome ~19 online-only voices, Edge 250+ online-only neural voices, Safari hides high-quality voices, Firefox uses OS voices; documents naming/quality inconsistency."
+        },
+        {
+          "name": "Edge TTS voice list (FoloToy wiki)",
+          "url": "https://github.com/FoloToy/folotoy-server-self-hosting/wiki/Edge%E2%80%90TTS%E2%80%90Voices",
+          "note": "Confirms the ru-RU edge-tts voices: DmitryNeural (M) and SvetlanaNeural (F)."
+        }
+      ],
+      "sources": [
+        "https://github.com/rany2/edge-tts",
+        "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice",
+        "https://readium.org/speech/docs/WebSpeech.html",
+        "https://docs.cloud.google.com/text-to-speech/docs/list-voices-and-types",
+        "https://cloud.google.com/text-to-speech/pricing",
+        "https://gtts.readthedocs.io/",
+        "https://gtts.readthedocs.io/en/latest/changelog.html",
+        "https://platform.openai.com/docs/guides/text-to-speech",
+        "https://platform.openai.com/docs/models/gpt-4o-mini-tts",
+        "https://elevenlabs.io/text-to-speech",
+        "https://github.com/FoloToy/folotoy-server-self-hosting/wiki/Edge%E2%80%90TTS%E2%80%90Voices",
+        "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis",
+        "https://developer.apple.com/forums/thread/723503"
+      ],
+      "uncertainties": [
+        "Exact, current edge-tts rate-limit thresholds and long-term reliability are unknown because it relies on an undocumented Microsoft endpoint; it has broken before when Microsoft changed the service. Caching and a Google Cloud fallback mitigate this but the risk is real and not contractually covered.",
+        "I did not run a side-by-side listening test of ru-RU-SvetlanaNeural vs Google ru-RU Neural2 vs ElevenLabs Russian; relative naturalness rankings are drawn from documentation, MOS figures, and aggregated reviews rather than my own A/B evaluation of Russian-specific stress/palatalization. A quick personal listening test on your actual target sentences is advisable before locking the default.",
+        "I could not confirm the precise set and quality of Russian voices the user's specific macOS version exposes to the Web Speech API (it varies by OS version and which voices are downloaded); the 'robotic on macOS' assessment is based on the general nature of Apple's API-exposed Russian voices, not a check of this exact machine.",
+        "OpenAI/ElevenLabs/Google pricing and free-tier numbers were gathered from current (June 2026) sources but vendor pricing and free-tier limits change; verify the exact current figures on the official pages before committing budget.",
+        "gTTS character/hour rate-limit figures come from community reports, not official documentation (Google publishes no quota for this unofficial endpoint), so treat them as approximate."
+      ]
+    }
+  ],
+  "verdicts": [
+    {
+      "claim": "test",
+      "verdict": "supported",
+      "explanation": "SUPPORTED. Nation 2006 confirms 98 percent equals 1 in 50 and 95 percent equals 1 in 20; Laufer 2010 gives 98 optimal and 95 minimal; Schmitt 2011 found linear and endorsed 98 percent.",
+      "sources": [
+        "https://www.lextutor.ca/cover/papers/nation_2006.pdf"
+      ]
+    },
+    {
+      "claim": "FSRS is current state-of-the-art and Anki's default since v23.10 (Nov 2023); uses a three-component DSR model vs SM-2's single ease factor; on the open-spaced-repetition benchmark (~727M reviews/~10k users) beats SM-2 for ~99.5% of users and needs ~20-30% fewer reviews for the same retention. Recommendation: build on py-fsrs (pip install fsrs, import name fsrs), wrap Scheduler/Card/Rating/review_card in a thin service, persist full Card FSRS state + every ReviewLog, and do not implement SM-2 yourself.",
+      "verdict": "mixed",
+      "explanation": "Almost every part of the claim checks out, but one decision-critical fact is wrong: FSRS is NOT and was NOT \"Anki's default since v23.10.\"\n\nWHAT IS WRONG — the \"default since 23.10\" attribution:\n- The official Anki 23.10 changelog says FSRS support was \"now integrated into Anki\" — i.e. it became available and could be configured inside Anki without custom-scheduling hacks. It does NOT say it became the default. (changes.ankiweb.net/changes/23.10.html)\n- The official Anki manual (deck-options.html) still frames FSRS as opt-in: \"When you turn on FSRS...\" and \"Enable FSRS under the 'FSRS' section, at the bottom of the deck options page.\" This is the language of a feature you must switch on, not a default.\n- The official Anki FAQ (faqs.ankiweb.net/what-spaced-repetition-algorithm) lists SM-2 first and FSRS second as two available algorithms, again not declaring FSRS the default.\n- Anki's lead developer (dae) explicitly wrote in a Jan 29, 2024 forum thread titled \"Why isn't FSRS the default scheduler?\" that it is not the default yet, citing integration kinks and users who fail cards with Hard instead of Again. So as of early 2024 SM-2 was still the default for new collections, with FSRS opt-in. (Note: secondary blog/SEO sites do loosely claim \"default since 23.10,\" but they are not authoritative and conflict with Anki's own docs and developer.) The correct statement is: 23.10 (Nov 2023) is when FSRS became a built-in, officially supported, opt-in option in Anki — not the default.\n\nWHAT IS CORRECT (well-supported):\n- State of the art / DSR model: FSRS uses the three-component DSR model — Difficulty, Stability, Retrievability — vs SM-2's single ease factor. Confirmed by the official FSRS/DSR repo and the algorithm write-ups. A notable practical upside: Difficulty uses mean reversion, avoiding SM-2's \"ease hell.\"\n- Benchmark accuracy: The open-spaced-repetition srs-benchmark uses ~727M reviews / ~10k users (with ~350M reviews used for evaluation after excluding same-day reviews). The official benchmark page reports FSRS-6 superiority over Anki SM-2 of ~99.6% of collections (the ~99.5% figure is accurate). One fair caveat the benchmark itself flags: SM-2 was not designed to output recall probabilities, so probability-conversion formulas were bolted on for comparison — the comparison is not perfectly apples-to-apples, though it is the standard cited evidence.\n- ~20-30% fewer reviews for the same retention: Widely cited and attributed to the Anki team's own testing and large-scale benchmarks. This is the one quantitative claim with weaker primary sourcing (it appears in secondary write-ups and Anki team statements rather than a single rigorous primary paper in the benchmark repo), but it is the consensus figure and I found nothing refuting it. Treat it as a reasonable planning estimate, not a guaranteed result for a from-zero personal app with little data.\n\nTHE py-fsrs RECOMMENDATION (sanity-check) — sound:\n- pip install fsrs is correct; import name is fsrs; classes Scheduler, Card, Rating, ReviewLog exist; the workflow card, review_log = scheduler.review_card(card, rating) is the documented API. The package is actively maintained (latest v6.3.1, March 2026; ~36 releases).\n- It exposes ReviewLog and an optional optimizer via pip install \"fsrs[optimizer]\" that computes optimal parameters/retention from historical ReviewLogs — so the advice to persist every ReviewLog for later optimization is correct and important (the optimizer is useless without stored logs).\n- Card scheduling state (stability, difficulty, due, last_review, step, state) is tracked on the Card object; Card supports serialization, so persisting full state is straightforward. Wrapping the library behind a thin scheduling service is good design and keeps you insulated from FSRS-6 -> future-version changes.\n- \"Do NOT implement SM-2 yourself; FSRS is strictly better and the library handles the math\" — directionally fine for a personal app, but two caveats: (1) \"strictly better\" is an overstatement — FSRS's edge depends on rating Hard vs Again consistently, which is the exact reason Anki's dev kept it opt-in; for a from-zero learner this is a real usability consideration. (2) With near-zero review history, FSRS runs on default/global parameters and only personalizes after you accumulate enough reviews to run the optimizer — so early on the practical accuracy gap over SM-2 is smaller than the headline benchmark numbers suggest.\n\nBOTTOM LINE: Build on py-fsrs as recommended — that guidance is solid. But correct the one load-bearing fact in your design doc: FSRS has been a built-in opt-in option in Anki since v23.10 (Nov 2023); it was not Anki's default at that time (SM-2 was). Hence verdict = mixed rather than supported.",
+      "sources": [
+        "https://changes.ankiweb.net/changes/23.10.html",
+        "https://docs.ankiweb.net/deck-options.html",
+        "https://faqs.ankiweb.net/what-spaced-repetition-algorithm",
+        "https://forums.ankiweb.net/t/why-isnt-fsrs-the-default-scheduler/40455",
+        "https://expertium.github.io/Benchmark.html",
+        "https://github.com/open-spaced-repetition/srs-benchmark",
+        "https://github.com/open-spaced-repetition/py-fsrs",
+        "https://pypi.org/project/fsrs/",
+        "https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler",
+        "https://expertium.github.io/Algorithm.html"
+      ]
+    },
+    {
+      "claim": "The dominant pedagogical model groups the 33 Cyrillic letters by visual/phonetic relationship to Latin (not alphabetically) in a four-bucket sequence — (1) true friends, (2) false friends, (3) unfamiliar shape/familiar sound, (4) genuinely new letters/sounds + the two signs — and Babbel, RussianLessons.net, the University of Arizona CMES module, and Polyglottist all converge on this same sequence. Plus a recommended lesson split with specific letters per bucket.",
+      "verdict": "mixed",
+      "explanation": "CORE MODEL: STRONGLY SUPPORTED. The four-bucket sequence (true friends to false friends to unfamiliar-shape/familiar-sound to new sounds + signs) is genuinely the dominant beginner-facing model for English speakers, used across many independent sources. It originates with RussianPod101's \"True/False/New Friends + Strangers\" series and is mirrored by RussianLessons.net, Polyglottist Language Academy, Rocket Languages, Fluent in 3 Months, and others. The first three buckets reproduce almost identically everywhere (True: А К М О Т; False: В Е Н Р С У Х; New friends: Б Г Д З И Л П Ф Э). So the pedagogical thrust of the takeaway holds.\n\nSOURCE-CONVERGENCE CLAIM: PARTIALLY REFUTED. The assertion that \"Babbel ... and the University of Arizona CMES academic module ... all converge on this same four-bucket sequence\" does not hold up to two of its four named sources.\n - Babbel: I could not confirm Babbel uses this four-bucket model. Babbel's public alphabet pages (babbel.com/russian-alphabet, the \"Cyrillic in two days\" magazine piece) discuss history and mention isolated false-friend examples but do NOT present the structured four-bucket sequence. Whatever is inside Babbel's paywalled course is unverifiable from public sources; citing Babbel as a converging authority for THIS specific schema is unsupported.\n - \"University of Arizona CMES academic module\": I could not locate any such module. \"CMES\" is Center for Middle Eastern Studies — wrong center for Russian (UArizona Russian sits under the Critical Languages Program / Russian & Slavic dept, and its historical Critical Languages Series did not even cover Russian). This citation appears to be fabricated or misremembered; treat it as non-existent until a real URL is produced.\n - Only RussianLessons.net and Polyglottist are verifiably accurate citations for the four-bucket sequence.\n\nRECOMMENDATION LETTER ASSIGNMENTS: ONE REAL ERROR, otherwise sound.\n - Lesson 1 (А К М О Т) and Lesson 2 (В Н Р С У Х + Е) match the canonical model exactly — Е is correctly a false friend. Good.\n - Lesson 3 PROBLEM: it places the iotated vowels Ё Ю Я (and lists Й in L3) into the \"unfamiliar-shape/familiar-sound\" bucket. This contradicts the dominant model it claims to follow. RussianPod101's canonical taxonomy puts Ё Ю Я Й, the hissing letters, Ы, and both signs ALL in the final \"Strangers\" group — Й, Ё, Ю, Я are explicitly classed as Strangers, not new-friends. Pedagogically the iotated vowels carry a genuinely new sound/behavior (preceding /j/, palatalization) so they belong in bucket 4, not bucket 3. The recommendation also drops Й inconsistently (named in L3 but also implied in L4). Minor count note: with Е moved to L2, buckets 1–3 hold 5+7+ letters and the totals only reach 33 if the iotated vowels land in L4. Recommend moving Ё Ю Я Й to Lesson 4.\n\nOTHER SANITY CHECKS (supported): recognition-before-production and time-to-read framing are well attested — sources report basic Cyrillic decoding in a few days to ~2 weeks, with transliteration deliberately removed after ~7–10 days to force direct reading, which aligns with the app's SRS + comprehensible-input design.",
+      "sources": [
+        "https://www.russianpod101.com/lesson/russian-alphabet-made-easy-10-review-of-true-false-and-new-friends?lp=67",
+        "https://www.russianlessons.net/lessons/lesson1_main.php",
+        "https://www.polyglottistlanguageacademy.com/language-culture-travelling-blog/2026/5/29/the-russian-alphabet-in-2-hours-a-complete-beginners-guide-to-cyrillic",
+        "https://www.polyglottistlanguageacademy.com/language-culture-travelling-blog/2026/3/30/how-to-learn-russian-alphabet-fast",
+        "https://www.babbel.com/russian-alphabet",
+        "https://www.babbel.com/en/magazine/learn-cyrillic-alphabet-two-days",
+        "https://clp.arizona.edu/",
+        "https://en.wikipedia.org/wiki/Critical_languages_series",
+        "https://www.rocketlanguages.com/russian/lessons/russian-alphabet",
+        "https://www.fluentin3months.com/learn-russian-cyrillic-alphabet/",
+        "https://languagelearnershub.com/blog/learn-russian-alphabet/"
+      ]
+    },
+    {
+      "claim": "STRESS is the keystone problem of Russian for from-zero English speakers: Russian stress is lexically unpredictable and mobile across a word's inflectional paradigm, phonemic in some pairs, with no reliable rule set, so it must be learned per lexeme and per form. Therefore stress should be modeled as a first-class per-word-FORM attribute (stored on lemma AND each inflected form, with a mobile/stress-shift flag, as StimulStat exposes) and marked in all learner-facing Russian from day one, because vowel reduction is unrecoverable without it.",
+      "verdict": "supported",
+      "explanation": "I tried to refute this and could not; every load-bearing component holds up under current scholarly and pedagogical sources.\n\nCORE CLAIM (well supported):\n- Unpredictable/lexical: Russian has a \"free lexical stress system\" where any syllable can be stressed; the Cambridge Phonology default-stress study concludes stress is \"fundamentally lexical-dependent\" with rule-based defaults only a supplementary fallback. Jouravlev & Lupker (2015) explicitly title Russian \"an unpredictable stress language.\"\n- Mobile across the paradigm: Confirmed — stress alternates between stem and suffix across inflectional forms; Zaliznyak's Grammatical Dictionary codifies 6 noun stress patterns (plus adjective/verb variants) precisely because stress shifts per form.\n- Phonemic/contrastive: Confirmed via minimal pairs (muka 'torture' vs muka 'flour'; dorog vs dorog).\n- Vowel reduction unrecoverable without stress: Strongly confirmed — reduction (akanye) is \"entirely predictable once you know where the stress falls,\" and undecidable without it (canonical moloko example: of three letters O only the stressed one is clear).\n- Marking stress in all learner-facing material from day one: Confirmed as standard pedagogy — learner dictionaries and textbooks mark stress for exactly this reason; native text omits it.\n\nONE NUANCE (does not overturn the takeaway): The very papers cited (Jouravlev & Lupker) found weak PROBABILISTIC non-lexical cues (onset/coda complexity, certain orthographic segments) that beat chance. So Russian stress is not literally rule-free; rather, no cue set is reliable enough to replace per-lexeme/per-form learning. The claim's phrase \"no reliable rule set\" is therefore accurate in spirit (no rules reliable enough to skip lexical storage) but slightly overstated if read as \"no statistical regularities exist.\"\n\nONE PARTIALLY-VERIFIED DETAIL: StimulStat (52k+ lemmas, 1.7M+ word forms, 70+ properties) does store main/secondary stress position per lemma AND per word form — confirmed. I could NOT independently confirm it exposes an explicit boolean \"mobile/stress-shift\" flag (official site uses a self-signed cert; the Behavior Research Methods paper is paywalled). However, the data-model recommendation stands regardless: Zaliznyak-based resources (Wiktionary appendices, libraries like tsnorm) encode stress-shift paradigms per form, so storing stress per form plus a mobility flag is well-founded and is the right design. Recommend sourcing stress data from Zaliznyak/Wiktionary-derived datasets and verifying StimulStat's exact field list directly if it is to be cited as the model.\n\nBottom line: the decision-critical takeaway and the data-model recommendation are sound design drivers; treat the StimulStat \"mobile flag exists\" specific as unconfirmed and the \"no rules at all\" wording as a slight simplification.",
+      "sources": [
+        "https://www.cambridge.org/core/journals/phonology/article/default-stress-assignment-in-russian-evidence-from-acquired-surface-dyslexia/1890076DCE1C2A7FBE45E77B620E82DF",
+        "https://www.psychology.uwo.ca/faculty/lupkerpdfs/Jouravlev%20&%20Lupker,%202015a.pdf",
+        "https://www.researchgate.net/publication/281324275_Predicting_stress_patterns_in_an_unpredictable_stress_language_The_use_of_non-lexical_sources_of_evidence_for_stress_assignment_in_Russian",
+        "https://link.springer.com/article/10.3758/s13423-015-0802-y",
+        "https://link.springer.com/article/10.3758/s13428-017-0994-3",
+        "http://stimul.s-alexeeva.ru/ru_stimul/info/",
+        "https://en.wikipedia.org/wiki/Vowel_reduction_in_Russian",
+        "https://en.wikipedia.org/wiki/Akanye",
+        "https://www.internationalphoneticassociation.org/icphs-proceedings/ICPhS2015/Papers/ICPHS0402.pdf",
+        "https://en.wikipedia.org/wiki/Andrey_Zaliznyak",
+        "https://en.wiktionary.org/wiki/Appendix:Russian_stress_patterns_-_nouns",
+        "https://pypi.org/project/tsnorm/1.1.0/",
+        "https://russianstepbystep.com/accent-mark-in-russian-textbooks/",
+        "https://learnrussian101.com/all-you-need-to-know-about-russian-stress-patterns/"
+      ]
+    },
+    {
+      "claim": "hermitdave/FrequencyWords on GitHub provides OpenSubtitles-2018-derived Russian frequency lists at content/2018/ru/ (ru_50k.txt, ru_full.txt) as plain 'word count' text (e.g. 'я 5081568', 'не 4334804', 'что 3552532'), licensed MIT (code) + CC BY-SA 4.0 (data) with commercial use allowed under attribution + share-alike; recommended as the master frequency spine for a Russian-learning app.",
+      "verdict": "mixed",
+      "explanation": "The factual and technical core of the claim is verified exactly, but the license/commercial-use conclusion is overstated and partly inaccurate, so the takeaway is mixed rather than fully supported.\n\nVERIFIED EXACTLY:\n- The repo exists and is OpenSubtitles-2018-derived. README states the 2018 lists are generated from OpenSubtitles2018 (opus.nlpl.eu/OpenSubtitles2018).\n- Path content/2018/ru/ exists and contains ru_50k.txt and ru_full.txt (plus ru_ignored.txt).\n- Format is plain '{word}{space}{occurrence_count}' text, exactly as claimed.\n- The example lines are verbatim-correct: I fetched the raw ru_50k.txt and its first three lines are 'я 5081568', 'не 4334804', 'что 3552532'.\n- The README literally states 'MIT License for code. CC-by-sa-4.0 for content.'\n\nPROBLEMS WITH THE LICENSE/REUSABILITY CLAIM (why this is not 'fully reusable, commercial use allowed'):\n1. Repo LICENSE file mismatch: The repository's actual LICENSE file is MIT only (Copyright (c) 2016 Hermit Dave) and does not contain any CC-BY-SA text. The CC-BY-SA-4.0 designation lives only in the README prose / GitHub metadata, not in a formal license file applied to the data files. This weakens the clean 'dual license' framing.\n2. Version inconsistency: The author's own canonical page (invokeit.wordpress.com/frequency-word-lists) states the lists are under Creative Commons Attribution/ShareAlike 3.0, not 4.0. So the author has published two different CC BY-SA versions (3.0 on his site, 4.0 on GitHub). The specific '4.0' in the claim is only one of two author-stated versions.\n3. Upstream non-commercial restriction (the decision-critical risk): The data is derived from the OPUS OpenSubtitles2018 corpus, which OPUS explicitly does NOT own ('We do not own any of the text... We only offer files that we believe we are free to redistribute'). The underlying source, opensubtitles.org, restricts use to non-commercial, scientific and educational purposes. A downstream re-publisher's CC BY-SA label cannot grant broader rights than the upstream source allows, so the flat assertion 'commercial use allowed' is legally shaky for the data and should not be relied upon for a commercial app without independent legal review. Note also the data is frequency counts (facts), which in many jurisdictions are not themselves copyrightable — a separate argument that cuts toward reusability but is not what the claim asserts.\n\nPRACTICAL RECOMMENDATION (the second part) is sound: ru_50k.txt is exactly a ranked 'word count' file; parsing lines into (rank, lemma, count) is trivial and correct (rank = line order, descending count). Using it as a frequency spine for sequencing vocabulary and weighting comprehensible-input sentence selection by unknown-word rank is a reasonable, common design. One technical caveat: the entries are surface word forms/tokens, not lemmas — Russian is heavily inflected, so 'lemma' in the parse tuple is a misnomer; you'd need lemmatization (e.g. pymorphy3/pymystem3) to get true lemma frequencies, or accept form-level frequencies.\n\nNET: Format, path, files, example data, and the MIT-code/CC-BY-SA-content README labeling are all confirmed (supported). The 'CC BY-SA 4.0 + commercial use allowed' reusability conclusion is unreliable because of the LICENSE-file/version inconsistencies and, more importantly, the non-commercial restriction on the upstream OpenSubtitles source (refuted/uncertain). Recommend treating hermitdave as the best practical free Russian frequency list technically, but do NOT assume clean commercial rights to the data without legal review; consider the wordfreq Python package (which also draws on OpenSubtitles among other sources) as a cross-check.",
+      "sources": [
+        "https://github.com/hermitdave/FrequencyWords",
+        "https://github.com/hermitdave/FrequencyWords/blob/master/LICENSE",
+        "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/README.md",
+        "https://github.com/hermitdave/FrequencyWords/tree/master/content/2018/ru",
+        "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/ru/ru_50k.txt",
+        "https://invokeit.wordpress.com/frequency-word-lists/",
+        "https://opus.nlpl.eu/legacy/OpenSubtitles-v2018.php",
+        "https://www.sketchengine.eu/opensubtitles-parallel-corpora/"
+      ]
+    },
+    {
+      "claim": "Browser Web Speech API gives inconsistent/unreliable Russian coverage across browsers and OSes (per readium.org: Chrome ~19 online-only voices/15 langs; Edge 250+ online-only neural voices/75 langs; Safari hides downloadable voices and upgrading one can make it vanish; Firefox ships no native voices, falls back to OS), so it cannot be a primary engine. Recommendation: use edge-tts in a Python backend with ru-RU-SvetlanaNeural + ru-RU-DmitryNeural — free, no API key, high neural quality, exposes word boundaries for word-highlighting, alternate male/female voices.",
+      "verdict": "supported",
+      "explanation": "I tried to refute this and could not; primary sources confirm it almost verbatim, with one caveat the user should plan around.\n\nREADIUM SURVEY (all confirmed near-verbatim at readium.org/speech/docs/WebSpeech.html):\n- Chrome: \"preloaded with a limited selection of 19 high quality voices across 15 languages\" and \"All of these voices require online access to use them, without any fallback to a lower quality offline variant.\" Matches \"~19 / 15 languages / online-only.\"\n- Edge: \"over 250 preloaded voices across 75 languages (as of April 2024)\" and these \"natural\" voices \"rely on Machine Learning (ML) and therefore require online access.\" Matches \"250+ / 75 languages / online-only.\" (Note a documented macOS quirk: Edge shows only ~18 voices until the API has spoken once, then expands to 250+ — which itself reinforces the \"inconsistent/unreliable to rely on\" thesis.)\n- Safari: \"Downloadable voices do not show up in the list returned by the Web Speech API,\" and \"when installing higher quality variants of preloaded voices, these voices disappear in Safari, which means that entire languages could disappear completely.\" Matches the claim exactly.\n- Firefox: \"Firefox doesn't come with any preloaded voice of its own\" and relies on system voices. Matches \"no native voices, falls back to OS.\"\nThe overarching conclusion (Web Speech API is too inconsistent across browser/OS to be a reliable primary engine, especially for a single non-English language like Russian) is well-supported by this survey, which is exactly why readium built a curated voice-ranking layer on top of it.\n\nEDGE-TTS RECOMMENDATION (confirmed against the rany2/edge-tts repo):\n- Free, no API key, no Edge/Windows needed: project tagline is \"Use Microsoft Edge's online text-to-speech service from Python WITHOUT needing Microsoft Edge or Windows or an API key.\" Correct.\n- Russian voices exist: ru-RU-SvetlanaNeural (Female) and ru-RU-DmitryNeural (Male) are both in the current voice list. Correct, and alternating them gives the male/female contrast claimed.\n- Word boundaries for highlighting: CONFIRMED in source (communicate.py). Communicate.stream() yields dicts of {\"type\": \"WordBoundary\"/\"SentenceBoundary\", \"offset\", \"duration\", \"text\"} interleaved with {\"type\": \"audio\", \"data\": ...}. These offsets are real word-level timestamps and are exactly what SubMaker uses to build SRT/VTT subtitles, so they can drive current-word highlighting during comprehensible-input playback. Correct and load-bearing — this is the strongest reason to prefer edge-tts over browser TTS for a karaoke-style reader.\n- High neural quality: these are Microsoft Azure-grade neural voices (same tech as Edge Read Aloud); quality is widely regarded as good for Russian. Reasonable.\n\nCAVEATS the user must weigh (these prevent a blind \"all-green\" but do not refute the claim for THIS use case):\n1) RELIABILITY: edge-tts is an unofficial, reverse-engineered client of Microsoft's Read Aloud endpoint, not a supported API. It has broken before (403 errors requiring a new Sec-MS-GEC anti-abuse token, GitHub issues #290/#458) and Microsoft has tightened filtering on datacenter/cloud IP ranges — so it can fail from servers on cloud IPs. For a LOCAL, personal app running from a residential IP this is low-risk and the package has historically been patched quickly, but a \"default engine\" should have a fallback path. Caching generated MP3s also sidesteps rate-limiting and latency.\n2) TERMS / COMMERCIAL USE: Using Microsoft's service this way is generally treated as fine for personal/local use, but commercial use without an Azure subscription may violate Microsoft's ToS. The user's stated scope (local, personal, low-cost) fits the accepted use case; if it ever ships commercially, move to paid Azure TTS (same voices, same WordBoundary support) — a clean upgrade path.\n\nNet: the refutation attempt fails. The factual claims are accurate, the recommendation is sound for a local personal Russian-learning app, and the only adjustment is to add a fallback engine (e.g. offline Piper/Silero, or paid Azure) and cache audio for robustness rather than treating the reverse-engineered endpoint as guaranteed-available.",
+      "sources": [
+        "https://readium.org/speech/docs/WebSpeech.html",
+        "https://github.com/rany2/edge-tts",
+        "https://raw.githubusercontent.com/rany2/edge-tts/master/README.md",
+        "https://github.com/rany2/edge-tts/blob/master/src/edge_tts/communicate.py",
+        "https://github.com/FoloToy/folotoy-server-self-hosting/wiki/Edge%E2%80%90TTS%E2%80%90Voices",
+        "https://github.com/rany2/edge-tts/issues/290",
+        "https://github.com/rany2/edge-tts/issues/458",
+        "https://learn.microsoft.com/en-us/answers/questions/2088770/are-opensource-edge-tts-free-for-commercial-use"
+      ]
+    }
+  ]
+}
