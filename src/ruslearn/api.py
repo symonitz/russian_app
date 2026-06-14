@@ -13,7 +13,9 @@ from sqlalchemy.orm import Session
 
 from ruslearn.alphabet import AlphabetModule
 from ruslearn.db import init_db, make_engine, make_session_factory
+from ruslearn.gemini_cli import GeminiCLIProvider
 from ruslearn.lexicon import LexiconStore
+from ruslearn.reader import ContentGenerator
 from ruslearn.seed import SeedImporter
 from ruslearn.srs import SRSService
 from ruslearn.tts import TTSService
@@ -37,13 +39,16 @@ def _now() -> datetime:
 
 
 def create_app(
-    db_path: Path | str = DEFAULT_DB, tts_cache_dir: Path | str | None = None
+    db_path: Path | str = DEFAULT_DB,
+    tts_cache_dir: Path | str | None = None,
+    generator: ContentGenerator | None = None,
 ) -> FastAPI:
     engine = make_engine(db_path)
     init_db(engine)
     factory = make_session_factory(engine)
     srs = SRSService()
     tts = TTSService(tts_cache_dir or (DATA_DIR / "tts"))
+    generator = generator or ContentGenerator(GeminiCLIProvider())
 
     # One-time idempotent seeding.
     with factory() as s:
@@ -101,6 +106,13 @@ def create_app(
             s.commit()
             return {"lemma_id": lemma_id, "state": k.state}
 
+    @app.post("/api/vocab/{lemma_id}/introduce")
+    def vocab_introduce_one(lemma_id: int) -> dict:
+        with session() as s:
+            k = LexiconStore(s, srs).introduce_lemma(lemma_id, _now())
+            s.commit()
+            return {"lemma_id": lemma_id, "state": k.state}
+
     @app.post("/api/alphabet/introduce")
     def alpha_introduce(body: CountBody) -> dict:
         with session() as s:
@@ -130,6 +142,34 @@ def create_app(
             lk = AlphabetModule(s, srs).record_answer(letter_id, body.rating, _now())
             s.commit()
             return {"letter_id": letter_id, "state": lk.state}
+
+    @app.get("/api/reading/next")
+    async def reading_next() -> dict:
+        with session() as s:
+            store = LexiconStore(s, srs)
+            known = store.known_words()
+            new = store.peek_next_new()
+            new_info = (
+                {"id": new.id, "cyrillic": new.cyrillic, "gloss": new.gloss_en}
+                if new
+                else None
+            )
+        if len(known) < 3:
+            return {"needs_more": True, "known_count": len(known)}
+        if new_info is None:
+            return {"done": True}
+        try:
+            passage = await generator.generate(
+                known, new_info["cyrillic"], new_info["gloss"]
+            )
+        except Exception:
+            raise HTTPException(status_code=502, detail="generation failed")
+        return {
+            "passage": passage.text,
+            "glossary": passage.glossary,
+            "new_words": passage.new_words,
+            "new_word": new_info,
+        }
 
     @app.get("/api/audio")
     async def audio(text: str, voice: str | None = None) -> FileResponse:

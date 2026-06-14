@@ -117,3 +117,38 @@ class LexiconStore:
                 Knowledge.introduced_at >= _day_start_naive(now),
             ),
         }
+
+    def known_words(self, limit: int = 200) -> list[str]:
+        """Cyrillic of all introduced lemmas (learning + known), frequency-first."""
+        stmt = (
+            select(Lemma.cyrillic)
+            .join(Knowledge)
+            .where(Knowledge.state.in_(("learning", "known")))
+            .order_by(Lemma.freq_rank)
+            .limit(limit)
+        )
+        return list(self.session.scalars(stmt))
+
+    def peek_next_new(self) -> Lemma | None:
+        """The next not-yet-introduced lemma by frequency (without introducing it)."""
+        stmt = (
+            select(Lemma)
+            .join(Knowledge)
+            .where(Knowledge.state == "new")
+            .order_by(Lemma.freq_rank)
+            .limit(1)
+        )
+        return self.session.scalars(stmt).first()
+
+    def introduce_lemma(self, lemma_id: int, now: datetime) -> Knowledge:
+        """Introduce one specific lemma into SRS (no-op if already introduced)."""
+        k = self.session.scalars(
+            select(Knowledge).where(Knowledge.lemma_id == lemma_id)
+        ).one()
+        if k.state == "new":
+            k.card = self.srs.new_card()
+            k.state = "learning"
+            k.due_ts = _ts(now)
+            k.introduced_at = _naive_utc(now)
+            self.session.flush()
+        return k

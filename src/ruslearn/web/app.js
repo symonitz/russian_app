@@ -62,15 +62,16 @@ function requeue(queue, card) {
 }
 
 function show(view) {
-  for (const id of ["home", "reviews", "alphabet"]) {
+  for (const id of ["home", "reviews", "alphabet", "reading"]) {
     $(`#view-${id}`).hidden = id !== view;
   }
   $("#back").hidden = view === "home";
   $("#title").textContent =
-    view === "home" ? "READING · RUSSIAN" : view.toUpperCase();
+    view === "home" ? "RUSLEARN · RUSSIAN" : view.toUpperCase();
   if (view === "home") refreshHome();
   if (view === "reviews") loadReviews();
   if (view === "alphabet") loadAlphabet();
+  if (view === "reading") loadReading();
 }
 
 async function refreshHome() {
@@ -219,13 +220,87 @@ function renderLetterCard(card) {
   };
 }
 
+// ---- Reading ----
+async function loadReading() {
+  const stage = $("#reading-stage");
+  stage.innerHTML = `<div class="empty">Generating a passage at your level…</div>`;
+  let data;
+  try {
+    data = await api("/api/reading/next");
+  } catch (e) {
+    stage.innerHTML = `<div class="empty">Couldn't generate right now.</div>
+      <div class="btn-row"><button class="btn reveal" id="read-retry">Try again</button></div>`;
+    $("#read-retry").onclick = loadReading;
+    return;
+  }
+  if (data.needs_more) {
+    stage.innerHTML = `<div class="empty">Learn a few words in <b>Reviews</b> first,<br>then come back to read. 📖</div>`;
+    return;
+  }
+  if (data.done) {
+    stage.innerHTML = `<div class="empty">You've met every seeded word! 🎉</div>`;
+    return;
+  }
+  renderPassage(data);
+}
+
+function renderPassage(data) {
+  const stage = $("#reading-stage");
+  const re = /\[\[(.+?)\]\]|([\p{L}\p{M}]+)|([^\p{L}\p{M}]+)/gu;
+  let html = "";
+  let m;
+  while ((m = re.exec(data.passage)) !== null) {
+    if (m[1] !== undefined) {
+      html += `<span class="rtoken rnew" data-w="${m[1]}">${m[1]}</span>`;
+    } else if (m[2] !== undefined) {
+      html += `<span class="rtoken" data-w="${m[2]}">${m[2]}</span>`;
+    } else {
+      html += m[3].replace(/\n/g, "<br>");
+    }
+  }
+  const nw = data.new_word || {};
+  const glossary = data.glossary || {};
+  stage.innerHTML = `
+    <div class="qcard reading"><div class="passage">${html}</div></div>
+    <div class="wordpop" id="wordpop" hidden></div>
+    <div class="newword">
+      <span>New word: <b>${nw.cyrillic || ""}</b> — ${nw.gloss || ""}</span>
+      <button class="btn r-good" id="add-new">＋ Add to reviews</button>
+    </div>
+    <div class="btn-row"><button class="btn reveal" id="read-next">↻ New passage</button></div>
+    <div class="subtitle" style="text-align:center;margin-top:10px;font-size:12px">
+      Tap any word to hear it &amp; see its meaning.
+    </div>`;
+  stage.querySelectorAll(".rtoken").forEach((el) => {
+    el.onclick = () => {
+      const w = el.dataset.w;
+      playAudio(w);
+      const g = glossary[w.toLowerCase()];
+      const pop = $("#wordpop");
+      pop.hidden = false;
+      pop.innerHTML = `<b>${w}</b>${g ? " — " + g : ""} <span class="pop-speak">🔊</span>`;
+      pop.querySelector(".pop-speak").onclick = (e) => {
+        e.stopPropagation();
+        playAudio(w);
+      };
+    };
+  });
+  $("#read-next").onclick = loadReading;
+  const addBtn = $("#add-new");
+  if (nw.id) {
+    addBtn.onclick = async () => {
+      await api(`/api/vocab/${nw.id}/introduce`, { method: "POST" });
+      addBtn.textContent = "✓ Added";
+      addBtn.disabled = true;
+    };
+  } else {
+    addBtn.style.display = "none";
+  }
+}
+
 // ---- wiring ----
 document.querySelectorAll(".mode[data-go]").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const go = btn.dataset.go;
-    if (go === "reading") return toast("Reading mode arrives in M2 ✨");
-    show(go);
-  });
+  btn.addEventListener("click", () => show(btn.dataset.go));
 });
 $("#back").addEventListener("click", () => show("home"));
 $("#voice").addEventListener("click", toggleVoice);

@@ -33,6 +33,44 @@ def test_audio_endpoint_requires_text(tmp_path):
     assert r.status_code == 400
 
 
+def test_reading_needs_more_when_nothing_known(tmp_path):
+    client = _client(tmp_path)  # fresh DB, 0 introduced
+    r = client.get("/api/reading/next")
+    assert r.status_code == 200
+    assert r.json()["needs_more"] is True
+
+
+def test_reading_generates_passage_with_injected_generator(tmp_path):
+    from ruslearn.reader import Passage
+
+    class _FakeGen:
+        async def generate(self, known, new_word, new_gloss):
+            return Passage(
+                text="Это [[белый]] дом.",
+                glossary={"это": "this", "дом": "house", "белый": "white"},
+                new_words=["белый"],
+            )
+
+    app = create_app(
+        db_path=tmp_path / "api.db", tts_cache_dir=tmp_path / "tts", generator=_FakeGen()
+    )
+    client = TestClient(app)
+    client.post("/api/vocab/introduce", json={"count": 5})  # known >= 3
+    r = client.get("/api/reading/next")
+    assert r.status_code == 200
+    body = r.json()
+    assert "[[белый]]" in body["passage"]
+    assert body["glossary"]["дом"] == "house"
+    assert body["new_word"]["cyrillic"]
+
+
+def test_introduce_one_endpoint(tmp_path):
+    client = _client(tmp_path)
+    r = client.post("/api/vocab/1/introduce")  # lemma id 1 = "я" (freq_rank 1)
+    assert r.status_code == 200
+    assert r.json()["state"] == "learning"
+
+
 def test_state_endpoint_reports_seeded_counts(tmp_path):
     client = _client(tmp_path)
     r = client.get("/api/state")

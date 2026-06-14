@@ -69,3 +69,17 @@ def test_record_review_easy_marks_known_and_logs(session, srs, now):
     assert store.counts(now=now)["known"] == 1
     from ruslearn.models import ReviewLogEntry
     assert session.query(ReviewLogEntry).count() == 1
+
+
+def test_known_words_peek_and_introduce_lemma(session, srs):
+    store = _store(session, srs)
+    _seed_three(store)  # я(1), дом(2), кот(3)
+    assert store.known_words() == []
+    assert store.peek_next_new().cyrillic == "я"  # lowest freq_rank
+    store.introduce_next(_now(), count=2)
+    assert set(store.known_words()) == {"я", "дом"}
+    kot = store.peek_next_new()
+    assert kot.cyrillic == "кот"
+    k = store.introduce_lemma(kot.id, _now())
+    assert k.state == "learning"
+    assert "кот" in store.known_words()

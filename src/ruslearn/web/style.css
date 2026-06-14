@@ -70,6 +70,19 @@ body {
   background:var(--glass); border:1px solid var(--line); color:var(--ink); font-size:15px; }
 .voicebtn:active { transform:scale(.92); }
 
+.qcard.reading { padding:24px 22px; text-align:left; }
+.passage { font-size:23px; line-height:2; }
+.rtoken { cursor:pointer; border-bottom:1px dotted rgba(255,255,255,.22); padding:0 1px; }
+.rtoken:active { color:var(--amber); }
+.rnew { color:#ffd27a; border-bottom:2px solid rgba(245,181,71,.7); border-radius:3px;
+  background:linear-gradient(180deg, transparent 60%, rgba(245,181,71,.20) 0); padding:0 3px; }
+.wordpop { margin-top:14px; background:var(--glass); border:1px solid var(--line);
+  border-radius:12px; padding:12px 14px; font-size:17px; }
+.wordpop .pop-speak { float:right; cursor:pointer; }
+.newword { margin-top:16px; display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  font-size:14px; color:var(--muted); }
+.newword .btn { flex:0 0 auto; margin-left:auto; }
+
 .empty { text-align:center; color:var(--muted); padding:60px 0; }
 .empty .add { margin-top:16px; }
 
