@@ -246,7 +246,7 @@ async function loadReading() {
 
 function renderPassage(data) {
   const stage = $("#reading-stage");
-  const re = /\[\[(.+?)\]\]|([\p{L}\p{M}]+)|([^\p{L}\p{M}]+)/gu;
+  const re = /\[\[(.+?)\]\]|([\p{L}\p{M}]+)|([^\p{L}\p{M}\[\]]+)/gu;
   let html = "";
   let m;
   while ((m = re.exec(data.passage)) !== null) {

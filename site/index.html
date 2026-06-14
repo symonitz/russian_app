@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0c0e14" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <title>ruslearn — Russian</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <button class="back" id="back" hidden>‹</button>
+      <div class="title" id="title">RUSLEARN&nbsp;·&nbsp;RUSSIAN</div>
+      <div class="spacer"></div>
+    </header>
+
+    <!-- HOME -->
+    <section class="view" id="view-home">
+      <h1 class="hello">Привет!</h1>
+      <p class="sub">Russian — from zero</p>
+      <div class="stats">
+        <div class="stat"><b id="s-known">0</b><span>known</span></div>
+        <div class="stat"><b id="s-due">0</b><span>due</span></div>
+        <div class="stat"><b id="s-left">0</b><span>to learn</span></div>
+      </div>
+      <button class="mode" data-go="alphabet">
+        <span class="ic">Аа</span>
+        <span class="m-txt"><b>Alphabet</b><i>Learn to read Cyrillic</i></span>
+        <span class="badge" id="b-alpha">0 / 33</span>
+      </button>
+      <button class="mode primary" data-go="reviews">
+        <span class="ic">⟳</span>
+        <span class="m-txt"><b>Reviews</b><i>Words due right now</i></span>
+        <span class="badge" id="b-rev">0 due</span>
+      </button>
+      <button class="mode" data-go="reading">
+        <span class="ic">¶</span>
+        <span class="m-txt"><b>Reading</b><i>Passages at your level</i></span>
+        <span class="badge" id="b-read">go</span>
+      </button>
+    </section>
+
+    <section class="view" id="view-reviews" hidden><div class="card-stage" id="rev-stage"></div></section>
+    <section class="view" id="view-alphabet" hidden><div class="card-stage" id="alpha-stage"></div></section>
+    <section class="view" id="view-reading" hidden><div class="card-stage" id="reading-stage"></div></section>
+  </div>
+
+  <div class="toast" id="toast" hidden></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

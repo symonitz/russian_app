@@ -1,0 +1,775 @@
+[
+  {
+    "level": 3,
+    "new_word": {
+      "cyrillic": "это",
+      "gloss": "this / it is"
+    },
+    "passage": "[[Это]] я. [[Это]] ты. [[Это]] не я.",
+    "glossary": {
+      "я": "I",
+      "ты": "you",
+      "не": "not",
+      "это": "this / it is"
+    },
+    "new_words": [
+      "это"
+    ]
+  },
+  {
+    "level": 4,
+    "new_word": {
+      "cyrillic": "и",
+      "gloss": "and"
+    },
+    "passage": "Это я.\nЭто ты [[и]] я.\nЭто не я [[и]] не ты.",
+    "glossary": {
+      "я": "I",
+      "ты": "you",
+      "не": "not",
+      "это": "this, it is",
+      "и": "and"
+    },
+    "new_words": [
+      "и"
+    ]
+  },
+  {
+    "level": 5,
+    "new_word": {
+      "cyrillic": "да",
+      "gloss": "yes"
+    },
+    "passage": "Это я? [[Да]].\nЭто ты? [[Да]].\nЭто не ты и не я. [[Да]]?",
+    "glossary": {
+      "я": "I",
+      "ты": "you",
+      "не": "not",
+      "это": "this, it",
+      "и": "and",
+      "да": "yes"
+    },
+    "new_words": [
+      "да"
+    ]
+  },
+  {
+    "level": 6,
+    "new_word": {
+      "cyrillic": "нет",
+      "gloss": "no"
+    },
+    "passage": "Это [[нет]]. Да, это я. И ты [[нет]]?",
+    "glossary": {
+      "я": "I",
+      "ты": "you (singular informal)",
+      "не": "not",
+      "это": "this/it",
+      "и": "and",
+      "да": "yes",
+      "нет": "no"
+    },
+    "new_words": [
+      "нет"
+    ]
+  },
+  {
+    "level": 7,
+    "new_word": {
+      "cyrillic": "он",
+      "gloss": "he"
+    },
+    "passage": "Это [[он]]?\nДа, это [[он]].\nТы и [[он]].",
+    "glossary": {
+      "это": "this, it is",
+      "он": "he",
+      "да": "yes",
+      "ты": "you",
+      "и": "and"
+    },
+    "new_words": [
+      "он"
+    ]
+  },
+  {
+    "level": 8,
+    "new_word": {
+      "cyrillic": "она",
+      "gloss": "she"
+    },
+    "passage": "Это он и [[она]]. [[Она]] не ты. Да, это [[она]].",
+    "glossary": {
+      "это": "this/it",
+      "он": "he",
+      "и": "and",
+      "она": "she",
+      "не": "not",
+      "ты": "you",
+      "да": "yes"
+    },
+    "new_words": [
+      "она"
+    ]
+  },
+  {
+    "level": 9,
+    "new_word": {
+      "cyrillic": "мы",
+      "gloss": "we"
+    },
+    "passage": "Это ты и я. Это [[мы]]. Да, это [[мы]]. Он и она. Это не [[мы]].",
+    "glossary": {
+      "это": "this",
+      "ты": "you",
+      "и": "and",
+      "я": "I",
+      "мы": "we",
+      "да": "yes",
+      "он": "he",
+      "она": "she",
+      "не": "not"
+    },
+    "new_words": [
+      "мы"
+    ]
+  },
+  {
+    "level": 10,
+    "new_word": {
+      "cyrillic": "хорошо",
+      "gloss": "good / well"
+    },
+    "passage": "Это не [[хорошо]].\nОн [[хорошо]].\nМы и она.",
+    "glossary": {
+      "это": "this",
+      "не": "not",
+      "хорошо": "good",
+      "он": "he",
+      "мы": "we",
+      "и": "and",
+      "она": "she"
+    },
+    "new_words": [
+      "хорошо"
+    ]
+  },
+  {
+    "level": 11,
+    "new_word": {
+      "cyrillic": "спасибо",
+      "gloss": "thank you"
+    },
+    "passage": "Это хорошо. Ты и я хорошо. Да, [[спасибо]].",
+    "glossary": {
+      "это": "this/it",
+      "хорошо": "good/well",
+      "ты": "you",
+      "и": "and",
+      "я": "I",
+      "да": "yes",
+      "спасибо": "thank you"
+    },
+    "new_words": [
+      "спасибо"
+    ]
+  },
+  {
+    "level": 12,
+    "new_word": {
+      "cyrillic": "привет",
+      "gloss": "hi"
+    },
+    "passage": "[[Привет]]!\n[[Привет]], это ты?\nДа, это я. Хорошо.",
+    "glossary": {
+      "привет": "hi",
+      "это": "this, it is",
+      "ты": "you (informal singular)",
+      "да": "yes",
+      "я": "I",
+      "хорошо": "good, well, okay"
+    },
+    "new_words": [
+      "привет"
+    ]
+  },
+  {
+    "level": 14,
+    "new_word": {
+      "cyrillic": "дом",
+      "gloss": "house"
+    },
+    "passage": "Это [[дом]]. Да, это [[дом]]. Я и ты.",
+    "glossary": {
+      "это": "this",
+      "дом": "house",
+      "да": "yes",
+      "я": "I",
+      "и": "and",
+      "ты": "you"
+    },
+    "new_words": [
+      "дом"
+    ]
+  },
+  {
+    "level": 15,
+    "new_word": {
+      "cyrillic": "друг",
+      "gloss": "friend"
+    },
+    "passage": "Это [[друг]]. Я и ты. Ты [[друг]]? Он [[друг]].",
+    "glossary": {
+      "это": "this/it is",
+      "друг": "friend",
+      "я": "I",
+      "и": "and",
+      "ты": "you (singular informal)",
+      "он": "he"
+    },
+    "new_words": [
+      "друг"
+    ]
+  },
+  {
+    "level": 16,
+    "new_word": {
+      "cyrillic": "город",
+      "gloss": "city"
+    },
+    "passage": "Это [[город]].\nПривет, это [[город]]?\nЭто дом и [[город]].",
+    "glossary": {
+      "это": "this is, it is",
+      "город": "city",
+      "привет": "hello",
+      "дом": "house, home",
+      "и": "and"
+    },
+    "new_words": [
+      "город"
+    ]
+  },
+  {
+    "level": 17,
+    "new_word": {
+      "cyrillic": "вода",
+      "gloss": "water"
+    },
+    "passage": "Это [[вода]]. Да, это [[вода]]. Дом и [[вода]].",
+    "glossary": {
+      "это": "this is",
+      "вода": "water",
+      "да": "yes",
+      "дом": "house",
+      "и": "and"
+    },
+    "new_words": [
+      "вода"
+    ]
+  },
+  {
+    "level": 18,
+    "new_word": {
+      "cyrillic": "книга",
+      "gloss": "book"
+    },
+    "passage": "Это [[книга]]. Он и ты. Это [[книга]] и дом.",
+    "glossary": {
+      "это": "this, it is",
+      "книга": "book",
+      "он": "he",
+      "и": "and",
+      "ты": "you",
+      "дом": "house, home"
+    },
+    "new_words": [
+      "книга"
+    ]
+  },
+  {
+    "level": 19,
+    "new_word": {
+      "cyrillic": "мама",
+      "gloss": "mom"
+    },
+    "passage": "Это [[мама]]. [[Мама]] и я. [[Мама]] дома.",
+    "glossary": {
+      "это": "this",
+      "мама": "mom",
+      "и": "and",
+      "я": "I",
+      "дома": "at home"
+    },
+    "new_words": [
+      "мама"
+    ]
+  },
+  {
+    "level": 20,
+    "new_word": {
+      "cyrillic": "папа",
+      "gloss": "dad"
+    },
+    "passage": "Это [[папа]]?\nДа, это [[папа]].\n[[Папа]] и мама дома.",
+    "glossary": {
+      "это": "this is",
+      "папа": "dad",
+      "да": "yes",
+      "и": "and",
+      "мама": "mom",
+      "дома": "at home"
+    },
+    "new_words": [
+      "папа"
+    ]
+  },
+  {
+    "level": 21,
+    "new_word": {
+      "cyrillic": "кот",
+      "gloss": "cat"
+    },
+    "passage": "Это [[кот]]. [[Кот]] хорошо. Я и [[кот]].",
+    "glossary": {
+      "это": "this",
+      "кот": "cat",
+      "хорошо": "good",
+      "я": "I",
+      "и": "and"
+    },
+    "new_words": [
+      "кот"
+    ]
+  },
+  {
+    "level": 22,
+    "new_word": {
+      "cyrillic": "собака",
+      "gloss": "dog"
+    },
+    "passage": "Это [[собака]]. Это [[собака]] и кот. Он друг и [[собака]].",
+    "glossary": {
+      "это": "this/it is",
+      "собака": "dog",
+      "и": "and",
+      "кот": "cat",
+      "он": "he",
+      "друг": "friend"
+    },
+    "new_words": [
+      "собака"
+    ]
+  },
+  {
+    "level": 23,
+    "new_word": {
+      "cyrillic": "стол",
+      "gloss": "table"
+    },
+    "passage": "Это [[стол]]. Это книга и [[стол]]. Мама и папа, это [[стол]].",
+    "glossary": {
+      "это": "this is / it is",
+      "стол": "table",
+      "книга": "book",
+      "и": "and",
+      "мама": "mom",
+      "папа": "dad"
+    },
+    "new_words": [
+      "стол"
+    ]
+  },
+  {
+    "level": 24,
+    "new_word": {
+      "cyrillic": "окно",
+      "gloss": "window"
+    },
+    "passage": "Это [[окно]] и дом. Мама и папа, это [[окно]]. [[Окно]] хорошо.",
+    "glossary": {
+      "это": "this/it is",
+      "окно": "window",
+      "и": "and",
+      "дом": "house/home",
+      "мама": "mom",
+      "папа": "dad",
+      "хорошо": "good/well"
+    },
+    "new_words": [
+      "окно"
+    ]
+  },
+  {
+    "level": 27,
+    "new_word": {
+      "cyrillic": "хотеть",
+      "gloss": "to want"
+    },
+    "passage": "Я [[хочу]] вода. Ты [[хочешь]] хлеб? Мы [[хотим]] дом.",
+    "glossary": {
+      "я": "I",
+      "хочу": "want",
+      "вода": "water",
+      "ты": "you",
+      "хочешь": "want",
+      "хлеб": "bread",
+      "мы": "we",
+      "хотим": "want",
+      "дом": "house"
+    },
+    "new_words": [
+      "хотеть"
+    ]
+  },
+  {
+    "level": 28,
+    "new_word": {
+      "cyrillic": "говорить",
+      "gloss": "to speak"
+    },
+    "passage": "Я [[говорю]] хорошо. Ты не знаешь? Мы хотим хлеб и воду.",
+    "glossary": {
+      "я": "i",
+      "говорю": "speak",
+      "хорошо": "well",
+      "ты": "you",
+      "не": "not",
+      "знаешь": "know",
+      "мы": "we",
+      "хотим": "want",
+      "хлеб": "bread",
+      "и": "and",
+      "воду": "water"
+    },
+    "new_words": [
+      "говорить"
+    ]
+  },
+  {
+    "level": 29,
+    "new_word": {
+      "cyrillic": "кофе",
+      "gloss": "coffee"
+    },
+    "passage": "Я хочу [[кофе]]. Это [[кофе]] и вода. Он не хочет [[кофе]].",
+    "glossary": {
+      "я": "I",
+      "хочу": "want",
+      "кофе": "coffee",
+      "это": "this is",
+      "и": "and",
+      "вода": "water",
+      "он": "he",
+      "не": "not"
+    },
+    "new_words": [
+      "кофе"
+    ]
+  },
+  {
+    "level": 30,
+    "new_word": {
+      "cyrillic": "такси",
+      "gloss": "taxi"
+    },
+    "passage": "Это [[такси]]. Я хочу [[такси]]. Ты не хочешь [[такси]]?",
+    "glossary": {
+      "это": "this/it is",
+      "такси": "taxi",
+      "я": "I",
+      "хочу": "I want",
+      "ты": "you",
+      "не": "not",
+      "хочешь": "you want"
+    },
+    "new_words": [
+      "такси"
+    ]
+  },
+  {
+    "level": 31,
+    "new_word": {
+      "cyrillic": "телефон",
+      "gloss": "telephone"
+    },
+    "passage": "Это [[телефон]]. Я хочу [[телефон]]. Это не [[телефон]], это книга.",
+    "glossary": {
+      "это": "this/it is",
+      "телефон": "telephone",
+      "я": "i",
+      "хочу": "want (verb, 1st person singular)",
+      "не": "not",
+      "книга": "book"
+    },
+    "new_words": [
+      "телефон"
+    ]
+  },
+  {
+    "level": 32,
+    "new_word": {
+      "cyrillic": "ресторан",
+      "gloss": "restaurant"
+    },
+    "passage": "Это [[ресторан]]. Мы хотим [[ресторан]]? Я хочу кофе.",
+    "glossary": {
+      "это": "this/it",
+      "ресторан": "restaurant",
+      "мы": "we",
+      "хотеть": "to want",
+      "я": "I",
+      "кофе": "coffee"
+    },
+    "new_words": [
+      "ресторан"
+    ]
+  },
+  {
+    "level": 33,
+    "new_word": {
+      "cyrillic": "компьютер",
+      "gloss": "computer"
+    },
+    "passage": "Это [[компьютер]]. Я хочу [[компьютер]]. Он хочет [[компьютер]] и кофе.",
+    "glossary": {
+      "это": "this",
+      "компьютер": "computer",
+      "я": "I",
+      "хочу": "want",
+      "он": "he",
+      "хочет": "wants",
+      "и": "and",
+      "кофе": "coffee"
+    },
+    "new_words": [
+      "компьютер"
+    ]
+  },
+  {
+    "level": 34,
+    "new_word": {
+      "cyrillic": "интернет",
+      "gloss": "internet"
+    },
+    "passage": "Это дом. Это [[интернет]] и телефон. Я хочу [[интернет]].",
+    "glossary": {
+      "это": "this / it is",
+      "дом": "house / home",
+      "интернет": "internet",
+      "и": "and",
+      "телефон": "telephone",
+      "я": "I",
+      "хочу": "want"
+    },
+    "new_words": [
+      "интернет"
+    ]
+  },
+  {
+    "level": 35,
+    "new_word": {
+      "cyrillic": "музыка",
+      "gloss": "music"
+    },
+    "passage": "Я знаю [[музыка]]. Мы хотим [[музыка]]. Это [[музыка]] и это хорошо.",
+    "glossary": {
+      "я": "I",
+      "знаю": "know",
+      "музыка": "music",
+      "мы": "we",
+      "хотим": "want",
+      "это": "this",
+      "и": "and",
+      "хорошо": "good"
+    },
+    "new_words": [
+      "музыка"
+    ]
+  },
+  {
+    "level": 36,
+    "new_word": {
+      "cyrillic": "парк",
+      "gloss": "park"
+    },
+    "passage": "Я люблю [[парк]]. Это большой [[парк]]. Он и она в [[парке]].",
+    "glossary": {
+      "я": "I",
+      "люблю": "love",
+      "парк": "park",
+      "это": "this",
+      "большой": "big",
+      "он": "he",
+      "и": "and",
+      "она": "she",
+      "в": "in"
+    },
+    "new_words": [
+      "парк"
+    ]
+  },
+  {
+    "level": 37,
+    "new_word": {
+      "cyrillic": "банк",
+      "gloss": "bank"
+    },
+    "passage": "Это [[банк]]. Он хочет [[банк]]. Я и ты. Мы говорим.",
+    "glossary": {
+      "это": "this/it",
+      "банк": "bank",
+      "он": "he",
+      "хочет": "to want",
+      "я": "I",
+      "и": "and",
+      "ты": "you (informal)",
+      "мы": "we",
+      "говорим": "to speak"
+    },
+    "new_words": [
+      "банк"
+    ]
+  },
+  {
+    "level": 38,
+    "new_word": {
+      "cyrillic": "спорт",
+      "gloss": "sport"
+    },
+    "passage": "Это [[спорт]]. Я хочу [[спорт]]. Он и она знают [[спорт]].",
+    "glossary": {
+      "это": "this",
+      "спорт": "sport",
+      "я": "I",
+      "хочу": "want",
+      "он": "he",
+      "и": "and",
+      "она": "she",
+      "знают": "know"
+    },
+    "new_words": [
+      "спорт"
+    ]
+  },
+  {
+    "level": 39,
+    "new_word": {
+      "cyrillic": "доктор",
+      "gloss": "doctor"
+    },
+    "passage": "Он [[доктор]]. Это [[доктор]] и мама. Мы не [[доктор]].",
+    "glossary": {
+      "он": "he",
+      "доктор": "doctor",
+      "это": "this is",
+      "и": "and",
+      "мама": "mom",
+      "мы": "we",
+      "не": "not"
+    },
+    "new_words": [
+      "доктор"
+    ]
+  },
+  {
+    "level": 40,
+    "new_word": {
+      "cyrillic": "студент",
+      "gloss": "student"
+    },
+    "passage": "Я [[студент]]. Он [[студент]] и друг. Это хорошо.",
+    "glossary": {
+      "я": "I",
+      "студент": "student",
+      "он": "he",
+      "и": "and",
+      "друг": "friend",
+      "это": "this/it",
+      "хорошо": "good/well"
+    },
+    "new_words": [
+      "студент"
+    ]
+  },
+  {
+    "level": 41,
+    "new_word": {
+      "cyrillic": "театр",
+      "gloss": "theater"
+    },
+    "passage": "Это [[театр]]. Я знаю [[театр]]. Мы говорим хорошо.",
+    "glossary": {
+      "это": "this/it",
+      "театр": "theater",
+      "я": "I",
+      "знаю": "know",
+      "мы": "we",
+      "говорим": "speak/talk",
+      "хорошо": "good/well"
+    },
+    "new_words": [
+      "театр"
+    ]
+  },
+  {
+    "level": 42,
+    "new_word": {
+      "cyrillic": "музей",
+      "gloss": "museum"
+    },
+    "passage": "Это [[музей]]. Мы хотим в [[музей]]. Я знаю [[музей]].",
+    "glossary": {
+      "это": "this",
+      "музей": "museum",
+      "мы": "we",
+      "хотим": "want",
+      "в": "in, to",
+      "я": "I",
+      "знаю": "know"
+    },
+    "new_words": [
+      "музей"
+    ]
+  },
+  {
+    "level": 43,
+    "new_word": {
+      "cyrillic": "проблема",
+      "gloss": "problem"
+    },
+    "passage": "Это [[проблема]]. Мы не знаем. Это [[проблема]]. Ты не хочешь [[проблема]].",
+    "glossary": {
+      "это": "this, it is",
+      "проблема": "problem",
+      "мы": "we",
+      "не": "not",
+      "знаем": "(we) know",
+      "ты": "you (singular informal)",
+      "хочешь": "(you) want"
+    },
+    "new_words": [
+      "проблема"
+    ]
+  },
+  {
+    "level": 44,
+    "new_word": {
+      "cyrillic": "идея",
+      "gloss": "idea"
+    },
+    "passage": "Это хорошая [[идея]]. У меня есть [[идея]]. Мы хотим говорить. Это [[идея]]?",
+    "glossary": {
+      "это": "this, it",
+      "хорошо": "good, well",
+      "идея": "idea",
+      "у": "at, near, by (used for possession)",
+      "я": "I",
+      "есть": "there is, to have",
+      "мы": "we",
+      "хотеть": "to want",
+      "говорить": "to speak, to talk"
+    },
+    "new_words": [
+      "идея"
+    ]
+  }
+]

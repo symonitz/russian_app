@@ -1,0 +1,299 @@
+[
+  {
+    "cyrillic": "А",
+    "ipa": "a",
+    "bucket": 1,
+    "friend_type": "true",
+    "latin_lookalike": "A",
+    "example_word": "там",
+    "example_gloss": "there"
+  },
+  {
+    "cyrillic": "К",
+    "ipa": "k",
+    "bucket": 1,
+    "friend_type": "true",
+    "latin_lookalike": "K",
+    "example_word": "как",
+    "example_gloss": "how"
+  },
+  {
+    "cyrillic": "М",
+    "ipa": "m",
+    "bucket": 1,
+    "friend_type": "true",
+    "latin_lookalike": "M",
+    "example_word": "мама",
+    "example_gloss": "mom"
+  },
+  {
+    "cyrillic": "О",
+    "ipa": "o",
+    "bucket": 1,
+    "friend_type": "true",
+    "latin_lookalike": "O",
+    "example_word": "кот",
+    "example_gloss": "cat"
+  },
+  {
+    "cyrillic": "Т",
+    "ipa": "t",
+    "bucket": 1,
+    "friend_type": "true",
+    "latin_lookalike": "T",
+    "example_word": "том",
+    "example_gloss": "volume"
+  },
+  {
+    "cyrillic": "В",
+    "ipa": "v",
+    "bucket": 2,
+    "friend_type": "false",
+    "latin_lookalike": "B",
+    "example_word": "вот",
+    "example_gloss": "here is"
+  },
+  {
+    "cyrillic": "Н",
+    "ipa": "n",
+    "bucket": 2,
+    "friend_type": "false",
+    "latin_lookalike": "H",
+    "example_word": "он",
+    "example_gloss": "he"
+  },
+  {
+    "cyrillic": "Р",
+    "ipa": "r",
+    "bucket": 2,
+    "friend_type": "false",
+    "latin_lookalike": "P",
+    "example_word": "рот",
+    "example_gloss": "mouth"
+  },
+  {
+    "cyrillic": "С",
+    "ipa": "s",
+    "bucket": 2,
+    "friend_type": "false",
+    "latin_lookalike": "C",
+    "example_word": "сок",
+    "example_gloss": "juice"
+  },
+  {
+    "cyrillic": "У",
+    "ipa": "u",
+    "bucket": 2,
+    "friend_type": "false",
+    "latin_lookalike": "Y",
+    "example_word": "ум",
+    "example_gloss": "mind"
+  },
+  {
+    "cyrillic": "Х",
+    "ipa": "kh",
+    "bucket": 2,
+    "friend_type": "false",
+    "latin_lookalike": "X",
+    "example_word": "хор",
+    "example_gloss": "choir"
+  },
+  {
+    "cyrillic": "Е",
+    "ipa": "ye",
+    "bucket": 2,
+    "friend_type": "false",
+    "latin_lookalike": "E",
+    "example_word": "нет",
+    "example_gloss": "no"
+  },
+  {
+    "cyrillic": "Б",
+    "ipa": "b",
+    "bucket": 3,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "брат",
+    "example_gloss": "brother"
+  },
+  {
+    "cyrillic": "Г",
+    "ipa": "g",
+    "bucket": 3,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "год",
+    "example_gloss": "year"
+  },
+  {
+    "cyrillic": "Д",
+    "ipa": "d",
+    "bucket": 3,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "дом",
+    "example_gloss": "house"
+  },
+  {
+    "cyrillic": "З",
+    "ipa": "z",
+    "bucket": 3,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "зонт",
+    "example_gloss": "umbrella"
+  },
+  {
+    "cyrillic": "И",
+    "ipa": "i",
+    "bucket": 3,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "мир",
+    "example_gloss": "world"
+  },
+  {
+    "cyrillic": "Й",
+    "ipa": "y",
+    "bucket": 3,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "мой",
+    "example_gloss": "my"
+  },
+  {
+    "cyrillic": "Л",
+    "ipa": "l",
+    "bucket": 3,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "лес",
+    "example_gloss": "forest"
+  },
+  {
+    "cyrillic": "П",
+    "ipa": "p",
+    "bucket": 3,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "парк",
+    "example_gloss": "park"
+  },
+  {
+    "cyrillic": "Ф",
+    "ipa": "f",
+    "bucket": 3,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "флаг",
+    "example_gloss": "flag"
+  },
+  {
+    "cyrillic": "Э",
+    "ipa": "e",
+    "bucket": 3,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "это",
+    "example_gloss": "this"
+  },
+  {
+    "cyrillic": "Ж",
+    "ipa": "zh",
+    "bucket": 4,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "жук",
+    "example_gloss": "beetle"
+  },
+  {
+    "cyrillic": "Ц",
+    "ipa": "ts",
+    "bucket": 4,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "цирк",
+    "example_gloss": "circus"
+  },
+  {
+    "cyrillic": "Ч",
+    "ipa": "ch",
+    "bucket": 4,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "час",
+    "example_gloss": "hour"
+  },
+  {
+    "cyrillic": "Ш",
+    "ipa": "sh",
+    "bucket": 4,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "шар",
+    "example_gloss": "balloon"
+  },
+  {
+    "cyrillic": "Щ",
+    "ipa": "shch",
+    "bucket": 4,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "щи",
+    "example_gloss": "cabbage soup"
+  },
+  {
+    "cyrillic": "Ы",
+    "ipa": "y (hard i)",
+    "bucket": 4,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "сын",
+    "example_gloss": "son"
+  },
+  {
+    "cyrillic": "Ё",
+    "ipa": "yo",
+    "bucket": 4,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "ёж",
+    "example_gloss": "hedgehog"
+  },
+  {
+    "cyrillic": "Ю",
+    "ipa": "yu",
+    "bucket": 4,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "юг",
+    "example_gloss": "south"
+  },
+  {
+    "cyrillic": "Я",
+    "ipa": "ya",
+    "bucket": 4,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "я",
+    "example_gloss": "I"
+  },
+  {
+    "cyrillic": "Ъ",
+    "ipa": "(hard sign — silent)",
+    "bucket": 4,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "съел",
+    "example_gloss": "ate"
+  },
+  {
+    "cyrillic": "Ь",
+    "ipa": "(soft sign — softens)",
+    "bucket": 4,
+    "friend_type": "new",
+    "latin_lookalike": null,
+    "example_word": "соль",
+    "example_gloss": "salt"
+  }
+]

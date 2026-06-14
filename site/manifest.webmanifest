@@ -1,0 +1,14 @@
+{
+  "name": "ruslearn — Russian",
+  "short_name": "ruslearn",
+  "description": "Learn Russian from zero — alphabet, spaced-repetition vocab, and reading with audio.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0c0e14",
+  "theme_color": "#0c0e14",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

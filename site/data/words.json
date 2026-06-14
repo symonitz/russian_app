@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "cyrillic": "я",
+    "stressed": "я",
+    "translit": "ya",
+    "gloss_en": "I",
+    "pos": "pron",
+    "is_cognate": false,
+    "freq_rank": 1
+  },
+  {
+    "id": 2,
+    "cyrillic": "ты",
+    "stressed": "ты",
+    "translit": "ty",
+    "gloss_en": "you",
+    "pos": "pron",
+    "is_cognate": false,
+    "freq_rank": 2
+  },
+  {
+    "id": 3,
+    "cyrillic": "не",
+    "stressed": "не",
+    "translit": "ne",
+    "gloss_en": "not",
+    "pos": "part",
+    "is_cognate": false,
+    "freq_rank": 3
+  },
+  {
+    "id": 4,
+    "cyrillic": "это",
+    "stressed": "э́то",
+    "translit": "eto",
+    "gloss_en": "this / it is",
+    "pos": "pron",
+    "is_cognate": false,
+    "freq_rank": 4
+  },
+  {
+    "id": 5,
+    "cyrillic": "и",
+    "stressed": "и",
+    "translit": "i",
+    "gloss_en": "and",
+    "pos": "conj",
+    "is_cognate": false,
+    "freq_rank": 5
+  },
+  {
+    "id": 6,
+    "cyrillic": "да",
+    "stressed": "да",
+    "translit": "da",
+    "gloss_en": "yes",
+    "pos": "part",
+    "is_cognate": false,
+    "freq_rank": 6
+  },
+  {
+    "id": 7,
+    "cyrillic": "нет",
+    "stressed": "нет",
+    "translit": "net",
+    "gloss_en": "no",
+    "pos": "part",
+    "is_cognate": false,
+    "freq_rank": 7
+  },
+  {
+    "id": 8,
+    "cyrillic": "он",
+    "stressed": "он",
+    "translit": "on",
+    "gloss_en": "he",
+    "pos": "pron",
+    "is_cognate": false,
+    "freq_rank": 8
+  },
+  {
+    "id": 9,
+    "cyrillic": "она",
+    "stressed": "она́",
+    "translit": "ona",
+    "gloss_en": "she",
+    "pos": "pron",
+    "is_cognate": false,
+    "freq_rank": 9
+  },
+  {
+    "id": 10,
+    "cyrillic": "мы",
+    "stressed": "мы",
+    "translit": "my",
+    "gloss_en": "we",
+    "pos": "pron",
+    "is_cognate": false,
+    "freq_rank": 10
+  },
+  {
+    "id": 11,
+    "cyrillic": "хорошо",
+    "stressed": "хорошо́",
+    "translit": "khorosho",
+    "gloss_en": "good / well",
+    "pos": "adv",
+    "is_cognate": false,
+    "freq_rank": 11
+  },
+  {
+    "id": 12,
+    "cyrillic": "спасибо",
+    "stressed": "спаси́бо",
+    "translit": "spasibo",
+    "gloss_en": "thank you",
+    "pos": "part",
+    "is_cognate": false,
+    "freq_rank": 12
+  },
+  {
+    "id": 13,
+    "cyrillic": "привет",
+    "stressed": "приве́т",
+    "translit": "privet",
+    "gloss_en": "hi",
+    "pos": "interj",
+    "is_cognate": false,
+    "freq_rank": 13
+  },
+  {
+    "id": 14,
+    "cyrillic": "пока",
+    "stressed": "пока́",
+    "translit": "poka",
+    "gloss_en": "bye",
+    "pos": "interj",
+    "is_cognate": false,
+    "freq_rank": 14
+  },
+  {
+    "id": 15,
+    "cyrillic": "дом",
+    "stressed": "дом",
+    "translit": "dom",
+    "gloss_en": "house",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 15
+  },
+  {
+    "id": 16,
+    "cyrillic": "друг",
+    "stressed": "друг",
+    "translit": "drug",
+    "gloss_en": "friend",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 16
+  },
+  {
+    "id": 17,
+    "cyrillic": "город",
+    "stressed": "го́род",
+    "translit": "gorod",
+    "gloss_en": "city",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 17
+  },
+  {
+    "id": 18,
+    "cyrillic": "вода",
+    "stressed": "вода́",
+    "translit": "voda",
+    "gloss_en": "water",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 18
+  },
+  {
+    "id": 19,
+    "cyrillic": "книга",
+    "stressed": "кни́га",
+    "translit": "kniga",
+    "gloss_en": "book",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 19
+  },
+  {
+    "id": 20,
+    "cyrillic": "мама",
+    "stressed": "ма́ма",
+    "translit": "mama",
+    "gloss_en": "mom",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 20
+  },
+  {
+    "id": 21,
+    "cyrillic": "папа",
+    "stressed": "па́па",
+    "translit": "papa",
+    "gloss_en": "dad",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 21
+  },
+  {
+    "id": 22,
+    "cyrillic": "кот",
+    "stressed": "кот",
+    "translit": "kot",
+    "gloss_en": "cat",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 22
+  },
+  {
+    "id": 23,
+    "cyrillic": "собака",
+    "stressed": "соба́ка",
+    "translit": "sobaka",
+    "gloss_en": "dog",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 23
+  },
+  {
+    "id": 24,
+    "cyrillic": "стол",
+    "stressed": "стол",
+    "translit": "stol",
+    "gloss_en": "table",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 24
+  },
+  {
+    "id": 25,
+    "cyrillic": "окно",
+    "stressed": "окно́",
+    "translit": "okno",
+    "gloss_en": "window",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 25
+  },
+  {
+    "id": 26,
+    "cyrillic": "хлеб",
+    "stressed": "хлеб",
+    "translit": "khleb",
+    "gloss_en": "bread",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 26
+  },
+  {
+    "id": 27,
+    "cyrillic": "знать",
+    "stressed": "знать",
+    "translit": "znat",
+    "gloss_en": "to know",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 27
+  },
+  {
+    "id": 28,
+    "cyrillic": "хотеть",
+    "stressed": "хоте́ть",
+    "translit": "khotet",
+    "gloss_en": "to want",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 28
+  },
+  {
+    "id": 29,
+    "cyrillic": "говорить",
+    "stressed": "говори́ть",
+    "translit": "govorit",
+    "gloss_en": "to speak",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 29
+  },
+  {
+    "id": 30,
+    "cyrillic": "кофе",
+    "stressed": "ко́фе",
+    "translit": "kofe",
+    "gloss_en": "coffee",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 30
+  },
+  {
+    "id": 31,
+    "cyrillic": "такси",
+    "stressed": "такси́",
+    "translit": "taksi",
+    "gloss_en": "taxi",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 31
+  },
+  {
+    "id": 32,
+    "cyrillic": "телефон",
+    "stressed": "телефо́н",
+    "translit": "telefon",
+    "gloss_en": "telephone",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 32
+  },
+  {
+    "id": 33,
+    "cyrillic": "ресторан",
+    "stressed": "рестора́н",
+    "translit": "restoran",
+    "gloss_en": "restaurant",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 33
+  },
+  {
+    "id": 34,
+    "cyrillic": "компьютер",
+    "stressed": "компью́тер",
+    "translit": "kompyuter",
+    "gloss_en": "computer",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 34
+  },
+  {
+    "id": 35,
+    "cyrillic": "интернет",
+    "stressed": "интерне́т",
+    "translit": "internet",
+    "gloss_en": "internet",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 35
+  },
+  {
+    "id": 36,
+    "cyrillic": "музыка",
+    "stressed": "му́зыка",
+    "translit": "muzyka",
+    "gloss_en": "music",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 36
+  },
+  {
+    "id": 37,
+    "cyrillic": "парк",
+    "stressed": "парк",
+    "translit": "park",
+    "gloss_en": "park",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 37
+  },
+  {
+    "id": 38,
+    "cyrillic": "банк",
+    "stressed": "банк",
+    "translit": "bank",
+    "gloss_en": "bank",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 38
+  },
+  {
+    "id": 39,
+    "cyrillic": "спорт",
+    "stressed": "спорт",
+    "translit": "sport",
+    "gloss_en": "sport",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 39
+  },
+  {
+    "id": 40,
+    "cyrillic": "доктор",
+    "stressed": "до́ктор",
+    "translit": "doktor",
+    "gloss_en": "doctor",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 40
+  },
+  {
+    "id": 41,
+    "cyrillic": "студент",
+    "stressed": "студе́нт",
+    "translit": "student",
+    "gloss_en": "student",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 41
+  },
+  {
+    "id": 42,
+    "cyrillic": "театр",
+    "stressed": "теа́тр",
+    "translit": "teatr",
+    "gloss_en": "theater",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 42
+  },
+  {
+    "id": 43,
+    "cyrillic": "музей",
+    "stressed": "музе́й",
+    "translit": "muzey",
+    "gloss_en": "museum",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 43
+  },
+  {
+    "id": 44,
+    "cyrillic": "проблема",
+    "stressed": "пробле́ма",
+    "translit": "problema",
+    "gloss_en": "problem",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 44
+  },
+  {
+    "id": 45,
+    "cyrillic": "идея",
+    "stressed": "иде́я",
+    "translit": "ideya",
+    "gloss_en": "idea",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 45
+  }
+]
