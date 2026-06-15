@@ -1,13 +1,9 @@
-import {
-  createEmptyCard,
-  fsrs,
-  generatorParameters,
-  Rating,
-  State,
-} from "./vendor/ts-fsrs.js";
-
 const $ = (s) => document.querySelector(s);
-const f = fsrs(generatorParameters({ enable_fuzz: true, request_retention: 0.9 }));
+
+// Count-based spacing: a card's "due" is a value of the global card counter
+// (cards seen). Answer correct -> returns in OFFSET.good cards later; wrong ->
+// OFFSET.again cards later (so it reshuffles into the next ~30). Tweakable.
+const OFFSET = { again: 30, good: 100 };
 
 // ---------- dataset (static, pre-baked) ----------
 let WORDS = [];
@@ -30,35 +26,39 @@ async function loadData() {
 
 // ---------- progress (browser localStorage) ----------
 const KEY = "ruslearn.v1";
-const P = { vocab: {}, letters: {} }; // id/cyrillic -> ts-fsrs Card
+const P = { vocab: {}, letters: {}, counter: 0 };
 function loadProgress() {
   try {
     const s = JSON.parse(localStorage.getItem(KEY));
     if (s) {
       P.vocab = s.vocab || {};
       P.letters = s.letters || {};
+      P.counter = s.counter || 0;
     }
   } catch {
     /* first run — keep empty */
   }
 }
 function saveProgress() {
-  localStorage.setItem(KEY, JSON.stringify(P));
+  localStorage.setItem(
+    KEY,
+    JSON.stringify({ vocab: P.vocab, letters: P.letters, counter: P.counter })
+  );
 }
 
-// ---------- SRS (ts-fsrs, in-browser) ----------
-function revive(c) {
-  if (!c) return c;
-  return {
-    ...c,
-    due: new Date(c.due),
-    last_review: c.last_review ? new Date(c.last_review) : undefined,
-  };
+// ---------- count-based scheduler ----------
+function newCard() {
+  return { due: P.counter, reps: 0, state: "learning" }; // due now
 }
-const newCard = () => createEmptyCard(new Date());
-const review = (card, rating) => f.next(revive(card), new Date(), rating).card;
-const dueNow = (card) => !!card && new Date(card.due) <= new Date();
-const isKnown = (card) => !!card && card.state === State.Review;
+function answer(card, correct) {
+  card.reps = (card.reps || 0) + 1;
+  card.due = P.counter + (correct ? OFFSET.good : OFFSET.again);
+  card.state = correct && card.reps >= 2 ? "known" : "learning";
+  P.counter += 1;
+  return card;
+}
+const dueNow = (card) => !!card && card.due <= P.counter;
+const isKnown = (card) => !!card && card.state === "known";
 
 // ---------- audio (pre-rendered clips) ----------
 let currentAudio = null;
@@ -77,16 +77,6 @@ function toast(msg) {
   t.textContent = msg;
   t.hidden = false;
   setTimeout(() => (t.hidden = true), 1800);
-}
-
-const RATINGS = [
-  { r: Rating.Again, label: "Again", cls: "r-again" },
-  { r: Rating.Hard, label: "Hard", cls: "r-hard" },
-  { r: Rating.Good, label: "Good", cls: "r-good" },
-  { r: Rating.Easy, label: "Easy", cls: "r-easy" },
-];
-function requeue(queue, item) {
-  queue.splice(Math.min(queue.length, 3), 0, item);
 }
 
 // ---------- navigation ----------
@@ -122,27 +112,23 @@ function refreshHome() {
   $("#b-alpha").textContent = `${al} / ${ALPHABET.length}`;
 }
 
-// ---------- Reviews ----------
-let revQueue = [];
-const dueWords = () => WORDS.filter((w) => dueNow(P.vocab[w.id]));
-
+// ---------- Reviews (typed validation) ----------
 function loadReviews() {
-  revQueue = dueWords();
-  if (revQueue.length === 0) {
-    const fresh = WORDS.filter((w) => !P.vocab[w.id]).slice(0, 5);
-    if (fresh.length === 0) {
-      $("#rev-stage").innerHTML = `<div class="empty">All caught up — nothing due.</div>`;
-      return;
-    }
-    for (const w of fresh) P.vocab[w.id] = newCard();
-    saveProgress();
-    revQueue = dueWords();
-  }
   nextReview();
 }
 function nextReview() {
-  if (revQueue.length === 0) return loadReviews();
-  renderVocab(revQueue[0]);
+  const due = WORDS.filter((w) => dueNow(P.vocab[w.id])).sort(
+    (a, b) => P.vocab[a.id].due - P.vocab[b.id].due
+  );
+  if (due.length) return renderVocab(due[0]);
+  const fresh = WORDS.find((w) => !P.vocab[w.id]);
+  if (!fresh) {
+    $("#rev-stage").innerHTML = `<div class="empty">All caught up — nothing due.</div>`;
+    return;
+  }
+  P.vocab[fresh.id] = newCard();
+  saveProgress();
+  renderVocab(fresh);
 }
 function renderVocab(word) {
   const stage = $("#rev-stage");
@@ -211,34 +197,28 @@ function checkAnswer(word, value) {
   }
 }
 function grade(word, correct) {
-  P.vocab[word.id] = review(P.vocab[word.id], correct ? Rating.Good : Rating.Again);
+  answer(P.vocab[word.id], correct);
   saveProgress();
-  revQueue.shift();
-  if (!correct) requeue(revQueue, word);
   nextReview();
 }
 
 // ---------- Alphabet ----------
-let alphaQueue = [];
-const dueLetters = () => ALPHABET.filter((l) => dueNow(P.letters[l.cyrillic]));
-
 function loadAlphabet() {
-  alphaQueue = dueLetters();
-  if (alphaQueue.length === 0) {
-    const fresh = ALPHABET.filter((l) => !P.letters[l.cyrillic]).slice(0, 5);
-    if (fresh.length === 0) {
-      $("#alpha-stage").innerHTML = `<div class="empty">Alphabet complete! 🎉</div>`;
-      return;
-    }
-    for (const l of fresh) P.letters[l.cyrillic] = newCard();
-    saveProgress();
-    alphaQueue = dueLetters();
-  }
   nextAlpha();
 }
 function nextAlpha() {
-  if (alphaQueue.length === 0) return loadAlphabet();
-  renderLetter(alphaQueue[0]);
+  const due = ALPHABET.filter((l) => dueNow(P.letters[l.cyrillic])).sort(
+    (a, b) => P.letters[a.cyrillic].due - P.letters[b.cyrillic].due
+  );
+  if (due.length) return renderLetter(due[0]);
+  const fresh = ALPHABET.find((l) => !P.letters[l.cyrillic]);
+  if (!fresh) {
+    $("#alpha-stage").innerHTML = `<div class="empty">Alphabet complete! 🎉</div>`;
+    return;
+  }
+  P.letters[fresh.cyrillic] = newCard();
+  saveProgress();
+  renderLetter(fresh);
 }
 function renderLetter(letter) {
   const stage = $("#alpha-stage");
@@ -269,20 +249,17 @@ function renderLetter(letter) {
     stage.querySelector(".answer").hidden = false;
     play(letter.example_word);
     const row = $("#alpha-actions");
-    row.innerHTML = RATINGS.map(
-      (x) => `<button class="btn ${x.cls}" data-r="${x.r}">${x.label}</button>`
-    ).join("");
-    row.querySelectorAll("button").forEach((b) => {
-      b.onclick = () => {
-        const rating = Number(b.dataset.r);
-        P.letters[letter.cyrillic] = review(P.letters[letter.cyrillic], rating);
-        saveProgress();
-        alphaQueue.shift();
-        if (rating === Rating.Again) requeue(alphaQueue, letter);
-        nextAlpha();
-      };
-    });
+    row.innerHTML =
+      `<button class="btn r-again" id="a-again">Again</button>` +
+      `<button class="btn r-good" id="a-got">Got it ✓</button>`;
+    $("#a-again").onclick = () => gradeLetter(letter, false);
+    $("#a-got").onclick = () => gradeLetter(letter, true);
   };
+}
+function gradeLetter(letter, correct) {
+  answer(P.letters[letter.cyrillic], correct);
+  saveProgress();
+  nextAlpha();
 }
 
 // ---------- Reading ----------
@@ -295,7 +272,6 @@ function loadReading() {
     return;
   }
   // Next passage = lowest-level one whose new word you haven't met yet.
-  // (Skips any levels that failed to generate.)
   const introduced = new Set(WORDS.filter((w) => P.vocab[w.id]).map((w) => w.cyrillic));
   const entry = READING
     .filter((e) => !introduced.has(e.new_word.cyrillic))
