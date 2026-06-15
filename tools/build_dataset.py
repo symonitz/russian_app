@@ -40,6 +40,7 @@ N_WORDS = 500          # vocabulary size (flashcards + audio)
 PASSAGE_LEVELS = 120   # generate reading passages up to this level
 MIN_KNOWN = 3
 ENRICH_BATCH = 25      # bigger batches -> far fewer Gemini calls (the real speedup)
+GEMINI_CONC = 2        # gentle concurrency to stay under the Gemini rate limit
 FREQ_URL = "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/ru/ru_50k.txt"
 FREQ_PATH = DATA / "ru_50k.txt"
 WORD_RE = re.compile(r"[^\W\d_]+", re.UNICODE)
@@ -138,23 +139,45 @@ async def _gen_level(gen, sem, level, known, new) -> dict | None:
             p = await gen.generate(known, new["cyrillic"], new["gloss_en"])
             return {"level": level,
                     "new_word": {"cyrillic": new["cyrillic"], "gloss": new["gloss_en"]},
-                    "passage": p.text, "glossary": p.glossary, "new_words": p.new_words}
+                    "passage": p.text, "glossary": p.glossary, "new_words": p.new_words,
+                    "gist": p.gist, "translation": p.translation}
         except Exception as exc:  # noqa: BLE001
             print(f"  ! level {level} ({new['cyrillic']}) failed: {exc}")
             return None
 
 
+def _save_reading(existing: dict[int, dict]) -> list[dict]:
+    out = sorted(existing.values(), key=lambda r: r["level"])
+    _write(SITE_DATA / "reading.json", out)
+    return out
+
+
 async def build_reading(provider, sem, words: list[dict]) -> list[dict]:
     gen = ContentGenerator(provider)
     top = min(len(words), PASSAGE_LEVELS)
-    print(f"Generating passages for levels {MIN_KNOWN}..{top - 1}...")
+    existing: dict[int, dict] = {}
+    rp = SITE_DATA / "reading.json"
+    if rp.exists():
+        for e in json.loads(rp.read_text(encoding="utf-8")):
+            if e.get("gist") and e.get("translation"):  # complete entries only
+                existing[e["level"]] = e
+    todo = [i for i in range(MIN_KNOWN, top) if i not in existing]
+    print(f"Passages: {len(existing)} complete, generating {len(todo)} (up to level {top - 1})")
     tasks = [
-        _gen_level(gen, sem, i, [w["cyrillic"] for w in words[:i]], words[i])
-        for i in range(MIN_KNOWN, top)
+        asyncio.create_task(
+            _gen_level(gen, sem, i, [w["cyrillic"] for w in words[:i]], words[i])
+        )
+        for i in todo
     ]
-    out = [r for r in await asyncio.gather(*tasks) if r]
-    out.sort(key=lambda r: r["level"])
-    return out
+    done = 0
+    for fut in asyncio.as_completed(tasks):
+        r = await fut
+        if r:
+            existing[r["level"]] = r
+            done += 1
+            if done % 5 == 0:
+                _save_reading(existing)  # checkpoint so throttling can't wipe progress
+    return _save_reading(existing)
 
 
 def collect_audio_texts(words, alphabet, reading) -> set[str]:
@@ -194,17 +217,25 @@ def _write(path: Path, obj) -> None:
 async def main() -> None:
     SITE_DATA.mkdir(parents=True, exist_ok=True)
     SITE_AUDIO.mkdir(parents=True, exist_ok=True)
-    provider = GeminiCLIProvider()
-    gemini_sem = asyncio.Semaphore(3)
+    provider = GeminiCLIProvider(max_retries=5)
+    gemini_sem = asyncio.Semaphore(GEMINI_CONC)
 
-    ensure_freq()
-    freq = load_freq(N_WORDS)
-    curated = load_curated()
-    need = [w for w in freq if w not in curated]
-    enriched = await enrich(provider, gemini_sem, need)
-    words = assemble_words(freq, curated, enriched)
-    _write(SITE_DATA / "words.json", words)
-    print(f"  -> {len(words)} words")
+    words_path = SITE_DATA / "words.json"
+    words = None
+    if words_path.exists():
+        cached = json.loads(words_path.read_text(encoding="utf-8"))
+        if len(cached) >= N_WORDS:
+            words = cached
+            print(f"Reusing {len(words)} cached words (skipping enrichment)")
+    if words is None:
+        ensure_freq()
+        freq = load_freq(N_WORDS)
+        curated = load_curated()
+        need = [w for w in freq if w not in curated]
+        enriched = await enrich(provider, gemini_sem, need)
+        words = assemble_words(freq, curated, enriched)
+        _write(words_path, words)
+        print(f"  -> {len(words)} words")
 
     alphabet = json.loads((DATA / "alphabet.json").read_text(encoding="utf-8"))
     _write(SITE_DATA / "alphabet.json", alphabet)

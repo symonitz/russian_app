@@ -83,6 +83,24 @@ body {
   font-size:14px; color:var(--muted); }
 .newword .btn { flex:0 0 auto; margin-left:auto; }
 
+/* typed-answer validation (Reviews) */
+.answer-input { display:block; width:100%; margin:14px 0 4px; padding:13px 14px;
+  border-radius:12px; border:1px solid var(--line); background:rgba(0,0,0,.25);
+  color:var(--ink); font-size:18px; text-align:center; outline:none; }
+.answer-input:focus { border-color:var(--indigo); }
+.answer-input:disabled { opacity:.7; }
+.verdict { margin-top:14px; font-size:17px; }
+.verdict.good { color:#7dd3a8; }
+.verdict.bad { color:#e98c8c; }
+.btn#iwr { flex:0 0 auto; }
+
+/* reading aids: gist + full translation */
+.btn.ghost { background:var(--glass); color:var(--ink); border:1px solid var(--line); }
+.read-aids { margin-top:14px; }
+.aid-out { margin-top:10px; }
+.gist-line { color:var(--amber); font-style:italic; font-size:16px; }
+.translation-line { margin-top:8px; color:var(--ink); font-size:16px; line-height:1.6; }
+
 .empty { text-align:center; color:var(--muted); padding:60px 0; }
 .empty .add { margin-top:16px; }
 

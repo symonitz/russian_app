@@ -18,9 +18,10 @@ Write 3 very short, simple Russian sentences that:
 - read naturally for a beginner.
 
 Then give a short English gloss for EVERY distinct Russian word you used (each key is the word in lowercase, no punctuation, no brackets).
+Also give a short "gist" (max 6 words, the overall idea) and a natural full English "translation" of the whole passage.
 
 Respond with ONLY this JSON and nothing else:
-{{"passage": "<russian sentences>", "new_words": ["{new_word}"], "glossary": {{"<russian word>": "<english>"}}}}"""
+{{"passage": "<russian sentences>", "new_words": ["{new_word}"], "gist": "<max 6 word english summary>", "translation": "<full english translation>", "glossary": {{"<russian word>": "<english>"}}}}"""
 
 
 @dataclass
@@ -28,6 +29,8 @@ class Passage:
     text: str                    # passage with [[new word]] occurrences marked
     glossary: dict[str, str]     # lowercase russian word -> english
     new_words: list[str]
+    gist: str = ""               # short overall-idea hint
+    translation: str = ""        # full English translation
 
 
 class ContentGenerator:
@@ -46,4 +49,6 @@ class ContentGenerator:
             text=data["passage"],
             glossary={k.lower(): v for k, v in data.get("glossary", {}).items()},
             new_words=data.get("new_words") or [new_word],
+            gist=data.get("gist", ""),
+            translation=data.get("translation", ""),
         )

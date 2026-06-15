@@ -153,35 +153,69 @@ function renderVocab(word) {
         <button class="speak" id="rev-speak" aria-label="Play audio">🔊</button>
         <button class="speak slow" id="rev-slow" aria-label="Play slowly" title="Slow 0.75×">🐢</button>
       </div>
-      <div class="hint">What does it mean?</div>
-      <div class="answer" hidden>
-        <div class="gloss">${word.gloss_en}</div>
-        <div class="translit">${word.translit || ""}</div>
-      </div>
+      <div class="hint">Type what it means (English)</div>
+      <input class="answer-input" id="ans" autocomplete="off" autocapitalize="off"
+             autocorrect="off" spellcheck="false" placeholder="meaning…" />
+      <div class="verdict" id="verdict" hidden></div>
     </div>
     <div class="btn-row" id="rev-actions">
-      <button class="btn reveal" id="reveal">Show answer</button>
+      <button class="btn reveal" id="check">Check</button>
     </div>`;
   $("#rev-speak").onclick = () => play(word.stressed);
   $("#rev-slow").onclick = () => play(word.stressed, 0.75);
-  $("#reveal").onclick = () => {
-    stage.querySelector(".answer").hidden = false;
-    play(word.stressed);
-    const row = $("#rev-actions");
-    row.innerHTML = RATINGS.map(
-      (x) => `<button class="btn ${x.cls}" data-r="${x.r}">${x.label}</button>`
-    ).join("");
-    row.querySelectorAll("button").forEach((b) => {
-      b.onclick = () => {
-        const rating = Number(b.dataset.r);
-        P.vocab[word.id] = review(P.vocab[word.id], rating);
-        saveProgress();
-        revQueue.shift();
-        if (rating === Rating.Again) requeue(revQueue, word);
-        nextReview();
-      };
-    });
-  };
+  const input = $("#ans");
+  input.focus();
+  const go = () => checkAnswer(word, input.value);
+  $("#check").onclick = go;
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") go();
+  });
+}
+
+// Forgiving comparison: case/punct-insensitive, ignores leading to/a/the,
+// accepts any comma/slash alternate, and substring matches for longer words.
+function normalize(s) {
+  return s
+    .toLowerCase()
+    .trim()
+    .replace(/^(to |a |an |the )/, "")
+    .replace(/[.,;!?'"()]/g, "")
+    .trim();
+}
+function answerMatches(value, gloss) {
+  const u = normalize(value);
+  if (!u) return false;
+  const alts = gloss.split(/[,/;]| or /).map(normalize).filter(Boolean);
+  return alts.some((a) => a === u || (a.length > 3 && (a.includes(u) || u.includes(a))));
+}
+function checkAnswer(word, value) {
+  const ok = answerMatches(value, word.gloss_en);
+  $("#ans").disabled = true;
+  play(word.stressed);
+  const v = $("#verdict");
+  v.hidden = false;
+  v.className = "verdict " + (ok ? "good" : "bad");
+  v.innerHTML = ok
+    ? `✓ <b>${word.gloss_en}</b> · ${word.translit || ""}`
+    : `✗ it means <b>${word.gloss_en}</b> · ${word.translit || ""}`;
+  const row = $("#rev-actions");
+  if (ok) {
+    row.innerHTML = `<button class="btn r-good" id="next">Next →</button>`;
+    $("#next").onclick = () => grade(word, true);
+  } else {
+    row.innerHTML =
+      `<button class="btn" id="iwr">I was right</button>` +
+      `<button class="btn r-again" id="next">Next →</button>`;
+    $("#iwr").onclick = () => grade(word, true);
+    $("#next").onclick = () => grade(word, false);
+  }
+}
+function grade(word, correct) {
+  P.vocab[word.id] = review(P.vocab[word.id], correct ? Rating.Good : Rating.Again);
+  saveProgress();
+  revQueue.shift();
+  if (!correct) requeue(revQueue, word);
+  nextReview();
 }
 
 // ---------- Alphabet ----------
@@ -289,6 +323,7 @@ function renderPassage(data, nextWord) {
   stage.innerHTML = `
     <div class="qcard reading"><div class="passage">${html}</div></div>
     <div class="wordpop" id="wordpop" hidden></div>
+    <div class="read-aids" id="read-aids"></div>
     <div class="newword">
       <span>New word: <b>${nw.cyrillic || ""}</b> — ${nw.gloss || ""}</span>
       <button class="btn r-good" id="read-next">✓ Got it — next</button>
@@ -310,6 +345,35 @@ function renderPassage(data, nextWord) {
       };
     };
   });
+
+  // Gist hint first, then reveal the full translation on a second tap.
+  const aids = $("#read-aids");
+  const gist = (data.gist || "").trim();
+  const translation = (data.translation || "").trim();
+  if (gist || translation) {
+    let phase = gist ? 0 : 1;
+    const btn = document.createElement("button");
+    btn.className = "btn ghost";
+    btn.textContent = gist ? "💡 Hint" : "Show translation";
+    const out = document.createElement("div");
+    out.className = "aid-out";
+    aids.append(btn, out);
+    btn.onclick = () => {
+      if (phase === 0) {
+        out.innerHTML = `<div class="gist-line">“${gist}”</div>`;
+        if (translation) {
+          btn.textContent = "Show full translation";
+          phase = 1;
+        } else {
+          btn.remove();
+        }
+      } else {
+        out.insertAdjacentHTML("beforeend", `<div class="translation-line">${translation}</div>`);
+        btn.remove();
+      }
+    };
+  }
+
   $("#read-next").onclick = () => {
     P.vocab[nextWord.id] = newCard(); // reading introduces the new word into SRS
     saveProgress();
