@@ -25,7 +25,7 @@ async function loadData() {
 }
 
 // ---------- progress (browser localStorage) ----------
-const KEY = "ruslearn.v1";
+const KEY = "ruslearn.v2"; // bumped: progress format changed to count-based
 const P = { vocab: {}, letters: {}, counter: 0 };
 function loadProgress() {
   try {
