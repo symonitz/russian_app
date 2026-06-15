@@ -6,3 +6,4 @@ data/russian.db
 data/tts/
 .pytest_cache/
 *.egg-info/
+data/ru_50k.txt

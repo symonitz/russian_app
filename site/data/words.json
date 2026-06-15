@@ -11,31 +11,31 @@
   },
   {
     "id": 2,
-    "cyrillic": "ты",
-    "stressed": "ты",
-    "translit": "ty",
-    "gloss_en": "you",
-    "pos": "pron",
-    "is_cognate": false,
-    "freq_rank": 2
-  },
-  {
-    "id": 3,
     "cyrillic": "не",
     "stressed": "не",
     "translit": "ne",
     "gloss_en": "not",
     "pos": "part",
     "is_cognate": false,
+    "freq_rank": 2
+  },
+  {
+    "id": 3,
+    "cyrillic": "что",
+    "stressed": "что",
+    "translit": "chto",
+    "gloss_en": "what, that",
+    "pos": "pronoun",
+    "is_cognate": false,
     "freq_rank": 3
   },
   {
     "id": 4,
-    "cyrillic": "это",
-    "stressed": "э́то",
-    "translit": "eto",
-    "gloss_en": "this / it is",
-    "pos": "pron",
+    "cyrillic": "в",
+    "stressed": "в",
+    "translit": "v",
+    "gloss_en": "in, at, into",
+    "pos": "preposition",
     "is_cognate": false,
     "freq_rank": 4
   },
@@ -51,402 +51,4952 @@
   },
   {
     "id": 6,
-    "cyrillic": "да",
-    "stressed": "да",
-    "translit": "da",
-    "gloss_en": "yes",
-    "pos": "part",
+    "cyrillic": "ты",
+    "stressed": "ты",
+    "translit": "ty",
+    "gloss_en": "you",
+    "pos": "pron",
     "is_cognate": false,
     "freq_rank": 6
   },
   {
     "id": 7,
-    "cyrillic": "нет",
-    "stressed": "нет",
-    "translit": "net",
-    "gloss_en": "no",
-    "pos": "part",
+    "cyrillic": "это",
+    "stressed": "э́то",
+    "translit": "eto",
+    "gloss_en": "this / it is",
+    "pos": "pron",
     "is_cognate": false,
     "freq_rank": 7
   },
   {
     "id": 8,
+    "cyrillic": "на",
+    "stressed": "на",
+    "translit": "na",
+    "gloss_en": "on, at, to",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 8
+  },
+  {
+    "id": 9,
+    "cyrillic": "с",
+    "stressed": "с",
+    "translit": "s",
+    "gloss_en": "with, from",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 9
+  },
+  {
+    "id": 10,
     "cyrillic": "он",
     "stressed": "он",
     "translit": "on",
     "gloss_en": "he",
     "pos": "pron",
     "is_cognate": false,
-    "freq_rank": 8
+    "freq_rank": 10
   },
   {
-    "id": 9,
-    "cyrillic": "она",
-    "stressed": "она́",
-    "translit": "ona",
-    "gloss_en": "she",
-    "pos": "pron",
-    "is_cognate": false,
-    "freq_rank": 9
-  },
-  {
-    "id": 10,
+    "id": 11,
     "cyrillic": "мы",
     "stressed": "мы",
     "translit": "my",
     "gloss_en": "we",
     "pos": "pron",
     "is_cognate": false,
-    "freq_rank": 10
+    "freq_rank": 11
   },
   {
-    "id": 11,
+    "id": 12,
+    "cyrillic": "как",
+    "stressed": "как",
+    "translit": "kak",
+    "gloss_en": "how, as, like",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 12
+  },
+  {
+    "id": 13,
+    "cyrillic": "вы",
+    "stressed": "вы",
+    "translit": "vy",
+    "gloss_en": "you (formal/plural)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 13
+  },
+  {
+    "id": 14,
+    "cyrillic": "да",
+    "stressed": "да",
+    "translit": "da",
+    "gloss_en": "yes",
+    "pos": "part",
+    "is_cognate": false,
+    "freq_rank": 14
+  },
+  {
+    "id": 15,
+    "cyrillic": "мне",
+    "stressed": "мне",
+    "translit": "mne",
+    "gloss_en": "to me, for me",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 15
+  },
+  {
+    "id": 16,
+    "cyrillic": "у",
+    "stressed": "у",
+    "translit": "u",
+    "gloss_en": "at, by, near",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 16
+  },
+  {
+    "id": 17,
+    "cyrillic": "нет",
+    "stressed": "нет",
+    "translit": "net",
+    "gloss_en": "no",
+    "pos": "part",
+    "is_cognate": false,
+    "freq_rank": 17
+  },
+  {
+    "id": 18,
+    "cyrillic": "меня",
+    "stressed": "меня",
+    "translit": "menya",
+    "gloss_en": "me, my",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 18
+  },
+  {
+    "id": 19,
+    "cyrillic": "так",
+    "stressed": "так",
+    "translit": "tak",
+    "gloss_en": "so, thus, then",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 19
+  },
+  {
+    "id": 20,
+    "cyrillic": "но",
+    "stressed": "но",
+    "translit": "no",
+    "gloss_en": "but",
+    "pos": "conjunction",
+    "is_cognate": false,
+    "freq_rank": 20
+  },
+  {
+    "id": 21,
+    "cyrillic": "а",
+    "stressed": "а",
+    "translit": "a",
+    "gloss_en": "and, but, while",
+    "pos": "conjunction",
+    "is_cognate": false,
+    "freq_rank": 21
+  },
+  {
+    "id": 22,
+    "cyrillic": "его",
+    "stressed": "его",
+    "translit": "ego",
+    "gloss_en": "his, him, its",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 22
+  },
+  {
+    "id": 23,
+    "cyrillic": "все",
+    "stressed": "все",
+    "translit": "vse",
+    "gloss_en": "all, everyone",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 23
+  },
+  {
+    "id": 24,
+    "cyrillic": "она",
+    "stressed": "она́",
+    "translit": "ona",
+    "gloss_en": "she",
+    "pos": "pron",
+    "is_cognate": false,
+    "freq_rank": 24
+  },
+  {
+    "id": 25,
+    "cyrillic": "тебя",
+    "stressed": "тебя",
+    "translit": "tebya",
+    "gloss_en": "you, your (accusative/genitive)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 25
+  },
+  {
+    "id": 26,
+    "cyrillic": "о",
+    "stressed": "о",
+    "translit": "o",
+    "gloss_en": "about, concerning",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 26
+  },
+  {
+    "id": 27,
+    "cyrillic": "если",
+    "stressed": "если",
+    "translit": "yesli",
+    "gloss_en": "if",
+    "pos": "conjunction",
+    "is_cognate": false,
+    "freq_rank": 27
+  },
+  {
+    "id": 28,
+    "cyrillic": "за",
+    "stressed": "за",
+    "translit": "za",
+    "gloss_en": "for, behind, beyond",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 28
+  },
+  {
+    "id": 29,
+    "cyrillic": "бы",
+    "stressed": "бы",
+    "translit": "by",
+    "gloss_en": "would (particle)",
+    "pos": "particle",
+    "is_cognate": false,
+    "freq_rank": 29
+  },
+  {
+    "id": 30,
+    "cyrillic": "тебе",
+    "stressed": "тебе",
+    "translit": "tebe",
+    "gloss_en": "to you, for you",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 30
+  },
+  {
+    "id": 31,
+    "cyrillic": "они",
+    "stressed": "они",
+    "translit": "oni",
+    "gloss_en": "they",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 31
+  },
+  {
+    "id": 32,
+    "cyrillic": "чтобы",
+    "stressed": "чтобы",
+    "translit": "chtoby",
+    "gloss_en": "in order that, so that",
+    "pos": "conjunction",
+    "is_cognate": false,
+    "freq_rank": 32
+  },
+  {
+    "id": 33,
+    "cyrillic": "же",
+    "stressed": "же",
+    "translit": "zhe",
+    "gloss_en": "indeed, really (particle)",
+    "pos": "particle",
+    "is_cognate": false,
+    "freq_rank": 33
+  },
+  {
+    "id": 34,
+    "cyrillic": "есть",
+    "stressed": "есть",
+    "translit": "yest'",
+    "gloss_en": "is, am, are, to eat",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 34
+  },
+  {
+    "id": 35,
+    "cyrillic": "просто",
+    "stressed": "просто",
+    "translit": "prosto",
+    "gloss_en": "simply, just, easy",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 35
+  },
+  {
+    "id": 36,
+    "cyrillic": "из",
+    "stressed": "из",
+    "translit": "iz",
+    "gloss_en": "from, out of",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 36
+  },
+  {
+    "id": 37,
+    "cyrillic": "к",
+    "stressed": "к",
+    "translit": "k",
+    "gloss_en": "to, towards",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 37
+  },
+  {
+    "id": 38,
+    "cyrillic": "для",
+    "stressed": "для",
+    "translit": "dlya",
+    "gloss_en": "for",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 38
+  },
+  {
+    "id": 39,
+    "cyrillic": "ну",
+    "stressed": "ну",
+    "translit": "nu",
+    "gloss_en": "well, come on, so",
+    "pos": "interjection",
+    "is_cognate": true,
+    "freq_rank": 39
+  },
+  {
+    "id": 40,
+    "cyrillic": "когда",
+    "stressed": "когда",
+    "translit": "kogda",
+    "gloss_en": "when",
+    "pos": "adverb",
+    "is_cognate": true,
+    "freq_rank": 40
+  },
+  {
+    "id": 41,
     "cyrillic": "хорошо",
     "stressed": "хорошо́",
     "translit": "khorosho",
     "gloss_en": "good / well",
     "pos": "adv",
     "is_cognate": false,
-    "freq_rank": 11
+    "freq_rank": 41
   },
   {
-    "id": 12,
+    "id": 42,
+    "cyrillic": "здесь",
+    "stressed": "здесь",
+    "translit": "zdes'",
+    "gloss_en": "here",
+    "pos": "adverb",
+    "is_cognate": true,
+    "freq_rank": 42
+  },
+  {
+    "id": 43,
+    "cyrillic": "по",
+    "stressed": "по",
+    "translit": "po",
+    "gloss_en": "along, by, for",
+    "pos": "preposition",
+    "is_cognate": true,
+    "freq_rank": 43
+  },
+  {
+    "id": 44,
+    "cyrillic": "был",
+    "stressed": "был",
+    "translit": "byl",
+    "gloss_en": "was",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 44
+  },
+  {
+    "id": 45,
+    "cyrillic": "знаю",
+    "stressed": "знаю",
+    "translit": "znayu",
+    "gloss_en": "I know",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 45
+  },
+  {
+    "id": 46,
+    "cyrillic": "то",
+    "stressed": "то",
+    "translit": "to",
+    "gloss_en": "that, then",
+    "pos": "pronoun",
+    "is_cognate": true,
+    "freq_rank": 46
+  },
+  {
+    "id": 47,
+    "cyrillic": "только",
+    "stressed": "только",
+    "translit": "tol'ko",
+    "gloss_en": "only, just",
+    "pos": "adverb",
+    "is_cognate": true,
+    "freq_rank": 47
+  },
+  {
+    "id": 48,
+    "cyrillic": "всё",
+    "stressed": "всё",
+    "translit": "vsyo",
+    "gloss_en": "everything, all",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 48
+  },
+  {
+    "id": 49,
+    "cyrillic": "было",
+    "stressed": "было",
+    "translit": "bylo",
+    "gloss_en": "it was",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 49
+  },
+  {
+    "id": 50,
+    "cyrillic": "вас",
+    "stressed": "вас",
+    "translit": "vas",
+    "gloss_en": "you",
+    "pos": "pronoun",
+    "is_cognate": true,
+    "freq_rank": 50
+  },
+  {
+    "id": 51,
+    "cyrillic": "может",
+    "stressed": "может",
+    "translit": "mozhet",
+    "gloss_en": "can, maybe",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 51
+  },
+  {
+    "id": 52,
+    "cyrillic": "нас",
+    "stressed": "нас",
+    "translit": "nas",
+    "gloss_en": "us",
+    "pos": "pronoun",
+    "is_cognate": true,
+    "freq_rank": 52
+  },
+  {
+    "id": 53,
+    "cyrillic": "вот",
+    "stressed": "вот",
+    "translit": "vot",
+    "gloss_en": "here, there",
+    "pos": "particle",
+    "is_cognate": true,
+    "freq_rank": 53
+  },
+  {
+    "id": 54,
+    "cyrillic": "от",
+    "stressed": "от",
+    "translit": "ot",
+    "gloss_en": "from",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 54
+  },
+  {
+    "id": 55,
+    "cyrillic": "быть",
+    "stressed": "быть",
+    "translit": "byt'",
+    "gloss_en": "to be",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 55
+  },
+  {
+    "id": 56,
+    "cyrillic": "кто",
+    "stressed": "кто",
+    "translit": "kto",
+    "gloss_en": "who",
+    "pos": "pronoun",
+    "is_cognate": true,
+    "freq_rank": 56
+  },
+  {
+    "id": 57,
+    "cyrillic": "будет",
+    "stressed": "будет",
+    "translit": "budet",
+    "gloss_en": "will be",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 57
+  },
+  {
+    "id": 58,
+    "cyrillic": "почему",
+    "stressed": "почему",
+    "translit": "pochemu",
+    "gloss_en": "why",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 58
+  },
+  {
+    "id": 59,
+    "cyrillic": "вам",
+    "stressed": "вам",
+    "translit": "",
+    "gloss_en": "to you",
+    "pos": "",
+    "is_cognate": false,
+    "freq_rank": 59
+  },
+  {
+    "id": 60,
+    "cyrillic": "их",
+    "stressed": "их",
+    "translit": "ikh",
+    "gloss_en": "them, their",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 60
+  },
+  {
+    "id": 61,
+    "cyrillic": "очень",
+    "stressed": "очень",
+    "translit": "ochen'",
+    "gloss_en": "very, really",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 61
+  },
+  {
+    "id": 62,
+    "cyrillic": "могу",
+    "stressed": "могу",
+    "translit": "mogu",
+    "gloss_en": "I can",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 62
+  },
+  {
+    "id": 63,
+    "cyrillic": "уже",
+    "stressed": "уже",
+    "translit": "uzhe",
+    "gloss_en": "already, by now",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 63
+  },
+  {
+    "id": 64,
     "cyrillic": "спасибо",
     "stressed": "спаси́бо",
     "translit": "spasibo",
     "gloss_en": "thank you",
     "pos": "part",
     "is_cognate": false,
-    "freq_rank": 12
+    "freq_rank": 64
   },
   {
-    "id": 13,
-    "cyrillic": "привет",
-    "stressed": "приве́т",
-    "translit": "privet",
-    "gloss_en": "hi",
-    "pos": "interj",
+    "id": 65,
+    "cyrillic": "или",
+    "stressed": "или",
+    "translit": "ili",
+    "gloss_en": "or",
+    "pos": "conjunction",
     "is_cognate": false,
-    "freq_rank": 13
+    "freq_rank": 65
   },
   {
-    "id": 14,
+    "id": 66,
+    "cyrillic": "нам",
+    "stressed": "нам",
+    "translit": "nam",
+    "gloss_en": "to us, for us",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 66
+  },
+  {
+    "id": 67,
+    "cyrillic": "еще",
+    "stressed": "еще",
+    "translit": "eshche",
+    "gloss_en": "yet, still, more",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 67
+  },
+  {
+    "id": 68,
+    "cyrillic": "там",
+    "stressed": "там",
+    "translit": "tam",
+    "gloss_en": "there, over there",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 68
+  },
+  {
+    "id": 69,
+    "cyrillic": "нужно",
+    "stressed": "нужно",
+    "translit": "nuzhno",
+    "gloss_en": "necessary, must, need",
+    "pos": "other",
+    "is_cognate": false,
+    "freq_rank": 69
+  },
+  {
+    "id": 70,
+    "cyrillic": "сейчас",
+    "stressed": "сейчас",
+    "translit": "seychas",
+    "gloss_en": "now, immediately",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 70
+  },
+  {
+    "id": 71,
+    "cyrillic": "где",
+    "stressed": "где",
+    "translit": "gde",
+    "gloss_en": "where",
+    "pos": "adverb",
+    "is_cognate": true,
+    "freq_rank": 71
+  },
+  {
+    "id": 72,
+    "cyrillic": "чем",
+    "stressed": "чем",
+    "translit": "chem",
+    "gloss_en": "than, instrumental \"what\"",
+    "pos": "conjunction",
+    "is_cognate": false,
+    "freq_rank": 72
+  },
+  {
+    "id": 73,
+    "cyrillic": "хочу",
+    "stressed": "хочу",
+    "translit": "khochu",
+    "gloss_en": "I want",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 73
+  },
+  {
+    "id": 74,
+    "cyrillic": "ничего",
+    "stressed": "ничего",
+    "translit": "nichevo",
+    "gloss_en": "nothing, not bad",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 74
+  },
+  {
+    "id": 75,
+    "cyrillic": "этого",
+    "stressed": "этого",
+    "translit": "etogo",
+    "gloss_en": "of this, of that",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 75
+  },
+  {
+    "id": 76,
+    "cyrillic": "была",
+    "stressed": "была",
+    "translit": "byla",
+    "gloss_en": "was (feminine)",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 76
+  },
+  {
+    "id": 77,
+    "cyrillic": "мой",
+    "stressed": "мой",
+    "translit": "moy",
+    "gloss_en": "my, mine",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 77
+  },
+  {
+    "id": 78,
+    "cyrillic": "ее",
+    "stressed": "ее",
+    "translit": "yeyo",
+    "gloss_en": "her, its",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 78
+  },
+  {
+    "id": 79,
+    "cyrillic": "ладно",
+    "stressed": "ладно",
+    "translit": "ladno",
+    "gloss_en": "okay, all right",
+    "pos": "interjection",
+    "is_cognate": false,
+    "freq_rank": 79
+  },
+  {
+    "id": 80,
+    "cyrillic": "знаешь",
+    "stressed": "знаешь",
+    "translit": "",
+    "gloss_en": "you know",
+    "pos": "",
+    "is_cognate": false,
+    "freq_rank": 80
+  },
+  {
+    "id": 81,
+    "cyrillic": "п",
+    "stressed": "п",
+    "translit": "po",
+    "gloss_en": "along, according to",
+    "pos": "preposition",
+    "is_cognate": true,
+    "freq_rank": 81
+  },
+  {
+    "id": 82,
+    "cyrillic": "до",
+    "stressed": "до",
+    "translit": "do",
+    "gloss_en": "until, to, up to",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 82
+  },
+  {
+    "id": 83,
+    "cyrillic": "этом",
+    "stressed": "этом",
+    "translit": "etom",
+    "gloss_en": "this, that (prepositional)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 83
+  },
+  {
+    "id": 84,
+    "cyrillic": "потому",
+    "stressed": "потому",
+    "translit": "potomu",
+    "gloss_en": "therefore, because of that",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 84
+  },
+  {
+    "id": 85,
+    "cyrillic": "теперь",
+    "stressed": "теперь",
+    "translit": "teper",
+    "gloss_en": "now, at present",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 85
+  },
+  {
+    "id": 86,
+    "cyrillic": "думаю",
+    "stressed": "думаю",
+    "translit": "dumayu",
+    "gloss_en": "I think, I believe",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 86
+  },
+  {
+    "id": 87,
+    "cyrillic": "больше",
+    "stressed": "больше",
+    "translit": "bolshe",
+    "gloss_en": "more, larger",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 87
+  },
+  {
+    "id": 88,
+    "cyrillic": "её",
+    "stressed": "её",
+    "translit": "yeyo",
+    "gloss_en": "her, its",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 88
+  },
+  {
+    "id": 89,
+    "cyrillic": "со",
+    "stressed": "со",
+    "translit": "so",
+    "gloss_en": "with, from",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 89
+  },
+  {
+    "id": 90,
+    "cyrillic": "раз",
+    "stressed": "раз",
+    "translit": "raz",
+    "gloss_en": "time, once",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 90
+  },
+  {
+    "id": 91,
+    "cyrillic": "ему",
+    "stressed": "ему",
+    "translit": "yemu",
+    "gloss_en": "him, it",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 91
+  },
+  {
+    "id": 92,
+    "cyrillic": "надо",
+    "stressed": "надо",
+    "translit": "nado",
+    "gloss_en": "must, necessary",
+    "pos": "other",
+    "is_cognate": false,
+    "freq_rank": 92
+  },
+  {
+    "id": 93,
+    "cyrillic": "время",
+    "stressed": "время",
+    "translit": "vremya",
+    "gloss_en": "time",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 93
+  },
+  {
+    "id": 94,
+    "cyrillic": "этот",
+    "stressed": "этот",
+    "translit": "etot",
+    "gloss_en": "this, these",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 94
+  },
+  {
+    "id": 95,
+    "cyrillic": "ли",
+    "stressed": "ли",
+    "translit": "li",
+    "gloss_en": "if, whether",
+    "pos": "particle",
+    "is_cognate": false,
+    "freq_rank": 95
+  },
+  {
+    "id": 96,
+    "cyrillic": "ещё",
+    "stressed": "ещё",
+    "translit": "eshchyo",
+    "gloss_en": "still, yet, more",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 96
+  },
+  {
+    "id": 97,
     "cyrillic": "пока",
     "stressed": "пока́",
     "translit": "poka",
     "gloss_en": "bye",
     "pos": "interj",
     "is_cognate": false,
-    "freq_rank": 14
+    "freq_rank": 97
   },
   {
-    "id": 15,
-    "cyrillic": "дом",
-    "stressed": "дом",
-    "translit": "dom",
-    "gloss_en": "house",
+    "id": 98,
+    "cyrillic": "даже",
+    "stressed": "даже",
+    "translit": "dazhe",
+    "gloss_en": "even",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 98
+  },
+  {
+    "id": 99,
+    "cyrillic": "привет",
+    "stressed": "приве́т",
+    "translit": "privet",
+    "gloss_en": "hi",
+    "pos": "interj",
+    "is_cognate": false,
+    "freq_rank": 99
+  },
+  {
+    "id": 100,
+    "cyrillic": "сказал",
+    "stressed": "сказал",
+    "translit": "skazal",
+    "gloss_en": "said, told",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 100
+  },
+  {
+    "id": 101,
+    "cyrillic": "себя",
+    "stressed": "себя",
+    "translit": "sebya",
+    "gloss_en": "self",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 101
+  },
+  {
+    "id": 102,
+    "cyrillic": "должен",
+    "stressed": "должен",
+    "translit": "dolzhen",
+    "gloss_en": "must, should, obligated",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 102
+  },
+  {
+    "id": 103,
+    "cyrillic": "тоже",
+    "stressed": "тоже",
+    "translit": "tozhe",
+    "gloss_en": "also, too, as well",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 103
+  },
+  {
+    "id": 104,
+    "cyrillic": "хочешь",
+    "stressed": "хочешь",
+    "translit": "khochesh",
+    "gloss_en": "you want",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 104
+  },
+  {
+    "id": 105,
+    "cyrillic": "давай",
+    "stressed": "давай",
+    "translit": "davay",
+    "gloss_en": "let's, come on",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 105
+  },
+  {
+    "id": 106,
+    "cyrillic": "никогда",
+    "stressed": "никогда",
+    "translit": "nikogda",
+    "gloss_en": "never",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 106
+  },
+  {
+    "id": 107,
+    "cyrillic": "эй",
+    "stressed": "эй",
+    "translit": "ey",
+    "gloss_en": "hey, hi",
+    "pos": "interjection",
+    "is_cognate": true,
+    "freq_rank": 107
+  },
+  {
+    "id": 108,
+    "cyrillic": "того",
+    "stressed": "того",
+    "translit": "togo",
+    "gloss_en": "of that, that",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 108
+  },
+  {
+    "id": 109,
+    "cyrillic": "тогда",
+    "stressed": "тогда",
+    "translit": "togda",
+    "gloss_en": "then",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 109
+  },
+  {
+    "id": 110,
+    "cyrillic": "него",
+    "stressed": "него",
+    "translit": "nego",
+    "gloss_en": "him, it",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 110
+  },
+  {
+    "id": 111,
+    "cyrillic": "ни",
+    "stressed": "ни",
+    "translit": "ni",
+    "gloss_en": "neither, nor",
+    "pos": "particle",
+    "is_cognate": false,
+    "freq_rank": 111
+  },
+  {
+    "id": 112,
+    "cyrillic": "тут",
+    "stressed": "тут",
+    "translit": "tut",
+    "gloss_en": "here, now",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 112
+  },
+  {
+    "id": 113,
+    "cyrillic": "были",
+    "stressed": "были",
+    "translit": "byli",
+    "gloss_en": "were",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 113
+  },
+  {
+    "id": 114,
+    "cyrillic": "конечно",
+    "stressed": "конечно",
+    "translit": "konechno",
+    "gloss_en": "of course, certainly",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 114
+  },
+  {
+    "id": 115,
+    "cyrillic": "правда",
+    "stressed": "правда",
+    "translit": "pravda",
+    "gloss_en": "truth",
     "pos": "noun",
     "is_cognate": false,
-    "freq_rank": 15
+    "freq_rank": 115
   },
   {
-    "id": 16,
-    "cyrillic": "друг",
-    "stressed": "друг",
-    "translit": "drug",
-    "gloss_en": "friend",
+    "id": 116,
+    "cyrillic": "об",
+    "stressed": "об",
+    "translit": "ob",
+    "gloss_en": "about, concerning",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 116
+  },
+  {
+    "id": 117,
+    "cyrillic": "моя",
+    "stressed": "моя",
+    "translit": "moya",
+    "gloss_en": "my, mine",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 117
+  },
+  {
+    "id": 118,
+    "cyrillic": "пожалуйста",
+    "stressed": "пожалуйста",
+    "translit": "pozhaluysta",
+    "gloss_en": "please, you're welcome",
+    "pos": "particle",
+    "is_cognate": false,
+    "freq_rank": 118
+  },
+  {
+    "id": 119,
+    "cyrillic": "тобой",
+    "stressed": "тобой",
+    "translit": "toboy",
+    "gloss_en": "you (instrumental)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 119
+  },
+  {
+    "id": 120,
+    "cyrillic": "сказать",
+    "stressed": "сказать",
+    "translit": "skazat'",
+    "gloss_en": "to say, to tell",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 120
+  },
+  {
+    "id": 121,
+    "cyrillic": "сегодня",
+    "stressed": "сегодня",
+    "translit": "segodnya",
+    "gloss_en": "today",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 121
+  },
+  {
+    "id": 122,
+    "cyrillic": "один",
+    "stressed": "один",
+    "translit": "odin",
+    "gloss_en": "one",
+    "pos": "numeral",
+    "is_cognate": false,
+    "freq_rank": 122
+  },
+  {
+    "id": 123,
+    "cyrillic": "лучше",
+    "stressed": "лучше",
+    "translit": "luchshe",
+    "gloss_en": "better, best",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 123
+  },
+  {
+    "id": 124,
+    "cyrillic": "можешь",
+    "stressed": "можешь",
+    "translit": "mozhesh'",
+    "gloss_en": "you can (informal)",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 124
+  },
+  {
+    "id": 125,
+    "cyrillic": "сюда",
+    "stressed": "сюда",
+    "translit": "syuda",
+    "gloss_en": "here, hither",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 125
+  },
+  {
+    "id": 126,
+    "cyrillic": "мной",
+    "stressed": "мной",
+    "translit": "mnoy",
+    "gloss_en": "me (instrumental)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 126
+  },
+  {
+    "id": 127,
+    "cyrillic": "значит",
+    "stressed": "значит",
+    "translit": "znachit",
+    "gloss_en": "means, so, therefore",
+    "pos": "particle",
+    "is_cognate": false,
+    "freq_rank": 127
+  },
+  {
+    "id": 128,
+    "cyrillic": "сделать",
+    "stressed": "сделать",
+    "translit": "sdelat'",
+    "gloss_en": "to do, to make",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 128
+  },
+  {
+    "id": 129,
+    "cyrillic": "всегда",
+    "stressed": "всегда",
+    "translit": "vsegda",
+    "gloss_en": "always",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 129
+  },
+  {
+    "id": 130,
+    "cyrillic": "дело",
+    "stressed": "дело",
+    "translit": "delo",
+    "gloss_en": "business, matter",
     "pos": "noun",
     "is_cognate": false,
-    "freq_rank": 16
+    "freq_rank": 130
   },
   {
-    "id": 17,
-    "cyrillic": "город",
-    "stressed": "го́род",
-    "translit": "gorod",
-    "gloss_en": "city",
+    "id": 131,
+    "cyrillic": "можно",
+    "stressed": "можно",
+    "translit": "mozhno",
+    "gloss_en": "it is possible, one can",
+    "pos": "other",
+    "is_cognate": false,
+    "freq_rank": 131
+  },
+  {
+    "id": 132,
+    "cyrillic": "ей",
+    "stressed": "ей",
+    "translit": "ey",
+    "gloss_en": "her, to her",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 132
+  },
+  {
+    "id": 133,
+    "cyrillic": "должны",
+    "stressed": "должны",
+    "translit": "dolzhny",
+    "gloss_en": "must, should",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 133
+  },
+  {
+    "id": 134,
+    "cyrillic": "порядке",
+    "stressed": "порядке",
+    "translit": "poryadke",
+    "gloss_en": "order, in order",
     "pos": "noun",
     "is_cognate": false,
-    "freq_rank": 17
+    "freq_rank": 134
   },
   {
-    "id": 18,
-    "cyrillic": "вода",
-    "stressed": "вода́",
-    "translit": "voda",
-    "gloss_en": "water",
+    "id": 135,
+    "cyrillic": "без",
+    "stressed": "без",
+    "translit": "bez",
+    "gloss_en": "without",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 135
+  },
+  {
+    "id": 136,
+    "cyrillic": "день",
+    "stressed": "день",
+    "translit": "den'",
+    "gloss_en": "day",
     "pos": "noun",
     "is_cognate": false,
-    "freq_rank": 18
+    "freq_rank": 136
   },
   {
-    "id": 19,
-    "cyrillic": "книга",
-    "stressed": "кни́га",
-    "translit": "kniga",
-    "gloss_en": "book",
+    "id": 137,
+    "cyrillic": "том",
+    "stressed": "том",
+    "translit": "tom",
+    "gloss_en": "volume, tome",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 137
+  },
+  {
+    "id": 138,
+    "cyrillic": "буду",
+    "stressed": "буду",
+    "translit": "budu",
+    "gloss_en": "will be, I will",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 138
+  },
+  {
+    "id": 139,
+    "cyrillic": "делать",
+    "stressed": "делать",
+    "translit": "delat'",
+    "gloss_en": "to do, to make",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 139
+  },
+  {
+    "id": 140,
+    "cyrillic": "хотел",
+    "stressed": "хотел",
+    "translit": "khotel",
+    "gloss_en": "wanted",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 140
+  },
+  {
+    "id": 141,
+    "cyrillic": "чего",
+    "stressed": "чего",
+    "translit": "chego",
+    "gloss_en": "of what, why",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 141
+  },
+  {
+    "id": 142,
+    "cyrillic": "эти",
+    "stressed": "эти",
+    "translit": "eti",
+    "gloss_en": "these",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 142
+  },
+  {
+    "id": 143,
+    "cyrillic": "много",
+    "stressed": "много",
+    "translit": "mnogo",
+    "gloss_en": "a lot, much, many",
+    "pos": "adverb",
+    "is_cognate": true,
+    "freq_rank": 143
+  },
+  {
+    "id": 144,
+    "cyrillic": "после",
+    "stressed": "после",
+    "translit": "posle",
+    "gloss_en": "after, afterwards",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 144
+  },
+  {
+    "id": 145,
+    "cyrillic": "этим",
+    "stressed": "этим",
+    "translit": "etim",
+    "gloss_en": "by this, with this",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 145
+  },
+  {
+    "id": 146,
+    "cyrillic": "всего",
+    "stressed": "всего",
+    "translit": "vsego",
+    "gloss_en": "in total, only",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 146
+  },
+  {
+    "id": 147,
+    "cyrillic": "во",
+    "stressed": "во",
+    "translit": "vo",
+    "gloss_en": "in, at, to",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 147
+  },
+  {
+    "id": 148,
+    "cyrillic": "твой",
+    "stressed": "твой",
+    "translit": "tvoi",
+    "gloss_en": "your, yours",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 148
+  },
+  {
+    "id": 149,
+    "cyrillic": "ним",
+    "stressed": "ним",
+    "translit": "nim",
+    "gloss_en": "him, it, them",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 149
+  },
+  {
+    "id": 150,
+    "cyrillic": "лет",
+    "stressed": "лет",
+    "translit": "let",
+    "gloss_en": "years",
     "pos": "noun",
     "is_cognate": false,
-    "freq_rank": 19
+    "freq_rank": 150
   },
   {
-    "id": 20,
+    "id": 151,
+    "cyrillic": "боже",
+    "stressed": "боже",
+    "translit": "bozhe",
+    "gloss_en": "my God, oh Lord",
+    "pos": "interjection",
+    "is_cognate": false,
+    "freq_rank": 151
+  },
+  {
+    "id": 152,
+    "cyrillic": "них",
+    "stressed": "них",
+    "translit": "nikh",
+    "gloss_en": "them, they",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 152
+  },
+  {
+    "id": 153,
+    "cyrillic": "сэр",
+    "stressed": "сэр",
+    "translit": "ser",
+    "gloss_en": "sir",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 153
+  },
+  {
+    "id": 154,
+    "cyrillic": "ведь",
+    "stressed": "ведь",
+    "translit": "ved",
+    "gloss_en": "after all, indeed",
+    "pos": "particle",
+    "is_cognate": true,
+    "freq_rank": 154
+  },
+  {
+    "id": 155,
+    "cyrillic": "мистер",
+    "stressed": "мистер",
+    "translit": "mister",
+    "gloss_en": "mister",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 155
+  },
+  {
+    "id": 156,
+    "cyrillic": "жизнь",
+    "stressed": "жизнь",
+    "translit": "zhizn",
+    "gloss_en": "life, existence",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 156
+  },
+  {
+    "id": 157,
+    "cyrillic": "потом",
+    "stressed": "потом",
+    "translit": "potom",
+    "gloss_en": "afterwards, then",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 157
+  },
+  {
+    "id": 158,
+    "cyrillic": "ней",
+    "stressed": "ней",
+    "translit": "ney",
+    "gloss_en": "her, it",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 158
+  },
+  {
+    "id": 159,
+    "cyrillic": "такой",
+    "stressed": "такой",
+    "translit": "takoy",
+    "gloss_en": "such, like this",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 159
+  },
+  {
+    "id": 160,
+    "cyrillic": "который",
+    "stressed": "который",
+    "translit": "kotoryy",
+    "gloss_en": "which, who, that",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 160
+  },
+  {
+    "id": 161,
+    "cyrillic": "всех",
+    "stressed": "всех",
+    "translit": "vsekh",
+    "gloss_en": "all, everyone",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 161
+  },
+  {
+    "id": 162,
+    "cyrillic": "через",
+    "stressed": "через",
+    "translit": "cherez",
+    "gloss_en": "through, across, in",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 162
+  },
+  {
+    "id": 163,
+    "cyrillic": "им",
+    "stressed": "им",
+    "translit": "im",
+    "gloss_en": "them, by them/him/it",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 163
+  },
+  {
+    "id": 164,
+    "cyrillic": "возможно",
+    "stressed": "возможно",
+    "translit": "vozmozhno",
+    "gloss_en": "possibly, perhaps",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 164
+  },
+  {
+    "id": 165,
+    "cyrillic": "немного",
+    "stressed": "немного",
+    "translit": "nemnogo",
+    "gloss_en": "a little",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 165
+  },
+  {
+    "id": 166,
+    "cyrillic": "такое",
+    "stressed": "такое",
+    "translit": "takoye",
+    "gloss_en": "such, what kind of",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 166
+  },
+  {
+    "id": 167,
+    "cyrillic": "слишком",
+    "stressed": "слишком",
+    "translit": "slishkom",
+    "gloss_en": "too, too much",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 167
+  },
+  {
+    "id": 168,
+    "cyrillic": "себе",
+    "stressed": "себе",
+    "translit": "sebe",
+    "gloss_en": "to/for oneself",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 168
+  },
+  {
+    "id": 169,
+    "cyrillic": "зачем",
+    "stressed": "зачем",
+    "translit": "zachem",
+    "gloss_en": "why, what for",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 169
+  },
+  {
+    "id": 170,
+    "cyrillic": "должна",
+    "stressed": "должна",
+    "translit": "dolzhna",
+    "gloss_en": "must, should, owes",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 170
+  },
+  {
+    "id": 171,
+    "cyrillic": "моей",
+    "stressed": "моей",
+    "translit": "moey",
+    "gloss_en": "my",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 171
+  },
+  {
+    "id": 172,
+    "cyrillic": "люди",
+    "stressed": "люди",
+    "translit": "lyudi",
+    "gloss_en": "people",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 172
+  },
+  {
+    "id": 173,
+    "cyrillic": "знаете",
+    "stressed": "знаете",
+    "translit": "znayete",
+    "gloss_en": "you know",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 173
+  },
+  {
+    "id": 174,
+    "cyrillic": "этой",
+    "stressed": "этой",
+    "translit": "etoy",
+    "gloss_en": "this, that",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 174
+  },
+  {
+    "id": 175,
+    "cyrillic": "думаешь",
+    "stressed": "думаешь",
+    "translit": "dumayesh",
+    "gloss_en": "you think",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 175
+  },
+  {
+    "id": 176,
+    "cyrillic": "свою",
+    "stressed": "свою",
+    "translit": "svoyu",
+    "gloss_en": "one's own",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 176
+  },
+  {
+    "id": 177,
+    "cyrillic": "точно",
+    "stressed": "точно",
+    "translit": "tochno",
+    "gloss_en": "exactly, precisely",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 177
+  },
+  {
+    "id": 178,
+    "cyrillic": "человек",
+    "stressed": "человек",
+    "translit": "chelovek",
+    "gloss_en": "person, human",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 178
+  },
+  {
+    "id": 179,
+    "cyrillic": "твоя",
+    "stressed": "твоя",
+    "translit": "tvoya",
+    "gloss_en": "your",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 179
+  },
+  {
+    "id": 180,
+    "cyrillic": "под",
+    "stressed": "под",
+    "translit": "pod",
+    "gloss_en": "under",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 180
+  },
+  {
+    "id": 181,
+    "cyrillic": "сказала",
+    "stressed": "сказала",
+    "translit": "skazala",
+    "gloss_en": "said, told",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 181
+  },
+  {
+    "id": 182,
+    "cyrillic": "назад",
+    "stressed": "назад",
+    "translit": "nazad",
+    "gloss_en": "back, ago",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 182
+  },
+  {
+    "id": 183,
+    "cyrillic": "эту",
+    "stressed": "эту",
+    "translit": "etu",
+    "gloss_en": "this, that",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 183
+  },
+  {
+    "id": 184,
+    "cyrillic": "можем",
+    "stressed": "можем",
+    "translit": "mozhem",
+    "gloss_en": "we can",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 184
+  },
+  {
+    "id": 185,
+    "cyrillic": "случилось",
+    "stressed": "случилось",
+    "translit": "sluchilos",
+    "gloss_en": "it happened",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 185
+  },
+  {
+    "id": 186,
     "cyrillic": "мама",
     "stressed": "ма́ма",
     "translit": "mama",
     "gloss_en": "mom",
     "pos": "noun",
     "is_cognate": false,
-    "freq_rank": 20
+    "freq_rank": 186
   },
   {
-    "id": 21,
-    "cyrillic": "папа",
-    "stressed": "па́па",
-    "translit": "papa",
-    "gloss_en": "dad",
+    "id": 187,
+    "cyrillic": "мог",
+    "stressed": "мог",
+    "translit": "mog",
+    "gloss_en": "could, was able",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 187
+  },
+  {
+    "id": 188,
+    "cyrillic": "вместе",
+    "stressed": "вместе",
+    "translit": "vmeste",
+    "gloss_en": "together",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 188
+  },
+  {
+    "id": 189,
+    "cyrillic": "отец",
+    "stressed": "отец",
+    "translit": "otets",
+    "gloss_en": "father",
     "pos": "noun",
     "is_cognate": false,
-    "freq_rank": 21
+    "freq_rank": 189
   },
   {
-    "id": 22,
-    "cyrillic": "кот",
-    "stressed": "кот",
-    "translit": "kot",
-    "gloss_en": "cat",
+    "id": 190,
+    "cyrillic": "сделал",
+    "stressed": "сделал",
+    "translit": "sdelal",
+    "gloss_en": "did, made",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 190
+  },
+  {
+    "id": 191,
+    "cyrillic": "мои",
+    "stressed": "мои",
+    "translit": "moi",
+    "gloss_en": "my",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 191
+  },
+  {
+    "id": 192,
+    "cyrillic": "кажется",
+    "stressed": "кажется",
+    "translit": "kazhetsya",
+    "gloss_en": "it seems",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 192
+  },
+  {
+    "id": 193,
+    "cyrillic": "друг",
+    "stressed": "друг",
+    "translit": "drug",
+    "gloss_en": "friend",
     "pos": "noun",
     "is_cognate": false,
-    "freq_rank": 22
+    "freq_rank": 193
   },
   {
-    "id": 23,
-    "cyrillic": "собака",
-    "stressed": "соба́ка",
-    "translit": "sobaka",
-    "gloss_en": "dog",
+    "id": 194,
+    "cyrillic": "куда",
+    "stressed": "куда",
+    "translit": "kuda",
+    "gloss_en": "where to",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 194
+  },
+  {
+    "id": 195,
+    "cyrillic": "никто",
+    "stressed": "никто",
+    "translit": "nikto",
+    "gloss_en": "nobody",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 195
+  },
+  {
+    "id": 196,
+    "cyrillic": "поэтому",
+    "stressed": "поэтому",
+    "translit": "poetomu",
+    "gloss_en": "therefore, so",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 196
+  },
+  {
+    "id": 197,
+    "cyrillic": "эта",
+    "stressed": "эта",
+    "translit": "eta",
+    "gloss_en": "this (feminine)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 197
+  },
+  {
+    "id": 198,
+    "cyrillic": "которые",
+    "stressed": "которые",
+    "translit": "kotorye",
+    "gloss_en": "which, who",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 198
+  },
+  {
+    "id": 199,
+    "cyrillic": "два",
+    "stressed": "два",
+    "translit": "dva",
+    "gloss_en": "two",
+    "pos": "numeral",
+    "is_cognate": false,
+    "freq_rank": 199
+  },
+  {
+    "id": 200,
+    "cyrillic": "тот",
+    "stressed": "тот",
+    "translit": "tot",
+    "gloss_en": "that (masculine)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 200
+  },
+  {
+    "id": 201,
+    "cyrillic": "сколько",
+    "stressed": "сколько",
+    "translit": "skolko",
+    "gloss_en": "how much/many",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 201
+  },
+  {
+    "id": 202,
+    "cyrillic": "понимаю",
+    "stressed": "понимаю",
+    "translit": "ponimayu",
+    "gloss_en": "I understand",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 202
+  },
+  {
+    "id": 203,
+    "cyrillic": "снова",
+    "stressed": "снова",
+    "translit": "snova",
+    "gloss_en": "again",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 203
+  },
+  {
+    "id": 204,
+    "cyrillic": "жизни",
+    "stressed": "жизни",
+    "translit": "zhizni",
+    "gloss_en": "life (genitive/dative)",
     "pos": "noun",
     "is_cognate": false,
-    "freq_rank": 23
+    "freq_rank": 204
   },
   {
-    "id": 24,
-    "cyrillic": "стол",
-    "stressed": "стол",
-    "translit": "stol",
-    "gloss_en": "table",
+    "id": 205,
+    "cyrillic": "нравится",
+    "stressed": "нравится",
+    "translit": "nravitsya",
+    "gloss_en": "to like",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 205
+  },
+  {
+    "id": 206,
+    "cyrillic": "людей",
+    "stressed": "людей",
+    "translit": "lyudey",
+    "gloss_en": "people (genitive)",
     "pos": "noun",
     "is_cognate": false,
-    "freq_rank": 24
+    "freq_rank": 206
   },
   {
-    "id": 25,
-    "cyrillic": "окно",
-    "stressed": "окно́",
-    "translit": "okno",
-    "gloss_en": "window",
+    "id": 207,
+    "cyrillic": "помочь",
+    "stressed": "помочь",
+    "translit": "pomoch",
+    "gloss_en": "to help",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 207
+  },
+  {
+    "id": 208,
+    "cyrillic": "видел",
+    "stressed": "видел",
+    "translit": "videl",
+    "gloss_en": "saw (masculine)",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 208
+  },
+  {
+    "id": 209,
+    "cyrillic": "люблю",
+    "stressed": "люблю",
+    "translit": "lyublyu",
+    "gloss_en": "I love",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 209
+  },
+  {
+    "id": 210,
+    "cyrillic": "хочет",
+    "stressed": "хочет",
+    "translit": "khochet",
+    "gloss_en": "wants",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 210
+  },
+  {
+    "id": 211,
+    "cyrillic": "место",
+    "stressed": "место",
+    "translit": "mesto",
+    "gloss_en": "place",
     "pos": "noun",
     "is_cognate": false,
-    "freq_rank": 25
+    "freq_rank": 211
   },
   {
-    "id": 26,
-    "cyrillic": "хлеб",
-    "stressed": "хлеб",
-    "translit": "khleb",
-    "gloss_en": "bread",
-    "pos": "noun",
-    "is_cognate": false,
-    "freq_rank": 26
-  },
-  {
-    "id": 27,
+    "id": 212,
     "cyrillic": "знать",
     "stressed": "знать",
     "translit": "znat",
     "gloss_en": "to know",
     "pos": "verb",
     "is_cognate": false,
-    "freq_rank": 27
+    "freq_rank": 212
   },
   {
-    "id": 28,
-    "cyrillic": "хотеть",
-    "stressed": "хоте́ть",
-    "translit": "khotet",
-    "gloss_en": "to want",
+    "id": 213,
+    "cyrillic": "прости",
+    "stressed": "прости",
+    "translit": "prosti",
+    "gloss_en": "forgive me, sorry",
     "pos": "verb",
     "is_cognate": false,
-    "freq_rank": 28
+    "freq_rank": 213
   },
   {
-    "id": 29,
-    "cyrillic": "говорить",
-    "stressed": "говори́ть",
-    "translit": "govorit",
-    "gloss_en": "to speak",
+    "id": 214,
+    "cyrillic": "отлично",
+    "stressed": "отлично",
+    "translit": "otlichno",
+    "gloss_en": "excellent, great",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 214
+  },
+  {
+    "id": 215,
+    "cyrillic": "похоже",
+    "stressed": "похоже",
+    "translit": "pokhozhe",
+    "gloss_en": "similar, looks like",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 215
+  },
+  {
+    "id": 216,
+    "cyrillic": "парень",
+    "stressed": "парень",
+    "translit": "paren",
+    "gloss_en": "guy, boyfriend",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 216
+  },
+  {
+    "id": 217,
+    "cyrillic": "домой",
+    "stressed": "домой",
+    "translit": "domoy",
+    "gloss_en": "home (direction)",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 217
+  },
+  {
+    "id": 218,
+    "cyrillic": "всем",
+    "stressed": "всем",
+    "translit": "vsem",
+    "gloss_en": "to all, for all",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 218
+  },
+  {
+    "id": 219,
+    "cyrillic": "деньги",
+    "stressed": "деньги",
+    "translit": "den'gi",
+    "gloss_en": "money, funds",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 219
+  },
+  {
+    "id": 220,
+    "cyrillic": "иди",
+    "stressed": "иди",
+    "translit": "idi",
+    "gloss_en": "go (imperative)",
     "pos": "verb",
     "is_cognate": false,
-    "freq_rank": 29
+    "freq_rank": 220
   },
   {
-    "id": 30,
-    "cyrillic": "кофе",
-    "stressed": "ко́фе",
-    "translit": "kofe",
-    "gloss_en": "coffee",
+    "id": 221,
+    "cyrillic": "времени",
+    "stressed": "времени",
+    "translit": "vremeni",
+    "gloss_en": "time (genitive)",
     "pos": "noun",
-    "is_cognate": true,
-    "freq_rank": 30
+    "is_cognate": false,
+    "freq_rank": 221
   },
   {
-    "id": 31,
-    "cyrillic": "такси",
-    "stressed": "такси́",
-    "translit": "taksi",
-    "gloss_en": "taxi",
-    "pos": "noun",
-    "is_cognate": true,
-    "freq_rank": 31
+    "id": 222,
+    "cyrillic": "дома",
+    "stressed": "дома",
+    "translit": "doma",
+    "gloss_en": "at home",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 222
   },
   {
-    "id": 32,
-    "cyrillic": "телефон",
-    "stressed": "телефо́н",
-    "translit": "telefon",
-    "gloss_en": "telephone",
-    "pos": "noun",
-    "is_cognate": true,
-    "freq_rank": 32
+    "id": 223,
+    "cyrillic": "именно",
+    "stressed": "именно",
+    "translit": "imenno",
+    "gloss_en": "exactly, namely",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 223
   },
   {
-    "id": 33,
-    "cyrillic": "ресторан",
-    "stressed": "рестора́н",
-    "translit": "restoran",
-    "gloss_en": "restaurant",
-    "pos": "noun",
-    "is_cognate": true,
-    "freq_rank": 33
-  },
-  {
-    "id": 34,
-    "cyrillic": "компьютер",
-    "stressed": "компью́тер",
-    "translit": "kompyuter",
-    "gloss_en": "computer",
-    "pos": "noun",
-    "is_cognate": true,
-    "freq_rank": 34
-  },
-  {
-    "id": 35,
-    "cyrillic": "интернет",
-    "stressed": "интерне́т",
-    "translit": "internet",
-    "gloss_en": "internet",
-    "pos": "noun",
-    "is_cognate": true,
-    "freq_rank": 35
-  },
-  {
-    "id": 36,
-    "cyrillic": "музыка",
-    "stressed": "му́зыка",
-    "translit": "muzyka",
-    "gloss_en": "music",
-    "pos": "noun",
-    "is_cognate": true,
-    "freq_rank": 36
-  },
-  {
-    "id": 37,
-    "cyrillic": "парк",
-    "stressed": "парк",
-    "translit": "park",
-    "gloss_en": "park",
-    "pos": "noun",
-    "is_cognate": true,
-    "freq_rank": 37
-  },
-  {
-    "id": 38,
-    "cyrillic": "банк",
-    "stressed": "банк",
-    "translit": "bank",
-    "gloss_en": "bank",
-    "pos": "noun",
-    "is_cognate": true,
-    "freq_rank": 38
-  },
-  {
-    "id": 39,
-    "cyrillic": "спорт",
-    "stressed": "спорт",
-    "translit": "sport",
-    "gloss_en": "sport",
-    "pos": "noun",
-    "is_cognate": true,
-    "freq_rank": 39
-  },
-  {
-    "id": 40,
+    "id": 224,
     "cyrillic": "доктор",
     "stressed": "до́ктор",
     "translit": "doktor",
     "gloss_en": "doctor",
     "pos": "noun",
     "is_cognate": true,
-    "freq_rank": 40
+    "freq_rank": 224
   },
   {
-    "id": 41,
-    "cyrillic": "студент",
-    "stressed": "студе́нт",
-    "translit": "student",
-    "gloss_en": "student",
+    "id": 225,
+    "cyrillic": "думал",
+    "stressed": "думал",
+    "translit": "dumal",
+    "gloss_en": "thought, was thinking",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 225
+  },
+  {
+    "id": 226,
+    "cyrillic": "говорил",
+    "stressed": "говорил",
+    "translit": "govoril",
+    "gloss_en": "said, spoke",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 226
+  },
+  {
+    "id": 227,
+    "cyrillic": "делаешь",
+    "stressed": "делаешь",
+    "translit": "delaesh'",
+    "gloss_en": "you do, you are doing",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 227
+  },
+  {
+    "id": 228,
+    "cyrillic": "будем",
+    "stressed": "будем",
+    "translit": "budem",
+    "gloss_en": "we will be",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 228
+  },
+  {
+    "id": 229,
+    "cyrillic": "прямо",
+    "stressed": "прямо",
+    "translit": "pryamo",
+    "gloss_en": "straight, directly",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 229
+  },
+  {
+    "id": 230,
+    "cyrillic": "стоит",
+    "stressed": "стоит",
+    "translit": "stoit",
+    "gloss_en": "stands, is worth",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 230
+  },
+  {
+    "id": 231,
+    "cyrillic": "поговорить",
+    "stressed": "поговорить",
+    "translit": "pogovorit'",
+    "gloss_en": "to talk, to have a conversation",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 231
+  },
+  {
+    "id": 232,
+    "cyrillic": "найти",
+    "stressed": "найти",
+    "translit": "nayti",
+    "gloss_en": "to find",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 232
+  },
+  {
+    "id": 233,
+    "cyrillic": "разве",
+    "stressed": "разве",
+    "translit": "razve",
+    "gloss_en": "really?, surely not?",
+    "pos": "particle",
+    "is_cognate": false,
+    "freq_rank": 233
+  },
+  {
+    "id": 234,
+    "cyrillic": "слушай",
+    "stressed": "слушай",
+    "translit": "slushay",
+    "gloss_en": "listen (imperative)",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 234
+  },
+  {
+    "id": 235,
+    "cyrillic": "своей",
+    "stressed": "своей",
+    "translit": "svoyey",
+    "gloss_en": "one's own",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 235
+  },
+  {
+    "id": 236,
+    "cyrillic": "лишь",
+    "stressed": "лишь",
+    "translit": "lish'",
+    "gloss_en": "only, just",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 236
+  },
+  {
+    "id": 237,
+    "cyrillic": "ага",
+    "stressed": "ага",
+    "translit": "aga",
+    "gloss_en": "yep, aha",
+    "pos": "interjection",
+    "is_cognate": true,
+    "freq_rank": 237
+  },
+  {
+    "id": 238,
+    "cyrillic": "можете",
+    "stressed": "можете",
+    "translit": "mozhete",
+    "gloss_en": "you can (plural/formal)",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 238
+  },
+  {
+    "id": 239,
+    "cyrillic": "простите",
+    "stressed": "простите",
+    "translit": "prostite",
+    "gloss_en": "excuse me, forgive me",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 239
+  },
+  {
+    "id": 240,
+    "cyrillic": "хотела",
+    "stressed": "хотела",
+    "translit": "khotela",
+    "gloss_en": "wanted, wished",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 240
+  },
+  {
+    "id": 241,
+    "cyrillic": "сам",
+    "stressed": "сам",
+    "translit": "sam",
+    "gloss_en": "self, himself, herself",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 241
+  },
+  {
+    "id": 242,
+    "cyrillic": "тем",
+    "stressed": "тем",
+    "translit": "tem",
+    "gloss_en": "that (instrumental/dative)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 242
+  },
+  {
+    "id": 243,
+    "cyrillic": "будешь",
+    "stressed": "будешь",
+    "translit": "budesh",
+    "gloss_en": "you will be",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 243
+  },
+  {
+    "id": 244,
+    "cyrillic": "прошу",
+    "stressed": "прошу",
+    "translit": "proshu",
+    "gloss_en": "I ask",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 244
+  },
+  {
+    "id": 245,
+    "cyrillic": "три",
+    "stressed": "три",
+    "translit": "tri",
+    "gloss_en": "three",
+    "pos": "numeral",
+    "is_cognate": true,
+    "freq_rank": 245
+  },
+  {
+    "id": 246,
+    "cyrillic": "деле",
+    "stressed": "деле",
+    "translit": "dele",
+    "gloss_en": "matter, business",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 246
+  },
+  {
+    "id": 247,
+    "cyrillic": "хотите",
+    "stressed": "хотите",
+    "translit": "khotite",
+    "gloss_en": "you want",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 247
+  },
+  {
+    "id": 248,
+    "cyrillic": "говорить",
+    "stressed": "говори́ть",
+    "translit": "govorit",
+    "gloss_en": "to speak",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 248
+  },
+  {
+    "id": 249,
+    "cyrillic": "давайте",
+    "stressed": "давайте",
+    "translit": "davayte",
+    "gloss_en": "let's, give",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 249
+  },
+  {
+    "id": 250,
+    "cyrillic": "совсем",
+    "stressed": "совсем",
+    "translit": "sovsem",
+    "gloss_en": "completely, at all",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 250
+  },
+  {
+    "id": 251,
+    "cyrillic": "знал",
+    "stressed": "знал",
+    "translit": "znal",
+    "gloss_en": "knew",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 251
+  },
+  {
+    "id": 252,
+    "cyrillic": "знает",
+    "stressed": "знает",
+    "translit": "znayet",
+    "gloss_en": "knows",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 252
+  },
+  {
+    "id": 253,
+    "cyrillic": "какой",
+    "stressed": "какой",
+    "translit": "kakoy",
+    "gloss_en": "which, what kind",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 253
+  },
+  {
+    "id": 254,
+    "cyrillic": "моего",
+    "stressed": "моего",
+    "translit": "moyego",
+    "gloss_en": "my, mine",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 254
+  },
+  {
+    "id": 255,
+    "cyrillic": "скажи",
+    "stressed": "скажи",
+    "translit": "skazhi",
+    "gloss_en": "tell, say",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 255
+  },
+  {
+    "id": 256,
+    "cyrillic": "дом",
+    "stressed": "дом",
+    "translit": "dom",
+    "gloss_en": "house",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 256
+  },
+  {
+    "id": 257,
+    "cyrillic": "дела",
+    "stressed": "дела",
+    "translit": "dela",
+    "gloss_en": "affairs, business",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 257
+  },
+  {
+    "id": 258,
+    "cyrillic": "вами",
+    "stressed": "вами",
+    "translit": "vami",
+    "gloss_en": "you (instrumental)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 258
+  },
+  {
+    "id": 259,
+    "cyrillic": "свои",
+    "stressed": "свои",
+    "translit": "svoi",
+    "gloss_en": "one's own",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 259
+  },
+  {
+    "id": 260,
+    "cyrillic": "ж",
+    "stressed": "ж",
+    "translit": "zh",
+    "gloss_en": "indeed, but, then",
+    "pos": "particle",
+    "is_cognate": false,
+    "freq_rank": 260
+  },
+  {
+    "id": 261,
+    "cyrillic": "говорит",
+    "stressed": "говорит",
+    "translit": "govorits",
+    "gloss_en": "says, speaks",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 261
+  },
+  {
+    "id": 262,
+    "cyrillic": "несколько",
+    "stressed": "несколько",
+    "translit": "neskolko",
+    "gloss_en": "several, a few",
+    "pos": "numeral",
+    "is_cognate": false,
+    "freq_rank": 262
+  },
+  {
+    "id": 263,
+    "cyrillic": "должно",
+    "stressed": "должно",
+    "translit": "dolzhno",
+    "gloss_en": "must, should",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 263
+  },
+  {
+    "id": 264,
+    "cyrillic": "про",
+    "stressed": "про",
+    "translit": "pro",
+    "gloss_en": "about, for",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 264
+  },
+  {
+    "id": 265,
+    "cyrillic": "ваш",
+    "stressed": "ваш",
+    "translit": "vash",
+    "gloss_en": "your, yours",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 265
+  },
+  {
+    "id": 266,
+    "cyrillic": "происходит",
+    "stressed": "происходит",
+    "translit": "proiskhodit",
+    "gloss_en": "happens, occurs",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 266
+  },
+  {
+    "id": 267,
+    "cyrillic": "жаль",
+    "stressed": "жаль",
+    "translit": "zhal",
+    "gloss_en": "pity, too bad",
+    "pos": "interjection",
+    "is_cognate": false,
+    "freq_rank": 267
+  },
+  {
+    "id": 268,
+    "cyrillic": "туда",
+    "stressed": "туда",
+    "translit": "tuda",
+    "gloss_en": "there (direction)",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 268
+  },
+  {
+    "id": 269,
+    "cyrillic": "действительно",
+    "stressed": "действительно",
+    "translit": "deystvitelno",
+    "gloss_en": "really, actually",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 269
+  },
+  {
+    "id": 270,
+    "cyrillic": "папа",
+    "stressed": "па́па",
+    "translit": "papa",
+    "gloss_en": "dad",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 270
+  },
+  {
+    "id": 271,
+    "cyrillic": "завтра",
+    "stressed": "завтра",
+    "translit": "zavtra",
+    "gloss_en": "tomorrow",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 271
+  },
+  {
+    "id": 272,
+    "cyrillic": "оно",
+    "stressed": "оно",
+    "translit": "ono",
+    "gloss_en": "it, that",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 272
+  },
+  {
+    "id": 273,
+    "cyrillic": "черт",
+    "stressed": "черт",
+    "translit": "chert",
+    "gloss_en": "devil, damn",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 273
+  },
+  {
+    "id": 274,
+    "cyrillic": "одна",
+    "stressed": "одна",
+    "translit": "odna",
+    "gloss_en": "one (fem.)",
+    "pos": "numeral",
+    "is_cognate": false,
+    "freq_rank": 274
+  },
+  {
+    "id": 275,
+    "cyrillic": "перед",
+    "stressed": "перед",
+    "translit": "pered",
+    "gloss_en": "in front of, before",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 275
+  },
+  {
+    "id": 276,
+    "cyrillic": "наш",
+    "stressed": "наш",
+    "translit": "nash",
+    "gloss_en": "our",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 276
+  },
+  {
+    "id": 277,
+    "cyrillic": "уверен",
+    "stressed": "уверен",
+    "translit": "uveren",
+    "gloss_en": "sure, confident",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 277
+  },
+  {
+    "id": 278,
+    "cyrillic": "отсюда",
+    "stressed": "отсюда",
+    "translit": "otsyuda",
+    "gloss_en": "from here, hence",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 278
+  },
+  {
+    "id": 279,
+    "cyrillic": "нужна",
+    "stressed": "нужна",
+    "translit": "nuzhna",
+    "gloss_en": "needed (fem.)",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 279
+  },
+  {
+    "id": 280,
+    "cyrillic": "самом",
+    "stressed": "самом",
+    "translit": "samom",
+    "gloss_en": "very, most, self",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 280
+  },
+  {
+    "id": 281,
+    "cyrillic": "тех",
+    "stressed": "тех",
+    "translit": "tekh",
+    "gloss_en": "those, them",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 281
+  },
+  {
+    "id": 282,
+    "cyrillic": "нужен",
+    "stressed": "нужен",
+    "translit": "nuzhen",
+    "gloss_en": "needed (masc.)",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 282
+  },
+  {
+    "id": 283,
+    "cyrillic": "свой",
+    "stressed": "свой",
+    "translit": "svoy",
+    "gloss_en": "own, one's own",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 283
+  },
+  {
+    "id": 284,
+    "cyrillic": "мою",
+    "stressed": "мою",
+    "translit": "moyu",
+    "gloss_en": "my (fem. acc.)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 284
+  },
+  {
+    "id": 285,
+    "cyrillic": "кого",
+    "stressed": "кого",
+    "translit": "kogo",
+    "gloss_en": "whom, whose",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 285
+  },
+  {
+    "id": 286,
+    "cyrillic": "верно",
+    "stressed": "верно",
+    "translit": "verno",
+    "gloss_en": "correctly, truly",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 286
+  },
+  {
+    "id": 287,
+    "cyrillic": "работу",
+    "stressed": "работу",
+    "translit": "rabotu",
+    "gloss_en": "work (acc.)",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 287
+  },
+  {
+    "id": 288,
+    "cyrillic": "каждый",
+    "stressed": "каждый",
+    "translit": "kazhdyy",
+    "gloss_en": "every, each",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 288
+  },
+  {
+    "id": 289,
+    "cyrillic": "твоей",
+    "stressed": "твоей",
+    "translit": "tvoey",
+    "gloss_en": "your (fem. gen/dat/prep)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 289
+  },
+  {
+    "id": 290,
+    "cyrillic": "будут",
+    "stressed": "будут",
+    "translit": "budut",
+    "gloss_en": "they will be",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 290
+  },
+  {
+    "id": 291,
+    "cyrillic": "хватит",
+    "stressed": "хватит",
+    "translit": "khvatit",
+    "gloss_en": "enough, suffice",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 291
+  },
+  {
+    "id": 292,
+    "cyrillic": "понял",
+    "stressed": "понял",
+    "translit": "ponyol",
+    "gloss_en": "understood (masc.)",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 292
+  },
+  {
+    "id": 293,
+    "cyrillic": "нее",
+    "stressed": "нее",
+    "translit": "nee",
+    "gloss_en": "her (with prepositions)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 293
+  },
+  {
+    "id": 294,
+    "cyrillic": "уж",
+    "stressed": "уж",
+    "translit": "uzh",
+    "gloss_en": "indeed, really, already",
+    "pos": "particle",
+    "is_cognate": false,
+    "freq_rank": 294
+  },
+  {
+    "id": 295,
+    "cyrillic": "имя",
+    "stressed": "имя",
+    "translit": "imya",
+    "gloss_en": "name",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 295
+  },
+  {
+    "id": 296,
+    "cyrillic": "против",
+    "stressed": "против",
+    "translit": "protiv",
+    "gloss_en": "against, opposite",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 296
+  },
+  {
+    "id": 297,
+    "cyrillic": "пор",
+    "stressed": "пор",
+    "translit": "por",
+    "gloss_en": "pore",
     "pos": "noun",
     "is_cognate": true,
-    "freq_rank": 41
+    "freq_rank": 297
   },
   {
-    "id": 42,
-    "cyrillic": "театр",
-    "stressed": "теа́тр",
-    "translit": "teatr",
-    "gloss_en": "theater",
+    "id": 298,
+    "cyrillic": "чём",
+    "stressed": "чём",
+    "translit": "chyom",
+    "gloss_en": "what",
+    "pos": "pronoun",
+    "is_cognate": true,
+    "freq_rank": 298
+  },
+  {
+    "id": 299,
+    "cyrillic": "раньше",
+    "stressed": "раньше",
+    "translit": "ran'she",
+    "gloss_en": "earlier, before",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 299
+  },
+  {
+    "id": 300,
+    "cyrillic": "говорю",
+    "stressed": "говорю",
+    "translit": "govoryu",
+    "gloss_en": "I speak, I say",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 300
+  },
+  {
+    "id": 301,
+    "cyrillic": "более",
+    "stressed": "более",
+    "translit": "boleye",
+    "gloss_en": "more",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 301
+  },
+  {
+    "id": 302,
+    "cyrillic": "надеюсь",
+    "stressed": "надеюсь",
+    "translit": "nadeyus'",
+    "gloss_en": "I hope",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 302
+  },
+  {
+    "id": 303,
+    "cyrillic": "итак",
+    "stressed": "итак",
+    "translit": "itak",
+    "gloss_en": "thus, so",
+    "pos": "conjunction",
+    "is_cognate": false,
+    "freq_rank": 303
+  },
+  {
+    "id": 304,
+    "cyrillic": "при",
+    "stressed": "при",
+    "translit": "pri",
+    "gloss_en": "at, near, by, during",
+    "pos": "preposition",
+    "is_cognate": true,
+    "freq_rank": 304
+  },
+  {
+    "id": 305,
+    "cyrillic": "ваша",
+    "stressed": "ваша",
+    "translit": "vasha",
+    "gloss_en": "your (feminine)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 305
+  },
+  {
+    "id": 306,
+    "cyrillic": "вообще",
+    "stressed": "вообще",
+    "translit": "voobshche",
+    "gloss_en": "in general, at all",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 306
+  },
+  {
+    "id": 307,
+    "cyrillic": "пошли",
+    "stressed": "пошли",
+    "translit": "poshli",
+    "gloss_en": "went, let's go",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 307
+  },
+  {
+    "id": 308,
+    "cyrillic": "мать",
+    "stressed": "мать",
+    "translit": "mat'",
+    "gloss_en": "mother",
     "pos": "noun",
     "is_cognate": true,
-    "freq_rank": 42
+    "freq_rank": 308
   },
   {
-    "id": 43,
-    "cyrillic": "музей",
-    "stressed": "музе́й",
-    "translit": "muzey",
-    "gloss_en": "museum",
+    "id": 309,
+    "cyrillic": "нельзя",
+    "stressed": "нельзя",
+    "translit": "nelzya",
+    "gloss_en": "impossible, not allowed",
+    "pos": "other",
+    "is_cognate": false,
+    "freq_rank": 309
+  },
+  {
+    "id": 310,
+    "cyrillic": "наверное",
+    "stressed": "наверное",
+    "translit": "navernoe",
+    "gloss_en": "probably, most likely",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 310
+  },
+  {
+    "id": 311,
+    "cyrillic": "нами",
+    "stressed": "нами",
+    "translit": "nami",
+    "gloss_en": "us (instrumental plural)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 311
+  },
+  {
+    "id": 312,
+    "cyrillic": "твои",
+    "stressed": "твои",
+    "translit": "tvoi",
+    "gloss_en": "your (plural)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 312
+  },
+  {
+    "id": 313,
+    "cyrillic": "могли",
+    "stressed": "могли",
+    "translit": "mogli",
+    "gloss_en": "could, were able",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 313
+  },
+  {
+    "id": 314,
+    "cyrillic": "дай",
+    "stressed": "дай",
+    "translit": "dai",
+    "gloss_en": "give, let",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 314
+  },
+  {
+    "id": 315,
+    "cyrillic": "ради",
+    "stressed": "ради",
+    "translit": "radi",
+    "gloss_en": "for the sake of",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 315
+  },
+  {
+    "id": 316,
+    "cyrillic": "всю",
+    "stressed": "всю",
+    "translit": "vsyu",
+    "gloss_en": "all, whole (fem.)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 316
+  },
+  {
+    "id": 317,
+    "cyrillic": "ребята",
+    "stressed": "ребята",
+    "translit": "rebyata",
+    "gloss_en": "guys, children",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 317
+  },
+  {
+    "id": 318,
+    "cyrillic": "ко",
+    "stressed": "ко",
+    "translit": "ko",
+    "gloss_en": "to, towards",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 318
+  },
+  {
+    "id": 319,
+    "cyrillic": "хотя",
+    "stressed": "хотя",
+    "translit": "xotya",
+    "gloss_en": "although, though",
+    "pos": "conjunction",
+    "is_cognate": false,
+    "freq_rank": 319
+  },
+  {
+    "id": 320,
+    "cyrillic": "понимаешь",
+    "stressed": "понимаешь",
+    "translit": "ponimaesh'",
+    "gloss_en": "you understand, you know",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 320
+  },
+  {
+    "id": 321,
+    "cyrillic": "идти",
+    "stressed": "идти",
+    "translit": "idti",
+    "gloss_en": "to go, to walk",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 321
+  },
+  {
+    "id": 322,
+    "cyrillic": "этих",
+    "stressed": "этих",
+    "translit": "etikh",
+    "gloss_en": "these",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 322
+  },
+  {
+    "id": 323,
+    "cyrillic": "откуда",
+    "stressed": "откуда",
+    "translit": "otkuda",
+    "gloss_en": "from where",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 323
+  },
+  {
+    "id": 324,
+    "cyrillic": "такая",
+    "stressed": "такая",
+    "translit": "takaya",
+    "gloss_en": "such a",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 324
+  },
+  {
+    "id": 325,
+    "cyrillic": "ясно",
+    "stressed": "ясно",
+    "translit": "yasno",
+    "gloss_en": "clear, clearly",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 325
+  },
+  {
+    "id": 326,
+    "cyrillic": "другой",
+    "stressed": "другой",
+    "translit": "drugoy",
+    "gloss_en": "other, another",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 326
+  },
+  {
+    "id": 327,
+    "cyrillic": "извините",
+    "stressed": "извините",
+    "translit": "izvinite",
+    "gloss_en": "excuse me, sorry",
+    "pos": "interjection",
+    "is_cognate": false,
+    "freq_rank": 327
+  },
+  {
+    "id": 328,
+    "cyrillic": "вижу",
+    "stressed": "вижу",
+    "translit": "vizhu",
+    "gloss_en": "I see",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 328
+  },
+  {
+    "id": 329,
+    "cyrillic": "видеть",
+    "stressed": "видеть",
+    "translit": "videt",
+    "gloss_en": "to see",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 329
+  },
+  {
+    "id": 330,
+    "cyrillic": "над",
+    "stressed": "над",
+    "translit": "nad",
+    "gloss_en": "above, over",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 330
+  },
+  {
+    "id": 331,
+    "cyrillic": "могут",
+    "stressed": "могут",
+    "translit": "mogut",
+    "gloss_en": "can, may",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 331
+  },
+  {
+    "id": 332,
+    "cyrillic": "равно",
+    "stressed": "равно",
+    "translit": "ravno",
+    "gloss_en": "equally, equal",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 332
+  },
+  {
+    "id": 333,
+    "cyrillic": "мисс",
+    "stressed": "мисс",
+    "translit": "miss",
+    "gloss_en": "Miss",
     "pos": "noun",
     "is_cognate": true,
-    "freq_rank": 43
+    "freq_rank": 333
   },
   {
-    "id": 44,
+    "id": 334,
+    "cyrillic": "скоро",
+    "stressed": "скоро",
+    "translit": "skoro",
+    "gloss_en": "soon, quickly",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 334
+  },
+  {
+    "id": 335,
+    "cyrillic": "будто",
+    "stressed": "будто",
+    "translit": "budto",
+    "gloss_en": "as if, as though",
+    "pos": "conjunction",
+    "is_cognate": false,
+    "freq_rank": 335
+  },
+  {
+    "id": 336,
+    "cyrillic": "зовут",
+    "stressed": "зовут",
+    "translit": "zovut",
+    "gloss_en": "they call",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 336
+  },
+  {
+    "id": 337,
+    "cyrillic": "виду",
+    "stressed": "виду",
+    "translit": "vidu",
+    "gloss_en": "appearance, view",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 337
+  },
+  {
+    "id": 338,
+    "cyrillic": "наши",
+    "stressed": "наши",
+    "translit": "nashi",
+    "gloss_en": "our, ours",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 338
+  },
+  {
+    "id": 339,
+    "cyrillic": "думала",
+    "stressed": "думала",
+    "translit": "dumala",
+    "gloss_en": "thought",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 339
+  },
+  {
+    "id": 340,
+    "cyrillic": "послушай",
+    "stressed": "послушай",
+    "translit": "poslushay",
+    "gloss_en": "listen",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 340
+  },
+  {
+    "id": 341,
+    "cyrillic": "между",
+    "stressed": "между",
+    "translit": "mezhdu",
+    "gloss_en": "between, among",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 341
+  },
+  {
+    "id": 342,
+    "cyrillic": "своего",
+    "stressed": "своего",
+    "translit": "svoego",
+    "gloss_en": "one's own",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 342
+  },
+  {
+    "id": 343,
+    "cyrillic": "вопрос",
+    "stressed": "вопрос",
+    "translit": "vopros",
+    "gloss_en": "question, issue",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 343
+  },
+  {
+    "id": 344,
+    "cyrillic": "этому",
+    "stressed": "этому",
+    "translit": "etomu",
+    "gloss_en": "to this, for this",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 344
+  },
+  {
+    "id": 345,
+    "cyrillic": "почти",
+    "stressed": "почти",
+    "translit": "pochti",
+    "gloss_en": "almost, nearly",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 345
+  },
+  {
+    "id": 346,
+    "cyrillic": "года",
+    "stressed": "года",
+    "translit": "goda",
+    "gloss_en": "years",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 346
+  },
+  {
+    "id": 347,
+    "cyrillic": "человека",
+    "stressed": "человека",
+    "translit": "cheloveka",
+    "gloss_en": "person",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 347
+  },
+  {
+    "id": 348,
+    "cyrillic": "которая",
+    "stressed": "которая",
+    "translit": "kotoraya",
+    "gloss_en": "which",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 348
+  },
+  {
+    "id": 349,
+    "cyrillic": "подожди",
+    "stressed": "подожди",
+    "translit": "podozhdi",
+    "gloss_en": "wait",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 349
+  },
+  {
+    "id": 350,
+    "cyrillic": "руки",
+    "stressed": "руки",
+    "translit": "ruki",
+    "gloss_en": "hands",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 350
+  },
+  {
+    "id": 351,
+    "cyrillic": "нормально",
+    "stressed": "нормально",
+    "translit": "normalno",
+    "gloss_en": "normal",
+    "pos": "adverb",
+    "is_cognate": true,
+    "freq_rank": 351
+  },
+  {
+    "id": 352,
+    "cyrillic": "такие",
+    "stressed": "такие",
+    "translit": "takie",
+    "gloss_en": "such",
+    "pos": "determiner",
+    "is_cognate": false,
+    "freq_rank": 352
+  },
+  {
+    "id": 353,
+    "cyrillic": "возьми",
+    "stressed": "возьми",
+    "translit": "vozmi",
+    "gloss_en": "take",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 353
+  },
+  {
+    "id": 354,
+    "cyrillic": "минут",
+    "stressed": "минут",
+    "translit": "minut",
+    "gloss_en": "minutes",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 354
+  },
+  {
+    "id": 355,
+    "cyrillic": "извини",
+    "stressed": "извини",
+    "translit": "izvini",
+    "gloss_en": "excuse me",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 355
+  },
+  {
+    "id": 356,
+    "cyrillic": "вещи",
+    "stressed": "вещи",
+    "translit": "veshchi",
+    "gloss_en": "things",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 356
+  },
+  {
+    "id": 357,
+    "cyrillic": "могла",
+    "stressed": "могла",
+    "translit": "mogla",
+    "gloss_en": "could",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 357
+  },
+  {
+    "id": 358,
+    "cyrillic": "смотри",
+    "stressed": "смотри",
+    "translit": "smotri",
+    "gloss_en": "look",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 358
+  },
+  {
+    "id": 359,
+    "cyrillic": "хоть",
+    "stressed": "хоть",
+    "translit": "khot",
+    "gloss_en": "at least",
+    "pos": "particle",
+    "is_cognate": false,
+    "freq_rank": 359
+  },
+  {
+    "id": 360,
+    "cyrillic": "работа",
+    "stressed": "работа",
+    "translit": "rabota",
+    "gloss_en": "work",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 360
+  },
+  {
+    "id": 361,
+    "cyrillic": "пару",
+    "stressed": "пару",
+    "translit": "paru",
+    "gloss_en": "a couple",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 361
+  },
+  {
+    "id": 362,
+    "cyrillic": "сын",
+    "stressed": "сын",
+    "translit": "syn",
+    "gloss_en": "son",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 362
+  },
+  {
+    "id": 363,
+    "cyrillic": "ваше",
+    "stressed": "ваше",
+    "translit": "vashe",
+    "gloss_en": "your",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 363
+  },
+  {
+    "id": 364,
+    "cyrillic": "дня",
+    "stressed": "дня",
+    "translit": "dnya",
+    "gloss_en": "day",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 364
+  },
+  {
+    "id": 365,
+    "cyrillic": "пора",
+    "stressed": "пора",
+    "translit": "pora",
+    "gloss_en": "it is time",
+    "pos": "interjection",
+    "is_cognate": false,
+    "freq_rank": 365
+  },
+  {
+    "id": 366,
+    "cyrillic": "неё",
+    "stressed": "неё",
+    "translit": "neyo",
+    "gloss_en": "her",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 366
+  },
+  {
+    "id": 367,
+    "cyrillic": "жить",
+    "stressed": "жить",
+    "translit": "zhit",
+    "gloss_en": "to live",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 367
+  },
+  {
+    "id": 368,
+    "cyrillic": "видишь",
+    "stressed": "видишь",
+    "translit": "vidish",
+    "gloss_en": "you see",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 368
+  },
+  {
+    "id": 369,
+    "cyrillic": "достаточно",
+    "stressed": "достаточно",
+    "translit": "dostatochno",
+    "gloss_en": "enough",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 369
+  },
+  {
+    "id": 370,
+    "cyrillic": "господи",
+    "stressed": "господи",
+    "translit": "Gospodi",
+    "gloss_en": "Oh my God!",
+    "pos": "interjection",
+    "is_cognate": false,
+    "freq_rank": 370
+  },
+  {
+    "id": 371,
+    "cyrillic": "быстро",
+    "stressed": "быстро",
+    "translit": "bystro",
+    "gloss_en": "quickly",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 371
+  },
+  {
+    "id": 372,
+    "cyrillic": "твою",
+    "stressed": "твою",
+    "translit": "tvoyu",
+    "gloss_en": "your (fem. acc.)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 372
+  },
+  {
+    "id": 373,
+    "cyrillic": "весь",
+    "stressed": "весь",
+    "translit": "ves'",
+    "gloss_en": "whole, all",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 373
+  },
+  {
+    "id": 374,
+    "cyrillic": "убить",
+    "stressed": "убить",
+    "translit": "ubit'",
+    "gloss_en": "to kill",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 374
+  },
+  {
+    "id": 375,
+    "cyrillic": "ночь",
+    "stressed": "ночь",
+    "translit": "noch'",
+    "gloss_en": "night",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 375
+  },
+  {
+    "id": 376,
+    "cyrillic": "говоришь",
+    "stressed": "говоришь",
+    "translit": "govorish'",
+    "gloss_en": "you speak/say",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 376
+  },
+  {
+    "id": 377,
+    "cyrillic": "собой",
+    "stressed": "собой",
+    "translit": "soboy",
+    "gloss_en": "oneself, with oneself",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 377
+  },
+  {
+    "id": 378,
+    "cyrillic": "скажу",
+    "stressed": "скажу",
+    "translit": "skazhu",
+    "gloss_en": "I will say/tell",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 378
+  },
+  {
+    "id": 379,
+    "cyrillic": "готов",
+    "stressed": "готов",
+    "translit": "gotov",
+    "gloss_en": "ready",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 379
+  },
+  {
+    "id": 380,
+    "cyrillic": "слышал",
+    "stressed": "слышал",
+    "translit": "slyshal",
+    "gloss_en": "heard (masc. past)",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 380
+  },
+  {
+    "id": 381,
+    "cyrillic": "какая",
+    "stressed": "какая",
+    "translit": "kakaya",
+    "gloss_en": "what, which (fem.)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 381
+  },
+  {
+    "id": 382,
+    "cyrillic": "посмотри",
+    "stressed": "посмотри",
+    "translit": "posmotri",
+    "gloss_en": "look (imperative)",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 382
+  },
+  {
+    "id": 383,
+    "cyrillic": "первый",
+    "stressed": "первый",
+    "translit": "pervyy",
+    "gloss_en": "first",
+    "pos": "numeral",
+    "is_cognate": false,
+    "freq_rank": 383
+  },
+  {
+    "id": 384,
+    "cyrillic": "самое",
+    "stressed": "самое",
+    "translit": "samoye",
+    "gloss_en": "the most (neut.)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 384
+  },
+  {
+    "id": 385,
+    "cyrillic": "видела",
+    "stressed": "видела",
+    "translit": "videla",
+    "gloss_en": "saw (fem. past)",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 385
+  },
+  {
+    "id": 386,
+    "cyrillic": "пусть",
+    "stressed": "пусть",
+    "translit": "pust'",
+    "gloss_en": "let",
+    "pos": "particle",
+    "is_cognate": false,
+    "freq_rank": 386
+  },
+  {
+    "id": 387,
+    "cyrillic": "месте",
+    "stressed": "месте",
+    "translit": "meste",
+    "gloss_en": "place (locative)",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 387
+  },
+  {
+    "id": 388,
+    "cyrillic": "нашли",
+    "stressed": "нашли",
+    "translit": "nashli",
+    "gloss_en": "found (pl. past)",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 388
+  },
+  {
+    "id": 389,
+    "cyrillic": "сказали",
+    "stressed": "сказали",
+    "translit": "skazali",
+    "gloss_en": "said (pl. past)",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 389
+  },
+  {
+    "id": 390,
+    "cyrillic": "плохо",
+    "stressed": "плохо",
+    "translit": "plokho",
+    "gloss_en": "bad, badly",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 390
+  },
+  {
+    "id": 391,
+    "cyrillic": "смогу",
+    "stressed": "смогу",
+    "translit": "smogu",
+    "gloss_en": "I will be able",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 391
+  },
+  {
+    "id": 392,
+    "cyrillic": "ваши",
+    "stressed": "ваши",
+    "translit": "vashi",
+    "gloss_en": "your (pl.)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 392
+  },
+  {
+    "id": 393,
+    "cyrillic": "отца",
+    "stressed": "отца",
+    "translit": "ottsa",
+    "gloss_en": "father (gen/acc)",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 393
+  },
+  {
+    "id": 394,
+    "cyrillic": "детей",
+    "stressed": "детей",
+    "translit": "detey",
+    "gloss_en": "children (gen/acc)",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 394
+  },
+  {
+    "id": 395,
+    "cyrillic": "знаем",
+    "stressed": "знаем",
+    "translit": "znayem",
+    "gloss_en": "we know",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 395
+  },
+  {
+    "id": 396,
+    "cyrillic": "рад",
+    "stressed": "рад",
+    "translit": "rad",
+    "gloss_en": "glad, happy",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 396
+  },
+  {
+    "id": 397,
+    "cyrillic": "прав",
+    "stressed": "прав",
+    "translit": "prav",
+    "gloss_en": "right, correct",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 397
+  },
+  {
+    "id": 398,
+    "cyrillic": "никаких",
+    "stressed": "никаких",
+    "translit": "nikakikh",
+    "gloss_en": "no, none",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 398
+  },
+  {
+    "id": 399,
+    "cyrillic": "имею",
+    "stressed": "имею",
+    "translit": "imeyu",
+    "gloss_en": "I have",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 399
+  },
+  {
+    "id": 400,
+    "cyrillic": "миссис",
+    "stressed": "миссис",
+    "translit": "missis",
+    "gloss_en": "Mrs.",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 400
+  },
+  {
+    "id": 401,
+    "cyrillic": "иногда",
+    "stressed": "иногда",
+    "translit": "inogda",
+    "gloss_en": "sometimes",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 401
+  },
+  {
+    "id": 402,
+    "cyrillic": "смерти",
+    "stressed": "смерти",
+    "translit": "smerti",
+    "gloss_en": "death",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 402
+  },
+  {
+    "id": 403,
+    "cyrillic": "своих",
+    "stressed": "своих",
+    "translit": "svoikh",
+    "gloss_en": "one's own",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 403
+  },
+  {
+    "id": 404,
+    "cyrillic": "пойду",
+    "stressed": "пойду",
+    "translit": "poydu",
+    "gloss_en": "I will go",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 404
+  },
+  {
+    "id": 405,
+    "cyrillic": "брат",
+    "stressed": "брат",
+    "translit": "brat",
+    "gloss_en": "brother",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 405
+  },
+  {
+    "id": 406,
+    "cyrillic": "вроде",
+    "stressed": "вроде",
+    "translit": "vrode",
+    "gloss_en": "like, kind of",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 406
+  },
+  {
+    "id": 407,
+    "cyrillic": "рядом",
+    "stressed": "рядом",
+    "translit": "ryadom",
+    "gloss_en": "nearby, next to",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 407
+  },
+  {
+    "id": 408,
+    "cyrillic": "мир",
+    "stressed": "мир",
+    "translit": "mir",
+    "gloss_en": "peace, world",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 408
+  },
+  {
+    "id": 409,
+    "cyrillic": "произошло",
+    "stressed": "произошло",
+    "translit": "proizoshlo",
+    "gloss_en": "happened, occurred",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 409
+  },
+  {
+    "id": 410,
+    "cyrillic": "которую",
+    "stressed": "которую",
+    "translit": "kotoruyu",
+    "gloss_en": "which, whom",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 410
+  },
+  {
+    "id": 411,
+    "cyrillic": "сделала",
+    "stressed": "сделала",
+    "translit": "sdelala",
+    "gloss_en": "made, did",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 411
+  },
+  {
+    "id": 412,
+    "cyrillic": "говорила",
+    "stressed": "говорила",
+    "translit": "govorila",
+    "gloss_en": "spoke, said",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 412
+  },
+  {
+    "id": 413,
+    "cyrillic": "знала",
+    "stressed": "знала",
+    "translit": "znala",
+    "gloss_en": "knew",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 413
+  },
+  {
+    "id": 414,
+    "cyrillic": "мое",
+    "stressed": "мое",
+    "translit": "moye",
+    "gloss_en": "my, mine",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 414
+  },
+  {
+    "id": 415,
+    "cyrillic": "одного",
+    "stressed": "одного",
+    "translit": "odnogo",
+    "gloss_en": "one, a certain",
+    "pos": "numeral",
+    "is_cognate": false,
+    "freq_rank": 415
+  },
+  {
+    "id": 416,
+    "cyrillic": "таким",
+    "stressed": "таким",
+    "translit": "takim",
+    "gloss_en": "such, in this way",
+    "pos": "determiner",
+    "is_cognate": false,
+    "freq_rank": 416
+  },
+  {
+    "id": 417,
+    "cyrillic": "помощь",
+    "stressed": "помощь",
+    "translit": "pomoshch",
+    "gloss_en": "help, assistance",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 417
+  },
+  {
+    "id": 418,
+    "cyrillic": "такого",
+    "stressed": "такого",
+    "translit": "takogo",
+    "gloss_en": "of such, such a",
+    "pos": "determiner",
+    "is_cognate": false,
+    "freq_rank": 418
+  },
+  {
+    "id": 419,
+    "cyrillic": "кем",
+    "stressed": "кем",
+    "translit": "kem",
+    "gloss_en": "whom, by whom",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 419
+  },
+  {
+    "id": 420,
+    "cyrillic": "насчет",
+    "stressed": "насчет",
+    "translit": "naschet",
+    "gloss_en": "about, concerning",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 420
+  },
+  {
+    "id": 421,
+    "cyrillic": "вчера",
+    "stressed": "вчера",
+    "translit": "vchera",
+    "gloss_en": "yesterday",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 421
+  },
+  {
+    "id": 422,
+    "cyrillic": "случае",
+    "stressed": "случае",
+    "translit": "sluchaye",
+    "gloss_en": "case, event",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 422
+  },
+  {
+    "id": 423,
+    "cyrillic": "увидеть",
+    "stressed": "увидеть",
+    "translit": "uvidet",
+    "gloss_en": "to see",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 423
+  },
+  {
+    "id": 424,
+    "cyrillic": "нашей",
+    "stressed": "нашей",
+    "translit": "nashey",
+    "gloss_en": "our",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 424
+  },
+  {
+    "id": 425,
+    "cyrillic": "говорят",
+    "stressed": "говорят",
+    "translit": "govoryat",
+    "gloss_en": "they say",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 425
+  },
+  {
+    "id": 426,
+    "cyrillic": "правильно",
+    "stressed": "правильно",
+    "translit": "pravilno",
+    "gloss_en": "correctly, right",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 426
+  },
+  {
+    "id": 427,
+    "cyrillic": "убил",
+    "stressed": "убил",
+    "translit": "ubil",
+    "gloss_en": "killed",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 427
+  },
+  {
+    "id": 428,
+    "cyrillic": "одно",
+    "stressed": "одно",
+    "translit": "odno",
+    "gloss_en": "one",
+    "pos": "numeral",
+    "is_cognate": false,
+    "freq_rank": 428
+  },
+  {
+    "id": 429,
+    "cyrillic": "пойти",
+    "stressed": "пойти",
+    "translit": "poyti",
+    "gloss_en": "to go",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 429
+  },
+  {
+    "id": 430,
+    "cyrillic": "друга",
+    "stressed": "друга",
+    "translit": "druga",
+    "gloss_en": "friend",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 430
+  },
+  {
+    "id": 431,
+    "cyrillic": "сама",
+    "stressed": "сама",
+    "translit": "sama",
+    "gloss_en": "herself, alone",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 431
+  },
+  {
+    "id": 432,
+    "cyrillic": "долго",
+    "stressed": "долго",
+    "translit": "dolgo",
+    "gloss_en": "long, for a long time",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 432
+  },
+  {
+    "id": 433,
+    "cyrillic": "работать",
+    "stressed": "работать",
+    "translit": "rabotat",
+    "gloss_en": "to work",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 433
+  },
+  {
+    "id": 434,
+    "cyrillic": "дверь",
+    "stressed": "дверь",
+    "translit": "dver",
+    "gloss_en": "door",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 434
+  },
+  {
+    "id": 435,
+    "cyrillic": "делает",
+    "stressed": "делает",
+    "translit": "delaet",
+    "gloss_en": "does, makes",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 435
+  },
+  {
+    "id": 436,
+    "cyrillic": "женщина",
+    "stressed": "женщина",
+    "translit": "zhenshchina",
+    "gloss_en": "woman",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 436
+  },
+  {
+    "id": 437,
+    "cyrillic": "важно",
+    "stressed": "важно",
+    "translit": "vazhno",
+    "gloss_en": "important",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 437
+  },
+  {
+    "id": 438,
+    "cyrillic": "кроме",
+    "stressed": "кроме",
+    "translit": "krome",
+    "gloss_en": "except, besides",
+    "pos": "preposition",
+    "is_cognate": false,
+    "freq_rank": 438
+  },
+  {
+    "id": 439,
+    "cyrillic": "будь",
+    "stressed": "будь",
+    "translit": "bud",
+    "gloss_en": "be",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 439
+  },
+  {
+    "id": 440,
+    "cyrillic": "собираюсь",
+    "stressed": "собираюсь",
+    "translit": "sobirayus",
+    "gloss_en": "I intend to, I am going to",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 440
+  },
+  {
+    "id": 441,
+    "cyrillic": "вашей",
+    "stressed": "вашей",
+    "translit": "vashey",
+    "gloss_en": "your",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 441
+  },
+  {
+    "id": 442,
+    "cyrillic": "нужны",
+    "stressed": "нужны",
+    "translit": "nuzhny",
+    "gloss_en": "needed, necessary",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 442
+  },
+  {
+    "id": 443,
+    "cyrillic": "здорово",
+    "stressed": "здорово",
+    "translit": "zdorovo",
+    "gloss_en": "great, awesome",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 443
+  },
+  {
+    "id": 444,
+    "cyrillic": "номер",
+    "stressed": "номер",
+    "translit": "nomer",
+    "gloss_en": "number, room",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 444
+  },
+  {
+    "id": 445,
     "cyrillic": "проблема",
     "stressed": "пробле́ма",
     "translit": "problema",
     "gloss_en": "problem",
     "pos": "noun",
     "is_cognate": true,
-    "freq_rank": 44
+    "freq_rank": 445
   },
   {
-    "id": 45,
+    "id": 446,
+    "cyrillic": "проблемы",
+    "stressed": "проблемы",
+    "translit": "problemy",
+    "gloss_en": "problems, issues",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 446
+  },
+  {
+    "id": 447,
+    "cyrillic": "денег",
+    "stressed": "денег",
+    "translit": "deneg",
+    "gloss_en": "money",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 447
+  },
+  {
+    "id": 448,
+    "cyrillic": "чёрт",
+    "stressed": "чёрт",
+    "translit": "chort",
+    "gloss_en": "devil, demon, damn",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 448
+  },
+  {
+    "id": 449,
+    "cyrillic": "хороший",
+    "stressed": "хороший",
+    "translit": "khoroshiy",
+    "gloss_en": "good, nice, fine",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 449
+  },
+  {
+    "id": 450,
+    "cyrillic": "твоего",
+    "stressed": "твоего",
+    "translit": "tvoego",
+    "gloss_en": "your (genitive/accusative)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 450
+  },
+  {
+    "id": 451,
+    "cyrillic": "одну",
+    "stressed": "одну",
+    "translit": "odnu",
+    "gloss_en": "one (feminine accusative)",
+    "pos": "numeral",
+    "is_cognate": true,
+    "freq_rank": 451
+  },
+  {
+    "id": 452,
+    "cyrillic": "дальше",
+    "stressed": "дальше",
+    "translit": "dalshe",
+    "gloss_en": "further, next, then",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 452
+  },
+  {
+    "id": 453,
+    "cyrillic": "вернуться",
+    "stressed": "вернуться",
+    "translit": "vernutsya",
+    "gloss_en": "to return, come back",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 453
+  },
+  {
+    "id": 454,
+    "cyrillic": "давно",
+    "stressed": "давно",
+    "translit": "davno",
+    "gloss_en": "long ago, for a long time",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 454
+  },
+  {
+    "id": 455,
+    "cyrillic": "последний",
+    "stressed": "последний",
+    "translit": "posledniy",
+    "gloss_en": "last, final",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 455
+  },
+  {
+    "id": 456,
+    "cyrillic": "ночи",
+    "stressed": "ночи",
+    "translit": "nochi",
+    "gloss_en": "night, nights",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 456
+  },
+  {
+    "id": 457,
+    "cyrillic": "узнать",
+    "stressed": "узнать",
+    "translit": "uznat",
+    "gloss_en": "to find out, learn, recognize",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 457
+  },
+  {
+    "id": 458,
+    "cyrillic": "уверена",
+    "stressed": "уверена",
+    "translit": "uverena",
+    "gloss_en": "sure, confident",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 458
+  },
+  {
+    "id": 459,
+    "cyrillic": "машину",
+    "stressed": "машину",
+    "translit": "mashinu",
+    "gloss_en": "car, machine (accusative)",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 459
+  },
+  {
+    "id": 460,
+    "cyrillic": "права",
+    "stressed": "права",
+    "translit": "prava",
+    "gloss_en": "rights, driving license",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 460
+  },
+  {
+    "id": 461,
+    "cyrillic": "пять",
+    "stressed": "пять",
+    "translit": "pyat",
+    "gloss_en": "five",
+    "pos": "numeral",
+    "is_cognate": true,
+    "freq_rank": 461
+  },
+  {
+    "id": 462,
+    "cyrillic": "моих",
+    "stressed": "моих",
+    "translit": "moikh",
+    "gloss_en": "my, mine (genitive/accusative plural)",
+    "pos": "pronoun",
+    "is_cognate": true,
+    "freq_rank": 462
+  },
+  {
+    "id": 463,
+    "cyrillic": "также",
+    "stressed": "также",
+    "translit": "takzhe",
+    "gloss_en": "also, too, as well",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 463
+  },
+  {
+    "id": 464,
+    "cyrillic": "тому",
+    "stressed": "тому",
+    "translit": "tomu",
+    "gloss_en": "to that, that (dative)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 464
+  },
+  {
+    "id": 465,
+    "cyrillic": "вечером",
+    "stressed": "вечером",
+    "translit": "vecherom",
+    "gloss_en": "in the evening, tonight",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 465
+  },
+  {
+    "id": 466,
+    "cyrillic": "дети",
+    "stressed": "дети",
+    "translit": "deti",
+    "gloss_en": "children",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 466
+  },
+  {
+    "id": 467,
+    "cyrillic": "опять",
+    "stressed": "опять",
+    "translit": "opyat",
+    "gloss_en": "again, once more",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 467
+  },
+  {
+    "id": 468,
+    "cyrillic": "серьезно",
+    "stressed": "серьезно",
+    "translit": "seryozno",
+    "gloss_en": "seriously, gravely, indeed",
+    "pos": "adverb",
+    "is_cognate": true,
+    "freq_rank": 468
+  },
+  {
+    "id": 469,
+    "cyrillic": "работает",
+    "stressed": "работает",
+    "translit": "rabotayet",
+    "gloss_en": "works, operates",
+    "pos": "verb",
+    "is_cognate": true,
+    "freq_rank": 469
+  },
+  {
+    "id": 470,
+    "cyrillic": "своим",
+    "stressed": "своим",
+    "translit": "svoim",
+    "gloss_en": "one's own (instrumental/dative)",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 470
+  },
+  {
+    "id": 471,
+    "cyrillic": "сначала",
+    "stressed": "сначала",
+    "translit": "snachala",
+    "gloss_en": "at first, initially",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 471
+  },
+  {
+    "id": 472,
+    "cyrillic": "две",
+    "stressed": "две",
+    "translit": "dve",
+    "gloss_en": "two (feminine/neuter)",
+    "pos": "numeral",
+    "is_cognate": true,
+    "freq_rank": 472
+  },
+  {
+    "id": 473,
+    "cyrillic": "одной",
+    "stressed": "одной",
+    "translit": "odnoy",
+    "gloss_en": "one",
+    "pos": "numeral",
+    "is_cognate": false,
+    "freq_rank": 473
+  },
+  {
+    "id": 474,
+    "cyrillic": "моим",
+    "stressed": "моим",
+    "translit": "moim",
+    "gloss_en": "my",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 474
+  },
+  {
+    "id": 475,
+    "cyrillic": "те",
+    "stressed": "те",
+    "translit": "te",
+    "gloss_en": "those",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 475
+  },
+  {
+    "id": 476,
+    "cyrillic": "жена",
+    "stressed": "жена",
+    "translit": "zhena",
+    "gloss_en": "wife",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 476
+  },
+  {
+    "id": 477,
+    "cyrillic": "думаете",
+    "stressed": "думаете",
+    "translit": "dumayete",
+    "gloss_en": "you think",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 477
+  },
+  {
+    "id": 478,
+    "cyrillic": "помнишь",
+    "stressed": "помнишь",
+    "translit": "pomnish",
+    "gloss_en": "you remember",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 478
+  },
+  {
+    "id": 479,
+    "cyrillic": "глаза",
+    "stressed": "глаза",
+    "translit": "glaza",
+    "gloss_en": "eyes",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 479
+  },
+  {
+    "id": 480,
+    "cyrillic": "ними",
+    "stressed": "ними",
+    "translit": "nimi",
+    "gloss_en": "them",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 480
+  },
+  {
+    "id": 481,
+    "cyrillic": "чувак",
+    "stressed": "чувак",
+    "translit": "chuvak",
+    "gloss_en": "dude",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 481
+  },
+  {
+    "id": 482,
+    "cyrillic": "ночью",
+    "stressed": "ночью",
+    "translit": "nochyu",
+    "gloss_en": "at night",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 482
+  },
+  {
+    "id": 483,
+    "cyrillic": "чувствую",
+    "stressed": "чувствую",
+    "translit": "chuvstvuyu",
+    "gloss_en": "I feel",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 483
+  },
+  {
+    "id": 484,
+    "cyrillic": "взять",
+    "stressed": "взять",
+    "translit": "vzyat",
+    "gloss_en": "to take",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 484
+  },
+  {
+    "id": 485,
+    "cyrillic": "сразу",
+    "stressed": "сразу",
+    "translit": "srazu",
+    "gloss_en": "at once",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 485
+  },
+  {
+    "id": 486,
+    "cyrillic": "утром",
+    "stressed": "утром",
+    "translit": "utrom",
+    "gloss_en": "in the morning",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 486
+  },
+  {
+    "id": 487,
+    "cyrillic": "часть",
+    "stressed": "часть",
+    "translit": "chast",
+    "gloss_en": "part",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 487
+  },
+  {
+    "id": 488,
+    "cyrillic": "придется",
+    "stressed": "придется",
+    "translit": "pridetsya",
+    "gloss_en": "will have to",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 488
+  },
+  {
+    "id": 489,
+    "cyrillic": "стать",
+    "stressed": "стать",
+    "translit": "stat",
+    "gloss_en": "to become",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 489
+  },
+  {
+    "id": 490,
     "cyrillic": "идея",
     "stressed": "иде́я",
     "translit": "ideya",
     "gloss_en": "idea",
     "pos": "noun",
     "is_cognate": true,
-    "freq_rank": 45
+    "freq_rank": 490
+  },
+  {
+    "id": 491,
+    "cyrillic": "дорогая",
+    "stressed": "дорогая",
+    "translit": "dorogaya",
+    "gloss_en": "dear, expensive",
+    "pos": "adjective",
+    "is_cognate": false,
+    "freq_rank": 491
+  },
+  {
+    "id": 492,
+    "cyrillic": "прекрасно",
+    "stressed": "прекрасно",
+    "translit": "prekrasno",
+    "gloss_en": "beautifully, perfectly",
+    "pos": "adverb",
+    "is_cognate": false,
+    "freq_rank": 492
+  },
+  {
+    "id": 493,
+    "cyrillic": "слова",
+    "stressed": "слова",
+    "translit": "slova",
+    "gloss_en": "words",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 493
+  },
+  {
+    "id": 494,
+    "cyrillic": "сделали",
+    "stressed": "сделали",
+    "translit": "sdelali",
+    "gloss_en": "they did, made",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 494
+  },
+  {
+    "id": 495,
+    "cyrillic": "видели",
+    "stressed": "видели",
+    "translit": "videli",
+    "gloss_en": "they saw",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 495
+  },
+  {
+    "id": 496,
+    "cyrillic": "наша",
+    "stressed": "наша",
+    "translit": "nasha",
+    "gloss_en": "our",
+    "pos": "pronoun",
+    "is_cognate": false,
+    "freq_rank": 496
+  },
+  {
+    "id": 497,
+    "cyrillic": "сердце",
+    "stressed": "сердце",
+    "translit": "serdtse",
+    "gloss_en": "heart",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 497
+  },
+  {
+    "id": 498,
+    "cyrillic": "помню",
+    "stressed": "помню",
+    "translit": "pomnyu",
+    "gloss_en": "I remember",
+    "pos": "verb",
+    "is_cognate": false,
+    "freq_rank": 498
+  },
+  {
+    "id": 499,
+    "cyrillic": "парня",
+    "stressed": "парня",
+    "translit": "parnya",
+    "gloss_en": "guy's",
+    "pos": "noun",
+    "is_cognate": false,
+    "freq_rank": 499
+  },
+  {
+    "id": 500,
+    "cyrillic": "момент",
+    "stressed": "момент",
+    "translit": "moment",
+    "gloss_en": "moment",
+    "pos": "noun",
+    "is_cognate": true,
+    "freq_rank": 500
   }
 ]
