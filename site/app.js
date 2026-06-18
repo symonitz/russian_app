@@ -81,7 +81,7 @@ function toast(msg) {
 
 // ---------- navigation ----------
 function show(view) {
-  for (const id of ["home", "reviews", "alphabet", "reading"]) {
+  for (const id of ["home", "reviews", "alphabet", "listen", "reading"]) {
     $(`#view-${id}`).hidden = id !== view;
   }
   $("#back").hidden = view === "home";
@@ -89,6 +89,7 @@ function show(view) {
   if (view === "home") refreshHome();
   if (view === "reviews") loadReviews();
   if (view === "alphabet") loadAlphabet();
+  if (view === "listen") loadListen();
   if (view === "reading") loadReading();
 }
 
@@ -200,6 +201,77 @@ function grade(word, correct) {
   answer(P.vocab[word.id], correct);
   saveProgress();
   nextReview();
+}
+
+// ---------- Listen (audio-first; word hidden until you answer) ----------
+function loadListen() {
+  nextListen();
+}
+function nextListen() {
+  const intro = WORDS.filter((w) => P.vocab[w.id]);
+  if (!intro.length) {
+    $("#listen-stage").innerHTML = `<div class="empty">Learn a few words in <b>Reviews</b> first,<br>then train your ear here. 🎧</div>`;
+    return;
+  }
+  const due = intro
+    .filter((w) => dueNow(P.vocab[w.id]))
+    .sort((a, b) => P.vocab[a.id].due - P.vocab[b.id].due);
+  const word = due[0] || intro[Math.floor(Math.random() * intro.length)];
+  renderListen(word);
+}
+function renderListen(word) {
+  const stage = $("#listen-stage");
+  stage.innerHTML = `
+    <div class="qcard">
+      <div class="big">🎧</div>
+      <div class="speak-row">
+        <button class="speak" id="li-speak" aria-label="Play audio">🔊</button>
+        <button class="speak slow" id="li-slow" aria-label="Play slowly" title="Slow 0.75×">🐢</button>
+      </div>
+      <div class="hint">Listen — type what it means (English)</div>
+      <input class="answer-input" id="lans" autocomplete="off" autocapitalize="off"
+             autocorrect="off" spellcheck="false" placeholder="meaning…" />
+      <div class="verdict" id="lverdict" hidden></div>
+    </div>
+    <div class="btn-row" id="li-actions">
+      <button class="btn reveal" id="lcheck">Check</button>
+    </div>`;
+  $("#li-speak").onclick = () => play(word.stressed);
+  $("#li-slow").onclick = () => play(word.stressed, 0.75);
+  play(word.stressed); // autoplay on appear
+  const input = $("#lans");
+  input.focus();
+  const go = () => checkListen(word, input.value);
+  $("#lcheck").onclick = go;
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") go();
+  });
+}
+function checkListen(word, value) {
+  const ok = answerMatches(value, word.gloss_en);
+  $("#lans").disabled = true;
+  play(word.stressed);
+  const v = $("#lverdict");
+  v.hidden = false;
+  v.className = "verdict " + (ok ? "good" : "bad");
+  v.innerHTML =
+    (ok ? "✓ " : "✗ ") + `<b>${word.stressed}</b> — ${word.gloss_en} · ${word.translit || ""}`;
+  const row = $("#li-actions");
+  if (ok) {
+    row.innerHTML = `<button class="btn r-good" id="lnext">Next →</button>`;
+    $("#lnext").onclick = () => gradeListen(word, true);
+  } else {
+    row.innerHTML =
+      `<button class="btn" id="liwr">I was right</button>` +
+      `<button class="btn r-again" id="lnext">Next →</button>`;
+    $("#liwr").onclick = () => gradeListen(word, true);
+    $("#lnext").onclick = () => gradeListen(word, false);
+  }
+}
+function gradeListen(word, correct) {
+  answer(P.vocab[word.id], correct);
+  saveProgress();
+  nextListen();
 }
 
 // ---------- Alphabet ----------
