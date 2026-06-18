@@ -24,6 +24,16 @@ Respond with ONLY this JSON and nothing else:
 {{"passage": "<russian sentences>", "new_words": ["{new_word}"], "gist": "<max 6 word english summary>", "translation": "<full english translation>", "glossary": {{"<russian word>": "<english>"}}}}"""
 
 
+SENTENCE_PROMPT = """Write ONE natural, everyday Russian sentence (about 4-8 words) that a native speaker would actually say, featuring the word "{word}" ({gloss}). Keep it simple and beginner-friendly, but it must be REAL, natural language — not a contrived drill.
+- Wrap each occurrence of the word (in any inflected form) in double square brackets, e.g. [[{word}]].
+- Use plain Russian letters only — NO stress marks and NO Latin letters.
+- Give a natural full English "translation".
+- Give a "glossary": a short English gloss for EVERY distinct Russian word you used (each key lowercase, no punctuation, no brackets).
+
+Respond with ONLY this JSON and nothing else:
+{{"passage": "<russian sentence>", "new_words": ["{word}"], "translation": "<english translation>", "glossary": {{"<russian word>": "<english>"}}}}"""
+
+
 @dataclass
 class Passage:
     text: str                    # passage with [[new word]] occurrences marked
@@ -50,5 +60,17 @@ class ContentGenerator:
             glossary={k.lower(): v for k, v in data.get("glossary", {}).items()},
             new_words=data.get("new_words") or [new_word],
             gist=data.get("gist", ""),
+            translation=data.get("translation", ""),
+        )
+
+    async def generate_sentence(self, word: str, gloss: str) -> Passage:
+        """Generate ONE natural sentence featuring `word` (no known-word constraint)."""
+        raw = await self.provider.complete(SENTENCE_PROMPT.format(word=word, gloss=gloss))
+        data = json.loads(raw)
+        return Passage(
+            text=data["passage"],
+            glossary={k.lower(): v for k, v in data.get("glossary", {}).items()},
+            new_words=data.get("new_words") or [word],
+            gist="",
             translation=data.get("translation", ""),
         )

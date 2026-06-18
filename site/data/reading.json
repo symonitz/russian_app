@@ -1,22 +1,80 @@
 [
   {
+    "level": 0,
+    "new_word": {
+      "cyrillic": "я",
+      "gloss": "I"
+    },
+    "passage": "[[Я]] люблю читать книги.",
+    "glossary": {
+      "я": "I",
+      "люблю": "love",
+      "читать": "to read",
+      "книги": "books"
+    },
+    "new_words": [
+      "я"
+    ],
+    "gist": "",
+    "translation": "I love to read books."
+  },
+  {
+    "level": 1,
+    "new_word": {
+      "cyrillic": "не",
+      "gloss": "not"
+    },
+    "passage": "Я [[не]] люблю зиму.",
+    "glossary": {
+      "я": "I",
+      "не": "not",
+      "люблю": "like",
+      "зиму": "winter"
+    },
+    "new_words": [
+      "не"
+    ],
+    "gist": "",
+    "translation": "I don't like winter."
+  },
+  {
+    "level": 2,
+    "new_word": {
+      "cyrillic": "что",
+      "gloss": "what, that"
+    },
+    "passage": "Я не знаю, [[что]] это.",
+    "glossary": {
+      "я": "I",
+      "не": "not",
+      "знаю": "know",
+      "что": "what",
+      "это": "this"
+    },
+    "new_words": [
+      "что"
+    ],
+    "gist": "",
+    "translation": "I don't know what this is."
+  },
+  {
     "level": 3,
     "new_word": {
       "cyrillic": "в",
       "gloss": "in, at, into"
     },
-    "passage": "Что я?\nЯ не [[в]].\nЧто [[в]]?",
+    "passage": "Я иду [[в]] магазин.",
     "glossary": {
       "я": "I",
-      "не": "not",
-      "что": "what",
-      "в": "in, at, into"
+      "иду": "go",
+      "в": "to",
+      "магазин": "shop"
     },
     "new_words": [
       "в"
     ],
-    "gist": "Asking about self, location, presence",
-    "translation": "What am I? I am not in. What is in?"
+    "gist": "",
+    "translation": "I am going to the shop."
   },
   {
     "level": 4,
@@ -24,19 +82,19 @@
       "cyrillic": "и",
       "gloss": "and"
     },
-    "passage": "Я [[и]] я. Что [[и]] что? Я не в [[и]] не я.",
+    "passage": "Я люблю собак [[и]] кошек.",
     "glossary": {
       "я": "I",
+      "люблю": "love",
+      "собак": "dogs",
       "и": "and",
-      "что": "what",
-      "не": "not",
-      "в": "in"
+      "кошек": "cats"
     },
     "new_words": [
       "и"
     ],
-    "gist": "Connecting simple words with 'and'",
-    "translation": "I and I. What and what? I am not in and not I."
+    "gist": "",
+    "translation": "I love dogs and cats."
   },
   {
     "level": 5,
@@ -44,18 +102,17 @@
       "cyrillic": "ты",
       "gloss": "you"
     },
-    "passage": "Я и [[ты]].\nЯ не [[ты]].\n[[Ты]] не я.",
+    "passage": "[[Ты]] говоришь по-английски?",
     "glossary": {
-      "я": "I",
-      "и": "and",
-      "ты": "you",
-      "не": "not"
+      "ты": "you (informal)",
+      "говоришь": "speak",
+      "по-английски": "in English"
     },
     "new_words": [
       "ты"
     ],
-    "gist": "Introducing 'you', basic statements.",
-    "translation": "I and you. I am not you. You are not I."
+    "gist": "",
+    "translation": "Do you speak English?"
   },
   {
     "level": 6,
@@ -63,20 +120,18 @@
       "cyrillic": "это",
       "gloss": "this / it is"
     },
-    "passage": "Я и ты. Что [[это]]? [[Это]] не ты.",
+    "passage": "[[Это]] очень интересная книга.",
     "glossary": {
-      "я": "I",
-      "и": "and",
-      "ты": "you",
-      "что": "what",
       "это": "this / it is",
-      "не": "not"
+      "очень": "very",
+      "интересная": "interesting",
+      "книга": "book"
     },
     "new_words": [
       "это"
     ],
-    "gist": "I and you, question identity.",
-    "translation": "I and you. What is this? This is not you."
+    "gist": "",
+    "translation": "This is a very interesting book."
   },
   {
     "level": 7,
@@ -84,21 +139,18 @@
       "cyrillic": "на",
       "gloss": "on, at, to"
     },
-    "passage": "Что это [[на]]?\nЯ и ты.\nЭто не [[на]].",
+    "passage": "Положи книгу [[на]] стол.",
     "glossary": {
-      "что": "what",
-      "это": "this",
-      "на": "on, at, to",
-      "я": "I",
-      "и": "and",
-      "ты": "you",
-      "не": "not"
+      "положи": "put",
+      "книгу": "book",
+      "на": "on, to",
+      "стол": "table"
     },
     "new_words": [
       "на"
     ],
-    "gist": "Location of objects, people.",
-    "translation": "What is this on/at/to?\nI and you.\nThis is not on/at/to."
+    "gist": "",
+    "translation": "Put the book on the table."
   },
   {
     "level": 8,
@@ -106,20 +158,18 @@
       "cyrillic": "с",
       "gloss": "with, from"
     },
-    "passage": "Я [[с]] тобой.\nЧто [[с]] тобой?\nЭто не я.",
+    "passage": "Я иду [[с]] тобой.",
     "glossary": {
-      "я": "I",
-      "с": "with, from",
-      "тобой": "you (informal, with)",
-      "что": "what",
-      "это": "this, it",
-      "не": "not"
+      "я": "i",
+      "иду": "go",
+      "с": "with",
+      "тобой": "you"
     },
     "new_words": [
       "с"
     ],
-    "gist": "I, you, what, with you.",
-    "translation": "I am with you. What is with you? This is not me."
+    "gist": "",
+    "translation": "I am going with you."
   },
   {
     "level": 9,
@@ -127,20 +177,17 @@
       "cyrillic": "он",
       "gloss": "he"
     },
-    "passage": "Это [[он]]. Я и [[он]]. Ты не [[он]].",
+    "passage": "[[Он]] читает книгу.",
     "glossary": {
-      "это": "this/is",
       "он": "he",
-      "я": "I",
-      "и": "and",
-      "ты": "you",
-      "не": "not"
+      "читает": "reads",
+      "книгу": "book"
     },
     "new_words": [
       "он"
     ],
-    "gist": "Introducing 'he' with simple words",
-    "translation": "This is he. I and he. You are not he."
+    "gist": "",
+    "translation": "He reads a book."
   },
   {
     "level": 10,
@@ -148,20 +195,17 @@
       "cyrillic": "мы",
       "gloss": "we"
     },
-    "passage": "Я и ты. [[Мы]]. Что это?",
+    "passage": "[[Мы]] идём домой.",
     "glossary": {
-      "я": "I",
-      "и": "and",
-      "ты": "you",
       "мы": "we",
-      "что": "what",
-      "это": "this, it, is"
+      "идём": "go (we go, we are going)",
+      "домой": "home (direction)"
     },
     "new_words": [
       "мы"
     ],
-    "gist": "Simple sentences introduce 'we'.",
-    "translation": "I and you. We. What is this?"
+    "gist": "",
+    "translation": "We are going home."
   },
   {
     "level": 11,
@@ -169,22 +213,20 @@
       "cyrillic": "как",
       "gloss": "how, as, like"
     },
-    "passage": "Что это [[как]]?\nМы [[как]] ты.\nОн [[как]] я и ты.",
+    "passage": "Я люблю Россию [[как]] свой дом.",
     "glossary": {
-      "что": "what",
-      "это": "this, it",
-      "как": "how, as, like",
-      "мы": "we",
-      "ты": "you",
-      "он": "he",
-      "я": "I",
-      "и": "and"
+      "я": "i",
+      "люблю": "love",
+      "россию": "russia",
+      "как": "like, as, how",
+      "свой": "my, one's own",
+      "дом": "home, house"
     },
     "new_words": [
       "как"
     ],
-    "gist": "Likeness and identity",
-    "translation": "What is this like? We are like you. He is like me and you."
+    "gist": "",
+    "translation": "I love Russia like my home."
   },
   {
     "level": 12,
@@ -192,19 +234,17 @@
       "cyrillic": "вы",
       "gloss": "you (formal/plural)"
     },
-    "passage": "Как [[вы]]? Я и [[вы]]. Это [[вы]]?",
+    "passage": "Как [[вы]] поживаете?",
     "glossary": {
       "как": "how",
       "вы": "you (formal/plural)",
-      "я": "I",
-      "и": "and",
-      "это": "this/it/is"
+      "поживаете": "are doing"
     },
     "new_words": [
       "вы"
     ],
-    "gist": "How are you? I, you.",
-    "translation": "How are you? I and you. Is this you?"
+    "gist": "",
+    "translation": "How are you doing?"
   },
   {
     "level": 13,
@@ -212,22 +252,19 @@
       "cyrillic": "да",
       "gloss": "yes"
     },
-    "passage": "[[Да]], это я.\nКак ты?\nМы не он. [[Да]]?",
+    "passage": "[[Да]], это очень интересная книга.",
     "glossary": {
       "да": "yes",
-      "это": "this, it is",
-      "я": "I",
-      "как": "how",
-      "ты": "you (singular informal)",
-      "мы": "we",
-      "не": "not",
-      "он": "he"
+      "это": "this/it (is)",
+      "очень": "very",
+      "интересная": "interesting",
+      "книга": "book"
     },
     "new_words": [
       "да"
     ],
-    "gist": "Confirming identities, asking how, yes.",
-    "translation": "Yes, it is me.\nHow are you?\nWe are not him. Yes?"
+    "gist": "",
+    "translation": "Yes, this is a very interesting book."
   },
   {
     "level": 14,
@@ -235,18 +272,17 @@
       "cyrillic": "мне",
       "gloss": "to me, for me"
     },
-    "passage": "Это [[мне]]?\nДа, это [[мне]].\nКак это [[мне]]?",
+    "passage": "Мне нравится это.",
     "glossary": {
-      "это": "this",
-      "мне": "to me, for me",
-      "да": "yes",
-      "как": "how"
+      "мне": "to me",
+      "нравится": "likes (is pleasing)",
+      "это": "this"
     },
     "new_words": [
       "мне"
     ],
-    "gist": "Is this for me? Yes, how?",
-    "translation": "Is this for me? Yes, this is for me. How is this for me?"
+    "gist": "",
+    "translation": "I like this."
   },
   {
     "level": 15,
@@ -254,21 +290,18 @@
       "cyrillic": "у",
       "gloss": "at, by, near"
     },
-    "passage": "Это [[у]] нас?\nДа, это [[у]] тебя.\nЧто [[у]] меня?",
+    "passage": "[[У]] меня есть книга.",
     "glossary": {
-      "это": "this, it is",
-      "у": "at, by, near (for possession)",
-      "нас": "us",
-      "да": "yes",
-      "тебя": "you",
-      "что": "what",
-      "меня": "me"
+      "у": "at, by, near (indicating possession)",
+      "меня": "me (genitive of я)",
+      "есть": "there is/are (to have)",
+      "книга": "book"
     },
     "new_words": [
       "у"
     ],
-    "gist": "Asking about and stating possession.",
-    "translation": "Is this at us? Yes, you have this. What do I have?"
+    "gist": "",
+    "translation": "I have a book."
   },
   {
     "level": 16,
@@ -276,21 +309,19 @@
       "cyrillic": "нет",
       "gloss": "no"
     },
-    "passage": "Это [[нет]].\nТы не он, [[нет]]?\nЯ не ты, и ты не я, [[нет]]?",
+    "passage": "Извините, у меня [[нет]] времени.",
     "glossary": {
-      "это": "this, it is",
-      "нет": "no, there isn't",
-      "ты": "you (informal singular)",
-      "не": "not",
-      "он": "he",
-      "я": "I",
-      "и": "and"
+      "извините": "excuse me",
+      "у": "at / by",
+      "меня": "me",
+      "нет": "no / not",
+      "времени": "time"
     },
     "new_words": [
       "нет"
     ],
-    "gist": "Simple statements with new word.",
-    "translation": "This is no.\nYou are not him, no?\nI am not you, and you are not I, no?"
+    "gist": "",
+    "translation": "Excuse me, I don't have time."
   },
   {
     "level": 17,
@@ -298,20 +329,18 @@
       "cyrillic": "меня",
       "gloss": "me, my"
     },
-    "passage": "У [[меня]] это.\nЭто не у [[меня]].\nТы как [[меня]]?",
+    "passage": "У [[меня]] есть книга.",
     "glossary": {
-      "у": "at, by, near; (with genitive) have",
-      "меня": "me, my",
-      "это": "this, it is",
-      "не": "not",
-      "ты": "you (informal singular)",
-      "как": "how, as, like"
+      "у": "at, near",
+      "меня": "me",
+      "есть": "is, there is, to have",
+      "книга": "book"
     },
     "new_words": [
       "меня"
     ],
-    "gist": "Possession, negation, and comparison.",
-    "translation": "I have this. This is not mine. Are you like me?"
+    "gist": "",
+    "translation": "I have a book."
   },
   {
     "level": 18,
@@ -319,19 +348,18 @@
       "cyrillic": "так",
       "gloss": "so, thus, then"
     },
-    "passage": "Как [[так]]?\nЭто не [[так]].\nМы [[так]].",
+    "passage": "Погода [[так]] хороша сегодня.",
     "glossary": {
-      "как": "how",
+      "погода": "weather",
       "так": "so",
-      "это": "this, it",
-      "не": "not",
-      "мы": "we"
+      "хороша": "good",
+      "сегодня": "today"
     },
     "new_words": [
       "так"
     ],
-    "gist": "Asking how and stating facts.",
-    "translation": "How so? It is not so. We are so."
+    "gist": "",
+    "translation": "The weather is so good today."
   },
   {
     "level": 19,
@@ -339,22 +367,19 @@
       "cyrillic": "но",
       "gloss": "but"
     },
-    "passage": "Это не мы, [[но]] я. Он не ты, [[но]] я. Я не так, [[но]] ты так.",
+    "passage": "Я хочу, [[но]] не могу.",
     "glossary": {
-      "это": "it/this is",
-      "не": "not",
-      "мы": "we",
+      "я": "I",
+      "хочу": "want",
       "но": "but",
-      "я": "I/me",
-      "он": "he",
-      "ты": "you (singular informal)",
-      "так": "so/thus/like that"
+      "не": "not",
+      "могу": "can"
     },
     "new_words": [
       "но"
     ],
-    "gist": "Simple contrasts using 'but' for beginners.",
-    "translation": "It is not us, but me. He is not you, but me. I am not like that, but you are like that."
+    "gist": "",
+    "translation": "I want to, but I can't."
   },
   {
     "level": 20,
@@ -362,22 +387,19 @@
       "cyrillic": "а",
       "gloss": "and, but, while"
     },
-    "passage": "Я, [[а]] ты? Это не он, [[а]] я. Я так, [[а]] ты как?",
+    "passage": "Я хочу кофе, [[а]] ты?",
     "glossary": {
       "я": "I",
-      "а": "and, but",
-      "ты": "you (singular informal)",
-      "это": "this, it",
-      "не": "not",
-      "он": "he",
-      "так": "so, thus, well",
-      "как": "how, as"
+      "хочу": "want",
+      "кофе": "coffee",
+      "а": "and/but",
+      "ты": "you"
     },
     "new_words": [
       "а"
     ],
-    "gist": "Simple questions and clarifications",
-    "translation": "I, and you? It is not him, but me. I am fine, and how are you?"
+    "gist": "",
+    "translation": "I want coffee, and you?"
   },
   {
     "level": 21,
@@ -385,22 +407,17 @@
       "cyrillic": "его",
       "gloss": "his, him, its"
     },
-    "passage": "Это [[его]]. Он и я. А это не [[его]]? Как он?",
+    "passage": "Это [[его]] книга.",
     "glossary": {
-      "это": "this, it",
-      "его": "his, him, its",
-      "он": "he",
-      "и": "and",
-      "я": "I",
-      "а": "and, but",
-      "не": "not",
-      "как": "how"
+      "это": "this is",
+      "его": "his",
+      "книга": "book"
     },
     "new_words": [
       "его"
     ],
-    "gist": "Identify possession, ask question, check status.",
-    "translation": "This is his. He and I. And is this not his? How is he?"
+    "gist": "",
+    "translation": "This is his book."
   },
   {
     "level": 22,
@@ -408,20 +425,16 @@
       "cyrillic": "все",
       "gloss": "all, everyone"
     },
-    "passage": "Как [[все]]?\nМы и [[все]].\nЭто не [[все]].",
+    "passage": "[[Все]] хорошо.",
     "glossary": {
-      "как": "how",
-      "все": "all, everyone, everything",
-      "мы": "we",
-      "и": "and",
-      "это": "this, it",
-      "не": "not, no"
+      "все": "all, everything",
+      "хорошо": "good, well"
     },
     "new_words": [
       "все"
     ],
-    "gist": "Asking about everyone; not all.",
-    "translation": "How is everyone? We and everyone. This is not all."
+    "gist": "",
+    "translation": "Everything is good."
   },
   {
     "level": 23,
@@ -429,19 +442,18 @@
       "cyrillic": "она",
       "gloss": "she"
     },
-    "passage": "Это [[она]]. Как [[она]]? Он и [[она]].",
+    "passage": "[[Она]] очень любит читать.",
     "glossary": {
-      "это": "this",
       "она": "she",
-      "как": "how",
-      "он": "he",
-      "и": "and"
+      "очень": "very, really",
+      "любит": "loves",
+      "читать": "to read"
     },
     "new_words": [
       "она"
     ],
-    "gist": "Introduce 'she' with simple phrases.",
-    "translation": "This is she. How is she? He and she."
+    "gist": "",
+    "translation": "She really loves to read."
   },
   {
     "level": 24,
@@ -449,22 +461,18 @@
       "cyrillic": "тебя",
       "gloss": "you, your (accusative/genitive)"
     },
-    "passage": "Я не он.\nУ [[тебя]] все.\nМеня нет у [[тебя]].",
+    "passage": "Я люблю [[тебя]] очень.",
     "glossary": {
-      "я": "I",
-      "не": "not",
-      "он": "he, him",
-      "у": "at, by, have",
-      "тебя": "you, your",
-      "все": "all, everything",
-      "меня": "me, my",
-      "нет": "no, there isn't, don't have"
+      "я": "i",
+      "люблю": "love",
+      "тебя": "you",
+      "очень": "very much"
     },
     "new_words": [
       "тебя"
     ],
-    "gist": "Possession, absence, and identity with you.",
-    "translation": "I am not him. You have everything. You don't have me."
+    "gist": "",
+    "translation": "I love you very much."
   },
   {
     "level": 25,
@@ -472,23 +480,18 @@
       "cyrillic": "о",
       "gloss": "about, concerning"
     },
-    "passage": "Это [[о]] нас.\nЧто это [[о]] нем?\nЭто [[о]] вас, а не [[о]] мне.",
+    "passage": "Я думаю [[о]] тебе.",
     "glossary": {
-      "это": "this, it",
-      "о": "about, concerning",
-      "нас": "us (form of we)",
-      "что": "what",
-      "нем": "him (form of he)",
-      "вас": "you (plural/formal, form of you all)",
-      "а": "and, but",
-      "не": "not",
-      "мне": "to me, for me (form of I)"
+      "я": "i",
+      "думаю": "think",
+      "о": "about",
+      "тебе": "you"
     },
     "new_words": [
       "о"
     ],
-    "gist": "Introducing 'about' with known words",
-    "translation": "This is about us. What is this about him? This is about you, and not about me."
+    "gist": "",
+    "translation": "I think about you."
   },
   {
     "level": 26,
@@ -496,25 +499,19 @@
       "cyrillic": "если",
       "gloss": "if"
     },
-    "passage": "[[Если]] это не так, что это? Что, [[если]] он и ты? [[Если]] у меня, что у тебя?",
+    "passage": "[[Если]] хочешь, приходи в гости.",
     "glossary": {
       "если": "if",
-      "это": "this, it",
-      "не": "not",
-      "так": "so, thus",
-      "что": "what, that",
-      "он": "he",
-      "и": "and",
-      "ты": "you (informal singular)",
-      "у": "at, by, near, have",
-      "меня": "me",
-      "тебя": "you"
+      "хочешь": "you want",
+      "приходи": "come",
+      "в": "to",
+      "гости": "visit (as in, to guests' place)"
     },
     "new_words": [
       "если"
     ],
-    "gist": "Conditional questions, people, possessions.",
-    "translation": "If it is not so, what is it? What, if he and you? If I have it, what do you have?"
+    "gist": "",
+    "translation": "If you want, come visit."
   },
   {
     "level": 27,
@@ -522,20 +519,18 @@
       "cyrillic": "за",
       "gloss": "for, behind, beyond"
     },
-    "passage": "Это [[за]] тебя. Он [[за]] меня. Что это?",
+    "passage": "Он сидит [[за]] столом.",
     "glossary": {
-      "это": "this, it",
-      "за": "for, behind",
-      "тебя": "you",
       "он": "he",
-      "меня": "me",
-      "что": "what"
+      "сидит": "sits",
+      "за": "at",
+      "столом": "table"
     },
     "new_words": [
       "за"
     ],
-    "gist": "For you and me. What?",
-    "translation": "This is for you. He is for me. What is this?"
+    "gist": "",
+    "translation": "He is sitting at the table."
   },
   {
     "level": 28,
@@ -543,22 +538,19 @@
       "cyrillic": "бы",
       "gloss": "would (particle)"
     },
-    "passage": "Я [[бы]] не он. Это мы. Если [[бы]] не ты.",
+    "passage": "Я [[бы]] пошел в кино.",
     "glossary": {
       "я": "I",
       "бы": "would (particle)",
-      "не": "not",
-      "он": "he",
-      "это": "this, it",
-      "мы": "we",
-      "если": "if",
-      "ты": "you (singular informal)"
+      "пошел": "went (male, past tense, here part of conditional)",
+      "в": "to, into",
+      "кино": "cinema, movie"
     },
     "new_words": [
       "бы"
     ],
-    "gist": "Introducing 'would' in simple phrases.",
-    "translation": "I would not be him. This is us. If it were not you."
+    "gist": "",
+    "translation": "I would go to the cinema."
   },
   {
     "level": 29,
@@ -566,20 +558,18 @@
       "cyrillic": "тебе",
       "gloss": "to you, for you"
     },
-    "passage": "Это [[тебе]]. Как [[тебе]] это? Это не мне, а [[тебе]].",
+    "passage": "Я хочу [[тебе]] помочь.",
     "glossary": {
-      "это": "this",
-      "тебе": "to you, for you",
-      "как": "how",
-      "не": "not",
-      "мне": "to me, for me",
-      "а": "but"
+      "я": "I",
+      "хочу": "want",
+      "тебе": "to you",
+      "помочь": "to help"
     },
     "new_words": [
       "тебе"
     ],
-    "gist": "For you, how do you like it?",
-    "translation": "This is for you. How do you like this? This is not for me, but for you."
+    "gist": "",
+    "translation": "I want to help you."
   },
   {
     "level": 30,
@@ -587,24 +577,17 @@
       "cyrillic": "они",
       "gloss": "they"
     },
-    "passage": "Это он и она. [[Они]] не я. Как [[они]]? Я и ты, а [[они]]?",
+    "passage": "[[Они]] читают книги.",
     "glossary": {
-      "это": "this, it is",
-      "он": "he",
-      "и": "and",
-      "она": "she",
       "они": "they",
-      "не": "not",
-      "я": "I",
-      "как": "how",
-      "ты": "you (informal singular)",
-      "а": "and, but"
+      "читают": "read",
+      "книги": "books"
     },
     "new_words": [
       "они"
     ],
-    "gist": "He, she, you, me, and them.",
-    "translation": "This is he and she. They are not me. How are they? I and you, and they?"
+    "gist": "",
+    "translation": "They read books."
   },
   {
     "level": 31,
@@ -612,26 +595,19 @@
       "cyrillic": "чтобы",
       "gloss": "in order that, so that"
     },
-    "passage": "Мне это. [[Чтобы]] тебе это.\nУ нас это. [[Чтобы]] у них это.\nЭто не так, но все это [[чтобы]] мы.",
+    "passage": "Я учусь, [[чтобы]] говорить по-русски.",
     "glossary": {
-      "мне": "to me, for me",
-      "это": "this, it, is",
-      "чтобы": "so that, in order that",
-      "тебе": "to you, for you",
-      "у": "at, by, near, have (with genitive)",
-      "нас": "us (genitive of мы)",
-      "них": "them (genitive of они)",
-      "не": "not",
-      "так": "so, thus",
-      "но": "but",
-      "все": "all, everyone",
-      "мы": "we"
+      "я": "I",
+      "учусь": "learn",
+      "чтобы": "in order to",
+      "говорить": "speak",
+      "по-русски": "Russian (language)"
     },
     "new_words": [
       "чтобы"
     ],
-    "gist": "Sharing for all, despite differences",
-    "translation": "This is for me, so that this is for you. We have this, so that they have this. This is not so, but all of this is so that we (have/do this)."
+    "gist": "",
+    "translation": "I am learning to speak Russian."
   },
   {
     "level": 32,
@@ -639,22 +615,17 @@
       "cyrillic": "же",
       "gloss": "indeed, really (particle)"
     },
-    "passage": "Это [[же]] он. Ты не я. Как так?",
+    "passage": "Как [[же]] так?",
     "glossary": {
-      "это": "this, it",
-      "же": "indeed, really (particle)",
-      "он": "he",
-      "ты": "you (singular informal)",
-      "не": "not",
-      "я": "I",
-      "как": "how, as",
-      "так": "so, thus, like that"
+      "как": "how",
+      "же": "indeed (particle)",
+      "так": "so, thus"
     },
     "new_words": [
       "же"
     ],
-    "gist": "Simple sentences introducing Russian particle 'же'",
-    "translation": "It is him, indeed. You are not I. How so?"
+    "gist": "",
+    "translation": "How can this be?"
   },
   {
     "level": 33,
@@ -662,22 +633,18 @@
       "cyrillic": "есть",
       "gloss": "is, am, are, to eat"
     },
-    "passage": "У меня [[есть]] это.\nУ тебя [[есть]] что?\nЭто не я.",
+    "passage": "У меня [[есть]] книга.",
     "glossary": {
-      "у": "at, by (introduces possession)",
-      "меня": "me (genitive of 'я')",
-      "есть": "is, am, are, to eat",
-      "это": "this, it",
-      "тебя": "you (genitive of 'ты')",
-      "что": "what",
-      "не": "not",
-      "я": "I"
+      "у": "at, by",
+      "меня": "me (genitive)",
+      "есть": "is, have",
+      "книга": "book"
     },
     "new_words": [
       "есть"
     ],
-    "gist": "Asking about possessions, simple statements",
-    "translation": "I have this. What do you have? This is not me."
+    "gist": "",
+    "translation": "I have a book."
   },
   {
     "level": 34,
@@ -685,18 +652,18 @@
       "cyrillic": "просто",
       "gloss": "simply, just, easy"
     },
-    "passage": "Это [[просто]]. Это [[просто]] я. Это [[просто]] он.",
+    "passage": "Я [[просто]] хочу кофе.",
     "glossary": {
-      "это": "this, it",
-      "просто": "simply, just, easy",
-      "я": "I, me",
-      "он": "he, him"
+      "я": "i",
+      "просто": "just, simply",
+      "хочу": "want",
+      "кофе": "coffee"
     },
     "new_words": [
       "просто"
     ],
-    "gist": "Easy things, just me, just him.",
-    "translation": "This is easy. It's just me. It's just him."
+    "gist": "",
+    "translation": "I just want coffee."
   },
   {
     "level": 35,
@@ -704,22 +671,17 @@
       "cyrillic": "из",
       "gloss": "from, out of"
     },
-    "passage": "Ты [[из]] нас. Это не [[из]] тебя. Он [[из]] меня.",
+    "passage": "Я [[из]] России.",
     "glossary": {
-      "ты": "you (informal singular)",
-      "из": "from, out of",
-      "нас": "us",
-      "это": "this, it",
-      "не": "not",
-      "тебя": "you",
-      "он": "he",
-      "меня": "me"
+      "я": "I",
+      "из": "from",
+      "россии": "Russia"
     },
     "new_words": [
       "из"
     ],
-    "gist": "Origin: from me, you, us.",
-    "translation": "You are from us. This is not from you. He is from me."
+    "gist": "",
+    "translation": "I am from Russia."
   },
   {
     "level": 36,
@@ -727,20 +689,18 @@
       "cyrillic": "к",
       "gloss": "to, towards"
     },
-    "passage": "Я [[к]] тебе. Это [[к]] мне. Он [[к]] тебе.",
+    "passage": "Я иду [[к]] дому.",
     "glossary": {
       "я": "I",
-      "к": "to, towards",
-      "тебе": "to you",
-      "это": "this, it",
-      "мне": "to me",
-      "он": "he"
+      "иду": "go",
+      "к": "to",
+      "дому": "house"
     },
     "new_words": [
       "к"
     ],
-    "gist": "Directions: to you, to me",
-    "translation": "I am coming to you. This is for me. He is coming to you."
+    "gist": "",
+    "translation": "I am going to the house."
   },
   {
     "level": 37,
@@ -748,21 +708,17 @@
       "cyrillic": "для",
       "gloss": "for"
     },
-    "passage": "Это [[для]] тебя. Что это [[для]] меня? Он [[для]] тебя и [[для]] меня.",
+    "passage": "Кофе [[для]] мамы.",
     "glossary": {
-      "это": "this/it",
+      "кофе": "coffee",
       "для": "for",
-      "тебя": "you (informal, genitive)",
-      "что": "what",
-      "меня": "me (informal, genitive)",
-      "он": "he",
-      "и": "and"
+      "мамы": "mom"
     },
     "new_words": [
       "для"
     ],
-    "gist": "Things for you and me.",
-    "translation": "This is for you. What is this for me? He is for you and for me."
+    "gist": "",
+    "translation": "Coffee for mom."
   },
   {
     "level": 38,
@@ -770,22 +726,17 @@
       "cyrillic": "ну",
       "gloss": "well, come on, so"
     },
-    "passage": "[[Ну]], как ты? [[Ну]], это не он. А что это?",
+    "passage": "[[Ну]] как дела?",
     "glossary": {
-      "ну": "well, so, come on",
+      "ну": "well",
       "как": "how",
-      "ты": "you (informal singular)",
-      "это": "this, it is",
-      "не": "not",
-      "он": "he",
-      "а": "and (by contrast), but",
-      "что": "what"
+      "дела": "things"
     },
     "new_words": [
       "ну"
     ],
-    "gist": "Well, asking simple questions",
-    "translation": "Well, how are you? Well, it's not him. And what is this?"
+    "gist": "",
+    "translation": "Well, how are things?"
   },
   {
     "level": 39,
@@ -793,22 +744,18 @@
       "cyrillic": "когда",
       "gloss": "when"
     },
-    "passage": "[[Когда]] ты ешь? [[Когда]] это? Я и ты. Мы все.",
+    "passage": "[[Когда]] ты придешь домой?",
     "glossary": {
       "когда": "when",
-      "ты": "you (informal)",
-      "ешь": "eat (you eat)",
-      "это": "this, it is",
-      "я": "I",
-      "и": "and",
-      "мы": "we",
-      "все": "all, everyone"
+      "ты": "you",
+      "придешь": "will come",
+      "домой": "home"
     },
     "new_words": [
       "когда"
     ],
-    "gist": "Asking about time and common subjects.",
-    "translation": "When do you eat? When is this? Me and you. We all."
+    "gist": "",
+    "translation": "When will you come home?"
   },
   {
     "level": 40,
@@ -816,19 +763,16 @@
       "cyrillic": "хорошо",
       "gloss": "good / well"
     },
-    "passage": "Как ты? Я [[хорошо]]. Это [[хорошо]]!",
+    "passage": "Как [[хорошо]]!",
     "glossary": {
       "как": "how",
-      "ты": "you (informal singular)",
-      "я": "I",
-      "хорошо": "good, well",
-      "это": "this, it"
+      "хорошо": "good, well"
     },
     "new_words": [
       "хорошо"
     ],
-    "gist": "How are you? I am good.",
-    "translation": "How are you? I am well. This is good!"
+    "gist": "",
+    "translation": "How good!"
   },
   {
     "level": 41,
@@ -836,21 +780,18 @@
       "cyrillic": "здесь",
       "gloss": "here"
     },
-    "passage": "Я [[здесь]]. Ты [[здесь]]? Мы [[здесь]] и это хорошо.",
+    "passage": "Я живу [[здесь]] давно.",
     "glossary": {
       "я": "I",
+      "живу": "live",
       "здесь": "here",
-      "ты": "you",
-      "мы": "we",
-      "и": "and",
-      "это": "it is",
-      "хорошо": "good"
+      "давно": "for a long time"
     },
     "new_words": [
       "здесь"
     ],
-    "gist": "Being here, it is good.",
-    "translation": "I am here. Are you here? We are here and it is good."
+    "gist": "",
+    "translation": "I have lived here for a long time."
   },
   {
     "level": 42,
@@ -858,22 +799,19 @@
       "cyrillic": "по",
       "gloss": "along, by, for"
     },
-    "passage": "Это [[по]] мне. Я [[по]] тебе. Он [[по]] мне, а ты [[по]] тебе.",
+    "passage": "Дай мне книгу [[по]] истории.",
     "glossary": {
-      "это": "this",
-      "по": "for, according to",
-      "мне": "for me",
-      "я": "I",
-      "тебе": "for you",
-      "он": "he",
-      "а": "and",
-      "ты": "you (informal singular)"
+      "дай": "give",
+      "мне": "me",
+      "книгу": "book",
+      "по": "on",
+      "истории": "history"
     },
     "new_words": [
       "по"
     ],
-    "gist": "Personal preferences and support",
-    "translation": "This is for me. I am for you. He is for me, and you are for you."
+    "gist": "",
+    "translation": "Give me a book on history."
   },
   {
     "level": 43,
@@ -881,20 +819,17 @@
       "cyrillic": "был",
       "gloss": "was"
     },
-    "passage": "Он [[был]] здесь. Ты не [[был]] здесь. Это он?",
+    "passage": "Он [[был]] дома.",
     "glossary": {
       "он": "he",
       "был": "was",
-      "здесь": "here",
-      "ты": "you",
-      "не": "not",
-      "это": "this, it"
+      "дома": "at home"
     },
     "new_words": [
       "был"
     ],
-    "gist": "He was here, you were not.",
-    "translation": "He was here. You were not here. Is it him?"
+    "gist": "",
+    "translation": "He was at home."
   },
   {
     "level": 44,
@@ -902,22 +837,18 @@
       "cyrillic": "знаю",
       "gloss": "I know"
     },
-    "passage": "Я [[знаю]], что это. Ты [[знаешь]]? Нет, я не [[знаю]].",
+    "passage": "Я [[знаю]] этот город.",
     "glossary": {
-      "я": "I",
+      "я": "i",
       "знаю": "know",
-      "что": "what",
-      "это": "this",
-      "ты": "you",
-      "знаешь": "know",
-      "нет": "no",
-      "не": "not"
+      "этот": "this",
+      "город": "city"
     },
     "new_words": [
       "знаю"
     ],
-    "gist": "Asking and answering about knowledge.",
-    "translation": "I know what this is. Do you know? No, I don't know."
+    "gist": "",
+    "translation": "I know this city."
   },
   {
     "level": 45,
@@ -925,21 +856,18 @@
       "cyrillic": "то",
       "gloss": "that, then"
     },
-    "passage": "Я знаю это. А [[то]] что? Это не [[то]].",
+    "passage": "Я хочу [[то]] яблоко.",
     "glossary": {
       "я": "I",
-      "знаю": "know",
-      "это": "this",
-      "а": "and, but",
-      "что": "what, that",
-      "не": "not",
-      "то": "that, then"
+      "хочу": "want",
+      "то": "that",
+      "яблоко": "apple"
     },
     "new_words": [
       "то"
     ],
-    "gist": "Knowing this, what is that?",
-    "translation": "I know this. And what is that? This is not that."
+    "gist": "",
+    "translation": "I want that apple."
   },
   {
     "level": 46,
@@ -947,23 +875,18 @@
       "cyrillic": "только",
       "gloss": "only, just"
     },
-    "passage": "Я [[только]] знаю это. У меня [[только]] это есть. Мы [[только]] здесь.",
+    "passage": "Я [[только]] учу русский.",
     "glossary": {
       "я": "I",
       "только": "only, just",
-      "знаю": "know",
-      "это": "this, it is",
-      "у": "at, by (possessive)",
-      "меня": "me (genitive of я)",
-      "есть": "is, to be",
-      "мы": "we",
-      "здесь": "here"
+      "учу": "am learning",
+      "русский": "Russian"
     },
     "new_words": [
       "только"
     ],
-    "gist": "Only know, only have, only here",
-    "translation": "I only know this. I only have this. We are only here."
+    "gist": "",
+    "translation": "I am just learning Russian."
   },
   {
     "level": 47,
@@ -971,18 +894,18 @@
       "cyrillic": "всё",
       "gloss": "everything, all"
     },
-    "passage": "Это [[всё]]. Я знаю это. Это [[всё]]?",
+    "passage": "Как [[всё]] прошло вчера?",
     "glossary": {
-      "это": "this, it",
+      "как": "how",
       "всё": "everything, all",
-      "я": "I",
-      "знаю": "know"
+      "прошло": "went",
+      "вчера": "yesterday"
     },
     "new_words": [
       "всё"
     ],
-    "gist": "Everything is known, is it all?",
-    "translation": "This is everything. I know this. Is this everything?"
+    "gist": "",
+    "translation": "How did everything go yesterday?"
   },
   {
     "level": 48,
@@ -990,21 +913,18 @@
       "cyrillic": "было",
       "gloss": "it was"
     },
-    "passage": "Это [[было]] хорошо. Как это [[было]]? Я знаю, это [[было]] здесь.",
+    "passage": "[[Было]] очень холодно вчера.",
     "glossary": {
-      "это": "this, it",
       "было": "was",
-      "хорошо": "good",
-      "как": "how",
-      "я": "I",
-      "знаю": "know",
-      "здесь": "here"
+      "очень": "very",
+      "холодно": "cold",
+      "вчера": "yesterday"
     },
     "new_words": [
       "было"
     ],
-    "gist": "Asking, telling about what was.",
-    "translation": "This was good. How was it? I know, it was here."
+    "gist": "",
+    "translation": "It was very cold yesterday."
   },
   {
     "level": 49,
@@ -1012,24 +932,17 @@
       "cyrillic": "вас",
       "gloss": "you"
     },
-    "passage": "Как у [[вас]]? Это для [[вас]]? Я знаю, что у [[вас]] все хорошо.",
+    "passage": "Как [[вас]] зовут?",
     "glossary": {
       "как": "how",
-      "у": "at / with (possessive)",
-      "вас": "you (formal/plural)",
-      "это": "this / it",
-      "для": "for",
-      "я": "I",
-      "знаю": "know",
-      "что": "that / what",
-      "все": "all / everything",
-      "хорошо": "good / well"
+      "вас": "you",
+      "зовут": "call (they call)"
     },
     "new_words": [
       "вас"
     ],
-    "gist": "Asking about you, everything good for you.",
-    "translation": "How are you? Is this for you? I know that everything is good with you."
+    "gist": "",
+    "translation": "What is your name?"
   },
   {
     "level": 50,
@@ -1037,21 +950,18 @@
       "cyrillic": "может",
       "gloss": "can, maybe"
     },
-    "passage": "Я не знаю. Он [[может]] это. Ты [[может]]?",
+    "passage": "Он [[может]] прийти завтра.",
     "glossary": {
-      "я": "I",
-      "не": "not",
-      "знаю": "know",
       "он": "he",
-      "может": "can, maybe",
-      "это": "this",
-      "ты": "you"
+      "может": "can",
+      "прийти": "to come",
+      "завтра": "tomorrow"
     },
     "new_words": [
       "может"
     ],
-    "gist": "Questioning ability or possibility.",
-    "translation": "I don't know. He can do this. Can you?"
+    "gist": "",
+    "translation": "He can come tomorrow."
   },
   {
     "level": 51,
@@ -1059,22 +969,17 @@
       "cyrillic": "нас",
       "gloss": "us"
     },
-    "passage": "Это у [[нас]].\nКак это у [[нас]]?\nЯ не знаю вас.",
+    "passage": "Пойдем с [[нас]]?",
     "glossary": {
-      "это": "this",
-      "у": "at, with (possession)",
-      "нас": "us",
-      "как": "how",
-      "я": "I",
-      "не": "not",
-      "знаю": "know (I know)",
-      "вас": "you (plural/formal)"
+      "пойдем": "let's go/will go",
+      "с": "with",
+      "нас": "us"
     },
     "new_words": [
       "нас"
     ],
-    "gist": "Our situation, questioning, not knowing.",
-    "translation": "This is ours. How is this with us? I don't know you."
+    "gist": "",
+    "translation": "Will you come with us?"
   },
   {
     "level": 52,
@@ -1082,20 +987,18 @@
       "cyrillic": "вот",
       "gloss": "here, there"
     },
-    "passage": "[[Вот]] я. И [[вот]] ты. Это хорошо.",
+    "passage": "[[Вот]] моя новая книга.",
     "glossary": {
-      "я": "I",
-      "и": "and",
-      "ты": "you (singular informal)",
-      "это": "this, it",
-      "хорошо": "good",
-      "вот": "here"
+      "вот": "here is",
+      "моя": "my",
+      "новая": "new",
+      "книга": "book"
     },
     "new_words": [
       "вот"
     ],
-    "gist": "Here we are, it's good.",
-    "translation": "Here I am. And here you are. This is good."
+    "gist": "",
+    "translation": "Here is my new book."
   },
   {
     "level": 53,
@@ -1103,23 +1006,18 @@
       "cyrillic": "от",
       "gloss": "from"
     },
-    "passage": "Это [[от]] меня. Он [[от]] вас. Я знаю, что это [[от]] нас.",
+    "passage": "Я иду [[от]] дома.",
     "glossary": {
-      "это": "this",
-      "от": "from",
-      "меня": "me",
-      "он": "he",
-      "вас": "you (plural/formal)",
       "я": "I",
-      "знаю": "know (I know)",
-      "что": "that (conjunction)",
-      "нас": "us"
+      "иду": "go (walking)",
+      "от": "from",
+      "дома": "home"
     },
     "new_words": [
       "от"
     ],
-    "gist": "Origin of objects and people.",
-    "translation": "This is from me. He is from you. I know that this is from us."
+    "gist": "",
+    "translation": "I am walking from home."
   },
   {
     "level": 54,
@@ -1127,28 +1025,18 @@
       "cyrillic": "быть",
       "gloss": "to be"
     },
-    "passage": "Мне хорошо [[быть]] здесь.\nОн не может [[быть]] у нас.\nЯ знаю, что это так.",
+    "passage": "Я хочу [[быть]] учителем.",
     "glossary": {
-      "мне": "me / for me",
-      "хорошо": "good / well",
+      "я": "i",
+      "хочу": "want",
       "быть": "to be",
-      "здесь": "here",
-      "он": "he",
-      "не": "not",
-      "может": "can / may (he/she/it)",
-      "у": "at / by / near / have",
-      "нас": "us / of us",
-      "я": "I",
-      "знаю": "know (I know)",
-      "что": "that / what",
-      "это": "this / it",
-      "так": "so / thus"
+      "учителем": "teacher"
     },
     "new_words": [
       "быть"
     ],
-    "gist": "Good to be, he can't be, I know.",
-    "translation": "It is good for me to be here. He cannot be with us. I know that it is so."
+    "gist": "",
+    "translation": "I want to be a teacher."
   },
   {
     "level": 55,
@@ -1156,20 +1044,16 @@
       "cyrillic": "кто",
       "gloss": "who"
     },
-    "passage": "Это [[кто]]? А [[кто]] вы? Я знаю, [[кто]] это.",
+    "passage": "Кто там?",
     "glossary": {
-      "это": "this / it is",
       "кто": "who",
-      "а": "and / but",
-      "вы": "you (formal/plural)",
-      "я": "I",
-      "знаю": "I know"
+      "там": "there"
     },
     "new_words": [
       "кто"
     ],
-    "gist": "Asking and stating who someone is.",
-    "translation": "Who is this? And who are you? I know who this is."
+    "gist": "",
+    "translation": "Who is there?"
   },
   {
     "level": 56,
@@ -1177,22 +1061,17 @@
       "cyrillic": "будет",
       "gloss": "will be"
     },
-    "passage": "Это [[будет]] хорошо.\nЯ не знаю, как это [[будет]].\nКогда это [[будет]]?",
+    "passage": "Завтра [[будет]] холодно.",
     "glossary": {
-      "это": "this, it is",
+      "завтра": "tomorrow",
       "будет": "will be",
-      "хорошо": "good, well",
-      "я": "I",
-      "не": "not",
-      "знаю": "I know",
-      "как": "how, as",
-      "когда": "when"
+      "холодно": "cold"
     },
     "new_words": [
       "будет"
     ],
-    "gist": "Future state, known and unknown.",
-    "translation": "This will be good. I don't know how this will be. When will this be?"
+    "gist": "",
+    "translation": "Tomorrow will be cold."
   },
   {
     "level": 57,
@@ -1200,24 +1079,17 @@
       "cyrillic": "почему",
       "gloss": "why"
     },
-    "passage": "Ты здесь? Да. [[Почему]]? Я не знаю, [[почему]] так. Это хорошо.",
+    "passage": "[[Почему]] ты здесь?",
     "glossary": {
-      "ты": "you (informal singular)",
-      "здесь": "here",
-      "да": "yes",
       "почему": "why",
-      "я": "I",
-      "не": "not",
-      "знаю": "know",
-      "так": "so, like this",
-      "это": "this, it",
-      "хорошо": "good, well"
+      "ты": "you (singular, informal)",
+      "здесь": "here"
     },
     "new_words": [
       "почему"
     ],
-    "gist": "Asking why, not knowing, it's good.",
-    "translation": "Are you here? Yes. Why? I don't know why it's like that. It's good."
+    "gist": "",
+    "translation": "Why are you here?"
   },
   {
     "level": 58,
@@ -1225,21 +1097,18 @@
       "cyrillic": "вам",
       "gloss": "to you"
     },
-    "passage": "Как [[вам]]? Это для [[вам]]? Мне хорошо, а [[вам]]?",
+    "passage": "Я могу [[вам]] помочь.",
     "glossary": {
-      "как": "how",
+      "я": "I",
+      "могу": "can",
       "вам": "to you",
-      "это": "this",
-      "для": "for",
-      "мне": "to me",
-      "хорошо": "good",
-      "а": "and"
+      "помочь": "to help"
     },
     "new_words": [
       "вам"
     ],
-    "gist": "Asking if something is for you",
-    "translation": "How are you? Is this for you? I am good, and you?"
+    "gist": "",
+    "translation": "I can help you."
   },
   {
     "level": 59,
@@ -1247,21 +1116,18 @@
       "cyrillic": "их",
       "gloss": "them, their"
     },
-    "passage": "Я знаю [[их]]. Это [[их]]. Они не здесь.",
+    "passage": "Я вижу [[их]] машину.",
     "glossary": {
       "я": "I",
-      "знаю": "know",
-      "их": "them, their",
-      "это": "this, it, is",
-      "они": "they",
-      "не": "not",
-      "здесь": "here"
+      "вижу": "see",
+      "их": "their",
+      "машину": "car"
     },
     "new_words": [
       "их"
     ],
-    "gist": "New word: 'them' and 'their'",
-    "translation": "I know them. This is theirs. They are not here."
+    "gist": "",
+    "translation": "I see their car."
   },
   {
     "level": 60,
@@ -1269,22 +1135,18 @@
       "cyrillic": "очень",
       "gloss": "very, really"
     },
-    "passage": "Мне [[очень]] хорошо.\nЭто [[очень]] хорошо.\nЯ здесь, а ты?",
+    "passage": "Я [[очень]] люблю кофе.",
     "glossary": {
-      "мне": "to me, for me",
-      "очень": "very, really",
-      "хорошо": "well, good",
-      "это": "this, it",
       "я": "I",
-      "здесь": "here",
-      "а": "and, but",
-      "ты": "you"
+      "очень": "very, really",
+      "люблю": "love",
+      "кофе": "coffee"
     },
     "new_words": [
       "очень"
     ],
-    "gist": "Feeling good, location, simple question.",
-    "translation": "I feel very well. This is very good. I am here, and you?"
+    "gist": "",
+    "translation": "I really love coffee."
   },
   {
     "level": 61,
@@ -1292,23 +1154,18 @@
       "cyrillic": "могу",
       "gloss": "I can"
     },
-    "passage": "Я [[могу]]. Я не знаю, что я [[могу]]. Мне хорошо. Я здесь [[могу]] быть.",
+    "passage": "Я [[могу]] говорить по-русски.",
     "glossary": {
       "я": "I",
-      "могу": "I can",
-      "не": "not",
-      "знаю": "I know",
-      "что": "what",
-      "мне": "to me / for me",
-      "хорошо": "well / good",
-      "здесь": "here",
-      "быть": "to be"
+      "могу": "can",
+      "говорить": "to speak",
+      "по-русски": "Russian (adverb)"
     },
     "new_words": [
       "могу"
     ],
-    "gist": "I can, I don't know what",
-    "translation": "I can. I don't know what I can. I am well. I can be here."
+    "gist": "",
+    "translation": "I can speak Russian."
   },
   {
     "level": 62,
@@ -1316,22 +1173,17 @@
       "cyrillic": "уже",
       "gloss": "already, by now"
     },
-    "passage": "Я [[уже]] здесь. Это не просто. Он [[уже]] может.",
+    "passage": "Я [[уже]] дома.",
     "glossary": {
-      "я": "I",
+      "я": "i",
       "уже": "already",
-      "здесь": "here",
-      "это": "this, it",
-      "не": "not",
-      "просто": "simple, simply",
-      "он": "he, it",
-      "может": "can, may (he/she/it)"
+      "дома": "home"
     },
     "new_words": [
       "уже"
     ],
-    "gist": "Basic sentences introducing 'already'",
-    "translation": "I am already here. This is not simple. He can already."
+    "gist": "",
+    "translation": "I am already home."
   },
   {
     "level": 63,
@@ -1339,21 +1191,18 @@
       "cyrillic": "спасибо",
       "gloss": "thank you"
     },
-    "passage": "Это хорошо. [[Спасибо]]. Я знаю это. [[Спасибо]]. Это для вас. [[Спасибо]].",
+    "passage": "Большое [[спасибо]] за помощь!",
     "glossary": {
-      "это": "this, it",
-      "хорошо": "good, well",
+      "большое": "big, great",
       "спасибо": "thank you",
-      "я": "I",
-      "знаю": "(I) know",
-      "для": "for",
-      "вас": "you"
+      "за": "for",
+      "помощь": "help"
     },
     "new_words": [
       "спасибо"
     ],
-    "gist": "Simple statements with gratitude.",
-    "translation": "This is good. Thank you. I know this. Thank you. This is for you. Thank you."
+    "gist": "",
+    "translation": "Many thanks for the help!"
   },
   {
     "level": 64,
@@ -1361,22 +1210,17 @@
       "cyrillic": "или",
       "gloss": "or"
     },
-    "passage": "Это ты [[или]] я? Ты хорошо? [[Или]] нет? Мне это [[или]] то?",
+    "passage": "Чай [[или]] кофе?",
     "glossary": {
-      "это": "this, it",
-      "ты": "you",
+      "чай": "tea",
       "или": "or",
-      "я": "I, me",
-      "хорошо": "well, good",
-      "нет": "no, not",
-      "мне": "to me, for me",
-      "то": "that"
+      "кофе": "coffee"
     },
     "new_words": [
       "или"
     ],
-    "gist": "Simple choices: you, me, well, not, this, that.",
-    "translation": "Is it you or me? Are you well? Or not? Do I want this or that?"
+    "gist": "",
+    "translation": "Tea or coffee?"
   },
   {
     "level": 65,
@@ -1384,22 +1228,17 @@
       "cyrillic": "нам",
       "gloss": "to us, for us"
     },
-    "passage": "Это для [[нам]]. [[Нам]] хорошо здесь. Я знаю, что это для [[нам]].",
+    "passage": "Нам [[нужно]] молоко.",
     "glossary": {
-      "это": "this",
-      "для": "for",
       "нам": "to us, for us",
-      "хорошо": "good, well",
-      "здесь": "here",
-      "я": "I",
-      "знаю": "know",
-      "что": "that, what"
+      "нужно": "needed",
+      "молоко": "milk"
     },
     "new_words": [
       "нам"
     ],
-    "gist": "Good things are for us.",
-    "translation": "This is for us. It is good for us here. I know that this is for us."
+    "gist": "",
+    "translation": "We need milk."
   },
   {
     "level": 66,
@@ -1407,20 +1246,18 @@
       "cyrillic": "еще",
       "gloss": "yet, still, more"
     },
-    "passage": "Я здесь. Ты [[еще]] здесь? И он [[еще]] здесь.",
+    "passage": "Я [[еще]] не завтракал.",
     "glossary": {
       "я": "I",
-      "здесь": "here",
-      "ты": "you (singular informal)",
-      "еще": "still",
-      "и": "and",
-      "он": "he"
+      "еще": "yet",
+      "не": "not",
+      "завтракал": "had breakfast"
     },
     "new_words": [
       "еще"
     ],
-    "gist": "People are still here.",
-    "translation": "I am here. Are you still here? And he is still here."
+    "gist": "",
+    "translation": "I haven't had breakfast yet."
   },
   {
     "level": 67,
@@ -1428,20 +1265,16 @@
       "cyrillic": "там",
       "gloss": "there, over there"
     },
-    "passage": "Я здесь. Ты [[там]]. Он не [[там]].",
+    "passage": "Что [[там]]?",
     "glossary": {
-      "я": "I",
-      "здесь": "here",
-      "ты": "you (informal singular)",
-      "там": "there",
-      "он": "he",
-      "не": "not"
+      "что": "what",
+      "там": "there, over there"
     },
     "new_words": [
       "там"
     ],
-    "gist": "Locations: here and there",
-    "translation": "I am here. You are there. He is not there."
+    "gist": "",
+    "translation": "What's over there?"
   },
   {
     "level": 68,
@@ -1449,24 +1282,18 @@
       "cyrillic": "нужно",
       "gloss": "necessary, must, need"
     },
-    "passage": "Мне [[нужно]] это.\nТебе [[нужно]] быть здесь.\nМы знаем, что нам [[нужно]].",
+    "passage": "Мне [[нужно]] идти домой.",
     "glossary": {
-      "мне": "to me, for me",
-      "нужно": "need, necessary",
-      "это": "this",
-      "тебе": "to you, for you",
-      "быть": "to be",
-      "здесь": "here",
-      "мы": "we",
-      "знаем": "know",
-      "что": "what",
-      "нам": "to us, for us"
+      "мне": "to me",
+      "нужно": "necessary, need",
+      "идти": "to go",
+      "домой": "home"
     },
     "new_words": [
       "нужно"
     ],
-    "gist": "Need this, be here, we know.",
-    "translation": "I need this. You need to be here. We know what we need."
+    "gist": "",
+    "translation": "I need to go home."
   },
   {
     "level": 69,
@@ -1474,22 +1301,18 @@
       "cyrillic": "сейчас",
       "gloss": "now, immediately"
     },
-    "passage": "Я здесь [[сейчас]]. Мне нужно это [[сейчас]]. Как ты [[сейчас]]?",
+    "passage": "Я [[сейчас]] читаю книгу.",
     "glossary": {
       "я": "I",
-      "здесь": "here",
       "сейчас": "now",
-      "мне": "to me",
-      "нужно": "need",
-      "это": "this",
-      "как": "how",
-      "ты": "you"
+      "читаю": "read",
+      "книгу": "book"
     },
     "new_words": [
       "сейчас"
     ],
-    "gist": "Ask about current state, express immediate need.",
-    "translation": "I am here now. I need this now. How are you now?"
+    "gist": "",
+    "translation": "I am reading a book now."
   },
   {
     "level": 70,
@@ -1497,21 +1320,17 @@
       "cyrillic": "где",
       "gloss": "where"
     },
-    "passage": "[[Где]] ты? Я знаю, [[где]] он. [[Где]] мы сейчас?",
+    "passage": "[[Где]] находится вокзал?",
     "glossary": {
       "где": "where",
-      "ты": "you (informal singular)",
-      "я": "I",
-      "знаю": "know (I know)",
-      "он": "he",
-      "мы": "we",
-      "сейчас": "now"
+      "находится": "is located",
+      "вокзал": "train station"
     },
     "new_words": [
       "где"
     ],
-    "gist": "Location of people, now.",
-    "translation": "Where are you? I know where he is. Where are we now?"
+    "gist": "",
+    "translation": "Where is the train station?"
   },
   {
     "level": 71,
@@ -1519,23 +1338,20 @@
       "cyrillic": "чем",
       "gloss": "than, instrumental \"what\""
     },
-    "passage": "Ты с [[чем]]? Он с [[чем]]? Я не знаю, что это.",
+    "passage": "Я люблю кофе больше, [[чем]] чай.",
     "glossary": {
-      "ты": "you",
-      "с": "with",
-      "чем": "than / instrumental what",
-      "он": "he",
-      "я": "I",
-      "не": "not",
-      "знаю": "know",
-      "что": "what / that",
-      "это": "this / it"
+      "я": "i",
+      "люблю": "love",
+      "кофе": "coffee",
+      "больше": "more",
+      "чем": "than",
+      "чай": "tea"
     },
     "new_words": [
       "чем"
     ],
-    "gist": "Inquiring about possessions, not knowing.",
-    "translation": "What do you have? What does he have? I don't know what this is."
+    "gist": "",
+    "translation": "I love coffee more than tea."
   },
   {
     "level": 72,
@@ -1543,23 +1359,17 @@
       "cyrillic": "хочу",
       "gloss": "I want"
     },
-    "passage": "Я [[хочу]] это.\nТы [[хочешь]] что?\nМы не [[хотим]].",
+    "passage": "Я [[хочу]] пить.",
     "glossary": {
       "я": "I",
       "хочу": "want",
-      "это": "this",
-      "ты": "you",
-      "хочешь": "want",
-      "что": "what",
-      "мы": "we",
-      "не": "not",
-      "хотим": "want"
+      "пить": "to drink"
     },
     "new_words": [
       "хочу"
     ],
-    "gist": "Asking about wants and desires.",
-    "translation": "I want this.\nWhat do you want?\nWe don't want."
+    "gist": "",
+    "translation": "I want to drink."
   },
   {
     "level": 73,
@@ -1567,23 +1377,18 @@
       "cyrillic": "ничего",
       "gloss": "nothing, not bad"
     },
-    "passage": "Я не знаю [[ничего]].\nКак ты? Все [[ничего]].\nМы здесь.",
+    "passage": "Как дела? [[Ничего]], спасибо.",
     "glossary": {
-      "я": "I",
-      "не": "not",
-      "знаю": "know",
-      "ничего": "nothing, fine",
       "как": "how",
-      "ты": "you (informal)",
-      "все": "everything",
-      "мы": "we",
-      "здесь": "here"
+      "дела": "things",
+      "ничего": "not bad / nothing",
+      "спасибо": "thanks"
     },
     "new_words": [
       "ничего"
     ],
-    "gist": "Simple Russian with new word",
-    "translation": "I know nothing. How are you? Everything is fine. We are here."
+    "gist": "",
+    "translation": "How are things? Not bad, thanks."
   },
   {
     "level": 74,
@@ -1591,24 +1396,18 @@
       "cyrillic": "этого",
       "gloss": "of this, of that"
     },
-    "passage": "Что это? Я не знаю. Мне не нужно [[этого]]. Это хорошо, но я не знаю [[этого]].",
+    "passage": "Я не хочу [[этого]].",
     "glossary": {
-      "что": "what",
-      "это": "this is",
       "я": "I",
       "не": "not",
-      "знаю": "know",
-      "мне": "to me, I",
-      "нужно": "needed",
-      "этого": "of this, of that",
-      "хорошо": "good",
-      "но": "but"
+      "хочу": "want",
+      "этого": "of this"
     },
     "new_words": [
       "этого"
     ],
-    "gist": "Asking, needing, and knowing about something.",
-    "translation": "What is this? I don't know. I don't need this. This is good, but I don't know this."
+    "gist": "",
+    "translation": "I don't want this."
   },
   {
     "level": 75,
@@ -1616,19 +1415,18 @@
       "cyrillic": "была",
       "gloss": "was (feminine)"
     },
-    "passage": "Она [[была]] здесь. Это [[была]] она. Где она [[была]]?",
+    "passage": "Погода вчера [[была]] хорошая.",
     "glossary": {
-      "она": "she",
-      "была": "was (feminine)",
-      "здесь": "here",
-      "это": "this, it",
-      "где": "where"
+      "погода": "weather",
+      "вчера": "yesterday",
+      "была": "was",
+      "хорошая": "good"
     },
     "new_words": [
       "была"
     ],
-    "gist": "She was here. It was her.",
-    "translation": "She was here. It was her. Where was she?"
+    "gist": "",
+    "translation": "The weather yesterday was good."
   },
   {
     "level": 76,
@@ -1636,19 +1434,17 @@
       "cyrillic": "мой",
       "gloss": "my, mine"
     },
-    "passage": "Это [[мой]]? Да, это [[мой]]. Все хорошо.",
+    "passage": "Это [[мой]] дом.",
     "glossary": {
-      "это": "this, it",
-      "мой": "my, mine",
-      "да": "yes",
-      "все": "all, everything",
-      "хорошо": "good, well"
+      "это": "this",
+      "мой": "my",
+      "дом": "house"
     },
     "new_words": [
       "мой"
     ],
-    "gist": "Confirming ownership and satisfaction.",
-    "translation": "Is this mine? Yes, this is mine. All is good."
+    "gist": "",
+    "translation": "This is my house."
   },
   {
     "level": 77,
@@ -1656,20 +1452,18 @@
       "cyrillic": "ее",
       "gloss": "her, its"
     },
-    "passage": "Я знаю [[ее]]. Это [[ее]]. Вы здесь?",
+    "passage": "Я люблю [[ее]] собаку.",
     "glossary": {
       "я": "I",
-      "знаю": "know",
-      "ее": "her, its",
-      "это": "this, it",
-      "вы": "you (plural or formal)",
-      "здесь": "here"
+      "люблю": "love",
+      "ее": "her",
+      "собаку": "dog"
     },
     "new_words": [
       "ее"
     ],
-    "gist": "I know her, this is hers.",
-    "translation": "I know her. This is hers. Are you here?"
+    "gist": "",
+    "translation": "I love her dog."
   },
   {
     "level": 78,
@@ -1677,21 +1471,17 @@
       "cyrillic": "ладно",
       "gloss": "okay, all right"
     },
-    "passage": "Это хорошо, [[ладно]]? Я знаю, [[ладно]]? Мне нужно это, [[ладно]]?",
+    "passage": "Ладно, увидимся завтра.",
     "glossary": {
-      "это": "this",
-      "хорошо": "good",
       "ладно": "okay",
-      "я": "I",
-      "знаю": "know",
-      "мне": "to me",
-      "нужно": "need"
+      "увидимся": "see each other",
+      "завтра": "tomorrow"
     },
     "new_words": [
       "ладно"
     ],
-    "gist": "Simple questions, basic agreement.",
-    "translation": "This is good, okay? I know, okay? I need this, okay?"
+    "gist": "",
+    "translation": "Okay, see you tomorrow."
   },
   {
     "level": 79,
@@ -1699,23 +1489,18 @@
       "cyrillic": "знаешь",
       "gloss": "you know"
     },
-    "passage": "Ты [[знаешь]], кто это? Я знаю, что ты [[знаешь]]. Это очень хорошо.",
+    "passage": "Ты [[знаешь]] русский язык?",
     "glossary": {
-      "ты": "you (informal singular)",
-      "знаешь": "you know (informal singular)",
-      "кто": "who",
-      "это": "this/it/that is",
-      "я": "I",
-      "знаю": "I know",
-      "что": "that/what",
-      "очень": "very",
-      "хорошо": "good/well"
+      "ты": "you",
+      "знаешь": "know",
+      "русский": "Russian",
+      "язык": "language"
     },
     "new_words": [
       "знаешь"
     ],
-    "gist": "Knowing, asking, simple Russian sentences",
-    "translation": "Do you know who this is? I know that you know. This is very good."
+    "gist": "",
+    "translation": "Do you know Russian?"
   },
   {
     "level": 80,
@@ -1723,21 +1508,18 @@
       "cyrillic": "п",
       "gloss": "along, according to"
     },
-    "passage": "Это [[п]] тебе. Как это [[п]] нас? Мне это нужно.",
+    "passage": "Мы гуляем [[по]] парку.",
     "glossary": {
-      "это": "this, that",
-      "п": "along, according to",
-      "тебе": "to you",
-      "как": "how",
-      "нас": "us",
-      "мне": "to me",
-      "нужно": "necessary"
+      "мы": "we",
+      "гуляем": "are walking",
+      "по": "along/in",
+      "парку": "park"
     },
     "new_words": [
-      "п"
+      "по"
     ],
-    "gist": "This according to us and you.",
-    "translation": "This is according to you. How is this according to us? I need this."
+    "gist": "",
+    "translation": "We are walking in the park."
   },
   {
     "level": 81,
@@ -1745,22 +1527,18 @@
       "cyrillic": "до",
       "gloss": "until, to, up to"
     },
-    "passage": "я был здесь [[до]] сейчас. это [[до]] тебя? кто был [[до]] тебя?",
+    "passage": "Я иду [[до]] магазина.",
     "glossary": {
       "я": "I",
-      "был": "was",
-      "здесь": "here",
-      "до": "until, to, up to, before",
-      "сейчас": "now",
-      "это": "this",
-      "тебя": "you",
-      "кто": "who"
+      "иду": "go",
+      "до": "to",
+      "магазина": "store"
     },
     "new_words": [
       "до"
     ],
-    "gist": "Past, present, responsibility, identity.",
-    "translation": "I was here until now. Is this up to you? Who was before you?"
+    "gist": "",
+    "translation": "I am going to the store."
   },
   {
     "level": 82,
@@ -1768,22 +1546,19 @@
       "cyrillic": "этом",
       "gloss": "this, that (prepositional)"
     },
-    "passage": "Это здесь. Мы на [[этом]]. Я знаю об [[этом]].",
+    "passage": "Мы говорили об [[этом]] вчера.",
     "glossary": {
-      "это": "this, it",
-      "здесь": "here",
       "мы": "we",
-      "на": "on, at",
-      "я": "I",
-      "знаю": "know",
-      "о": "about",
-      "этом": "this, that (prepositional)"
+      "говорили": "talked",
+      "об": "about",
+      "этом": "this/that",
+      "вчера": "yesterday"
     },
     "new_words": [
       "этом"
     ],
-    "gist": "We are here, on this, knowing.",
-    "translation": "This is here. We are on this. I know about this."
+    "gist": "",
+    "translation": "We talked about this yesterday."
   },
   {
     "level": 83,
@@ -1791,26 +1566,20 @@
       "cyrillic": "потому",
       "gloss": "therefore, because of that"
     },
-    "passage": "Я не знаю, [[потому]] что ты не здесь. Мне нужно это, [[потому]] что это хорошо. Мы здесь, [[потому]] что ты здесь.",
+    "passage": "Было холодно, [[потому]] мы пошли домой.",
     "glossary": {
-      "я": "I",
-      "не": "not",
-      "знаю": "know",
-      "потому": "because of that",
-      "что": "that",
-      "ты": "you (informal singular)",
-      "здесь": "here",
-      "мне": "to me",
-      "нужно": "needed",
-      "это": "this, it",
-      "хорошо": "good",
-      "мы": "we"
+      "было": "was",
+      "холодно": "cold",
+      "потому": "therefore",
+      "мы": "we",
+      "пошли": "went",
+      "домой": "home"
     },
     "new_words": [
       "потому"
     ],
-    "gist": "Simple reasons for actions.",
-    "translation": "I don't know, because you are not here. I need this, because it is good. We are here, because you are here."
+    "gist": "",
+    "translation": "It was cold, therefore we went home."
   },
   {
     "level": 84,
@@ -1818,22 +1587,18 @@
       "cyrillic": "теперь",
       "gloss": "now, at present"
     },
-    "passage": "Ты был там. [[Теперь]] ты здесь. Это очень хорошо.",
+    "passage": "Я [[теперь]] говорю по-русски.",
     "glossary": {
-      "ты": "you",
-      "был": "was",
-      "там": "there",
+      "я": "i",
       "теперь": "now",
-      "здесь": "here",
-      "это": "this/it",
-      "очень": "very",
-      "хорошо": "good"
+      "говорю": "speak",
+      "по-русски": "russian (language)"
     },
     "new_words": [
       "теперь"
     ],
-    "gist": "You were there, now here. Very good.",
-    "translation": "You were there. Now you are here. It is very good."
+    "gist": "",
+    "translation": "I now speak Russian."
   },
   {
     "level": 85,
@@ -1841,24 +1606,19 @@
       "cyrillic": "думаю",
       "gloss": "I think, I believe"
     },
-    "passage": "Я [[думаю]], это хорошо. Что ты [[думаешь]]? Мы [[думаем]], ты знаешь.",
+    "passage": "Я [[думаю]], это хорошая идея.",
     "glossary": {
       "я": "I",
-      "думаю": "I think",
-      "это": "this",
-      "хорошо": "good",
-      "что": "what",
-      "ты": "you (singular)",
-      "думаешь": "you think (singular)",
-      "мы": "we",
-      "думаем": "we think",
-      "знаешь": "you know (singular)"
+      "думаю": "think",
+      "это": "this is",
+      "хорошая": "good",
+      "идея": "idea"
     },
     "new_words": [
       "думаю"
     ],
-    "gist": "Our thoughts on what is known.",
-    "translation": "I think this is good. What do you think? We think you know."
+    "gist": "",
+    "translation": "I think this is a good idea."
   },
   {
     "level": 86,
@@ -1866,22 +1626,18 @@
       "cyrillic": "больше",
       "gloss": "more, larger"
     },
-    "passage": "Я хочу [[больше]]. Это не так. Мне нужно [[больше]]?",
+    "passage": "Я хочу [[больше]] кофе.",
     "glossary": {
       "я": "I",
       "хочу": "want",
       "больше": "more",
-      "это": "this",
-      "не": "not",
-      "так": "so",
-      "мне": "to me",
-      "нужно": "necessary"
+      "кофе": "coffee"
     },
     "new_words": [
       "больше"
     ],
-    "gist": "Wanting more, questioning need.",
-    "translation": "I want more. This is not so. Do I need more?"
+    "gist": "",
+    "translation": "I want more coffee."
   },
   {
     "level": 87,
@@ -1889,24 +1645,17 @@
       "cyrillic": "её",
       "gloss": "her, its"
     },
-    "passage": "Я знаю [[её]] очень хорошо. Это [[её]], я думаю. Я хочу быть здесь.",
+    "passage": "Это [[её]] машина.",
     "glossary": {
-      "я": "I",
-      "знаю": "know",
-      "её": "her, its",
-      "очень": "very",
-      "хорошо": "well",
-      "это": "this, it",
-      "думаю": "think",
-      "хочу": "want",
-      "быть": "to be",
-      "здесь": "here"
+      "это": "this is",
+      "её": "her",
+      "машина": "car"
     },
     "new_words": [
       "её"
     ],
-    "gist": "Knowing her, her things, wanting presence.",
-    "translation": "I know her very well. This is hers, I think. I want to be here."
+    "gist": "",
+    "translation": "This is her car."
   },
   {
     "level": 88,
@@ -1914,22 +1663,19 @@
       "cyrillic": "со",
       "gloss": "with, from"
     },
-    "passage": "Я [[со]] всеми.\nОн был здесь.\nТы [[со]] мной?",
+    "passage": "Я иду [[со]] своими друзьями.",
     "glossary": {
       "я": "I",
-      "со": "with, from",
-      "всеми": "all, everyone",
-      "он": "he",
-      "был": "was",
-      "здесь": "here",
-      "ты": "you",
-      "мной": "me"
+      "иду": "go",
+      "со": "with",
+      "своими": "my (plural)",
+      "друзьями": "friends"
     },
     "new_words": [
       "со"
     ],
-    "gist": "I, he, you, with, here.",
-    "translation": "I am with everyone. He was here. Are you with me?"
+    "gist": "",
+    "translation": "I am going with my friends."
   },
   {
     "level": 89,
@@ -1937,24 +1683,19 @@
       "cyrillic": "раз",
       "gloss": "time, once"
     },
-    "passage": "Я был здесь [[раз]]. Я хочу еще [[раз]]. Это хорошо, но только [[раз]].",
+    "passage": "Я хочу ещё один [[раз]].",
     "glossary": {
       "я": "I",
-      "был": "was (masculine)",
-      "здесь": "here",
-      "раз": "time, once",
-      "хочу": "I want",
-      "еще": "more, still, yet",
-      "это": "this, it",
-      "хорошо": "good, well",
-      "но": "but",
-      "только": "only"
+      "хочу": "want",
+      "ещё": "more",
+      "один": "one",
+      "раз": "time, once"
     },
     "new_words": [
       "раз"
     ],
-    "gist": "Visited once, want more, only once.",
-    "translation": "I was here once. I want once more. It is good, but only once."
+    "gist": "",
+    "translation": "I want one more time."
   },
   {
     "level": 90,
@@ -1962,21 +1703,18 @@
       "cyrillic": "ему",
       "gloss": "him, it"
     },
-    "passage": "Я знаю, [[ему]] хорошо. Это [[ему]]? Нет, это не [[ему]].",
+    "passage": "Я дал [[ему]] книгу.",
     "glossary": {
       "я": "I",
-      "знаю": "know",
-      "ему": "him, it",
-      "хорошо": "well",
-      "это": "this",
-      "нет": "no",
-      "не": "not"
+      "дал": "gave",
+      "ему": "him",
+      "книгу": "book"
     },
     "new_words": [
       "ему"
     ],
-    "gist": "Asking about 'him', he's fine.",
-    "translation": "I know, he is well. Is this for him? No, this is not for him."
+    "gist": "",
+    "translation": "I gave him a book."
   },
   {
     "level": 91,
@@ -1984,24 +1722,18 @@
       "cyrillic": "надо",
       "gloss": "must, necessary"
     },
-    "passage": "Я знаю, что мне [[надо]]. Это [[надо]] сейчас. Нам [[надо]] быть здесь.",
+    "passage": "Мне [[надо]] идти домой.",
     "glossary": {
-      "я": "I",
-      "знаю": "know",
-      "что": "that, what",
-      "мне": "to me, for me",
-      "надо": "must, necessary",
-      "это": "this, it",
-      "сейчас": "now",
-      "нам": "to us, for us",
-      "быть": "to be",
-      "здесь": "here"
+      "мне": "to me (I)",
+      "надо": "need, must, necessary",
+      "идти": "to go",
+      "домой": "home"
     },
     "new_words": [
       "надо"
     ],
-    "gist": "Needs to be done now.",
-    "translation": "I know that I must. This is necessary now. We need to be here."
+    "gist": "",
+    "translation": "I need to go home."
   },
   {
     "level": 92,
@@ -2009,21 +1741,18 @@
       "cyrillic": "время",
       "gloss": "time"
     },
-    "passage": "Мне нужно [[время]]. Здесь есть [[время]]. Сейчас нет [[времени]].",
+    "passage": "У меня нет [[времени]].",
     "glossary": {
-      "мне": "to me",
-      "нужно": "needed",
-      "время": "time",
-      "здесь": "here",
-      "есть": "is, are",
-      "сейчас": "now",
-      "нет": "no, there is no"
+      "у": "at, by",
+      "меня": "me",
+      "нет": "no, not",
+      "времени": "time"
     },
     "new_words": [
       "время"
     ],
-    "gist": "Time needed, time available, no time.",
-    "translation": "I need time. Here there is time. Now there is no time."
+    "gist": "",
+    "translation": "I don't have time."
   },
   {
     "level": 93,
@@ -2031,23 +1760,18 @@
       "cyrillic": "этот",
       "gloss": "this, these"
     },
-    "passage": "Это [[этот]]? Я знаю, что это мой. Так, но это не [[этот]].",
+    "passage": "Я люблю [[этот]] город.",
     "glossary": {
-      "это": "this is, it is",
-      "этот": "this (masculine)",
-      "я": "I",
-      "знаю": "I know",
-      "что": "that, what",
-      "мой": "my, mine (masculine)",
-      "так": "so",
-      "но": "but",
-      "не": "not"
+      "я": "i",
+      "люблю": "love",
+      "этот": "this",
+      "город": "city"
     },
     "new_words": [
       "этот"
     ],
-    "gist": "Asking about \"this one,\" identifying.",
-    "translation": "Is it [[this one]]? I know that this is mine. So, but this is not [[this one]]."
+    "gist": "",
+    "translation": "I love this city."
   },
   {
     "level": 94,
@@ -2055,25 +1779,19 @@
       "cyrillic": "ли",
       "gloss": "if, whether"
     },
-    "passage": "Это [[ли]] хорошо? Ты знаешь, он [[ли]] здесь? Я не знаю это время.",
+    "passage": "Ты знаешь, придёт [[ли]] он?",
     "glossary": {
-      "это": "this",
+      "ты": "you",
+      "знаешь": "know",
+      "придёт": "will come",
       "ли": "if, whether",
-      "хорошо": "good, well",
-      "ты": "you (informal singular)",
-      "знаешь": "you know",
-      "он": "he",
-      "здесь": "here",
-      "я": "I",
-      "не": "not",
-      "знаю": "I know",
-      "время": "time"
+      "он": "he"
     },
     "new_words": [
       "ли"
     ],
-    "gist": "Questions about good, presence, time",
-    "translation": "Is this good? Do you know if he is here? I don't know this time."
+    "gist": "",
+    "translation": "Do you know if he will come?"
   },
   {
     "level": 95,
@@ -2081,23 +1799,18 @@
       "cyrillic": "ещё",
       "gloss": "still, yet, more"
     },
-    "passage": "Я хочу [[ещё]]. Это [[ещё]] не все. Мне нужно [[ещё]] время.",
+    "passage": "Я хочу [[ещё]] кофе.",
     "glossary": {
       "я": "I",
       "хочу": "want",
-      "ещё": "still, yet, more",
-      "это": "this, it",
-      "не": "not",
-      "все": "all",
-      "мне": "to me, for me",
-      "нужно": "needed, necessary",
-      "время": "time"
+      "ещё": "more",
+      "кофе": "coffee"
     },
     "new_words": [
       "ещё"
     ],
-    "gist": "Want more, not all, need time.",
-    "translation": "I want more. This is not all yet. I need more time."
+    "gist": "",
+    "translation": "I want more coffee."
   },
   {
     "level": 96,
@@ -2105,22 +1818,17 @@
       "cyrillic": "пока",
       "gloss": "bye"
     },
-    "passage": "Я здесь. [[Пока]].\nТы как? Мне хорошо.\nМы здесь. [[Пока]].",
+    "passage": "Ну всё, [[пока]]!",
     "glossary": {
-      "я": "I",
-      "здесь": "here",
-      "пока": "bye",
-      "ты": "you (informal singular)",
-      "как": "how",
-      "мне": "to me (dative of I)",
-      "хорошо": "good",
-      "мы": "we"
+      "ну": "well",
+      "всё": "all",
+      "пока": "bye"
     },
     "new_words": [
       "пока"
     ],
-    "gist": "People are here, saying goodbye",
-    "translation": "I am here. Bye.\nHow are you? I am good.\nWe are here. Bye."
+    "gist": "",
+    "translation": "Alright, bye!"
   },
   {
     "level": 97,
@@ -2128,24 +1836,18 @@
       "cyrillic": "даже",
       "gloss": "even"
     },
-    "passage": "Это [[даже]] хорошо. Я знаю, что ты здесь. Он может [[даже]] это.",
+    "passage": "Я [[даже]] не знаю.",
     "glossary": {
-      "это": "this",
-      "даже": "even",
-      "хорошо": "good, well",
       "я": "I",
-      "знаю": "know (I know)",
-      "что": "what, that",
-      "ты": "you (informal singular)",
-      "здесь": "here",
-      "он": "he",
-      "может": "can (he/she/it can)"
+      "даже": "even",
+      "не": "not",
+      "знаю": "know"
     },
     "new_words": [
       "даже"
     ],
-    "gist": "Even simple things are good",
-    "translation": "This is even good. I know that you are here. He can even do this."
+    "gist": "",
+    "translation": "I don't even know."
   },
   {
     "level": 98,
@@ -2153,20 +1855,17 @@
       "cyrillic": "привет",
       "gloss": "hi"
     },
-    "passage": "[[Привет]]! Как ты? Я знаю, ты здесь. [[Привет]]!",
+    "passage": "[[Привет]], как дела?",
     "glossary": {
       "привет": "hi",
       "как": "how",
-      "ты": "you",
-      "я": "i",
-      "знаю": "i know",
-      "здесь": "here"
+      "дела": "affairs"
     },
     "new_words": [
       "привет"
     ],
-    "gist": "Greeting and acknowledging presence",
-    "translation": "Hi! How are you? I know, you are here. Hi!"
+    "gist": "",
+    "translation": "Hi, how are you?"
   },
   {
     "level": 99,
@@ -2174,25 +1873,17 @@
       "cyrillic": "сказал",
       "gloss": "said, told"
     },
-    "passage": "Он [[сказал]]: \"Я здесь.\" Она [[сказала]]: \"Это хорошо.\" Мы [[сказали]]: \"Спасибо.\"",
+    "passage": "Он [[сказал]] привет.",
     "glossary": {
       "он": "he",
       "сказал": "said",
-      "я": "I",
-      "здесь": "here",
-      "она": "she",
-      "сказала": "said",
-      "это": "this",
-      "хорошо": "good",
-      "мы": "we",
-      "сказали": "said",
-      "спасибо": "thank you"
+      "привет": "hello"
     },
     "new_words": [
       "сказал"
     ],
-    "gist": "People say simple, polite phrases.",
-    "translation": "He said: \"I am here.\" She said: \"This is good.\" We said: \"Thank you.\""
+    "gist": "",
+    "translation": "He said hello."
   },
   {
     "level": 100,
@@ -2200,20 +1891,18 @@
       "cyrillic": "себя",
       "gloss": "self"
     },
-    "passage": "Я знаю [[себя]]. Это для [[себя]]. Это хорошо.",
+    "passage": "Она чувствует [[себя]] хорошо.",
     "glossary": {
-      "я": "I",
-      "знаю": "know",
-      "себя": "self / myself",
-      "это": "this / it",
-      "для": "for",
-      "хорошо": "good / well"
+      "она": "she",
+      "чувствует": "feels",
+      "себя": "herself",
+      "хорошо": "good"
     },
     "new_words": [
       "себя"
     ],
-    "gist": "Knowing oneself is good.",
-    "translation": "I know myself. This is for myself. This is good."
+    "gist": "",
+    "translation": "She feels good."
   },
   {
     "level": 101,
@@ -2221,23 +1910,18 @@
       "cyrillic": "должен",
       "gloss": "must, should, obligated"
     },
-    "passage": "Я [[должен]] знать. Ты [[должен]] быть здесь. Мы [[должны]] быть там.",
+    "passage": "Я [[должен]] идти домой.",
     "glossary": {
       "я": "I",
-      "должен": "must",
-      "знать": "to know",
-      "ты": "you (sg.)",
-      "быть": "to be",
-      "здесь": "here",
-      "мы": "we",
-      "должны": "must (pl.)",
-      "там": "there"
+      "должен": "must, should",
+      "идти": "to go",
+      "домой": "home (adverb)"
     },
     "new_words": [
       "должен"
     ],
-    "gist": "Obligation, presence, knowing",
-    "translation": "I must know. You should be here. We should be there."
+    "gist": "",
+    "translation": "I must go home."
   },
   {
     "level": 102,
@@ -2245,26 +1929,18 @@
       "cyrillic": "тоже",
       "gloss": "also, too, as well"
     },
-    "passage": "Я здесь. Ты [[тоже]] здесь. Это хорошо. И это [[тоже]] хорошо. Он был там. Она [[тоже]] была там.",
+    "passage": "Я [[тоже]] люблю кофе.",
     "glossary": {
-      "я": "I",
-      "здесь": "here",
-      "ты": "you",
-      "тоже": "also",
-      "это": "this",
-      "хорошо": "good",
-      "и": "and",
-      "он": "he",
-      "был": "was (masculine)",
-      "там": "there",
-      "она": "she",
-      "была": "was (feminine)"
+      "я": "i",
+      "тоже": "also, too",
+      "люблю": "love, like",
+      "кофе": "coffee"
     },
     "new_words": [
       "тоже"
     ],
-    "gist": "Similarities in being, place, quality.",
-    "translation": "I am here. You are also here. This is good. And this is also good. He was there. She was also there."
+    "gist": "",
+    "translation": "I like coffee too."
   },
   {
     "level": 103,
@@ -2272,22 +1948,17 @@
       "cyrillic": "хочешь",
       "gloss": "you want"
     },
-    "passage": "Ты [[хочешь]] это? Я не знаю. Может быть.",
+    "passage": "Ты [[хочешь]] кофе?",
     "glossary": {
-      "ты": "you (informal singular)",
-      "хочешь": "you want (informal singular)",
-      "это": "this/it",
-      "я": "I",
-      "не": "not",
-      "знаю": "I know",
-      "может": "maybe/can",
-      "быть": "to be"
+      "ты": "you (informal)",
+      "хочешь": "you want",
+      "кофе": "coffee"
     },
     "new_words": [
       "хочешь"
     ],
-    "gist": "Asking if you want something",
-    "translation": "Do you want this? I don't know. Maybe."
+    "gist": "",
+    "translation": "Do you want coffee?"
   },
   {
     "level": 104,
@@ -2295,19 +1966,18 @@
       "cyrillic": "давай",
       "gloss": "let's, come on"
     },
-    "passage": "[[Давай]] это. Мы здесь, [[давай]]! [[Давай]] сейчас.",
+    "passage": "[[Давай]] пойдём в кино.",
     "glossary": {
-      "давай": "let's, come on",
-      "это": "this",
-      "мы": "we",
-      "здесь": "here",
-      "сейчас": "now"
+      "давай": "let's/come on",
+      "пойдём": "go (we will go)",
+      "в": "to/into",
+      "кино": "cinema/movies"
     },
     "new_words": [
       "давай"
     ],
-    "gist": "Let's do things now",
-    "translation": "Let's do this. We are here, let's go! Let's do it now."
+    "gist": "",
+    "translation": "Let's go to the cinema."
   },
   {
     "level": 105,
@@ -2315,24 +1985,20 @@
       "cyrillic": "никогда",
       "gloss": "never"
     },
-    "passage": "Это [[никогда]] не было хорошо. Я [[никогда]] не хочу это. Но сейчас я знаю.",
+    "passage": "Я [[никогда]] не был в Москве.",
     "glossary": {
-      "это": "this / it",
+      "я": "I",
       "никогда": "never",
       "не": "not",
-      "было": "was (neuter)",
-      "хорошо": "good / well",
-      "я": "I",
-      "хочу": "want (I want)",
-      "но": "but",
-      "сейчас": "now",
-      "знаю": "know (I know)"
+      "был": "was (masc.)",
+      "в": "in",
+      "москве": "Moscow"
     },
     "new_words": [
       "никогда"
     ],
-    "gist": "Never good, never want, now know.",
-    "translation": "This was never good. I never want this. But now I know."
+    "gist": "",
+    "translation": "I have never been to Moscow."
   },
   {
     "level": 106,
@@ -2340,24 +2006,17 @@
       "cyrillic": "эй",
       "gloss": "hey, hi"
     },
-    "passage": "[[Эй]], как ты? Я хочу знать, где он. Мы здесь.",
+    "passage": "[[Эй]], как дела?",
     "glossary": {
-      "эй": "hey, hi",
+      "эй": "hey",
       "как": "how",
-      "ты": "you",
-      "я": "I",
-      "хочу": "want",
-      "знать": "to know",
-      "где": "where",
-      "он": "he",
-      "мы": "we",
-      "здесь": "here"
+      "дела": "things"
     },
     "new_words": [
       "эй"
     ],
-    "gist": "Asking, wanting to know location.",
-    "translation": "Hey, how are you? I want to know where he is. We are here."
+    "gist": "",
+    "translation": "Hey, how are things?"
   },
   {
     "level": 107,
@@ -2365,22 +2024,20 @@
       "cyrillic": "того",
       "gloss": "of that, that"
     },
-    "passage": "Я не хочу [[того]]. Это для [[того]]? Мы не знаем [[того]].",
+    "passage": "Я не видел [[того]] человека давно.",
     "glossary": {
       "я": "I",
       "не": "not",
-      "хочу": "want",
-      "того": "of that, that",
-      "это": "this",
-      "для": "for",
-      "мы": "we",
-      "знаем": "know"
+      "видел": "saw (masc.)",
+      "того": "that, of that",
+      "человека": "person (acc.)",
+      "давно": "a long time ago"
     },
     "new_words": [
       "того"
     ],
-    "gist": "Don't want that. For that? Don't know.",
-    "translation": "I don't want that. Is this for that? We don't know that."
+    "gist": "",
+    "translation": "I haven't seen that person in a long time."
   },
   {
     "level": 108,
@@ -2388,21 +2045,18 @@
       "cyrillic": "тогда",
       "gloss": "then"
     },
-    "passage": "Мы здесь. [[Тогда]] ты тоже здесь. Это хорошо.",
+    "passage": "Сначала работа, [[тогда]] отдых.",
     "glossary": {
-      "мы": "we",
-      "здесь": "here",
+      "сначала": "first",
+      "работа": "work",
       "тогда": "then",
-      "ты": "you (singular informal)",
-      "тоже": "also",
-      "это": "this",
-      "хорошо": "good"
+      "отдых": "rest"
     },
     "new_words": [
       "тогда"
     ],
-    "gist": "We are all here together.",
-    "translation": "We are here. Then you are also here. This is good."
+    "gist": "",
+    "translation": "First work, then rest."
   },
   {
     "level": 109,
@@ -2410,24 +2064,18 @@
       "cyrillic": "него",
       "gloss": "him, it"
     },
-    "passage": "У [[него]] есть время. Я знаю, что это для [[него]]. Это хорошо.",
+    "passage": "У [[него]] есть машина.",
     "glossary": {
-      "у": "at, by, has",
-      "него": "him, it",
-      "есть": "is, there is, has",
-      "время": "time",
-      "я": "I",
-      "знаю": "know",
-      "что": "what, that",
-      "это": "this, it is",
-      "для": "for",
-      "хорошо": "good, well"
+      "у": "at, by",
+      "него": "him",
+      "есть": "is, there is",
+      "машина": "car"
     },
     "new_words": [
       "него"
     ],
-    "gist": "He has time, it is for him.",
-    "translation": "He has time. I know that this is for him. This is good."
+    "gist": "",
+    "translation": "He has a car."
   },
   {
     "level": 110,
@@ -2435,21 +2083,19 @@
       "cyrillic": "ни",
       "gloss": "neither, nor"
     },
-    "passage": "Я не знаю. Ты тоже не знаешь? [[Ни]] я, [[ни]] ты.",
+    "passage": "У меня [[ни]] денег, [[ни]] времени.",
     "glossary": {
-      "я": "I",
-      "не": "not",
-      "знаю": "I know",
-      "ты": "you",
-      "тоже": "also",
-      "знаешь": "you know",
-      "ни": "neither, nor"
+      "у": "at, by (expressing possession)",
+      "меня": "me (genitive of я)",
+      "ни": "neither, nor",
+      "денег": "money (genitive plural)",
+      "времени": "time (genitive)"
     },
     "new_words": [
       "ни"
     ],
-    "gist": "Neither I, nor you know.",
-    "translation": "I don't know. You don't know either? Neither I, nor you."
+    "gist": "",
+    "translation": "I have neither money nor time."
   },
   {
     "level": 111,
@@ -2457,20 +2103,18 @@
       "cyrillic": "тут",
       "gloss": "here, now"
     },
-    "passage": "Ты [[тут]]? Я тоже [[тут]]. Мне хорошо.",
+    "passage": "Я [[тут]] жду тебя.",
     "glossary": {
-      "ты": "you",
-      "тут": "here, now",
       "я": "I",
-      "тоже": "also",
-      "мне": "to me, for me",
-      "хорошо": "good, well"
+      "тут": "here",
+      "жду": "wait (I wait)",
+      "тебя": "you (accusative)"
     },
     "new_words": [
       "тут"
     ],
-    "gist": "Asking if someone is here",
-    "translation": "Are you here? I am also here. I am well."
+    "gist": "",
+    "translation": "I am waiting for you here."
   },
   {
     "level": 112,
@@ -2478,24 +2122,18 @@
       "cyrillic": "были",
       "gloss": "were"
     },
-    "passage": "Мы [[были]] здесь. Они [[были]] там. Я не знаю, где вы [[были]].",
+    "passage": "Мы [[были]] в парке.",
     "glossary": {
       "мы": "we",
       "были": "were",
-      "здесь": "here",
-      "они": "they",
-      "там": "there",
-      "я": "I",
-      "не": "not",
-      "знаю": "know",
-      "где": "where",
-      "вы": "you (plural/formal)"
+      "в": "in, at",
+      "парке": "park"
     },
     "new_words": [
       "были"
     ],
-    "gist": "About where people were",
-    "translation": "We were here. They were there. I don't know where you were."
+    "gist": "",
+    "translation": "We were in the park."
   },
   {
     "level": 113,
@@ -2503,24 +2141,19 @@
       "cyrillic": "конечно",
       "gloss": "of course, certainly"
     },
-    "passage": "Ты здесь, [[конечно]]. Я знаю, это хорошо, [[конечно]]. Мы тут, это все.",
+    "passage": "Да, [[конечно]], я могу помочь.",
     "glossary": {
-      "ты": "you",
-      "здесь": "here",
+      "да": "yes",
       "конечно": "of course",
       "я": "I",
-      "знаю": "know",
-      "это": "this",
-      "хорошо": "good",
-      "мы": "we",
-      "тут": "here",
-      "все": "all"
+      "могу": "can",
+      "помочь": "to help"
     },
     "new_words": [
       "конечно"
     ],
-    "gist": "You are here, this is good.",
-    "translation": "You are here, of course. I know, this is good, of course. We are here, that is all."
+    "gist": "",
+    "translation": "Yes, of course, I can help."
   },
   {
     "level": 114,
@@ -2528,22 +2161,19 @@
       "cyrillic": "правда",
       "gloss": "truth"
     },
-    "passage": "Это [[правда]]? Я знаю, что это [[правда]]. Ты тоже знаешь.",
+    "passage": "Это [[правда]], что он приехал?",
     "glossary": {
-      "это": "this/it",
+      "это": "it",
       "правда": "truth",
-      "я": "I",
-      "знаю": "know (I)",
       "что": "that",
-      "ты": "you (singular informal)",
-      "тоже": "also",
-      "знаешь": "know (you singular informal)"
+      "он": "he",
+      "приехал": "arrived"
     },
     "new_words": [
       "правда"
     ],
-    "gist": "Knowing truth, you also know.",
-    "translation": "Is this the truth? I know that this is the truth. You also know."
+    "gist": "",
+    "translation": "Is it true that he arrived?"
   },
   {
     "level": 115,
@@ -2551,22 +2181,18 @@
       "cyrillic": "об",
       "gloss": "about, concerning"
     },
-    "passage": "Я думаю [[об]] этом. Ты знаешь [[об]] этом? Это не [[об]] этом.",
+    "passage": "Мы говорили [[об]] этом.",
     "glossary": {
-      "я": "I",
-      "думаю": "think",
+      "мы": "we",
+      "говорили": "talked",
       "об": "about",
-      "этом": "this (prepositional)",
-      "ты": "you",
-      "знаешь": "know",
-      "не": "not",
-      "это": "this (nominative)"
+      "этом": "this"
     },
     "new_words": [
       "об"
     ],
-    "gist": "Discussing knowing and thinking about things.",
-    "translation": "I think about this. Do you know about this? This is not about this."
+    "gist": "",
+    "translation": "We talked about it."
   },
   {
     "level": 116,
@@ -2574,22 +2200,18 @@
       "cyrillic": "моя",
       "gloss": "my, mine"
     },
-    "passage": "Это [[моя]] правда. Ты знаешь это? Я тоже это знаю.",
+    "passage": "[[Моя]] мама очень добрая.",
     "glossary": {
-      "это": "this, it",
-      "моя": "my, mine (feminine)",
-      "правда": "truth",
-      "ты": "you (informal singular)",
-      "знаешь": "you know (informal singular)",
-      "я": "I",
-      "тоже": "also, too",
-      "знаю": "I know"
+      "моя": "my",
+      "мама": "mom",
+      "очень": "very",
+      "добрая": "kind"
     },
     "new_words": [
       "моя"
     ],
-    "gist": "My truth, you know, I know.",
-    "translation": "This is my truth. Do you know this? I also know this."
+    "gist": "",
+    "translation": "My mom is very kind."
   },
   {
     "level": 117,
@@ -2597,20 +2219,34 @@
       "cyrillic": "пожалуйста",
       "gloss": "please, you're welcome"
     },
-    "passage": "Да, [[пожалуйста]]. Мне нужно это. Спасибо, [[пожалуйста]].",
+    "passage": "Спасибо, [[пожалуйста]].",
     "glossary": {
-      "да": "yes",
-      "пожалуйста": "please, you're welcome",
-      "мне": "to me, I (dative)",
-      "нужно": "need, necessary",
-      "это": "this, it",
-      "спасибо": "thank you"
+      "спасибо": "thank you",
+      "пожалуйста": "please, you're welcome"
     },
     "new_words": [
       "пожалуйста"
     ],
-    "gist": "Basic requests and polite responses.",
-    "translation": "Yes, please. I need this. Thank you, you're welcome."
+    "gist": "",
+    "translation": "Thank you, you're welcome."
+  },
+  {
+    "level": 118,
+    "new_word": {
+      "cyrillic": "тобой",
+      "gloss": "you (instrumental)"
+    },
+    "passage": "Я горжусь [[тобой]].",
+    "glossary": {
+      "я": "I",
+      "горжусь": "am proud",
+      "тобой": "you (instrumental)"
+    },
+    "new_words": [
+      "тобой"
+    ],
+    "gist": "",
+    "translation": "I am proud of you."
   },
   {
     "level": 119,
@@ -2618,24 +2254,17 @@
       "cyrillic": "сказать",
       "gloss": "to say, to tell"
     },
-    "passage": "Я хочу [[сказать]] привет.\nТы должен [[сказать]] это.\nОн не может [[сказать]] ничего.",
+    "passage": "Пожалуйста, [[скажи]] мне правду.",
     "glossary": {
-      "я": "I",
-      "хочу": "want",
-      "сказать": "to say, to tell",
-      "привет": "hello",
-      "ты": "you",
-      "должен": "must",
-      "это": "this",
-      "он": "he",
-      "не": "not",
-      "может": "can",
-      "ничего": "nothing"
+      "пожалуйста": "please",
+      "скажи": "tell (imperative)",
+      "мне": "to me",
+      "правду": "truth"
     },
     "new_words": [
       "сказать"
     ],
-    "gist": "Introducing 'to say' in simple sentences.",
-    "translation": "I want to say hello.\nYou must say this.\nHe cannot say anything."
+    "gist": "",
+    "translation": "Please tell me the truth."
   }
 ]

@@ -133,16 +133,16 @@ def assemble_words(freq: list[str], curated: dict, enriched: dict) -> list[dict]
     return words
 
 
-async def _gen_level(gen, sem, level, known, new) -> dict | None:
+async def _gen_level(gen, sem, level, new) -> dict | None:
     async with sem:
         try:
-            p = await gen.generate(known, new["cyrillic"], new["gloss_en"])
+            p = await gen.generate_sentence(new["cyrillic"], new["gloss_en"])
             return {"level": level,
                     "new_word": {"cyrillic": new["cyrillic"], "gloss": new["gloss_en"]},
                     "passage": p.text, "glossary": p.glossary, "new_words": p.new_words,
                     "gist": p.gist, "translation": p.translation}
         except Exception as exc:  # noqa: BLE001
-            print(f"  ! level {level} ({new['cyrillic']}) failed: {exc}")
+            print(f"  ! word {new['cyrillic']} failed: {exc}")
             return None
 
 
@@ -159,16 +159,11 @@ async def build_reading(provider, sem, words: list[dict]) -> list[dict]:
     rp = SITE_DATA / "reading.json"
     if rp.exists():
         for e in json.loads(rp.read_text(encoding="utf-8")):
-            if e.get("gist") and e.get("translation"):  # complete entries only
+            if e.get("translation"):  # complete entries only (natural sentences have no gist)
                 existing[e["level"]] = e
-    todo = [i for i in range(MIN_KNOWN, top) if i not in existing]
-    print(f"Passages: {len(existing)} complete, generating {len(todo)} (up to level {top - 1})")
-    tasks = [
-        asyncio.create_task(
-            _gen_level(gen, sem, i, [w["cyrillic"] for w in words[:i]], words[i])
-        )
-        for i in todo
-    ]
+    todo = [i for i in range(0, top) if i not in existing]
+    print(f"Sentences: {len(existing)} complete, generating {len(todo)} (words 0..{top - 1})")
+    tasks = [asyncio.create_task(_gen_level(gen, sem, i, words[i])) for i in todo]
     done = 0
     for fut in asyncio.as_completed(tasks):
         r = await fut
