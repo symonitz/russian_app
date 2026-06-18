@@ -300,13 +300,11 @@ function renderPassage(data, nextWord) {
     <div class="qcard reading"><div class="passage">${html}</div></div>
     <div class="wordpop" id="wordpop" hidden></div>
     <div class="read-aids" id="read-aids"></div>
-    <div class="newword">
-      <span>New word: <b>${nw.cyrillic || ""}</b> — ${nw.gloss || ""}</span>
-      <button class="btn r-good" id="read-next">✓ Got it — next</button>
-    </div>
-    <div class="subtitle" style="text-align:center;margin-top:10px;font-size:12px">
+    <div class="newword"><span>New word: <b>${nw.cyrillic || ""}</b> — ${nw.gloss || ""}</span></div>
+    <div class="subtitle" style="text-align:center;margin:8px 0;font-size:12px">
       Tap any word to hear it &amp; see its meaning.
-    </div>`;
+    </div>
+    <div class="btn-row"><button class="btn r-good" id="read-next">✓ Got it — next</button></div>`;
   stage.querySelectorAll(".rtoken").forEach((el) => {
     el.onclick = () => {
       const w = el.dataset.w;
