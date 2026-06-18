@@ -183,6 +183,7 @@ def collect_audio_texts(words, alphabet, reading) -> set[str]:
         texts.add(letter["example_word"])
     for entry in reading:
         clean = entry["passage"].replace("[[", "").replace("]]", "")
+        texts.add(clean)  # full-sentence audio (for Listen → Sentences)
         for tok in WORD_RE.findall(clean):
             texts.add(tok.lower())
     return {t for t in texts if t.strip()}

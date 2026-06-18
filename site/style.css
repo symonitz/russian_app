@@ -101,6 +101,13 @@ body {
 .gist-line { color:var(--amber); font-style:italic; font-size:16px; }
 .translation-line { margin-top:8px; color:var(--ink); font-size:16px; line-height:1.6; }
 
+/* segmented toggle (Listen: Words / Sentences) */
+.seg { display:flex; gap:6px; background:var(--glass); border:1px solid var(--line);
+  border-radius:12px; padding:4px; margin-bottom:16px; }
+.seg-btn { flex:1; padding:9px; border-radius:9px; border:none; background:transparent;
+  color:var(--muted); font-size:14px; font-weight:600; cursor:pointer; }
+.seg-btn.on { background:var(--indigo); color:#fff; }
+
 .empty { text-align:center; color:var(--muted); padding:60px 0; }
 .empty .add { margin-top:16px; }
 

@@ -203,14 +203,32 @@ function grade(word, correct) {
   nextReview();
 }
 
-// ---------- Listen (audio-first; word hidden until you answer) ----------
+// ---------- Listen (audio-first) ----------
+let listenMode = "words"; // "words" | "sentences"
 function loadListen() {
-  nextListen();
+  const stage = $("#listen-stage");
+  stage.innerHTML = `
+    <div class="seg">
+      <button class="seg-btn ${listenMode === "words" ? "on" : ""}" data-m="words">Words</button>
+      <button class="seg-btn ${listenMode === "sentences" ? "on" : ""}" data-m="sentences">Sentences</button>
+    </div>
+    <div id="listen-body"></div>`;
+  stage.querySelectorAll(".seg-btn").forEach((b) => {
+    b.onclick = () => {
+      listenMode = b.dataset.m;
+      loadListen();
+    };
+  });
+  if (listenMode === "words") nextListen();
+  else nextListenSentence();
 }
+
+// --- Listen: words ---
 function nextListen() {
+  const body = $("#listen-body");
   const intro = WORDS.filter((w) => P.vocab[w.id]);
   if (!intro.length) {
-    $("#listen-stage").innerHTML = `<div class="empty">Learn a few words in <b>Reviews</b> first,<br>then train your ear here. 🎧</div>`;
+    body.innerHTML = `<div class="empty">Learn a few words in <b>Reviews</b> first,<br>then train your ear here. 🎧</div>`;
     return;
   }
   const due = intro
@@ -220,8 +238,8 @@ function nextListen() {
   renderListen(word);
 }
 function renderListen(word) {
-  const stage = $("#listen-stage");
-  stage.innerHTML = `
+  const body = $("#listen-body");
+  body.innerHTML = `
     <div class="qcard">
       <div class="big">🎧</div>
       <div class="speak-row">
@@ -238,7 +256,7 @@ function renderListen(word) {
     </div>`;
   $("#li-speak").onclick = () => play(word.stressed);
   $("#li-slow").onclick = () => play(word.stressed, 0.75);
-  play(word.stressed); // autoplay on appear
+  play(word.stressed); // autoplay
   const input = $("#lans");
   input.focus();
   const go = () => checkListen(word, input.value);
@@ -272,6 +290,47 @@ function gradeListen(word, correct) {
   answer(P.vocab[word.id], correct);
   saveProgress();
   nextListen();
+}
+
+// --- Listen: sentences (hear full sentence, then reveal text + translation) ---
+function nextListenSentence() {
+  const body = $("#listen-body");
+  const introduced = new Set(WORDS.filter((w) => P.vocab[w.id]).map((w) => w.cyrillic));
+  let pool = READING.filter((e) => e.translation && introduced.has(e.new_word.cyrillic));
+  if (pool.length < 3) pool = READING.filter((e) => e.translation).slice(0, 12); // fallback: easiest
+  if (!pool.length) {
+    body.innerHTML = `<div class="empty">No sentences available yet.</div>`;
+    return;
+  }
+  renderListenSentence(pool[Math.floor(Math.random() * pool.length)]);
+}
+function renderListenSentence(data) {
+  const body = $("#listen-body");
+  const clean = data.passage.replace(/\[\[|\]\]/g, "");
+  body.innerHTML = `
+    <div class="qcard">
+      <div class="big">🎧</div>
+      <div class="speak-row">
+        <button class="speak" id="ls-speak" aria-label="Play audio">🔊</button>
+        <button class="speak slow" id="ls-slow" aria-label="Play slowly" title="Slow 0.75×">🐢</button>
+      </div>
+      <div class="hint">Listen to the sentence — understand it, then reveal</div>
+      <div class="answer" id="ls-answer" hidden></div>
+    </div>
+    <div class="btn-row" id="ls-actions"><button class="btn reveal" id="ls-show">Show meaning</button></div>`;
+  $("#ls-speak").onclick = () => play(clean);
+  $("#ls-slow").onclick = () => play(clean, 0.75);
+  play(clean); // autoplay full sentence
+  $("#ls-show").onclick = () => {
+    const ans = $("#ls-answer");
+    ans.hidden = false;
+    ans.innerHTML =
+      `<div class="passage" style="font-size:20px;margin-bottom:8px">${tokenizeHTML(data.passage)}</div>` +
+      `<div class="translation-line">${data.translation}</div>`;
+    ans.querySelectorAll(".rtoken").forEach((el) => (el.onclick = () => play(el.dataset.w)));
+    $("#ls-actions").innerHTML = `<button class="btn r-good" id="ls-next">Next →</button>`;
+    $("#ls-next").onclick = nextListenSentence;
+  };
 }
 
 // ---------- Alphabet ----------
@@ -356,16 +415,21 @@ function loadReading() {
   renderPassage(entry, nextWord);
 }
 
-function renderPassage(data, nextWord) {
-  const stage = $("#reading-stage");
+function tokenizeHTML(passage) {
   const re = /\[\[(.+?)\]\]|([\p{L}\p{M}]+)|([^\p{L}\p{M}\[\]]+)/gu;
   let html = "";
   let m;
-  while ((m = re.exec(data.passage)) !== null) {
+  while ((m = re.exec(passage)) !== null) {
     if (m[1] !== undefined) html += `<span class="rtoken rnew" data-w="${m[1]}">${m[1]}</span>`;
     else if (m[2] !== undefined) html += `<span class="rtoken" data-w="${m[2]}">${m[2]}</span>`;
     else html += m[3].replace(/\n/g, "<br>");
   }
+  return html;
+}
+
+function renderPassage(data, nextWord) {
+  const stage = $("#reading-stage");
+  const html = tokenizeHTML(data.passage);
   const nw = data.new_word || {};
   const glossary = data.glossary || {};
   stage.innerHTML = `
