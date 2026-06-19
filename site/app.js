@@ -45,6 +45,7 @@ function saveProgress() {
     KEY,
     JSON.stringify({ vocab: P.vocab, letters: P.letters, counter: P.counter })
   );
+  schedulePush();
 }
 
 // ---------- count-based scheduler ----------
@@ -532,6 +533,96 @@ function renderPassage(data, nextWord) {
   };
 }
 
+// ---- account (Google sign-in) ----
+const GOOGLE_CLIENT_ID = "<CLIENT_ID_FROM_STEP_5>.apps.googleusercontent.com";
+let signedIn = false;
+
+async function onGoogleCredential(resp) {
+  try {
+    const r = await fetch("/api/auth/google", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ credential: resp.credential }),
+    });
+    if (!r.ok) throw new Error("auth failed");
+    const { email } = await r.json();
+    signedIn = true;
+    await pullAndMerge();         // defined in Task 8
+    renderAccount(email);
+    toast(`Signed in as ${email}`);
+  } catch {
+    toast("Sign-in failed");
+  }
+}
+
+function renderAccount(email) {
+  const el = $("#account");
+  if (signedIn) {
+    el.innerHTML = `<button class="acct" id="signout" title="${email || ""}">Sign out</button>`;
+    $("#signout").onclick = async () => {
+      await fetch("/api/auth/signout", { method: "POST" });
+      signedIn = false;
+      renderAccount();
+    };
+  } else {
+    el.innerHTML = `<div id="gbtn"></div>`;
+    if (window.google?.accounts?.id) {
+      google.accounts.id.initialize({ client_id: GOOGLE_CLIENT_ID, callback: onGoogleCredential });
+      google.accounts.id.renderButton($("#gbtn"), { type: "icon", shape: "circle", theme: "filled_black" });
+    }
+  }
+}
+
+async function initAccount() {
+  try {
+    const me = await fetch("/api/me").then((r) => r.json());
+    signedIn = !!me.signedIn;
+  } catch {
+    signedIn = false;
+  }
+  // GIS loads async; retry render until the library is present
+  const tryRender = (n) => {
+    renderAccount();
+    if (!signedIn && !window.google?.accounts?.id && n > 0) setTimeout(() => tryRender(n - 1), 400);
+  };
+  tryRender(10);
+}
+
+// ---- cloud sync ----
+async function pullAndMerge() {
+  if (!signedIn) return;
+  try {
+    const { progress } = await fetch("/api/progress").then((r) => r.json());
+    const merged = mergeProgress(
+      { vocab: P.vocab, letters: P.letters, counter: P.counter },
+      progress
+    );
+    P.vocab = merged.vocab;
+    P.letters = merged.letters;
+    P.counter = merged.counter;
+    localStorage.setItem(KEY, JSON.stringify(merged)); // local cache
+    await pushProgress(); // write the merged result back up
+    refreshHome();
+  } catch {
+    /* offline — keep local */
+  }
+}
+
+let pushTimer = null;
+function pushProgress() {
+  if (!signedIn) return Promise.resolve();
+  return fetch("/api/progress", {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ vocab: P.vocab, letters: P.letters, counter: P.counter }),
+  }).catch(() => {});
+}
+function schedulePush() {
+  if (!signedIn) return;
+  clearTimeout(pushTimer);
+  pushTimer = setTimeout(pushProgress, 3000);
+}
+
 // ---------- boot ----------
 document.querySelectorAll(".mode[data-go]").forEach((b) => {
   b.addEventListener("click", () => show(b.dataset.go));
@@ -548,6 +639,7 @@ $("#back").addEventListener("click", () => show("home"));
     return;
   }
   show("home");
+  initAccount();
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js").catch(() => {});
   }
