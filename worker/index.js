@@ -21,6 +21,17 @@ export default {
         const user = await readSession(request, env.SESSION_SECRET);
         return json({ signedIn: !!user });
       }
+      if (p === "/api/progress") {
+        const user = await readSession(request, env.SESSION_SECRET);
+        if (!user) return json({ error: "unauthorized" }, 401);
+        const { getProgress, putProgress } = await import("./db.js");
+        if (request.method === "GET") return json({ progress: await getProgress(env, user.id) });
+        if (request.method === "PUT") {
+          const body = await request.json();
+          await putProgress(env, user.id, body);
+          return json({ ok: true });
+        }
+      }
     } catch (e) {
       return json({ error: String(e?.message || e) }, 400);
     }
