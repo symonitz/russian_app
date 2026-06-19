@@ -10,29 +10,33 @@ let WORDS = [];
 let ALPHABET = [];
 let READING = [];
 let AUDIO = {};
+let PATTERNS = [];
 
 async function loadData() {
-  const [w, a, r, au] = await Promise.all([
+  const [w, a, r, au, pat] = await Promise.all([
     fetch("data/words.json").then((x) => x.json()),
     fetch("data/alphabet.json").then((x) => x.json()),
     fetch("data/reading.json").then((x) => x.json()),
     fetch("data/audio.json").then((x) => x.json()),
+    fetch("data/patterns.json").then((x) => x.json()).catch(() => []),
   ]);
   WORDS = w.sort((p, q) => p.freq_rank - q.freq_rank);
   ALPHABET = a;
   READING = r;
   AUDIO = au;
+  PATTERNS = pat || [];
 }
 
 // ---------- progress (browser localStorage) ----------
 const KEY = "ruslearn.v2"; // bumped: progress format changed to count-based
-const P = { vocab: {}, letters: {}, counter: 0 };
+const P = { vocab: {}, letters: {}, patterns: {}, counter: 0 };
 function loadProgress() {
   try {
     const s = JSON.parse(localStorage.getItem(KEY));
     if (s) {
       P.vocab = s.vocab || {};
       P.letters = s.letters || {};
+      P.patterns = s.patterns || {};
       P.counter = s.counter || 0;
     }
   } catch {
@@ -42,7 +46,7 @@ function loadProgress() {
 function saveProgress() {
   localStorage.setItem(
     KEY,
-    JSON.stringify({ vocab: P.vocab, letters: P.letters, counter: P.counter })
+    JSON.stringify({ vocab: P.vocab, letters: P.letters, patterns: P.patterns, counter: P.counter })
   );
 }
 
@@ -81,7 +85,7 @@ function toast(msg) {
 
 // ---------- navigation ----------
 function show(view) {
-  for (const id of ["home", "reviews", "alphabet", "listen", "reading"]) {
+  for (const id of ["home", "reviews", "alphabet", "listen", "reading", "patterns"]) {
     $(`#view-${id}`).hidden = id !== view;
   }
   $("#back").hidden = view === "home";
@@ -91,6 +95,7 @@ function show(view) {
   if (view === "alphabet") loadAlphabet();
   if (view === "listen") loadListen();
   if (view === "reading") loadReading();
+  if (view === "patterns") loadPatterns();
 }
 
 function refreshHome() {
@@ -529,6 +534,112 @@ function renderPassage(data, nextWord) {
     saveProgress();
     loadReading();
   };
+}
+
+// ---------- Patterns (build sentences, RME-style) ----------
+function shuffleA(a) {
+  return a.map((x) => [Math.random(), x]).sort((p, q) => p[0] - q[0]).map((x) => x[1]);
+}
+let patSession = null;
+
+function loadPatterns() {
+  const stage = $("#patterns-stage");
+  if (!PATTERNS.length) {
+    stage.innerHTML = `<div class="empty">No patterns available yet.</div>`;
+    return;
+  }
+  const due = PATTERNS.filter((p) => dueNow(P.patterns[p.id])).sort(
+    (a, b) => P.patterns[a.id].due - P.patterns[b.id].due
+  );
+  let pat = due[0] || PATTERNS.find((p) => !P.patterns[p.id]);
+  if (!pat) pat = PATTERNS[Math.floor(Math.random() * PATTERNS.length)]; // all met → random review
+  const items = shuffleA(pat.items).slice(0, Math.min(3, pat.items.length));
+  patSession = { pattern: pat, items, idx: 0, answer: [], bank: [] };
+  renderPatternItem();
+}
+
+function renderPatternItem() {
+  const stage = $("#patterns-stage");
+  const { pattern, items, idx } = patSession;
+  const item = items[idx];
+  patSession.answer = [];
+  patSession.bank = shuffleA(item.answer.concat(pattern.distractors || []));
+  stage.innerHTML = `
+    <div class="frame-head">${pattern.frame} <span>· ${pattern.frame_gloss}</span></div>
+    <div class="pat-prog">${idx + 1} / ${items.length}</div>
+    <div class="qcard patcard">
+      <div class="prompt-en">${item.prompt}</div>
+      <div class="pans" id="pans"></div>
+      <div class="ptiles" id="ptiles"></div>
+      <div class="verdict" id="pverdict" hidden></div>
+    </div>
+    <div class="btn-row" id="pat-actions"><button class="btn reveal" id="pcheck">Check</button></div>`;
+  renderPatTiles();
+  $("#pcheck").onclick = () => checkPattern(item);
+}
+
+function renderPatTiles() {
+  const ans = $("#pans");
+  const bank = $("#ptiles");
+  ans.innerHTML = patSession.answer.length ? "" : `<span class="ph">tap the words to build it…</span>`;
+  patSession.answer.forEach((w, i) => {
+    const b = document.createElement("button");
+    b.className = "ptile on";
+    b.textContent = w;
+    b.onclick = () => {
+      patSession.bank.push(patSession.answer.splice(i, 1)[0]);
+      renderPatTiles();
+    };
+    ans.appendChild(b);
+  });
+  bank.innerHTML = "";
+  patSession.bank.forEach((w, i) => {
+    const b = document.createElement("button");
+    b.className = "ptile";
+    b.textContent = w;
+    b.onclick = () => {
+      patSession.answer.push(patSession.bank.splice(i, 1)[0]);
+      renderPatTiles();
+    };
+    bank.appendChild(b);
+  });
+}
+
+function checkPattern(item) {
+  const ok =
+    patSession.answer.length === item.answer.length &&
+    patSession.answer.every((w, i) => w === item.answer[i]);
+  const v = $("#pverdict");
+  v.hidden = false;
+  v.className = "verdict " + (ok ? "good" : "bad");
+  if (!ok) {
+    v.textContent = "✗ not quite — tap to rearrange";
+    return;
+  }
+  play(item.say);
+  const g = (item.gloss || [])
+    .map((p) => `<span style="white-space:nowrap"><b>${p[0]}</b> <span style="opacity:.7">${p[1]}</span></span>`)
+    .join('<span style="opacity:.4"> · </span>');
+  v.innerHTML = `✓ <b>${item.say}</b> <span class="pop-speak" id="psay">🔊</span><div class="gloss-lite">${g}</div>`;
+  $("#psay").onclick = () => play(item.say);
+  $("#ptiles").querySelectorAll("button").forEach((b) => (b.disabled = true));
+  $("#pans").querySelectorAll("button").forEach((b) => (b.disabled = true));
+  const last = patSession.idx >= patSession.items.length - 1;
+  $("#pat-actions").innerHTML = `<button class="btn r-good" id="pnext">${last ? "Done →" : "Next →"}</button>`;
+  $("#pnext").onclick = () => {
+    if (last) gradePattern(patSession.pattern);
+    else {
+      patSession.idx++;
+      renderPatternItem();
+    }
+  };
+}
+
+function gradePattern(pat) {
+  if (!P.patterns[pat.id]) P.patterns[pat.id] = newCard();
+  answer(P.patterns[pat.id], true);
+  saveProgress();
+  loadPatterns();
 }
 
 // ---------- boot ----------

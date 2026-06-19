@@ -1,6 +1,6 @@
 // Offline service worker: precache the app shell + dataset, then cache audio
 // (and anything else) on first use. Cache-first for instant, offline loads.
-const CACHE = "ruslearn-v2";
+const CACHE = "ruslearn-v3";
 const SHELL = [
   "./",
   "./index.html",
@@ -15,6 +15,7 @@ const SHELL = [
   "./data/alphabet.json",
   "./data/reading.json",
   "./data/audio.json",
+  "./data/patterns.json",
 ];
 
 self.addEventListener("install", (e) => {

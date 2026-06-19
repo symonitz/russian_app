@@ -1,0 +1,957 @@
+[
+  {
+    "id": 0,
+    "frame": "Я хочу ___",
+    "frame_gloss": "I want ___",
+    "distractors": [
+      "нет",
+      "это"
+    ],
+    "items": [
+      {
+        "prompt": "I want coffee",
+        "answer": [
+          "Я",
+          "хочу",
+          "кофе"
+        ],
+        "say": "Я хочу кофе",
+        "gloss": [
+          [
+            "Я",
+            "I"
+          ],
+          [
+            "хочу",
+            "want"
+          ],
+          [
+            "кофе",
+            "coffee"
+          ]
+        ]
+      },
+      {
+        "prompt": "I want tea",
+        "answer": [
+          "Я",
+          "хочу",
+          "чай"
+        ],
+        "say": "Я хочу чай",
+        "gloss": [
+          [
+            "Я",
+            "I"
+          ],
+          [
+            "хочу",
+            "want"
+          ],
+          [
+            "чай",
+            "tea"
+          ]
+        ]
+      },
+      {
+        "prompt": "I want water",
+        "answer": [
+          "Я",
+          "хочу",
+          "воду"
+        ],
+        "say": "Я хочу воду",
+        "gloss": [
+          [
+            "Я",
+            "I"
+          ],
+          [
+            "хочу",
+            "want"
+          ],
+          [
+            "воду",
+            "water"
+          ]
+        ]
+      },
+      {
+        "prompt": "I want to sleep",
+        "answer": [
+          "Я",
+          "хочу",
+          "спать"
+        ],
+        "say": "Я хочу спать",
+        "gloss": [
+          [
+            "Я",
+            "I"
+          ],
+          [
+            "хочу",
+            "want"
+          ],
+          [
+            "спать",
+            "to sleep"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "frame": "Это ___",
+    "frame_gloss": "this is ___",
+    "distractors": [
+      "я",
+      "не"
+    ],
+    "items": [
+      {
+        "prompt": "This is my house",
+        "answer": [
+          "Это",
+          "мой",
+          "дом"
+        ],
+        "say": "Это мой дом",
+        "gloss": [
+          [
+            "Это",
+            "this is"
+          ],
+          [
+            "мой",
+            "my"
+          ],
+          [
+            "дом",
+            "house"
+          ]
+        ]
+      },
+      {
+        "prompt": "This is a book",
+        "answer": [
+          "Это",
+          "книга"
+        ],
+        "say": "Это книга",
+        "gloss": [
+          [
+            "Это",
+            "this is"
+          ],
+          [
+            "книга",
+            "book"
+          ]
+        ]
+      },
+      {
+        "prompt": "This is coffee",
+        "answer": [
+          "Это",
+          "кофе"
+        ],
+        "say": "Это кофе",
+        "gloss": [
+          [
+            "Это",
+            "this is"
+          ],
+          [
+            "кофе",
+            "coffee"
+          ]
+        ]
+      },
+      {
+        "prompt": "This is good",
+        "answer": [
+          "Это",
+          "хорошо"
+        ],
+        "say": "Это хорошо",
+        "gloss": [
+          [
+            "Это",
+            "this is"
+          ],
+          [
+            "хорошо",
+            "good"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "frame": "Где ___?",
+    "frame_gloss": "where is ___?",
+    "distractors": [
+      "это",
+      "мой"
+    ],
+    "items": [
+      {
+        "prompt": "Where is the house?",
+        "answer": [
+          "Где",
+          "дом"
+        ],
+        "say": "Где дом?",
+        "gloss": [
+          [
+            "Где",
+            "where"
+          ],
+          [
+            "дом",
+            "house"
+          ]
+        ]
+      },
+      {
+        "prompt": "Where is the museum?",
+        "answer": [
+          "Где",
+          "музей"
+        ],
+        "say": "Где музей?",
+        "gloss": [
+          [
+            "Где",
+            "where"
+          ],
+          [
+            "музей",
+            "museum"
+          ]
+        ]
+      },
+      {
+        "prompt": "Where is the water?",
+        "answer": [
+          "Где",
+          "вода"
+        ],
+        "say": "Где вода?",
+        "gloss": [
+          [
+            "Где",
+            "where"
+          ],
+          [
+            "вода",
+            "water"
+          ]
+        ]
+      },
+      {
+        "prompt": "Where is the restaurant?",
+        "answer": [
+          "Где",
+          "ресторан"
+        ],
+        "say": "Где ресторан?",
+        "gloss": [
+          [
+            "Где",
+            "where"
+          ],
+          [
+            "ресторан",
+            "restaurant"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "frame": "У меня есть ___",
+    "frame_gloss": "I have ___",
+    "distractors": [
+      "нет",
+      "кофе"
+    ],
+    "items": [
+      {
+        "prompt": "I have a dog",
+        "answer": [
+          "У",
+          "меня",
+          "есть",
+          "собака"
+        ],
+        "say": "У меня есть собака",
+        "gloss": [
+          [
+            "У",
+            "at"
+          ],
+          [
+            "меня",
+            "me"
+          ],
+          [
+            "есть",
+            "is"
+          ],
+          [
+            "собака",
+            "dog"
+          ]
+        ]
+      },
+      {
+        "prompt": "I have a friend",
+        "answer": [
+          "У",
+          "меня",
+          "есть",
+          "друг"
+        ],
+        "say": "У меня есть друг",
+        "gloss": [
+          [
+            "У",
+            "at"
+          ],
+          [
+            "меня",
+            "me"
+          ],
+          [
+            "есть",
+            "is"
+          ],
+          [
+            "друг",
+            "friend"
+          ]
+        ]
+      },
+      {
+        "prompt": "I have a question",
+        "answer": [
+          "У",
+          "меня",
+          "есть",
+          "вопрос"
+        ],
+        "say": "У меня есть вопрос",
+        "gloss": [
+          [
+            "У",
+            "at"
+          ],
+          [
+            "меня",
+            "me"
+          ],
+          [
+            "есть",
+            "is"
+          ],
+          [
+            "вопрос",
+            "question"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "frame": "Я люблю ___",
+    "frame_gloss": "I like ___",
+    "distractors": [
+      "хочу",
+      "это"
+    ],
+    "items": [
+      {
+        "prompt": "I love coffee",
+        "answer": [
+          "Я",
+          "люблю",
+          "кофе"
+        ],
+        "say": "Я люблю кофе",
+        "gloss": [
+          [
+            "Я",
+            "I"
+          ],
+          [
+            "люблю",
+            "love"
+          ],
+          [
+            "кофе",
+            "coffee"
+          ]
+        ]
+      },
+      {
+        "prompt": "I love you",
+        "answer": [
+          "Я",
+          "люблю",
+          "тебя"
+        ],
+        "say": "Я люблю тебя",
+        "gloss": [
+          [
+            "Я",
+            "I"
+          ],
+          [
+            "люблю",
+            "love"
+          ],
+          [
+            "тебя",
+            "you"
+          ]
+        ]
+      },
+      {
+        "prompt": "I love music",
+        "answer": [
+          "Я",
+          "люблю",
+          "музыку"
+        ],
+        "say": "Я люблю музыку",
+        "gloss": [
+          [
+            "Я",
+            "I"
+          ],
+          [
+            "люблю",
+            "love"
+          ],
+          [
+            "музыку",
+            "music"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "frame": "Мне нужно ___",
+    "frame_gloss": "I need to ___",
+    "distractors": [
+      "хочу",
+      "не"
+    ],
+    "items": [
+      {
+        "prompt": "I need to sleep",
+        "answer": [
+          "Мне",
+          "нужно",
+          "спать"
+        ],
+        "say": "Мне нужно спать",
+        "gloss": [
+          [
+            "Мне",
+            "to me"
+          ],
+          [
+            "нужно",
+            "necessary"
+          ],
+          [
+            "спать",
+            "to sleep"
+          ]
+        ]
+      },
+      {
+        "prompt": "I need to go",
+        "answer": [
+          "Мне",
+          "нужно",
+          "идти"
+        ],
+        "say": "Мне нужно идти",
+        "gloss": [
+          [
+            "Мне",
+            "to me"
+          ],
+          [
+            "нужно",
+            "necessary"
+          ],
+          [
+            "идти",
+            "to go"
+          ]
+        ]
+      },
+      {
+        "prompt": "I need to work",
+        "answer": [
+          "Мне",
+          "нужно",
+          "работать"
+        ],
+        "say": "Мне нужно работать",
+        "gloss": [
+          [
+            "Мне",
+            "to me"
+          ],
+          [
+            "нужно",
+            "necessary"
+          ],
+          [
+            "работать",
+            "to work"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "frame": "Можно ___?",
+    "frame_gloss": "may I have ___?",
+    "distractors": [
+      "я",
+      "нет"
+    ],
+    "items": [
+      {
+        "prompt": "May I have coffee?",
+        "answer": [
+          "Можно",
+          "кофе"
+        ],
+        "say": "Можно кофе?",
+        "gloss": [
+          [
+            "Можно",
+            "may"
+          ],
+          [
+            "кофе",
+            "coffee"
+          ]
+        ]
+      },
+      {
+        "prompt": "May I have water?",
+        "answer": [
+          "Можно",
+          "воду"
+        ],
+        "say": "Можно воду?",
+        "gloss": [
+          [
+            "Можно",
+            "may"
+          ],
+          [
+            "воду",
+            "water"
+          ]
+        ]
+      },
+      {
+        "prompt": "May I have tea?",
+        "answer": [
+          "Можно",
+          "чай"
+        ],
+        "say": "Можно чай?",
+        "gloss": [
+          [
+            "Можно",
+            "may"
+          ],
+          [
+            "чай",
+            "tea"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "frame": "Сколько стоит ___?",
+    "frame_gloss": "how much is ___?",
+    "distractors": [
+      "это",
+      "где"
+    ],
+    "items": [
+      {
+        "prompt": "How much is the coffee?",
+        "answer": [
+          "Сколько",
+          "стоит",
+          "кофе"
+        ],
+        "say": "Сколько стоит кофе?",
+        "gloss": [
+          [
+            "Сколько",
+            "how much"
+          ],
+          [
+            "стоит",
+            "costs"
+          ],
+          [
+            "кофе",
+            "coffee"
+          ]
+        ]
+      },
+      {
+        "prompt": "How much is the book?",
+        "answer": [
+          "Сколько",
+          "стоит",
+          "книга"
+        ],
+        "say": "Сколько стоит книга?",
+        "gloss": [
+          [
+            "Сколько",
+            "how much"
+          ],
+          [
+            "стоит",
+            "costs"
+          ],
+          [
+            "книга",
+            "book"
+          ]
+        ]
+      },
+      {
+        "prompt": "How much is the ticket?",
+        "answer": [
+          "Сколько",
+          "стоит",
+          "билет"
+        ],
+        "say": "Сколько стоит билет?",
+        "gloss": [
+          [
+            "Сколько",
+            "how much"
+          ],
+          [
+            "стоит",
+            "costs"
+          ],
+          [
+            "билет",
+            "ticket"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "frame": "Я из ___",
+    "frame_gloss": "I'm from ___",
+    "distractors": [
+      "в",
+      "это"
+    ],
+    "items": [
+      {
+        "prompt": "I'm from Russia",
+        "answer": [
+          "Я",
+          "из",
+          "России"
+        ],
+        "say": "Я из России",
+        "gloss": [
+          [
+            "Я",
+            "I"
+          ],
+          [
+            "из",
+            "from"
+          ],
+          [
+            "России",
+            "Russia"
+          ]
+        ]
+      },
+      {
+        "prompt": "I'm from America",
+        "answer": [
+          "Я",
+          "из",
+          "Америки"
+        ],
+        "say": "Я из Америки",
+        "gloss": [
+          [
+            "Я",
+            "I"
+          ],
+          [
+            "из",
+            "from"
+          ],
+          [
+            "Америки",
+            "America"
+          ]
+        ]
+      },
+      {
+        "prompt": "I'm from Moscow",
+        "answer": [
+          "Я",
+          "из",
+          "Москвы"
+        ],
+        "say": "Я из Москвы",
+        "gloss": [
+          [
+            "Я",
+            "I"
+          ],
+          [
+            "из",
+            "from"
+          ],
+          [
+            "Москвы",
+            "Moscow"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "frame": "Я не понимаю",
+    "frame_gloss": "I don't understand",
+    "distractors": [
+      "да",
+      "хорошо"
+    ],
+    "items": [
+      {
+        "prompt": "I don't understand",
+        "answer": [
+          "Я",
+          "не",
+          "понимаю"
+        ],
+        "say": "Я не понимаю",
+        "gloss": [
+          [
+            "Я",
+            "I"
+          ],
+          [
+            "не",
+            "not"
+          ],
+          [
+            "понимаю",
+            "understand"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "frame": "Как сказать ___?",
+    "frame_gloss": "how do you say ___?",
+    "distractors": [
+      "где",
+      "я"
+    ],
+    "items": [
+      {
+        "prompt": "How do you say this?",
+        "answer": [
+          "Как",
+          "сказать",
+          "это"
+        ],
+        "say": "Как сказать это?",
+        "gloss": [
+          [
+            "Как",
+            "how"
+          ],
+          [
+            "сказать",
+            "to say"
+          ],
+          [
+            "это",
+            "this"
+          ]
+        ]
+      },
+      {
+        "prompt": "How do you say \"thank you\"?",
+        "answer": [
+          "Как",
+          "сказать",
+          "спасибо"
+        ],
+        "say": "Как сказать спасибо?",
+        "gloss": [
+          [
+            "Как",
+            "how"
+          ],
+          [
+            "сказать",
+            "to say"
+          ],
+          [
+            "спасибо",
+            "thank you"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "frame": "Я хочу пойти в ___",
+    "frame_gloss": "I want to go to ___",
+    "distractors": [
+      "из",
+      "это"
+    ],
+    "items": [
+      {
+        "prompt": "I want to go to the museum",
+        "answer": [
+          "Я",
+          "хочу",
+          "пойти",
+          "в",
+          "музей"
+        ],
+        "say": "Я хочу пойти в музей",
+        "gloss": [
+          [
+            "Я",
+            "I"
+          ],
+          [
+            "хочу",
+            "want"
+          ],
+          [
+            "пойти",
+            "to go"
+          ],
+          [
+            "в",
+            "to"
+          ],
+          [
+            "музей",
+            "museum"
+          ]
+        ]
+      },
+      {
+        "prompt": "I want to go to the park",
+        "answer": [
+          "Я",
+          "хочу",
+          "пойти",
+          "в",
+          "парк"
+        ],
+        "say": "Я хочу пойти в парк",
+        "gloss": [
+          [
+            "Я",
+            "I"
+          ],
+          [
+            "хочу",
+            "want"
+          ],
+          [
+            "пойти",
+            "to go"
+          ],
+          [
+            "в",
+            "to"
+          ],
+          [
+            "парк",
+            "park"
+          ]
+        ]
+      },
+      {
+        "prompt": "I want to go to the restaurant",
+        "answer": [
+          "Я",
+          "хочу",
+          "пойти",
+          "в",
+          "ресторан"
+        ],
+        "say": "Я хочу пойти в ресторан",
+        "gloss": [
+          [
+            "Я",
+            "I"
+          ],
+          [
+            "хочу",
+            "want"
+          ],
+          [
+            "пойти",
+            "to go"
+          ],
+          [
+            "в",
+            "to"
+          ],
+          [
+            "ресторан",
+            "restaurant"
+          ]
+        ]
+      }
+    ]
+  }
+]
