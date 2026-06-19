@@ -304,6 +304,29 @@ function nextListenSentence() {
   }
   renderListenSentence(pool[Math.floor(Math.random() * pool.length)]);
 }
+// Lenient sentence check: did the typed meaning cover the key (content) words
+// of the real translation? Stopwords ignored; ~half the key words = pass.
+const STOPWORDS = new Set(
+  "a an the to of in on at is am are be was were i you he she it we they me my your his her its our their and or not no do does did this that".split(
+    " "
+  )
+);
+function contentWords(s) {
+  return s
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    .filter((w) => w && !STOPWORDS.has(w));
+}
+function sentenceMatches(value, translation) {
+  const want = contentWords(translation);
+  if (!want.length) return normalize(value) === normalize(translation);
+  const got = new Set(contentWords(value));
+  if (!got.size) return false;
+  const hit = want.filter((w) => got.has(w)).length;
+  return hit / want.length >= 0.5;
+}
+
 function renderListenSentence(data) {
   const body = $("#listen-body");
   const clean = data.passage.replace(/\[\[|\]\]/g, "");
@@ -314,23 +337,40 @@ function renderListenSentence(data) {
         <button class="speak" id="ls-speak" aria-label="Play audio">🔊</button>
         <button class="speak slow" id="ls-slow" aria-label="Play slowly" title="Slow 0.75×">🐢</button>
       </div>
-      <div class="hint">Listen to the sentence — understand it, then reveal</div>
+      <div class="hint">Listen — type what it means (English)</div>
+      <input class="answer-input" id="lsans" autocomplete="off" autocapitalize="off"
+             autocorrect="off" spellcheck="false" placeholder="meaning…" />
+      <div class="verdict" id="lsverdict" hidden></div>
       <div class="answer" id="ls-answer" hidden></div>
     </div>
-    <div class="btn-row" id="ls-actions"><button class="btn reveal" id="ls-show">Show meaning</button></div>`;
+    <div class="btn-row" id="ls-actions"><button class="btn reveal" id="ls-check">Check</button></div>`;
   $("#ls-speak").onclick = () => play(clean);
   $("#ls-slow").onclick = () => play(clean, 0.75);
   play(clean); // autoplay full sentence
-  $("#ls-show").onclick = () => {
-    const ans = $("#ls-answer");
-    ans.hidden = false;
-    ans.innerHTML =
-      `<div class="passage" style="font-size:20px;margin-bottom:8px">${tokenizeHTML(data.passage)}</div>` +
-      `<div class="translation-line">${data.translation}</div>`;
-    ans.querySelectorAll(".rtoken").forEach((el) => (el.onclick = () => play(el.dataset.w)));
-    $("#ls-actions").innerHTML = `<button class="btn r-good" id="ls-next">Next →</button>`;
-    $("#ls-next").onclick = nextListenSentence;
-  };
+  const input = $("#lsans");
+  input.focus();
+  const go = () => checkListenSentence(data, clean, input.value);
+  $("#ls-check").onclick = go;
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") go();
+  });
+}
+function checkListenSentence(data, clean, value) {
+  const ok = sentenceMatches(value, data.translation);
+  $("#lsans").disabled = true;
+  play(clean);
+  const v = $("#lsverdict");
+  v.hidden = false;
+  v.className = "verdict " + (ok ? "good" : "bad");
+  v.textContent = ok ? "✓ Got the gist" : "✗ Not quite — here it is:";
+  const ans = $("#ls-answer");
+  ans.hidden = false;
+  ans.innerHTML =
+    `<div class="passage" style="font-size:19px;margin-bottom:8px">${tokenizeHTML(data.passage)}</div>` +
+    `<div class="translation-line">${data.translation}</div>`;
+  ans.querySelectorAll(".rtoken").forEach((el) => (el.onclick = () => play(el.dataset.w)));
+  $("#ls-actions").innerHTML = `<button class="btn ${ok ? "r-good" : "r-again"}" id="ls-next">Next →</button>`;
+  $("#ls-next").onclick = nextListenSentence;
 }
 
 // ---------- Alphabet ----------
