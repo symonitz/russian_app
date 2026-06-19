@@ -124,6 +124,11 @@ body {
 .ptile:disabled { opacity:.6; cursor:default; }
 .gloss-lite { font-size:14px; margin-top:8px; }
 
+/* account / sign-in */
+.acct { background:var(--glass); border:1px solid var(--line); color:var(--ink);
+  border-radius:999px; padding:6px 12px; font-size:12px; cursor:pointer; }
+#account #gbtn { display:flex; }
+
 .empty { text-align:center; color:var(--muted); padding:60px 0; }
 .empty .add { margin-top:16px; }
 
