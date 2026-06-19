@@ -108,6 +108,22 @@ body {
   color:var(--muted); font-size:14px; font-weight:600; cursor:pointer; }
 .seg-btn.on { background:var(--indigo); color:#fff; }
 
+/* Patterns (build sentences) */
+.frame-head { font-size:18px; font-weight:600; margin:4px 0 2px; }
+.frame-head span { color:var(--muted); font-weight:400; font-size:14px; }
+.pat-prog { font-size:12px; color:var(--muted); margin-bottom:12px; }
+.patcard { text-align:left; padding:22px 20px; }
+.prompt-en { font-size:18px; margin-bottom:14px; }
+.pans { min-height:48px; display:flex; flex-wrap:wrap; gap:8px; align-items:center;
+  padding:10px; border-radius:12px; border:1px dashed var(--line); margin-bottom:14px; }
+.pans .ph { font-size:13px; color:var(--muted); }
+.ptiles { display:flex; flex-wrap:wrap; gap:8px; }
+.ptile { font-size:18px; padding:9px 14px; border-radius:10px; cursor:pointer;
+  background:var(--glass); border:1px solid var(--line); color:var(--ink); }
+.ptile.on { background:rgba(110,123,242,.18); border-color:rgba(110,123,242,.5); }
+.ptile:disabled { opacity:.6; cursor:default; }
+.gloss-lite { font-size:14px; margin-top:8px; }
+
 .empty { text-align:center; color:var(--muted); padding:60px 0; }
 .empty .add { margin-top:16px; }
 

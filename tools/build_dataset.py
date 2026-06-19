@@ -175,7 +175,7 @@ async def build_reading(provider, sem, words: list[dict]) -> list[dict]:
     return _save_reading(existing)
 
 
-def collect_audio_texts(words, alphabet, reading) -> set[str]:
+def collect_audio_texts(words, alphabet, reading, patterns) -> set[str]:
     texts: set[str] = set()
     for w in words:
         texts.add(w["stressed"])
@@ -186,6 +186,11 @@ def collect_audio_texts(words, alphabet, reading) -> set[str]:
         texts.add(clean)  # full-sentence audio (for Listen → Sentences)
         for tok in WORD_RE.findall(clean):
             texts.add(tok.lower())
+    for pat in patterns:
+        for item in pat["items"]:
+            texts.add(item["say"])  # full pattern sentence
+            for tok in WORD_RE.findall(item["say"]):
+                texts.add(tok.lower())  # individual words (tap a tile to hear it)
     return {t for t in texts if t.strip()}
 
 
@@ -208,6 +213,58 @@ async def render_audio(texts: set[str]) -> dict[str, str]:
 
 def _write(path: Path, obj) -> None:
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+FRAMES = [
+    {"frame": "Я хочу ___", "gloss": "I want ___"},
+    {"frame": "Это ___", "gloss": "this is ___"},
+    {"frame": "Где ___?", "gloss": "where is ___?"},
+    {"frame": "У меня есть ___", "gloss": "I have ___"},
+    {"frame": "Я люблю ___", "gloss": "I like ___"},
+    {"frame": "Мне нужно ___", "gloss": "I need ___"},
+    {"frame": "Можно ___?", "gloss": "may I have ___?"},
+    {"frame": "Сколько стоит ___?", "gloss": "how much is ___?"},
+    {"frame": "Я из ___", "gloss": "I'm from ___"},
+    {"frame": "Я не понимаю", "gloss": "I don't understand"},
+    {"frame": "Как сказать ___?", "gloss": "how do you say ___?"},
+    {"frame": "Я хочу пойти в ___", "gloss": "I want to go to ___"},
+]
+
+
+async def _gen_pattern(gen, sem, idx, frame) -> dict | None:
+    async with sem:
+        try:
+            res = await gen.generate_pattern(frame["frame"], frame["gloss"])
+            if not res["items"]:
+                print(f"  ! pattern {frame['frame']} -> no items")
+                return None
+            print(f"  pattern {idx}: {frame['frame']} ({len(res['items'])} items)")
+            return {
+                "id": idx, "frame": frame["frame"], "frame_gloss": frame["gloss"],
+                "items": res["items"], "distractors": res["distractors"],
+            }
+        except Exception as exc:  # noqa: BLE001
+            print(f"  ! pattern {frame['frame']} failed: {exc}")
+            return None
+
+
+async def build_patterns(provider, sem, frames) -> list[dict]:
+    gen = ContentGenerator(provider)
+    existing: dict[int, dict] = {}
+    pp = SITE_DATA / "patterns.json"
+    if pp.exists():
+        for e in json.loads(pp.read_text(encoding="utf-8")):
+            if e.get("items"):
+                existing[e["id"]] = e
+    todo = [i for i in range(len(frames)) if i not in existing]
+    print(f"Patterns: {len(existing)} cached, generating {len(todo)}")
+    results = await asyncio.gather(*(_gen_pattern(gen, sem, i, frames[i]) for i in todo))
+    for r in results:
+        if r:
+            existing[r["id"]] = r
+    out = sorted(existing.values(), key=lambda r: r["id"])
+    _write(SITE_DATA / "patterns.json", out)
+    return out
 
 
 async def main() -> None:
@@ -240,7 +297,10 @@ async def main() -> None:
     _write(SITE_DATA / "reading.json", reading)
     print(f"  -> {len(reading)} passages")
 
-    texts = collect_audio_texts(words, alphabet, reading)
+    patterns = await build_patterns(provider, gemini_sem, FRAMES)
+    print(f"  -> {len(patterns)} patterns")
+
+    texts = collect_audio_texts(words, alphabet, reading, patterns)
     print(f"Rendering {len(texts)} audio clips...")
     manifest = await render_audio(texts)
     _write(SITE_DATA / "audio.json", manifest)
