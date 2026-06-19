@@ -1,3 +1,4 @@
+import { mergeProgress } from "./sync.js";
 const $ = (s) => document.querySelector(s);
 
 // Count-based spacing: a card's "due" is a value of the global card counter
