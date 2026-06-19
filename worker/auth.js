@@ -1,6 +1,13 @@
 import { SignJWT, jwtVerify } from "jose";
 
-const enc = (secret) => new TextEncoder().encode(secret);
+// Fail closed: a missing or weak SESSION_SECRET would otherwise sign sessions
+// with a guessable key (an unset env var stringifies to "undefined").
+const enc = (secret) => {
+  if (!secret || secret.length < 32) {
+    throw new Error("SESSION_SECRET missing or too short (need at least 32 chars)");
+  }
+  return new TextEncoder().encode(secret);
+};
 const MAX_AGE = 30 * 24 * 3600; // 30 days
 
 export async function signSession(userId, secret) {
@@ -47,8 +54,8 @@ export async function verifyGoogleToken(idToken, clientId) {
   return { sub: payload.sub, email: payload.email };
 }
 
-export async function handleGoogleAuth(request, env) {
-  const { credential } = await request.json();
+export async function handleGoogleAuth(body, env) {
+  const { credential } = body;
   const { sub, email } = await verifyGoogleToken(credential, env.GOOGLE_CLIENT_ID);
   const user = await upsertUser(env, sub, email);
   const token = await signSession(user.id, env.SESSION_SECRET);
