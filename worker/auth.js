@@ -30,3 +30,29 @@ export function sessionCookie(token) {
 export function clearCookie() {
   return `session=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0`;
 }
+
+import { createRemoteJWKSet } from "jose";
+import { upsertUser } from "./db.js";
+
+const GOOGLE_JWKS = createRemoteJWKSet(
+  new URL("https://www.googleapis.com/oauth2/v3/certs")
+);
+
+// Verify a Google ID token (JWT) and return { sub, email }.
+export async function verifyGoogleToken(idToken, clientId) {
+  const { payload } = await jwtVerify(idToken, GOOGLE_JWKS, {
+    issuer: ["https://accounts.google.com", "accounts.google.com"],
+    audience: clientId,
+  });
+  return { sub: payload.sub, email: payload.email };
+}
+
+export async function handleGoogleAuth(request, env) {
+  const { credential } = await request.json();
+  const { sub, email } = await verifyGoogleToken(credential, env.GOOGLE_CLIENT_ID);
+  const user = await upsertUser(env, sub, email);
+  const token = await signSession(user.id, env.SESSION_SECRET);
+  return new Response(JSON.stringify({ ok: true, email }), {
+    headers: { "content-type": "application/json", "set-cookie": sessionCookie(token) },
+  });
+}
