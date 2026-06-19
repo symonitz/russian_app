@@ -34,6 +34,24 @@ Respond with ONLY this JSON and nothing else:
 {{"passage": "<russian sentence>", "new_words": ["{word}"], "translation": "<english translation>", "glossary": {{"<russian word>": "<english>"}}}}"""
 
 
+PATTERN_PROMPT = """You are building a sentence-PATTERN drill for a beginner learning Russian (pattern-substitution style).
+Frame: "{frame}"  (meaning: "{frame_gloss}")
+
+Produce {n} natural, useful beginner sentences that fit this frame by substituting the blank with common everyday words. If the frame is a fixed phrase with no blank, produce just that ONE sentence.
+
+For EACH sentence give:
+- "prompt": the English to say (e.g. "I want coffee")
+- "answer": the Russian as an ARRAY of word tokens IN ORDER (each item exactly one word; plain Russian letters; no stress marks; no punctuation tokens)
+- "say": the full Russian sentence (plain letters)
+- "gloss": an array of [russian_word, english] pairs, one per word in "answer", in the same order (super-literal, word-by-word)
+
+Also give "distractors": exactly 2 plausible real beginner Russian words that do NOT appear in any "answer" (decoy word-tiles).
+
+Use plain Russian letters only — NO stress marks, NO Latin letters.
+Respond with ONLY this JSON and nothing else:
+{{"items": [{{"prompt": "<english>", "answer": ["<w1>", "<w2>"], "say": "<russian sentence>", "gloss": [["<w1>", "<en>"], ["<w2>", "<en>"]]}}], "distractors": ["<ru>", "<ru>"]}}"""
+
+
 @dataclass
 class Passage:
     text: str                    # passage with [[new word]] occurrences marked
@@ -74,3 +92,22 @@ class ContentGenerator:
             gist="",
             translation=data.get("translation", ""),
         )
+
+    async def generate_pattern(self, frame: str, frame_gloss: str, n: int = 5) -> dict:
+        """Generate substitution items + decoy distractors for a sentence frame."""
+        raw = await self.provider.complete(
+            PATTERN_PROMPT.format(frame=frame, frame_gloss=frame_gloss, n=n)
+        )
+        data = json.loads(raw)
+        items = []
+        for it in data.get("items", []):
+            if it.get("answer") and it.get("say"):
+                items.append(
+                    {
+                        "prompt": it.get("prompt", ""),
+                        "answer": it["answer"],
+                        "say": it["say"],
+                        "gloss": it.get("gloss", []),
+                    }
+                )
+        return {"items": items, "distractors": data.get("distractors", [])[:2]}
