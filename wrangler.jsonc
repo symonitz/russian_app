@@ -4,7 +4,7 @@
   "main": "worker/index.js",
   "assets": { "directory": "./site", "binding": "ASSETS" },
   "d1_databases": [
-    { "binding": "DB", "database_name": "russian-app", "database_id": "<DATABASE_ID_FROM_STEP_4>" }
+    { "binding": "DB", "database_name": "russian-app", "database_id": "09647506-c986-476b-8eb7-4a8df7796957" }
   ],
   "vars": { "GOOGLE_CLIENT_ID": "<CLIENT_ID_FROM_STEP_5>.apps.googleusercontent.com" }
 }
