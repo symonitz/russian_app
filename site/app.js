@@ -534,7 +534,7 @@ function renderPassage(data, nextWord) {
 }
 
 // ---- account (Google sign-in) ----
-const GOOGLE_CLIENT_ID = "<CLIENT_ID_FROM_STEP_5>.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = "826017407933-np9i68adb4o6gnl297gn247pjgc5f661.apps.googleusercontent.com";
 let signedIn = false;
 
 async function onGoogleCredential(resp) {

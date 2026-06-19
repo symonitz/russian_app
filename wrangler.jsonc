@@ -6,5 +6,5 @@
   "d1_databases": [
     { "binding": "DB", "database_name": "russian-app", "database_id": "09647506-c986-476b-8eb7-4a8df7796957" }
   ],
-  "vars": { "GOOGLE_CLIENT_ID": "<CLIENT_ID_FROM_STEP_5>.apps.googleusercontent.com" }
+  "vars": { "GOOGLE_CLIENT_ID": "826017407933-np9i68adb4o6gnl297gn247pjgc5f661.apps.googleusercontent.com" }
 }
