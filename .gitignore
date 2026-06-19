@@ -7,3 +7,6 @@ data/tts/
 .pytest_cache/
 *.egg-info/
 data/ru_50k.txt
+node_modules/
+.dev.vars
+.wrangler/
