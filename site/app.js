@@ -3,7 +3,7 @@ const $ = (s) => document.querySelector(s);
 
 let currentView = "home";
 const CACHE_VERSION = "v4";
-const TURNSTILE_SITE_KEY = "<TURNSTILE_SITE_KEY>";
+const TURNSTILE_SITE_KEY = "0x4AAAAAADoPWVdaOuApj71A";
 
 // Count-based spacing: a card's "due" is a value of the global card counter
 // (cards seen). Answer correct -> returns in OFFSET.good cards later; wrong ->
