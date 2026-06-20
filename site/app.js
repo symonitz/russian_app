@@ -750,6 +750,7 @@ function initFeedback() {
 
 function openFeedback() {
   const root = $("#fb-root");
+  if (!root.hidden) return; // already open
   root.innerHTML = `
     <div class="fb-overlay" id="fb-overlay"></div>
     <div class="fb-panel" role="dialog" aria-label="Feedback">
