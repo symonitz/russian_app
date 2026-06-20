@@ -58,3 +58,30 @@ test("buildIssue: body carries the text, mood and context; label is user-feedbac
   assert.ok(issue.body.toLowerCase().includes("good"));
   assert.deepEqual(issue.labels, ["user-feedback"]);
 });
+
+import { verifyTurnstile, createIssue } from "../../worker/feedback.js";
+
+test("verifyTurnstile: false with no token, true/false from siteverify", async () => {
+  const ok = () => ({ json: async () => ({ success: true }) });
+  const bad = () => ({ json: async () => ({ success: false }) });
+  assert.equal(await verifyTurnstile("", "secret", "1.2.3.4", ok), false);
+  assert.equal(await verifyTurnstile("tok", "secret", "1.2.3.4", ok), true);
+  assert.equal(await verifyTurnstile("tok", "secret", "1.2.3.4", bad), false);
+});
+
+test("createIssue: posts to the repo issues URL with auth, returns the number", async () => {
+  let seen = null;
+  const fakeFetch = (url, opts) => {
+    seen = { url, opts };
+    return { ok: true, status: 201, json: async () => ({ number: 42 }) };
+  };
+  const n = await createIssue("symonitz/russian_app", "ghtok", { title: "t", body: "b", labels: ["user-feedback"] }, fakeFetch);
+  assert.equal(n, 42);
+  assert.equal(seen.url, "https://api.github.com/repos/symonitz/russian_app/issues");
+  assert.match(seen.opts.headers.Authorization, /Bearer ghtok/);
+});
+
+test("createIssue: throws on a non-ok response", async () => {
+  const fakeFetch = () => ({ ok: false, status: 403, json: async () => ({}) });
+  await assert.rejects(() => createIssue("r/r", "t", { title: "t", body: "b", labels: [] }, fakeFetch));
+});

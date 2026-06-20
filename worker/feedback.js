@@ -40,3 +40,34 @@ export function buildIssue(row) {
   ].join("\n");
   return { title, body, labels: ["user-feedback"] };
 }
+
+export async function verifyTurnstile(token, secret, ip, fetchImpl = fetch) {
+  if (!token || !secret) return false;
+  const form = new URLSearchParams();
+  form.set("secret", secret);
+  form.set("response", token);
+  if (ip) form.set("remoteip", ip);
+  const res = await fetchImpl("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+    method: "POST",
+    body: form,
+  });
+  const data = await res.json();
+  return !!data.success;
+}
+
+export async function createIssue(repo, token, issue, fetchImpl = fetch) {
+  const res = await fetchImpl(`https://api.github.com/repos/${repo}/issues`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: "application/vnd.github+json",
+      "User-Agent": "ruslearn-feedback",
+      "X-GitHub-Api-Version": "2022-11-28",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(issue),
+  });
+  if (!res.ok) throw new Error(`github ${res.status}`);
+  const data = await res.json();
+  return data.number;
+}
