@@ -13,6 +13,8 @@ export default {
         if (limiter) {
           const { success } = await limiter.limit({ key: ip });
           if (!success) return json({ error: "rate limited" }, 429);
+        } else {
+          console.error("rate-limit binding missing for", p);
         }
       }
       if (p === "/api/health") return json({ ok: true });
