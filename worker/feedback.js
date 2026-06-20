@@ -1,3 +1,9 @@
+import { json } from "./http.js";
+import { readSession } from "./auth.js";
+import { insertFeedback, setFeedbackIssue } from "./db.js";
+
+const GITHUB_REPO = "symonitz/russian_app";
+
 // Feedback endpoint logic: validation, GitHub/Turnstile calls, orchestration.
 
 const MOODS = ["good", "ok", "bad"];
@@ -70,4 +76,27 @@ export async function createIssue(repo, token, issue, fetchImpl = fetch) {
   if (!res.ok) throw new Error(`github ${res.status}`);
   const data = await res.json();
   return data.number;
+}
+
+export async function handleFeedback(body, env, request) {
+  const v = validateFeedback(body);
+  if (!v.ok) return json({ error: v.error }, 400);
+
+  const ip = request.headers.get("CF-Connecting-IP") || "";
+  const passed = await verifyTurnstile(body.turnstileToken, env.TURNSTILE_SECRET, ip);
+  if (!passed) return json({ error: "verification failed" }, 400);
+
+  const user = await readSession(request, env.SESSION_SECRET);
+  const row = { ...v.value, user_id: user?.id ?? null, created_at: new Date().toISOString() };
+  const id = await insertFeedback(env, row);
+
+  // Best-effort: a GitHub hiccup must not lose the feedback (D1 already has it).
+  try {
+    const num = await createIssue(GITHUB_REPO, env.GITHUB_TOKEN, buildIssue(row));
+    if (num) await setFeedbackIssue(env, id, num);
+  } catch (e) {
+    console.error("github issue failed:", e);
+  }
+
+  return json({ ok: true });
 }

@@ -1,14 +1,25 @@
 import { handleGoogleAuth, readSession, clearCookie } from "./auth.js";
 import { json, readJsonBody } from "./http.js";
+import { handleFeedback } from "./feedback.js";
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const p = url.pathname;
     try {
+      const ip = request.headers.get("CF-Connecting-IP") || "anon";
+      if (p.startsWith("/api/")) {
+        const limiter = p === "/api/feedback" ? env.FEEDBACK_RL : env.DEFAULT_RL;
+        if (limiter) {
+          const { success } = await limiter.limit({ key: ip });
+          if (!success) return json({ error: "rate limited" }, 429);
+        }
+      }
       if (p === "/api/health") return json({ ok: true });
       if (p === "/api/auth/google" && request.method === "POST")
         return await handleGoogleAuth(await readJsonBody(request), env);
+      if (p === "/api/feedback" && request.method === "POST")
+        return await handleFeedback(await readJsonBody(request, 8 * 1024), env, request);
       if (p === "/api/auth/signout" && request.method === "POST")
         return json({ ok: true }, 200, { "set-cookie": clearCookie() });
       if (p === "/api/me") {
