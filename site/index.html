@@ -11,6 +11,7 @@
   <title>ruslearn — Russian</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://accounts.google.com/gsi/client" async></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
   <div id="app">
@@ -55,6 +56,7 @@
         <span class="m-txt"><b>Patterns</b><i>Build &amp; say sentences</i></span>
         <span class="badge" id="b-pat">go</span>
       </button>
+      <button class="fb-open" id="fb-open">💬 Feedback</button>
     </section>
 
     <section class="view" id="view-reviews" hidden><div class="card-stage" id="rev-stage"></div></section>
@@ -62,6 +64,7 @@
     <section class="view" id="view-listen" hidden><div class="card-stage" id="listen-stage"></div></section>
     <section class="view" id="view-reading" hidden><div class="card-stage" id="reading-stage"></div></section>
     <section class="view" id="view-patterns" hidden><div class="card-stage" id="patterns-stage"></div></section>
+    <div id="fb-root" hidden></div>
   </div>
 
   <div class="toast" id="toast" hidden></div>

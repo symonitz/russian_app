@@ -1,6 +1,10 @@
 import { mergeProgress } from "./sync.js";
 const $ = (s) => document.querySelector(s);
 
+let currentView = "home";
+const CACHE_VERSION = "v4";
+const TURNSTILE_SITE_KEY = "<TURNSTILE_SITE_KEY>";
+
 // Count-based spacing: a card's "due" is a value of the global card counter
 // (cards seen). Answer correct -> returns in OFFSET.good cards later; wrong ->
 // OFFSET.again cards later (so it reshuffles into the next ~30). Tweakable.
@@ -87,6 +91,7 @@ function toast(msg) {
 
 // ---------- navigation ----------
 function show(view) {
+  currentView = view;
   for (const id of ["home", "reviews", "alphabet", "listen", "reading", "patterns"]) {
     $(`#view-${id}`).hidden = id !== view;
   }
@@ -735,6 +740,83 @@ function schedulePush() {
   pushTimer = setTimeout(pushProgress, 3000);
 }
 
+// ---------- feedback ----------
+let fbWidgetId = null;
+
+function initFeedback() {
+  const open = $("#fb-open");
+  if (open) open.onclick = openFeedback;
+}
+
+function openFeedback() {
+  const root = $("#fb-root");
+  root.innerHTML = `
+    <div class="fb-overlay" id="fb-overlay"></div>
+    <div class="fb-panel" role="dialog" aria-label="Feedback">
+      <h3 class="fb-title">Feedback</h3>
+      <textarea id="fb-text" class="fb-text" maxlength="2000"
+        placeholder="What's working? What's confusing? What's missing?"></textarea>
+      <div class="fb-moods" id="fb-moods">
+        <button type="button" data-mood="good">🙂</button>
+        <button type="button" data-mood="ok">😐</button>
+        <button type="button" data-mood="bad">🙁</button>
+      </div>
+      <input id="fb-contact" class="fb-contact" type="email" placeholder="Email (optional)" />
+      <div id="fb-ts"></div>
+      <div class="fb-actions">
+        <button class="btn ghost" id="fb-cancel">Cancel</button>
+        <button class="btn reveal" id="fb-send">Send</button>
+      </div>
+    </div>`;
+  root.hidden = false;
+
+  let mood = null;
+  $("#fb-moods").querySelectorAll("button").forEach((b) => {
+    b.onclick = () => {
+      mood = b.dataset.mood;
+      $("#fb-moods").querySelectorAll("button").forEach((x) => x.classList.remove("on"));
+      b.classList.add("on");
+    };
+  });
+
+  fbWidgetId = null;
+  if (window.turnstile) fbWidgetId = window.turnstile.render("#fb-ts", { sitekey: TURNSTILE_SITE_KEY });
+
+  const close = () => {
+    if (fbWidgetId != null && window.turnstile) window.turnstile.remove(fbWidgetId);
+    root.hidden = true;
+    root.innerHTML = "";
+  };
+  $("#fb-overlay").onclick = close;
+  $("#fb-cancel").onclick = close;
+
+  $("#fb-send").onclick = async () => {
+    const text = $("#fb-text").value.trim();
+    if (!text) return toast("Write something first");
+    const token = window.turnstile && fbWidgetId != null ? window.turnstile.getResponse(fbWidgetId) : "";
+    if (!token) return toast("Please complete the check");
+    const payload = {
+      text,
+      mood,
+      contact: $("#fb-contact").value.trim() || null,
+      turnstileToken: token,
+      context: { mode: currentView, version: CACHE_VERSION, ua: navigator.userAgent },
+    };
+    try {
+      const r = await fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!r.ok) throw new Error();
+      toast("Thanks! 🙏");
+      close();
+    } catch {
+      toast("Couldn't send — try again");
+    }
+  };
+}
+
 // ---------- boot ----------
 document.querySelectorAll(".mode[data-go]").forEach((b) => {
   b.addEventListener("click", () => show(b.dataset.go));
@@ -752,6 +834,7 @@ $("#back").addEventListener("click", () => show("home"));
   }
   show("home");
   initAccount();
+  initFeedback();
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js").catch(() => {});
   }
