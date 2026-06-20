@@ -135,3 +135,24 @@ body {
 .toast { position:fixed; left:50%; bottom:28px; transform:translateX(-50%);
   background:#1b2030; border:1px solid var(--line); color:var(--ink);
   padding:11px 18px; border-radius:12px; font-size:14px; box-shadow:0 10px 30px -10px #000; }
+
+/* feedback widget */
+.fb-open { display:block; margin:22px auto 0; background:var(--glass); border:1px solid var(--line);
+  color:var(--muted); border-radius:999px; padding:9px 18px; font-size:13px; cursor:pointer; }
+.fb-overlay { position:fixed; inset:0; background:rgba(0,0,0,.55); }
+.fb-panel { position:fixed; left:50%; bottom:0; transform:translateX(-50%);
+  width:100%; max-width:430px; background:var(--bg1); border:1px solid var(--line);
+  border-radius:20px 20px 0 0; padding:20px; box-shadow:0 -20px 50px -20px #000; }
+.fb-title { margin:0 0 12px; font-size:18px; }
+.fb-text { width:100%; min-height:110px; resize:vertical; border-radius:12px; padding:12px;
+  background:rgba(0,0,0,.25); border:1px solid var(--line); color:var(--ink); font-size:15px; outline:none; }
+.fb-text:focus { border-color:var(--indigo); }
+.fb-moods { display:flex; gap:8px; margin:12px 0; }
+.fb-moods button { font-size:22px; width:48px; height:44px; border-radius:12px;
+  background:var(--glass); border:1px solid var(--line); cursor:pointer; }
+.fb-moods button.on { background:rgba(110,123,242,.20); border-color:rgba(110,123,242,.5); }
+.fb-contact { width:100%; margin-bottom:12px; padding:11px 12px; border-radius:12px;
+  background:rgba(0,0,0,.25); border:1px solid var(--line); color:var(--ink); font-size:14px; outline:none; }
+.fb-contact:focus { border-color:var(--indigo); }
+.fb-actions { display:flex; gap:10px; margin-top:12px; }
+#fb-ts { min-height:0; }

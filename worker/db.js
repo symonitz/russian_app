@@ -28,3 +28,26 @@ export async function putProgress(env, userId, data) {
     .bind(userId, JSON.stringify(data), new Date().toISOString())
     .run();
 }
+
+export async function insertFeedback(env, row) {
+  const res = await env.DB.prepare(
+    `INSERT INTO feedback (text, mood, contact, context, user_id, created_at)
+     VALUES (?, ?, ?, ?, ?, ?)`
+  )
+    .bind(
+      row.text,
+      row.mood ?? null,
+      row.contact ?? null,
+      JSON.stringify(row.context ?? {}),
+      row.user_id ?? null,
+      row.created_at
+    )
+    .run();
+  return res.meta.last_row_id;
+}
+
+export async function setFeedbackIssue(env, id, issueNumber) {
+  await env.DB.prepare("UPDATE feedback SET github_issue = ? WHERE id = ?")
+    .bind(issueNumber, id)
+    .run();
+}
