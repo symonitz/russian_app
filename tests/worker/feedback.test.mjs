@@ -33,3 +33,28 @@ test("caps context fields and ignores junk", () => {
   assert.equal(r.value.context.ua.length, 300);
   assert.equal(r.value.context.extra, undefined);
 });
+
+import { buildIssue } from "../../worker/feedback.js";
+
+const ROW = {
+  text: "The reviews mode is great but the audio is quiet",
+  mood: "good",
+  contact: "a@b.co",
+  context: { mode: "reviews", version: "v4", ua: "iPhone" },
+  user_id: 7,
+  created_at: "2026-06-20T10:00:00.000Z",
+};
+
+test("buildIssue: title is prefixed and truncated to <= ~70 chars", () => {
+  const issue = buildIssue(ROW);
+  assert.ok(issue.title.startsWith("Feedback: "));
+  assert.ok(issue.title.length <= 70);
+});
+
+test("buildIssue: body carries the text, mood and context; label is user-feedback", () => {
+  const issue = buildIssue(ROW);
+  assert.ok(issue.body.includes("The reviews mode is great"));
+  assert.ok(issue.body.includes("reviews"));
+  assert.ok(issue.body.toLowerCase().includes("good"));
+  assert.deepEqual(issue.labels, ["user-feedback"]);
+});

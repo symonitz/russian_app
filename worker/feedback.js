@@ -1,6 +1,7 @@
 // Feedback endpoint logic: validation, GitHub/Turnstile calls, orchestration.
 
 const MOODS = ["good", "ok", "bad"];
+const MOOD_LABEL = { good: "🙂 good", ok: "😐 ok", bad: "🙁 bad" };
 
 export function validateFeedback(payload) {
   if (!payload || typeof payload !== "object") return { ok: false, error: "invalid" };
@@ -21,4 +22,21 @@ export function validateFeedback(payload) {
   };
 
   return { ok: true, value: { text, mood, contact: contact || null, context } };
+}
+
+export function buildIssue(row) {
+  const title = "Feedback: " + row.text.replace(/\s+/g, " ").slice(0, 60);
+  const body = [
+    row.text,
+    "",
+    "---",
+    `**Mood:** ${row.mood ? MOOD_LABEL[row.mood] : "—"}`,
+    `**Contact:** ${row.contact || "—"}`,
+    `**Mode:** ${row.context?.mode || "—"}`,
+    `**Version:** ${row.context?.version || "—"}`,
+    `**User:** ${row.user_id ?? "anon"}`,
+    `**UA:** ${row.context?.ua || "—"}`,
+    `**At:** ${row.created_at}`,
+  ].join("\n");
+  return { title, body, labels: ["user-feedback"] };
 }
