@@ -89,6 +89,8 @@ def accentize_passage(passage: str, accentize_fn=None) -> str:
         counter["n"] += 1
         return f"[[{m.group(0)}]]" if counter["n"] == idx else m.group(0)
 
+    # Invariant: the accent fn is purely additive (adds combining marks only),
+    # so it never adds/removes/splits word tokens — the index stays aligned.
     return _WORD.sub(repl, acc)
 
 

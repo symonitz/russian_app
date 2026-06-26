@@ -31,3 +31,9 @@ def test_apply_accents_words_and_glossary():
     # pattern answer + distractors ё-restored, no acute
     assert patterns[0]["items"][0]["answer"] == ["ещё"]
     assert patterns[0]["distractors"] == ["раз"]
+
+def test_passage_duplicate_word_only_marked_wrapped():
+    # "мама" appears twice; only the marked 2nd occurrence (index 1) is wrapped
+    out = accentize_passage("мама [[мама]] дом", fake_acc)
+    assert out.count("[[") == 1 and out.count("]]") == 1
+    assert out == "ма" + ACUTE + "ма" + ACUTE + " [[ма" + ACUTE + "ма" + ACUTE + "]] дом"
