@@ -29,6 +29,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from ruslearn.gemini_cli import GeminiCLIProvider  # noqa: E402
 from ruslearn.reader import ContentGenerator  # noqa: E402
 from ruslearn.tts import TTSService  # noqa: E402
+from ruslearn.accent import apply_accents, strip_acute  # noqa: E402
 
 DATA = ROOT / "data"
 SITE = ROOT / "site"
@@ -176,21 +177,25 @@ async def build_reading(provider, sem, words: list[dict]) -> list[dict]:
 
 
 def collect_audio_texts(words, alphabet, reading, patterns) -> set[str]:
+    # main() runs apply_accents first, so the data is already accentized here;
+    # strip_acute gives the audio key without re-running the model, and tokenizing
+    # the stripped text avoids WORD_RE splitting words at the combining acute.
     texts: set[str] = set()
     for w in words:
-        texts.add(w["stressed"])
+        texts.add(strip_acute(w["stressed"]))
     for letter in alphabet:
-        texts.add(letter["example_word"])
+        texts.add(strip_acute(letter["example_word"]))
     for entry in reading:
-        clean = entry["passage"].replace("[[", "").replace("]]", "")
-        texts.add(clean)  # full-sentence audio (for Listen → Sentences)
+        clean = strip_acute(entry["passage"].replace("[[", "").replace("]]", ""))
+        texts.add(clean)
         for tok in WORD_RE.findall(clean):
             texts.add(tok.lower())
     for pat in patterns:
         for item in pat["items"]:
-            texts.add(item["say"])  # full pattern sentence
-            for tok in WORD_RE.findall(item["say"]):
-                texts.add(tok.lower())  # individual words (tap a tile to hear it)
+            say = strip_acute(item["say"])
+            texts.add(say)
+            for tok in WORD_RE.findall(say):
+                texts.add(tok.lower())
     return {t for t in texts if t.strip()}
 
 
@@ -299,6 +304,12 @@ async def main() -> None:
 
     patterns = await build_patterns(provider, gemini_sem, FRAMES)
     print(f"  -> {len(patterns)} patterns")
+
+    apply_accents(words, reading, patterns)
+    _write(SITE_DATA / "words.json", words)
+    _write(SITE_DATA / "reading.json", reading)
+    _write(SITE_DATA / "patterns.json", patterns)
+    print("  -> applied stress + ё")
 
     texts = collect_audio_texts(words, alphabet, reading, patterns)
     print(f"Rendering {len(texts)} audio clips...")
