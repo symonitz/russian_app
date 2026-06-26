@@ -10,3 +10,5 @@ data/ru_50k.txt
 node_modules/
 .dev.vars
 .wrangler/
+test-results/
+playwright-report/
