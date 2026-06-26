@@ -2,7 +2,7 @@ import { mergeProgress } from "./sync.js";
 const $ = (s) => document.querySelector(s);
 
 let currentView = "home";
-const CACHE_VERSION = "v4";
+const CACHE_VERSION = "v5";
 const TURNSTILE_SITE_KEY = "0x4AAAAAADoPWVdaOuApj71A";
 
 // Count-based spacing: a card's "due" is a value of the global card counter
