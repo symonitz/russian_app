@@ -6,7 +6,10 @@
     "friend_type": "true",
     "latin_lookalike": "A",
     "example_word": "там",
-    "example_gloss": "there"
+    "example_gloss": "there",
+    "group": "true",
+    "hint_en": "bar",
+    "hint_word": "бар"
   },
   {
     "cyrillic": "К",
@@ -15,7 +18,10 @@
     "friend_type": "true",
     "latin_lookalike": "K",
     "example_word": "как",
-    "example_gloss": "how"
+    "example_gloss": "how",
+    "group": "true",
+    "hint_en": "coffee",
+    "hint_word": "кофе"
   },
   {
     "cyrillic": "М",
@@ -24,7 +30,10 @@
     "friend_type": "true",
     "latin_lookalike": "M",
     "example_word": "мама",
-    "example_gloss": "mom"
+    "example_gloss": "mom",
+    "group": "true",
+    "hint_en": "mother",
+    "hint_word": "мама"
   },
   {
     "cyrillic": "О",
@@ -33,7 +42,10 @@
     "friend_type": "true",
     "latin_lookalike": "O",
     "example_word": "кот",
-    "example_gloss": "cat"
+    "example_gloss": "cat",
+    "group": "true",
+    "hint_en": "metro",
+    "hint_word": "метро"
   },
   {
     "cyrillic": "Т",
@@ -42,7 +54,10 @@
     "friend_type": "true",
     "latin_lookalike": "T",
     "example_word": "том",
-    "example_gloss": "volume"
+    "example_gloss": "volume",
+    "group": "true",
+    "hint_en": "taxi",
+    "hint_word": "такси"
   },
   {
     "cyrillic": "В",
@@ -51,7 +66,10 @@
     "friend_type": "false",
     "latin_lookalike": "B",
     "example_word": "вот",
-    "example_gloss": "here is"
+    "example_gloss": "here is",
+    "group": "false",
+    "hint_en": "video",
+    "hint_word": "видео"
   },
   {
     "cyrillic": "Н",
@@ -60,7 +78,10 @@
     "friend_type": "false",
     "latin_lookalike": "H",
     "example_word": "он",
-    "example_gloss": "he"
+    "example_gloss": "he",
+    "group": "false",
+    "hint_en": "nose",
+    "hint_word": "нос"
   },
   {
     "cyrillic": "Р",
@@ -69,7 +90,10 @@
     "friend_type": "false",
     "latin_lookalike": "P",
     "example_word": "рот",
-    "example_gloss": "mouth"
+    "example_gloss": "mouth",
+    "group": "false",
+    "hint_en": "Russia",
+    "hint_word": "Россия"
   },
   {
     "cyrillic": "С",
@@ -78,7 +102,10 @@
     "friend_type": "false",
     "latin_lookalike": "C",
     "example_word": "сок",
-    "example_gloss": "juice"
+    "example_gloss": "juice",
+    "group": "false",
+    "hint_en": "sport",
+    "hint_word": "спорт"
   },
   {
     "cyrillic": "У",
@@ -87,7 +114,10 @@
     "friend_type": "false",
     "latin_lookalike": "Y",
     "example_word": "ум",
-    "example_gloss": "mind"
+    "example_gloss": "mind",
+    "group": "false",
+    "hint_en": "football",
+    "hint_word": "футбол"
   },
   {
     "cyrillic": "Х",
@@ -96,7 +126,10 @@
     "friend_type": "false",
     "latin_lookalike": "X",
     "example_word": "хор",
-    "example_gloss": "choir"
+    "example_gloss": "choir",
+    "group": "false",
+    "hint_en": "hockey",
+    "hint_word": "хоккей"
   },
   {
     "cyrillic": "Е",
@@ -105,7 +138,10 @@
     "friend_type": "false",
     "latin_lookalike": "E",
     "example_word": "нет",
-    "example_gloss": "no"
+    "example_gloss": "no",
+    "group": "false",
+    "hint_en": "Vietnam",
+    "hint_word": "Вьетнам"
   },
   {
     "cyrillic": "Б",
@@ -114,7 +150,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "брат",
-    "example_gloss": "brother"
+    "example_gloss": "brother",
+    "group": "new",
+    "hint_en": "bank",
+    "hint_word": "банк"
   },
   {
     "cyrillic": "Г",
@@ -123,7 +162,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "год",
-    "example_gloss": "year"
+    "example_gloss": "year",
+    "group": "new",
+    "hint_en": "guitar",
+    "hint_word": "гитара"
   },
   {
     "cyrillic": "Д",
@@ -132,7 +174,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "дом",
-    "example_gloss": "house"
+    "example_gloss": "house",
+    "group": "new",
+    "hint_en": "dollar",
+    "hint_word": "доллар"
   },
   {
     "cyrillic": "З",
@@ -141,7 +186,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "зонт",
-    "example_gloss": "umbrella"
+    "example_gloss": "umbrella",
+    "group": "new",
+    "hint_en": "zebra",
+    "hint_word": "зебра"
   },
   {
     "cyrillic": "И",
@@ -150,7 +198,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "мир",
-    "example_gloss": "world"
+    "example_gloss": "world",
+    "group": "new",
+    "hint_en": "video",
+    "hint_word": "видео"
   },
   {
     "cyrillic": "Й",
@@ -159,7 +210,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "мой",
-    "example_gloss": "my"
+    "example_gloss": "my",
+    "group": "stranger",
+    "hint_en": "yogurt",
+    "hint_word": "йогурт"
   },
   {
     "cyrillic": "Л",
@@ -168,7 +222,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "лес",
-    "example_gloss": "forest"
+    "example_gloss": "forest",
+    "group": "new",
+    "hint_en": "lamp",
+    "hint_word": "лампа"
   },
   {
     "cyrillic": "П",
@@ -177,7 +234,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "парк",
-    "example_gloss": "park"
+    "example_gloss": "park",
+    "group": "new",
+    "hint_en": "park",
+    "hint_word": "парк"
   },
   {
     "cyrillic": "Ф",
@@ -186,7 +246,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "флаг",
-    "example_gloss": "flag"
+    "example_gloss": "flag",
+    "group": "new",
+    "hint_en": "photo",
+    "hint_word": "фото"
   },
   {
     "cyrillic": "Э",
@@ -195,7 +258,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "это",
-    "example_gloss": "this"
+    "example_gloss": "this",
+    "group": "new",
+    "hint_en": "Edinburgh",
+    "hint_word": "Эдинбург"
   },
   {
     "cyrillic": "Ж",
@@ -204,7 +270,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "жук",
-    "example_gloss": "beetle"
+    "example_gloss": "beetle",
+    "group": "stranger",
+    "hint_en": "pleasure",
+    "hint_word": "журнал"
   },
   {
     "cyrillic": "Ц",
@@ -213,7 +282,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "цирк",
-    "example_gloss": "circus"
+    "example_gloss": "circus",
+    "group": "stranger",
+    "hint_en": "pizza",
+    "hint_word": "пицца"
   },
   {
     "cyrillic": "Ч",
@@ -222,7 +294,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "час",
-    "example_gloss": "hour"
+    "example_gloss": "hour",
+    "group": "stranger",
+    "hint_en": "Chili",
+    "hint_word": "Чили"
   },
   {
     "cyrillic": "Ш",
@@ -231,7 +306,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "шар",
-    "example_gloss": "balloon"
+    "example_gloss": "balloon",
+    "group": "stranger",
+    "hint_en": "show",
+    "hint_word": "шоу"
   },
   {
     "cyrillic": "Щ",
@@ -240,7 +318,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "щи",
-    "example_gloss": "cabbage soup"
+    "example_gloss": "cabbage soup",
+    "group": "stranger",
+    "hint_en": "borsch",
+    "hint_word": "борщ"
   },
   {
     "cyrillic": "Ы",
@@ -249,7 +330,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "сын",
-    "example_gloss": "son"
+    "example_gloss": "son",
+    "group": "stranger",
+    "hint_en": "(no English sound)",
+    "hint_word": "музыка"
   },
   {
     "cyrillic": "Ё",
@@ -258,7 +342,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "ёж",
-    "example_gloss": "hedgehog"
+    "example_gloss": "hedgehog",
+    "group": "stranger",
+    "hint_en": "surfing",
+    "hint_word": "сёрфинг"
   },
   {
     "cyrillic": "Ю",
@@ -267,7 +354,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "юг",
-    "example_gloss": "south"
+    "example_gloss": "south",
+    "group": "stranger",
+    "hint_en": "producer",
+    "hint_word": "продюсер"
   },
   {
     "cyrillic": "Я",
@@ -276,7 +366,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "я",
-    "example_gloss": "I"
+    "example_gloss": "I",
+    "group": "stranger",
+    "hint_en": "Yandex",
+    "hint_word": "Яндекс"
   },
   {
     "cyrillic": "Ъ",
@@ -285,7 +378,10 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "съел",
-    "example_gloss": "ate"
+    "example_gloss": "ate",
+    "group": "stranger",
+    "hint_en": "(silent)",
+    "hint_word": "объект"
   },
   {
     "cyrillic": "Ь",
@@ -294,6 +390,9 @@
     "friend_type": "new",
     "latin_lookalike": null,
     "example_word": "соль",
-    "example_gloss": "salt"
+    "example_gloss": "salt",
+    "group": "stranger",
+    "hint_en": "(silent)",
+    "hint_word": "фильм"
   }
 ]
