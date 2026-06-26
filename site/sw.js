@@ -1,6 +1,6 @@
 // Offline service worker: precache the app shell + dataset, then cache audio
 // (and anything else) on first use. Cache-first for instant, offline loads.
-const CACHE = "ruslearn-v4";
+const CACHE = "ruslearn-v5";
 const SHELL = [
   "./",
   "./index.html",
