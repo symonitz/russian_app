@@ -12,7 +12,7 @@
   {
     "id": 2,
     "cyrillic": "не",
-    "stressed": "не",
+    "stressed": "не́",
     "translit": "ne",
     "gloss_en": "not",
     "pos": "part",
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "cyrillic": "что",
-    "stressed": "что",
+    "stressed": "что́",
     "translit": "chto",
     "gloss_en": "what, that",
     "pos": "pronoun",
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "cyrillic": "ты",
-    "stressed": "ты",
+    "stressed": "ты́",
     "translit": "ty",
     "gloss_en": "you",
     "pos": "pron",
@@ -72,7 +72,7 @@
   {
     "id": 8,
     "cyrillic": "на",
-    "stressed": "на",
+    "stressed": "на́",
     "translit": "na",
     "gloss_en": "on, at, to",
     "pos": "preposition",
@@ -92,7 +92,7 @@
   {
     "id": 10,
     "cyrillic": "он",
-    "stressed": "он",
+    "stressed": "о́н",
     "translit": "on",
     "gloss_en": "he",
     "pos": "pron",
@@ -102,7 +102,7 @@
   {
     "id": 11,
     "cyrillic": "мы",
-    "stressed": "мы",
+    "stressed": "мы́",
     "translit": "my",
     "gloss_en": "we",
     "pos": "pron",
@@ -112,7 +112,7 @@
   {
     "id": 12,
     "cyrillic": "как",
-    "stressed": "как",
+    "stressed": "ка́к",
     "translit": "kak",
     "gloss_en": "how, as, like",
     "pos": "adverb",
@@ -122,7 +122,7 @@
   {
     "id": 13,
     "cyrillic": "вы",
-    "stressed": "вы",
+    "stressed": "вы́",
     "translit": "vy",
     "gloss_en": "you (formal/plural)",
     "pos": "pronoun",
@@ -132,7 +132,7 @@
   {
     "id": 14,
     "cyrillic": "да",
-    "stressed": "да",
+    "stressed": "да́",
     "translit": "da",
     "gloss_en": "yes",
     "pos": "part",
@@ -142,7 +142,7 @@
   {
     "id": 15,
     "cyrillic": "мне",
-    "stressed": "мне",
+    "stressed": "мне́",
     "translit": "mne",
     "gloss_en": "to me, for me",
     "pos": "pronoun",
@@ -162,7 +162,7 @@
   {
     "id": 17,
     "cyrillic": "нет",
-    "stressed": "нет",
+    "stressed": "не́т",
     "translit": "net",
     "gloss_en": "no",
     "pos": "part",
@@ -172,7 +172,7 @@
   {
     "id": 18,
     "cyrillic": "меня",
-    "stressed": "меня",
+    "stressed": "меня́",
     "translit": "menya",
     "gloss_en": "me, my",
     "pos": "pronoun",
@@ -182,7 +182,7 @@
   {
     "id": 19,
     "cyrillic": "так",
-    "stressed": "так",
+    "stressed": "та́к",
     "translit": "tak",
     "gloss_en": "so, thus, then",
     "pos": "adverb",
@@ -192,7 +192,7 @@
   {
     "id": 20,
     "cyrillic": "но",
-    "stressed": "но",
+    "stressed": "но́",
     "translit": "no",
     "gloss_en": "but",
     "pos": "conjunction",
@@ -212,7 +212,7 @@
   {
     "id": 22,
     "cyrillic": "его",
-    "stressed": "его",
+    "stressed": "его́",
     "translit": "ego",
     "gloss_en": "his, him, its",
     "pos": "pronoun",
@@ -222,7 +222,7 @@
   {
     "id": 23,
     "cyrillic": "все",
-    "stressed": "все",
+    "stressed": "всё",
     "translit": "vse",
     "gloss_en": "all, everyone",
     "pos": "pronoun",
@@ -242,7 +242,7 @@
   {
     "id": 25,
     "cyrillic": "тебя",
-    "stressed": "тебя",
+    "stressed": "тебя́",
     "translit": "tebya",
     "gloss_en": "you, your (accusative/genitive)",
     "pos": "pronoun",
@@ -252,7 +252,7 @@
   {
     "id": 26,
     "cyrillic": "о",
-    "stressed": "о",
+    "stressed": "о́",
     "translit": "o",
     "gloss_en": "about, concerning",
     "pos": "preposition",
@@ -262,7 +262,7 @@
   {
     "id": 27,
     "cyrillic": "если",
-    "stressed": "если",
+    "stressed": "е́сли",
     "translit": "yesli",
     "gloss_en": "if",
     "pos": "conjunction",
@@ -272,7 +272,7 @@
   {
     "id": 28,
     "cyrillic": "за",
-    "stressed": "за",
+    "stressed": "за́",
     "translit": "za",
     "gloss_en": "for, behind, beyond",
     "pos": "preposition",
@@ -292,7 +292,7 @@
   {
     "id": 30,
     "cyrillic": "тебе",
-    "stressed": "тебе",
+    "stressed": "тебе́",
     "translit": "tebe",
     "gloss_en": "to you, for you",
     "pos": "pronoun",
@@ -302,7 +302,7 @@
   {
     "id": 31,
     "cyrillic": "они",
-    "stressed": "они",
+    "stressed": "они́",
     "translit": "oni",
     "gloss_en": "they",
     "pos": "pronoun",
@@ -312,7 +312,7 @@
   {
     "id": 32,
     "cyrillic": "чтобы",
-    "stressed": "чтобы",
+    "stressed": "что́бы",
     "translit": "chtoby",
     "gloss_en": "in order that, so that",
     "pos": "conjunction",
@@ -332,7 +332,7 @@
   {
     "id": 34,
     "cyrillic": "есть",
-    "stressed": "есть",
+    "stressed": "е́сть",
     "translit": "yest'",
     "gloss_en": "is, am, are, to eat",
     "pos": "verb",
@@ -342,7 +342,7 @@
   {
     "id": 35,
     "cyrillic": "просто",
-    "stressed": "просто",
+    "stressed": "про́сто",
     "translit": "prosto",
     "gloss_en": "simply, just, easy",
     "pos": "adverb",
@@ -352,7 +352,7 @@
   {
     "id": 36,
     "cyrillic": "из",
-    "stressed": "из",
+    "stressed": "и́з",
     "translit": "iz",
     "gloss_en": "from, out of",
     "pos": "preposition",
@@ -372,7 +372,7 @@
   {
     "id": 38,
     "cyrillic": "для",
-    "stressed": "для",
+    "stressed": "для́",
     "translit": "dlya",
     "gloss_en": "for",
     "pos": "preposition",
@@ -382,7 +382,7 @@
   {
     "id": 39,
     "cyrillic": "ну",
-    "stressed": "ну",
+    "stressed": "ну́",
     "translit": "nu",
     "gloss_en": "well, come on, so",
     "pos": "interjection",
@@ -392,7 +392,7 @@
   {
     "id": 40,
     "cyrillic": "когда",
-    "stressed": "когда",
+    "stressed": "когда́",
     "translit": "kogda",
     "gloss_en": "when",
     "pos": "adverb",
@@ -412,7 +412,7 @@
   {
     "id": 42,
     "cyrillic": "здесь",
-    "stressed": "здесь",
+    "stressed": "зде́сь",
     "translit": "zdes'",
     "gloss_en": "here",
     "pos": "adverb",
@@ -422,7 +422,7 @@
   {
     "id": 43,
     "cyrillic": "по",
-    "stressed": "по",
+    "stressed": "по́",
     "translit": "po",
     "gloss_en": "along, by, for",
     "pos": "preposition",
@@ -432,7 +432,7 @@
   {
     "id": 44,
     "cyrillic": "был",
-    "stressed": "был",
+    "stressed": "бы́л",
     "translit": "byl",
     "gloss_en": "was",
     "pos": "verb",
@@ -442,7 +442,7 @@
   {
     "id": 45,
     "cyrillic": "знаю",
-    "stressed": "знаю",
+    "stressed": "зна́ю",
     "translit": "znayu",
     "gloss_en": "I know",
     "pos": "verb",
@@ -452,7 +452,7 @@
   {
     "id": 46,
     "cyrillic": "то",
-    "stressed": "то",
+    "stressed": "то́",
     "translit": "to",
     "gloss_en": "that, then",
     "pos": "pronoun",
@@ -462,7 +462,7 @@
   {
     "id": 47,
     "cyrillic": "только",
-    "stressed": "только",
+    "stressed": "то́лько",
     "translit": "tol'ko",
     "gloss_en": "only, just",
     "pos": "adverb",
@@ -482,7 +482,7 @@
   {
     "id": 49,
     "cyrillic": "было",
-    "stressed": "было",
+    "stressed": "бы́ло",
     "translit": "bylo",
     "gloss_en": "it was",
     "pos": "verb",
@@ -492,7 +492,7 @@
   {
     "id": 50,
     "cyrillic": "вас",
-    "stressed": "вас",
+    "stressed": "ва́с",
     "translit": "vas",
     "gloss_en": "you",
     "pos": "pronoun",
@@ -502,7 +502,7 @@
   {
     "id": 51,
     "cyrillic": "может",
-    "stressed": "может",
+    "stressed": "мо́жет",
     "translit": "mozhet",
     "gloss_en": "can, maybe",
     "pos": "verb",
@@ -512,7 +512,7 @@
   {
     "id": 52,
     "cyrillic": "нас",
-    "stressed": "нас",
+    "stressed": "на́с",
     "translit": "nas",
     "gloss_en": "us",
     "pos": "pronoun",
@@ -522,7 +522,7 @@
   {
     "id": 53,
     "cyrillic": "вот",
-    "stressed": "вот",
+    "stressed": "во́т",
     "translit": "vot",
     "gloss_en": "here, there",
     "pos": "particle",
@@ -532,7 +532,7 @@
   {
     "id": 54,
     "cyrillic": "от",
-    "stressed": "от",
+    "stressed": "о́т",
     "translit": "ot",
     "gloss_en": "from",
     "pos": "preposition",
@@ -542,7 +542,7 @@
   {
     "id": 55,
     "cyrillic": "быть",
-    "stressed": "быть",
+    "stressed": "бы́ть",
     "translit": "byt'",
     "gloss_en": "to be",
     "pos": "verb",
@@ -552,7 +552,7 @@
   {
     "id": 56,
     "cyrillic": "кто",
-    "stressed": "кто",
+    "stressed": "кто́",
     "translit": "kto",
     "gloss_en": "who",
     "pos": "pronoun",
@@ -562,7 +562,7 @@
   {
     "id": 57,
     "cyrillic": "будет",
-    "stressed": "будет",
+    "stressed": "бу́дет",
     "translit": "budet",
     "gloss_en": "will be",
     "pos": "verb",
@@ -572,7 +572,7 @@
   {
     "id": 58,
     "cyrillic": "почему",
-    "stressed": "почему",
+    "stressed": "почему́",
     "translit": "pochemu",
     "gloss_en": "why",
     "pos": "adverb",
@@ -582,7 +582,7 @@
   {
     "id": 59,
     "cyrillic": "вам",
-    "stressed": "вам",
+    "stressed": "ва́м",
     "translit": "",
     "gloss_en": "to you",
     "pos": "",
@@ -592,7 +592,7 @@
   {
     "id": 60,
     "cyrillic": "их",
-    "stressed": "их",
+    "stressed": "и́х",
     "translit": "ikh",
     "gloss_en": "them, their",
     "pos": "pronoun",
@@ -602,7 +602,7 @@
   {
     "id": 61,
     "cyrillic": "очень",
-    "stressed": "очень",
+    "stressed": "о́чень",
     "translit": "ochen'",
     "gloss_en": "very, really",
     "pos": "adverb",
@@ -612,7 +612,7 @@
   {
     "id": 62,
     "cyrillic": "могу",
-    "stressed": "могу",
+    "stressed": "могу́",
     "translit": "mogu",
     "gloss_en": "I can",
     "pos": "verb",
@@ -622,7 +622,7 @@
   {
     "id": 63,
     "cyrillic": "уже",
-    "stressed": "уже",
+    "stressed": "уже́",
     "translit": "uzhe",
     "gloss_en": "already, by now",
     "pos": "adverb",
@@ -642,7 +642,7 @@
   {
     "id": 65,
     "cyrillic": "или",
-    "stressed": "или",
+    "stressed": "и́ли",
     "translit": "ili",
     "gloss_en": "or",
     "pos": "conjunction",
@@ -652,7 +652,7 @@
   {
     "id": 66,
     "cyrillic": "нам",
-    "stressed": "нам",
+    "stressed": "на́м",
     "translit": "nam",
     "gloss_en": "to us, for us",
     "pos": "pronoun",
@@ -662,7 +662,7 @@
   {
     "id": 67,
     "cyrillic": "еще",
-    "stressed": "еще",
+    "stressed": "ещё",
     "translit": "eshche",
     "gloss_en": "yet, still, more",
     "pos": "adverb",
@@ -672,7 +672,7 @@
   {
     "id": 68,
     "cyrillic": "там",
-    "stressed": "там",
+    "stressed": "та́м",
     "translit": "tam",
     "gloss_en": "there, over there",
     "pos": "adverb",
@@ -682,7 +682,7 @@
   {
     "id": 69,
     "cyrillic": "нужно",
-    "stressed": "нужно",
+    "stressed": "ну́жно",
     "translit": "nuzhno",
     "gloss_en": "necessary, must, need",
     "pos": "other",
@@ -692,7 +692,7 @@
   {
     "id": 70,
     "cyrillic": "сейчас",
-    "stressed": "сейчас",
+    "stressed": "сейча́с",
     "translit": "seychas",
     "gloss_en": "now, immediately",
     "pos": "adverb",
@@ -702,7 +702,7 @@
   {
     "id": 71,
     "cyrillic": "где",
-    "stressed": "где",
+    "stressed": "где́",
     "translit": "gde",
     "gloss_en": "where",
     "pos": "adverb",
@@ -712,7 +712,7 @@
   {
     "id": 72,
     "cyrillic": "чем",
-    "stressed": "чем",
+    "stressed": "чём",
     "translit": "chem",
     "gloss_en": "than, instrumental \"what\"",
     "pos": "conjunction",
@@ -722,7 +722,7 @@
   {
     "id": 73,
     "cyrillic": "хочу",
-    "stressed": "хочу",
+    "stressed": "хочу́",
     "translit": "khochu",
     "gloss_en": "I want",
     "pos": "verb",
@@ -732,7 +732,7 @@
   {
     "id": 74,
     "cyrillic": "ничего",
-    "stressed": "ничего",
+    "stressed": "ничего́",
     "translit": "nichevo",
     "gloss_en": "nothing, not bad",
     "pos": "pronoun",
@@ -742,7 +742,7 @@
   {
     "id": 75,
     "cyrillic": "этого",
-    "stressed": "этого",
+    "stressed": "э́того",
     "translit": "etogo",
     "gloss_en": "of this, of that",
     "pos": "pronoun",
@@ -752,7 +752,7 @@
   {
     "id": 76,
     "cyrillic": "была",
-    "stressed": "была",
+    "stressed": "была́",
     "translit": "byla",
     "gloss_en": "was (feminine)",
     "pos": "verb",
@@ -762,7 +762,7 @@
   {
     "id": 77,
     "cyrillic": "мой",
-    "stressed": "мой",
+    "stressed": "мо́й",
     "translit": "moy",
     "gloss_en": "my, mine",
     "pos": "pronoun",
@@ -772,7 +772,7 @@
   {
     "id": 78,
     "cyrillic": "ее",
-    "stressed": "ее",
+    "stressed": "её",
     "translit": "yeyo",
     "gloss_en": "her, its",
     "pos": "pronoun",
@@ -782,7 +782,7 @@
   {
     "id": 79,
     "cyrillic": "ладно",
-    "stressed": "ладно",
+    "stressed": "ла́дно",
     "translit": "ladno",
     "gloss_en": "okay, all right",
     "pos": "interjection",
@@ -792,7 +792,7 @@
   {
     "id": 80,
     "cyrillic": "знаешь",
-    "stressed": "знаешь",
+    "stressed": "зна́ешь",
     "translit": "",
     "gloss_en": "you know",
     "pos": "",
@@ -812,7 +812,7 @@
   {
     "id": 82,
     "cyrillic": "до",
-    "stressed": "до",
+    "stressed": "до́",
     "translit": "do",
     "gloss_en": "until, to, up to",
     "pos": "preposition",
@@ -822,7 +822,7 @@
   {
     "id": 83,
     "cyrillic": "этом",
-    "stressed": "этом",
+    "stressed": "э́том",
     "translit": "etom",
     "gloss_en": "this, that (prepositional)",
     "pos": "pronoun",
@@ -832,7 +832,7 @@
   {
     "id": 84,
     "cyrillic": "потому",
-    "stressed": "потому",
+    "stressed": "потому́",
     "translit": "potomu",
     "gloss_en": "therefore, because of that",
     "pos": "adverb",
@@ -842,7 +842,7 @@
   {
     "id": 85,
     "cyrillic": "теперь",
-    "stressed": "теперь",
+    "stressed": "тепе́рь",
     "translit": "teper",
     "gloss_en": "now, at present",
     "pos": "adverb",
@@ -852,7 +852,7 @@
   {
     "id": 86,
     "cyrillic": "думаю",
-    "stressed": "думаю",
+    "stressed": "ду́маю",
     "translit": "dumayu",
     "gloss_en": "I think, I believe",
     "pos": "verb",
@@ -862,7 +862,7 @@
   {
     "id": 87,
     "cyrillic": "больше",
-    "stressed": "больше",
+    "stressed": "бо́льше",
     "translit": "bolshe",
     "gloss_en": "more, larger",
     "pos": "adjective",
@@ -882,7 +882,7 @@
   {
     "id": 89,
     "cyrillic": "со",
-    "stressed": "со",
+    "stressed": "со́",
     "translit": "so",
     "gloss_en": "with, from",
     "pos": "preposition",
@@ -892,7 +892,7 @@
   {
     "id": 90,
     "cyrillic": "раз",
-    "stressed": "раз",
+    "stressed": "ра́з",
     "translit": "raz",
     "gloss_en": "time, once",
     "pos": "noun",
@@ -902,7 +902,7 @@
   {
     "id": 91,
     "cyrillic": "ему",
-    "stressed": "ему",
+    "stressed": "ему́",
     "translit": "yemu",
     "gloss_en": "him, it",
     "pos": "pronoun",
@@ -912,7 +912,7 @@
   {
     "id": 92,
     "cyrillic": "надо",
-    "stressed": "надо",
+    "stressed": "на́до",
     "translit": "nado",
     "gloss_en": "must, necessary",
     "pos": "other",
@@ -922,7 +922,7 @@
   {
     "id": 93,
     "cyrillic": "время",
-    "stressed": "время",
+    "stressed": "вре́мя",
     "translit": "vremya",
     "gloss_en": "time",
     "pos": "noun",
@@ -932,7 +932,7 @@
   {
     "id": 94,
     "cyrillic": "этот",
-    "stressed": "этот",
+    "stressed": "э́тот",
     "translit": "etot",
     "gloss_en": "this, these",
     "pos": "pronoun",
@@ -942,7 +942,7 @@
   {
     "id": 95,
     "cyrillic": "ли",
-    "stressed": "ли",
+    "stressed": "ли́",
     "translit": "li",
     "gloss_en": "if, whether",
     "pos": "particle",
@@ -972,7 +972,7 @@
   {
     "id": 98,
     "cyrillic": "даже",
-    "stressed": "даже",
+    "stressed": "да́же",
     "translit": "dazhe",
     "gloss_en": "even",
     "pos": "adverb",
@@ -992,7 +992,7 @@
   {
     "id": 100,
     "cyrillic": "сказал",
-    "stressed": "сказал",
+    "stressed": "сказа́л",
     "translit": "skazal",
     "gloss_en": "said, told",
     "pos": "verb",
@@ -1002,7 +1002,7 @@
   {
     "id": 101,
     "cyrillic": "себя",
-    "stressed": "себя",
+    "stressed": "себя́",
     "translit": "sebya",
     "gloss_en": "self",
     "pos": "pronoun",
@@ -1012,7 +1012,7 @@
   {
     "id": 102,
     "cyrillic": "должен",
-    "stressed": "должен",
+    "stressed": "до́лжен",
     "translit": "dolzhen",
     "gloss_en": "must, should, obligated",
     "pos": "adjective",
@@ -1022,7 +1022,7 @@
   {
     "id": 103,
     "cyrillic": "тоже",
-    "stressed": "тоже",
+    "stressed": "то́же",
     "translit": "tozhe",
     "gloss_en": "also, too, as well",
     "pos": "adverb",
@@ -1032,7 +1032,7 @@
   {
     "id": 104,
     "cyrillic": "хочешь",
-    "stressed": "хочешь",
+    "stressed": "хо́чешь",
     "translit": "khochesh",
     "gloss_en": "you want",
     "pos": "verb",
@@ -1042,7 +1042,7 @@
   {
     "id": 105,
     "cyrillic": "давай",
-    "stressed": "давай",
+    "stressed": "дава́й",
     "translit": "davay",
     "gloss_en": "let's, come on",
     "pos": "verb",
@@ -1052,7 +1052,7 @@
   {
     "id": 106,
     "cyrillic": "никогда",
-    "stressed": "никогда",
+    "stressed": "никогда́",
     "translit": "nikogda",
     "gloss_en": "never",
     "pos": "adverb",
@@ -1062,7 +1062,7 @@
   {
     "id": 107,
     "cyrillic": "эй",
-    "stressed": "эй",
+    "stressed": "э́й",
     "translit": "ey",
     "gloss_en": "hey, hi",
     "pos": "interjection",
@@ -1072,7 +1072,7 @@
   {
     "id": 108,
     "cyrillic": "того",
-    "stressed": "того",
+    "stressed": "того́",
     "translit": "togo",
     "gloss_en": "of that, that",
     "pos": "pronoun",
@@ -1082,7 +1082,7 @@
   {
     "id": 109,
     "cyrillic": "тогда",
-    "stressed": "тогда",
+    "stressed": "тогда́",
     "translit": "togda",
     "gloss_en": "then",
     "pos": "adverb",
@@ -1092,7 +1092,7 @@
   {
     "id": 110,
     "cyrillic": "него",
-    "stressed": "него",
+    "stressed": "него́",
     "translit": "nego",
     "gloss_en": "him, it",
     "pos": "pronoun",
@@ -1102,7 +1102,7 @@
   {
     "id": 111,
     "cyrillic": "ни",
-    "stressed": "ни",
+    "stressed": "ни́",
     "translit": "ni",
     "gloss_en": "neither, nor",
     "pos": "particle",
@@ -1112,7 +1112,7 @@
   {
     "id": 112,
     "cyrillic": "тут",
-    "stressed": "тут",
+    "stressed": "ту́т",
     "translit": "tut",
     "gloss_en": "here, now",
     "pos": "adverb",
@@ -1122,7 +1122,7 @@
   {
     "id": 113,
     "cyrillic": "были",
-    "stressed": "были",
+    "stressed": "бы́ли",
     "translit": "byli",
     "gloss_en": "were",
     "pos": "verb",
@@ -1132,7 +1132,7 @@
   {
     "id": 114,
     "cyrillic": "конечно",
-    "stressed": "конечно",
+    "stressed": "коне́чно",
     "translit": "konechno",
     "gloss_en": "of course, certainly",
     "pos": "adverb",
@@ -1142,7 +1142,7 @@
   {
     "id": 115,
     "cyrillic": "правда",
-    "stressed": "правда",
+    "stressed": "пра́вда",
     "translit": "pravda",
     "gloss_en": "truth",
     "pos": "noun",
@@ -1152,7 +1152,7 @@
   {
     "id": 116,
     "cyrillic": "об",
-    "stressed": "об",
+    "stressed": "о́б",
     "translit": "ob",
     "gloss_en": "about, concerning",
     "pos": "preposition",
@@ -1162,7 +1162,7 @@
   {
     "id": 117,
     "cyrillic": "моя",
-    "stressed": "моя",
+    "stressed": "моя́",
     "translit": "moya",
     "gloss_en": "my, mine",
     "pos": "pronoun",
@@ -1172,7 +1172,7 @@
   {
     "id": 118,
     "cyrillic": "пожалуйста",
-    "stressed": "пожалуйста",
+    "stressed": "пожа́луйста",
     "translit": "pozhaluysta",
     "gloss_en": "please, you're welcome",
     "pos": "particle",
@@ -1182,7 +1182,7 @@
   {
     "id": 119,
     "cyrillic": "тобой",
-    "stressed": "тобой",
+    "stressed": "тобо́й",
     "translit": "toboy",
     "gloss_en": "you (instrumental)",
     "pos": "pronoun",
@@ -1192,7 +1192,7 @@
   {
     "id": 120,
     "cyrillic": "сказать",
-    "stressed": "сказать",
+    "stressed": "сказа́ть",
     "translit": "skazat'",
     "gloss_en": "to say, to tell",
     "pos": "verb",
@@ -1202,7 +1202,7 @@
   {
     "id": 121,
     "cyrillic": "сегодня",
-    "stressed": "сегодня",
+    "stressed": "сего́дня",
     "translit": "segodnya",
     "gloss_en": "today",
     "pos": "adverb",
@@ -1212,7 +1212,7 @@
   {
     "id": 122,
     "cyrillic": "один",
-    "stressed": "один",
+    "stressed": "оди́н",
     "translit": "odin",
     "gloss_en": "one",
     "pos": "numeral",
@@ -1222,7 +1222,7 @@
   {
     "id": 123,
     "cyrillic": "лучше",
-    "stressed": "лучше",
+    "stressed": "лу́чше",
     "translit": "luchshe",
     "gloss_en": "better, best",
     "pos": "adverb",
@@ -1232,7 +1232,7 @@
   {
     "id": 124,
     "cyrillic": "можешь",
-    "stressed": "можешь",
+    "stressed": "мо́жешь",
     "translit": "mozhesh'",
     "gloss_en": "you can (informal)",
     "pos": "verb",
@@ -1242,7 +1242,7 @@
   {
     "id": 125,
     "cyrillic": "сюда",
-    "stressed": "сюда",
+    "stressed": "сюда́",
     "translit": "syuda",
     "gloss_en": "here, hither",
     "pos": "adverb",
@@ -1252,7 +1252,7 @@
   {
     "id": 126,
     "cyrillic": "мной",
-    "stressed": "мной",
+    "stressed": "мно́й",
     "translit": "mnoy",
     "gloss_en": "me (instrumental)",
     "pos": "pronoun",
@@ -1262,7 +1262,7 @@
   {
     "id": 127,
     "cyrillic": "значит",
-    "stressed": "значит",
+    "stressed": "зна́чит",
     "translit": "znachit",
     "gloss_en": "means, so, therefore",
     "pos": "particle",
@@ -1272,7 +1272,7 @@
   {
     "id": 128,
     "cyrillic": "сделать",
-    "stressed": "сделать",
+    "stressed": "сде́лать",
     "translit": "sdelat'",
     "gloss_en": "to do, to make",
     "pos": "verb",
@@ -1282,7 +1282,7 @@
   {
     "id": 129,
     "cyrillic": "всегда",
-    "stressed": "всегда",
+    "stressed": "всегда́",
     "translit": "vsegda",
     "gloss_en": "always",
     "pos": "adverb",
@@ -1292,7 +1292,7 @@
   {
     "id": 130,
     "cyrillic": "дело",
-    "stressed": "дело",
+    "stressed": "де́ло",
     "translit": "delo",
     "gloss_en": "business, matter",
     "pos": "noun",
@@ -1302,7 +1302,7 @@
   {
     "id": 131,
     "cyrillic": "можно",
-    "stressed": "можно",
+    "stressed": "мо́жно",
     "translit": "mozhno",
     "gloss_en": "it is possible, one can",
     "pos": "other",
@@ -1312,7 +1312,7 @@
   {
     "id": 132,
     "cyrillic": "ей",
-    "stressed": "ей",
+    "stressed": "е́й",
     "translit": "ey",
     "gloss_en": "her, to her",
     "pos": "pronoun",
@@ -1322,7 +1322,7 @@
   {
     "id": 133,
     "cyrillic": "должны",
-    "stressed": "должны",
+    "stressed": "должны́",
     "translit": "dolzhny",
     "gloss_en": "must, should",
     "pos": "adjective",
@@ -1332,7 +1332,7 @@
   {
     "id": 134,
     "cyrillic": "порядке",
-    "stressed": "порядке",
+    "stressed": "поря́дке",
     "translit": "poryadke",
     "gloss_en": "order, in order",
     "pos": "noun",
@@ -1342,7 +1342,7 @@
   {
     "id": 135,
     "cyrillic": "без",
-    "stressed": "без",
+    "stressed": "бе́з",
     "translit": "bez",
     "gloss_en": "without",
     "pos": "preposition",
@@ -1352,7 +1352,7 @@
   {
     "id": 136,
     "cyrillic": "день",
-    "stressed": "день",
+    "stressed": "де́нь",
     "translit": "den'",
     "gloss_en": "day",
     "pos": "noun",
@@ -1362,7 +1362,7 @@
   {
     "id": 137,
     "cyrillic": "том",
-    "stressed": "том",
+    "stressed": "то́м",
     "translit": "tom",
     "gloss_en": "volume, tome",
     "pos": "noun",
@@ -1372,7 +1372,7 @@
   {
     "id": 138,
     "cyrillic": "буду",
-    "stressed": "буду",
+    "stressed": "бу́ду",
     "translit": "budu",
     "gloss_en": "will be, I will",
     "pos": "verb",
@@ -1382,7 +1382,7 @@
   {
     "id": 139,
     "cyrillic": "делать",
-    "stressed": "делать",
+    "stressed": "де́лать",
     "translit": "delat'",
     "gloss_en": "to do, to make",
     "pos": "verb",
@@ -1392,7 +1392,7 @@
   {
     "id": 140,
     "cyrillic": "хотел",
-    "stressed": "хотел",
+    "stressed": "хоте́л",
     "translit": "khotel",
     "gloss_en": "wanted",
     "pos": "verb",
@@ -1402,7 +1402,7 @@
   {
     "id": 141,
     "cyrillic": "чего",
-    "stressed": "чего",
+    "stressed": "чего́",
     "translit": "chego",
     "gloss_en": "of what, why",
     "pos": "pronoun",
@@ -1412,7 +1412,7 @@
   {
     "id": 142,
     "cyrillic": "эти",
-    "stressed": "эти",
+    "stressed": "э́ти",
     "translit": "eti",
     "gloss_en": "these",
     "pos": "pronoun",
@@ -1422,7 +1422,7 @@
   {
     "id": 143,
     "cyrillic": "много",
-    "stressed": "много",
+    "stressed": "мно́го",
     "translit": "mnogo",
     "gloss_en": "a lot, much, many",
     "pos": "adverb",
@@ -1432,7 +1432,7 @@
   {
     "id": 144,
     "cyrillic": "после",
-    "stressed": "после",
+    "stressed": "по́сле",
     "translit": "posle",
     "gloss_en": "after, afterwards",
     "pos": "preposition",
@@ -1442,7 +1442,7 @@
   {
     "id": 145,
     "cyrillic": "этим",
-    "stressed": "этим",
+    "stressed": "э́тим",
     "translit": "etim",
     "gloss_en": "by this, with this",
     "pos": "pronoun",
@@ -1452,7 +1452,7 @@
   {
     "id": 146,
     "cyrillic": "всего",
-    "stressed": "всего",
+    "stressed": "всего́",
     "translit": "vsego",
     "gloss_en": "in total, only",
     "pos": "adverb",
@@ -1462,7 +1462,7 @@
   {
     "id": 147,
     "cyrillic": "во",
-    "stressed": "во",
+    "stressed": "во́",
     "translit": "vo",
     "gloss_en": "in, at, to",
     "pos": "preposition",
@@ -1472,7 +1472,7 @@
   {
     "id": 148,
     "cyrillic": "твой",
-    "stressed": "твой",
+    "stressed": "тво́й",
     "translit": "tvoi",
     "gloss_en": "your, yours",
     "pos": "pronoun",
@@ -1482,7 +1482,7 @@
   {
     "id": 149,
     "cyrillic": "ним",
-    "stressed": "ним",
+    "stressed": "ни́м",
     "translit": "nim",
     "gloss_en": "him, it, them",
     "pos": "pronoun",
@@ -1492,7 +1492,7 @@
   {
     "id": 150,
     "cyrillic": "лет",
-    "stressed": "лет",
+    "stressed": "лёт",
     "translit": "let",
     "gloss_en": "years",
     "pos": "noun",
@@ -1502,7 +1502,7 @@
   {
     "id": 151,
     "cyrillic": "боже",
-    "stressed": "боже",
+    "stressed": "бо́же",
     "translit": "bozhe",
     "gloss_en": "my God, oh Lord",
     "pos": "interjection",
@@ -1512,7 +1512,7 @@
   {
     "id": 152,
     "cyrillic": "них",
-    "stressed": "них",
+    "stressed": "ни́х",
     "translit": "nikh",
     "gloss_en": "them, they",
     "pos": "pronoun",
@@ -1522,7 +1522,7 @@
   {
     "id": 153,
     "cyrillic": "сэр",
-    "stressed": "сэр",
+    "stressed": "сэ́р",
     "translit": "ser",
     "gloss_en": "sir",
     "pos": "noun",
@@ -1532,7 +1532,7 @@
   {
     "id": 154,
     "cyrillic": "ведь",
-    "stressed": "ведь",
+    "stressed": "ве́дь",
     "translit": "ved",
     "gloss_en": "after all, indeed",
     "pos": "particle",
@@ -1542,7 +1542,7 @@
   {
     "id": 155,
     "cyrillic": "мистер",
-    "stressed": "мистер",
+    "stressed": "ми́стер",
     "translit": "mister",
     "gloss_en": "mister",
     "pos": "noun",
@@ -1552,7 +1552,7 @@
   {
     "id": 156,
     "cyrillic": "жизнь",
-    "stressed": "жизнь",
+    "stressed": "жи́знь",
     "translit": "zhizn",
     "gloss_en": "life, existence",
     "pos": "noun",
@@ -1562,7 +1562,7 @@
   {
     "id": 157,
     "cyrillic": "потом",
-    "stressed": "потом",
+    "stressed": "пото́м",
     "translit": "potom",
     "gloss_en": "afterwards, then",
     "pos": "adverb",
@@ -1572,7 +1572,7 @@
   {
     "id": 158,
     "cyrillic": "ней",
-    "stressed": "ней",
+    "stressed": "не́й",
     "translit": "ney",
     "gloss_en": "her, it",
     "pos": "pronoun",
@@ -1582,7 +1582,7 @@
   {
     "id": 159,
     "cyrillic": "такой",
-    "stressed": "такой",
+    "stressed": "тако́й",
     "translit": "takoy",
     "gloss_en": "such, like this",
     "pos": "adjective",
@@ -1592,7 +1592,7 @@
   {
     "id": 160,
     "cyrillic": "который",
-    "stressed": "который",
+    "stressed": "кото́рый",
     "translit": "kotoryy",
     "gloss_en": "which, who, that",
     "pos": "pronoun",
@@ -1602,7 +1602,7 @@
   {
     "id": 161,
     "cyrillic": "всех",
-    "stressed": "всех",
+    "stressed": "все́х",
     "translit": "vsekh",
     "gloss_en": "all, everyone",
     "pos": "pronoun",
@@ -1612,7 +1612,7 @@
   {
     "id": 162,
     "cyrillic": "через",
-    "stressed": "через",
+    "stressed": "че́рез",
     "translit": "cherez",
     "gloss_en": "through, across, in",
     "pos": "preposition",
@@ -1622,7 +1622,7 @@
   {
     "id": 163,
     "cyrillic": "им",
-    "stressed": "им",
+    "stressed": "и́м",
     "translit": "im",
     "gloss_en": "them, by them/him/it",
     "pos": "pronoun",
@@ -1632,7 +1632,7 @@
   {
     "id": 164,
     "cyrillic": "возможно",
-    "stressed": "возможно",
+    "stressed": "возмо́жно",
     "translit": "vozmozhno",
     "gloss_en": "possibly, perhaps",
     "pos": "adverb",
@@ -1642,7 +1642,7 @@
   {
     "id": 165,
     "cyrillic": "немного",
-    "stressed": "немного",
+    "stressed": "немно́го",
     "translit": "nemnogo",
     "gloss_en": "a little",
     "pos": "adverb",
@@ -1652,7 +1652,7 @@
   {
     "id": 166,
     "cyrillic": "такое",
-    "stressed": "такое",
+    "stressed": "тако́е",
     "translit": "takoye",
     "gloss_en": "such, what kind of",
     "pos": "pronoun",
@@ -1662,7 +1662,7 @@
   {
     "id": 167,
     "cyrillic": "слишком",
-    "stressed": "слишком",
+    "stressed": "сли́шком",
     "translit": "slishkom",
     "gloss_en": "too, too much",
     "pos": "adverb",
@@ -1672,7 +1672,7 @@
   {
     "id": 168,
     "cyrillic": "себе",
-    "stressed": "себе",
+    "stressed": "себе́",
     "translit": "sebe",
     "gloss_en": "to/for oneself",
     "pos": "pronoun",
@@ -1682,7 +1682,7 @@
   {
     "id": 169,
     "cyrillic": "зачем",
-    "stressed": "зачем",
+    "stressed": "заче́м",
     "translit": "zachem",
     "gloss_en": "why, what for",
     "pos": "adverb",
@@ -1692,7 +1692,7 @@
   {
     "id": 170,
     "cyrillic": "должна",
-    "stressed": "должна",
+    "stressed": "должна́",
     "translit": "dolzhna",
     "gloss_en": "must, should, owes",
     "pos": "adjective",
@@ -1702,7 +1702,7 @@
   {
     "id": 171,
     "cyrillic": "моей",
-    "stressed": "моей",
+    "stressed": "мое́й",
     "translit": "moey",
     "gloss_en": "my",
     "pos": "pronoun",
@@ -1712,7 +1712,7 @@
   {
     "id": 172,
     "cyrillic": "люди",
-    "stressed": "люди",
+    "stressed": "лю́ди",
     "translit": "lyudi",
     "gloss_en": "people",
     "pos": "noun",
@@ -1722,7 +1722,7 @@
   {
     "id": 173,
     "cyrillic": "знаете",
-    "stressed": "знаете",
+    "stressed": "зна́ете",
     "translit": "znayete",
     "gloss_en": "you know",
     "pos": "verb",
@@ -1732,7 +1732,7 @@
   {
     "id": 174,
     "cyrillic": "этой",
-    "stressed": "этой",
+    "stressed": "э́той",
     "translit": "etoy",
     "gloss_en": "this, that",
     "pos": "pronoun",
@@ -1742,7 +1742,7 @@
   {
     "id": 175,
     "cyrillic": "думаешь",
-    "stressed": "думаешь",
+    "stressed": "ду́маешь",
     "translit": "dumayesh",
     "gloss_en": "you think",
     "pos": "verb",
@@ -1752,7 +1752,7 @@
   {
     "id": 176,
     "cyrillic": "свою",
-    "stressed": "свою",
+    "stressed": "свою́",
     "translit": "svoyu",
     "gloss_en": "one's own",
     "pos": "pronoun",
@@ -1762,7 +1762,7 @@
   {
     "id": 177,
     "cyrillic": "точно",
-    "stressed": "точно",
+    "stressed": "то́чно",
     "translit": "tochno",
     "gloss_en": "exactly, precisely",
     "pos": "adverb",
@@ -1772,7 +1772,7 @@
   {
     "id": 178,
     "cyrillic": "человек",
-    "stressed": "человек",
+    "stressed": "челове́к",
     "translit": "chelovek",
     "gloss_en": "person, human",
     "pos": "noun",
@@ -1782,7 +1782,7 @@
   {
     "id": 179,
     "cyrillic": "твоя",
-    "stressed": "твоя",
+    "stressed": "твоя́",
     "translit": "tvoya",
     "gloss_en": "your",
     "pos": "pronoun",
@@ -1792,7 +1792,7 @@
   {
     "id": 180,
     "cyrillic": "под",
-    "stressed": "под",
+    "stressed": "по́д",
     "translit": "pod",
     "gloss_en": "under",
     "pos": "preposition",
@@ -1802,7 +1802,7 @@
   {
     "id": 181,
     "cyrillic": "сказала",
-    "stressed": "сказала",
+    "stressed": "сказа́ла",
     "translit": "skazala",
     "gloss_en": "said, told",
     "pos": "verb",
@@ -1812,7 +1812,7 @@
   {
     "id": 182,
     "cyrillic": "назад",
-    "stressed": "назад",
+    "stressed": "наза́д",
     "translit": "nazad",
     "gloss_en": "back, ago",
     "pos": "adverb",
@@ -1822,7 +1822,7 @@
   {
     "id": 183,
     "cyrillic": "эту",
-    "stressed": "эту",
+    "stressed": "э́ту",
     "translit": "etu",
     "gloss_en": "this, that",
     "pos": "pronoun",
@@ -1832,7 +1832,7 @@
   {
     "id": 184,
     "cyrillic": "можем",
-    "stressed": "можем",
+    "stressed": "мо́жем",
     "translit": "mozhem",
     "gloss_en": "we can",
     "pos": "verb",
@@ -1842,7 +1842,7 @@
   {
     "id": 185,
     "cyrillic": "случилось",
-    "stressed": "случилось",
+    "stressed": "случи́лось",
     "translit": "sluchilos",
     "gloss_en": "it happened",
     "pos": "verb",
@@ -1862,7 +1862,7 @@
   {
     "id": 187,
     "cyrillic": "мог",
-    "stressed": "мог",
+    "stressed": "мо́г",
     "translit": "mog",
     "gloss_en": "could, was able",
     "pos": "verb",
@@ -1872,7 +1872,7 @@
   {
     "id": 188,
     "cyrillic": "вместе",
-    "stressed": "вместе",
+    "stressed": "вме́сте",
     "translit": "vmeste",
     "gloss_en": "together",
     "pos": "adverb",
@@ -1882,7 +1882,7 @@
   {
     "id": 189,
     "cyrillic": "отец",
-    "stressed": "отец",
+    "stressed": "оте́ц",
     "translit": "otets",
     "gloss_en": "father",
     "pos": "noun",
@@ -1892,7 +1892,7 @@
   {
     "id": 190,
     "cyrillic": "сделал",
-    "stressed": "сделал",
+    "stressed": "сде́лал",
     "translit": "sdelal",
     "gloss_en": "did, made",
     "pos": "verb",
@@ -1902,7 +1902,7 @@
   {
     "id": 191,
     "cyrillic": "мои",
-    "stressed": "мои",
+    "stressed": "мои́",
     "translit": "moi",
     "gloss_en": "my",
     "pos": "pronoun",
@@ -1912,7 +1912,7 @@
   {
     "id": 192,
     "cyrillic": "кажется",
-    "stressed": "кажется",
+    "stressed": "ка́жется",
     "translit": "kazhetsya",
     "gloss_en": "it seems",
     "pos": "verb",
@@ -1922,7 +1922,7 @@
   {
     "id": 193,
     "cyrillic": "друг",
-    "stressed": "друг",
+    "stressed": "дру́г",
     "translit": "drug",
     "gloss_en": "friend",
     "pos": "noun",
@@ -1932,7 +1932,7 @@
   {
     "id": 194,
     "cyrillic": "куда",
-    "stressed": "куда",
+    "stressed": "куда́",
     "translit": "kuda",
     "gloss_en": "where to",
     "pos": "adverb",
@@ -1942,7 +1942,7 @@
   {
     "id": 195,
     "cyrillic": "никто",
-    "stressed": "никто",
+    "stressed": "никто́",
     "translit": "nikto",
     "gloss_en": "nobody",
     "pos": "pronoun",
@@ -1952,7 +1952,7 @@
   {
     "id": 196,
     "cyrillic": "поэтому",
-    "stressed": "поэтому",
+    "stressed": "поэ́тому",
     "translit": "poetomu",
     "gloss_en": "therefore, so",
     "pos": "adverb",
@@ -1962,7 +1962,7 @@
   {
     "id": 197,
     "cyrillic": "эта",
-    "stressed": "эта",
+    "stressed": "э́та",
     "translit": "eta",
     "gloss_en": "this (feminine)",
     "pos": "pronoun",
@@ -1972,7 +1972,7 @@
   {
     "id": 198,
     "cyrillic": "которые",
-    "stressed": "которые",
+    "stressed": "кото́рые",
     "translit": "kotorye",
     "gloss_en": "which, who",
     "pos": "pronoun",
@@ -1982,7 +1982,7 @@
   {
     "id": 199,
     "cyrillic": "два",
-    "stressed": "два",
+    "stressed": "два́",
     "translit": "dva",
     "gloss_en": "two",
     "pos": "numeral",
@@ -1992,7 +1992,7 @@
   {
     "id": 200,
     "cyrillic": "тот",
-    "stressed": "тот",
+    "stressed": "то́т",
     "translit": "tot",
     "gloss_en": "that (masculine)",
     "pos": "pronoun",
@@ -2002,7 +2002,7 @@
   {
     "id": 201,
     "cyrillic": "сколько",
-    "stressed": "сколько",
+    "stressed": "ско́лько",
     "translit": "skolko",
     "gloss_en": "how much/many",
     "pos": "adverb",
@@ -2012,7 +2012,7 @@
   {
     "id": 202,
     "cyrillic": "понимаю",
-    "stressed": "понимаю",
+    "stressed": "понима́ю",
     "translit": "ponimayu",
     "gloss_en": "I understand",
     "pos": "verb",
@@ -2022,7 +2022,7 @@
   {
     "id": 203,
     "cyrillic": "снова",
-    "stressed": "снова",
+    "stressed": "сно́ва",
     "translit": "snova",
     "gloss_en": "again",
     "pos": "adverb",
@@ -2032,7 +2032,7 @@
   {
     "id": 204,
     "cyrillic": "жизни",
-    "stressed": "жизни",
+    "stressed": "жи́зни",
     "translit": "zhizni",
     "gloss_en": "life (genitive/dative)",
     "pos": "noun",
@@ -2042,7 +2042,7 @@
   {
     "id": 205,
     "cyrillic": "нравится",
-    "stressed": "нравится",
+    "stressed": "нра́вится",
     "translit": "nravitsya",
     "gloss_en": "to like",
     "pos": "verb",
@@ -2052,7 +2052,7 @@
   {
     "id": 206,
     "cyrillic": "людей",
-    "stressed": "людей",
+    "stressed": "люде́й",
     "translit": "lyudey",
     "gloss_en": "people (genitive)",
     "pos": "noun",
@@ -2062,7 +2062,7 @@
   {
     "id": 207,
     "cyrillic": "помочь",
-    "stressed": "помочь",
+    "stressed": "помо́чь",
     "translit": "pomoch",
     "gloss_en": "to help",
     "pos": "verb",
@@ -2072,7 +2072,7 @@
   {
     "id": 208,
     "cyrillic": "видел",
-    "stressed": "видел",
+    "stressed": "ви́дел",
     "translit": "videl",
     "gloss_en": "saw (masculine)",
     "pos": "verb",
@@ -2082,7 +2082,7 @@
   {
     "id": 209,
     "cyrillic": "люблю",
-    "stressed": "люблю",
+    "stressed": "люблю́",
     "translit": "lyublyu",
     "gloss_en": "I love",
     "pos": "verb",
@@ -2092,7 +2092,7 @@
   {
     "id": 210,
     "cyrillic": "хочет",
-    "stressed": "хочет",
+    "stressed": "хо́чет",
     "translit": "khochet",
     "gloss_en": "wants",
     "pos": "verb",
@@ -2102,7 +2102,7 @@
   {
     "id": 211,
     "cyrillic": "место",
-    "stressed": "место",
+    "stressed": "ме́сто",
     "translit": "mesto",
     "gloss_en": "place",
     "pos": "noun",
@@ -2112,7 +2112,7 @@
   {
     "id": 212,
     "cyrillic": "знать",
-    "stressed": "знать",
+    "stressed": "зна́ть",
     "translit": "znat",
     "gloss_en": "to know",
     "pos": "verb",
@@ -2122,7 +2122,7 @@
   {
     "id": 213,
     "cyrillic": "прости",
-    "stressed": "прости",
+    "stressed": "прости́",
     "translit": "prosti",
     "gloss_en": "forgive me, sorry",
     "pos": "verb",
@@ -2132,7 +2132,7 @@
   {
     "id": 214,
     "cyrillic": "отлично",
-    "stressed": "отлично",
+    "stressed": "отли́чно",
     "translit": "otlichno",
     "gloss_en": "excellent, great",
     "pos": "adverb",
@@ -2142,7 +2142,7 @@
   {
     "id": 215,
     "cyrillic": "похоже",
-    "stressed": "похоже",
+    "stressed": "похо́же",
     "translit": "pokhozhe",
     "gloss_en": "similar, looks like",
     "pos": "adjective",
@@ -2152,7 +2152,7 @@
   {
     "id": 216,
     "cyrillic": "парень",
-    "stressed": "парень",
+    "stressed": "па́рень",
     "translit": "paren",
     "gloss_en": "guy, boyfriend",
     "pos": "noun",
@@ -2162,7 +2162,7 @@
   {
     "id": 217,
     "cyrillic": "домой",
-    "stressed": "домой",
+    "stressed": "домо́й",
     "translit": "domoy",
     "gloss_en": "home (direction)",
     "pos": "adverb",
@@ -2172,7 +2172,7 @@
   {
     "id": 218,
     "cyrillic": "всем",
-    "stressed": "всем",
+    "stressed": "все́м",
     "translit": "vsem",
     "gloss_en": "to all, for all",
     "pos": "pronoun",
@@ -2182,7 +2182,7 @@
   {
     "id": 219,
     "cyrillic": "деньги",
-    "stressed": "деньги",
+    "stressed": "де́ньги",
     "translit": "den'gi",
     "gloss_en": "money, funds",
     "pos": "noun",
@@ -2192,7 +2192,7 @@
   {
     "id": 220,
     "cyrillic": "иди",
-    "stressed": "иди",
+    "stressed": "иди́",
     "translit": "idi",
     "gloss_en": "go (imperative)",
     "pos": "verb",
@@ -2202,7 +2202,7 @@
   {
     "id": 221,
     "cyrillic": "времени",
-    "stressed": "времени",
+    "stressed": "вре́мени",
     "translit": "vremeni",
     "gloss_en": "time (genitive)",
     "pos": "noun",
@@ -2212,7 +2212,7 @@
   {
     "id": 222,
     "cyrillic": "дома",
-    "stressed": "дома",
+    "stressed": "до́ма",
     "translit": "doma",
     "gloss_en": "at home",
     "pos": "adverb",
@@ -2222,7 +2222,7 @@
   {
     "id": 223,
     "cyrillic": "именно",
-    "stressed": "именно",
+    "stressed": "и́менно",
     "translit": "imenno",
     "gloss_en": "exactly, namely",
     "pos": "adverb",
@@ -2242,7 +2242,7 @@
   {
     "id": 225,
     "cyrillic": "думал",
-    "stressed": "думал",
+    "stressed": "ду́мал",
     "translit": "dumal",
     "gloss_en": "thought, was thinking",
     "pos": "verb",
@@ -2252,7 +2252,7 @@
   {
     "id": 226,
     "cyrillic": "говорил",
-    "stressed": "говорил",
+    "stressed": "говори́л",
     "translit": "govoril",
     "gloss_en": "said, spoke",
     "pos": "verb",
@@ -2262,7 +2262,7 @@
   {
     "id": 227,
     "cyrillic": "делаешь",
-    "stressed": "делаешь",
+    "stressed": "де́лаешь",
     "translit": "delaesh'",
     "gloss_en": "you do, you are doing",
     "pos": "verb",
@@ -2272,7 +2272,7 @@
   {
     "id": 228,
     "cyrillic": "будем",
-    "stressed": "будем",
+    "stressed": "бу́дем",
     "translit": "budem",
     "gloss_en": "we will be",
     "pos": "verb",
@@ -2282,7 +2282,7 @@
   {
     "id": 229,
     "cyrillic": "прямо",
-    "stressed": "прямо",
+    "stressed": "пря́мо",
     "translit": "pryamo",
     "gloss_en": "straight, directly",
     "pos": "adverb",
@@ -2292,7 +2292,7 @@
   {
     "id": 230,
     "cyrillic": "стоит",
-    "stressed": "стоит",
+    "stressed": "стои́т",
     "translit": "stoit",
     "gloss_en": "stands, is worth",
     "pos": "verb",
@@ -2302,7 +2302,7 @@
   {
     "id": 231,
     "cyrillic": "поговорить",
-    "stressed": "поговорить",
+    "stressed": "поговори́ть",
     "translit": "pogovorit'",
     "gloss_en": "to talk, to have a conversation",
     "pos": "verb",
@@ -2312,7 +2312,7 @@
   {
     "id": 232,
     "cyrillic": "найти",
-    "stressed": "найти",
+    "stressed": "найти́",
     "translit": "nayti",
     "gloss_en": "to find",
     "pos": "verb",
@@ -2322,7 +2322,7 @@
   {
     "id": 233,
     "cyrillic": "разве",
-    "stressed": "разве",
+    "stressed": "ра́зве",
     "translit": "razve",
     "gloss_en": "really?, surely not?",
     "pos": "particle",
@@ -2332,7 +2332,7 @@
   {
     "id": 234,
     "cyrillic": "слушай",
-    "stressed": "слушай",
+    "stressed": "слу́шай",
     "translit": "slushay",
     "gloss_en": "listen (imperative)",
     "pos": "verb",
@@ -2342,7 +2342,7 @@
   {
     "id": 235,
     "cyrillic": "своей",
-    "stressed": "своей",
+    "stressed": "свое́й",
     "translit": "svoyey",
     "gloss_en": "one's own",
     "pos": "pronoun",
@@ -2352,7 +2352,7 @@
   {
     "id": 236,
     "cyrillic": "лишь",
-    "stressed": "лишь",
+    "stressed": "ли́шь",
     "translit": "lish'",
     "gloss_en": "only, just",
     "pos": "adverb",
@@ -2362,7 +2362,7 @@
   {
     "id": 237,
     "cyrillic": "ага",
-    "stressed": "ага",
+    "stressed": "ага́",
     "translit": "aga",
     "gloss_en": "yep, aha",
     "pos": "interjection",
@@ -2372,7 +2372,7 @@
   {
     "id": 238,
     "cyrillic": "можете",
-    "stressed": "можете",
+    "stressed": "мо́жете",
     "translit": "mozhete",
     "gloss_en": "you can (plural/formal)",
     "pos": "verb",
@@ -2382,7 +2382,7 @@
   {
     "id": 239,
     "cyrillic": "простите",
-    "stressed": "простите",
+    "stressed": "прости́те",
     "translit": "prostite",
     "gloss_en": "excuse me, forgive me",
     "pos": "verb",
@@ -2392,7 +2392,7 @@
   {
     "id": 240,
     "cyrillic": "хотела",
-    "stressed": "хотела",
+    "stressed": "хоте́ла",
     "translit": "khotela",
     "gloss_en": "wanted, wished",
     "pos": "verb",
@@ -2402,7 +2402,7 @@
   {
     "id": 241,
     "cyrillic": "сам",
-    "stressed": "сам",
+    "stressed": "са́м",
     "translit": "sam",
     "gloss_en": "self, himself, herself",
     "pos": "pronoun",
@@ -2412,7 +2412,7 @@
   {
     "id": 242,
     "cyrillic": "тем",
-    "stressed": "тем",
+    "stressed": "те́м",
     "translit": "tem",
     "gloss_en": "that (instrumental/dative)",
     "pos": "pronoun",
@@ -2422,7 +2422,7 @@
   {
     "id": 243,
     "cyrillic": "будешь",
-    "stressed": "будешь",
+    "stressed": "бу́дешь",
     "translit": "budesh",
     "gloss_en": "you will be",
     "pos": "verb",
@@ -2432,7 +2432,7 @@
   {
     "id": 244,
     "cyrillic": "прошу",
-    "stressed": "прошу",
+    "stressed": "прошу́",
     "translit": "proshu",
     "gloss_en": "I ask",
     "pos": "verb",
@@ -2442,7 +2442,7 @@
   {
     "id": 245,
     "cyrillic": "три",
-    "stressed": "три",
+    "stressed": "три́",
     "translit": "tri",
     "gloss_en": "three",
     "pos": "numeral",
@@ -2452,7 +2452,7 @@
   {
     "id": 246,
     "cyrillic": "деле",
-    "stressed": "деле",
+    "stressed": "де́ле",
     "translit": "dele",
     "gloss_en": "matter, business",
     "pos": "noun",
@@ -2462,7 +2462,7 @@
   {
     "id": 247,
     "cyrillic": "хотите",
-    "stressed": "хотите",
+    "stressed": "хоти́те",
     "translit": "khotite",
     "gloss_en": "you want",
     "pos": "verb",
@@ -2482,7 +2482,7 @@
   {
     "id": 249,
     "cyrillic": "давайте",
-    "stressed": "давайте",
+    "stressed": "дава́йте",
     "translit": "davayte",
     "gloss_en": "let's, give",
     "pos": "verb",
@@ -2492,7 +2492,7 @@
   {
     "id": 250,
     "cyrillic": "совсем",
-    "stressed": "совсем",
+    "stressed": "совсе́м",
     "translit": "sovsem",
     "gloss_en": "completely, at all",
     "pos": "adverb",
@@ -2502,7 +2502,7 @@
   {
     "id": 251,
     "cyrillic": "знал",
-    "stressed": "знал",
+    "stressed": "зна́л",
     "translit": "znal",
     "gloss_en": "knew",
     "pos": "verb",
@@ -2512,7 +2512,7 @@
   {
     "id": 252,
     "cyrillic": "знает",
-    "stressed": "знает",
+    "stressed": "зна́ет",
     "translit": "znayet",
     "gloss_en": "knows",
     "pos": "verb",
@@ -2522,7 +2522,7 @@
   {
     "id": 253,
     "cyrillic": "какой",
-    "stressed": "какой",
+    "stressed": "како́й",
     "translit": "kakoy",
     "gloss_en": "which, what kind",
     "pos": "pronoun",
@@ -2532,7 +2532,7 @@
   {
     "id": 254,
     "cyrillic": "моего",
-    "stressed": "моего",
+    "stressed": "моего́",
     "translit": "moyego",
     "gloss_en": "my, mine",
     "pos": "pronoun",
@@ -2542,7 +2542,7 @@
   {
     "id": 255,
     "cyrillic": "скажи",
-    "stressed": "скажи",
+    "stressed": "скажи́",
     "translit": "skazhi",
     "gloss_en": "tell, say",
     "pos": "verb",
@@ -2552,7 +2552,7 @@
   {
     "id": 256,
     "cyrillic": "дом",
-    "stressed": "дом",
+    "stressed": "до́м",
     "translit": "dom",
     "gloss_en": "house",
     "pos": "noun",
@@ -2562,7 +2562,7 @@
   {
     "id": 257,
     "cyrillic": "дела",
-    "stressed": "дела",
+    "stressed": "дела́",
     "translit": "dela",
     "gloss_en": "affairs, business",
     "pos": "noun",
@@ -2572,7 +2572,7 @@
   {
     "id": 258,
     "cyrillic": "вами",
-    "stressed": "вами",
+    "stressed": "ва́ми",
     "translit": "vami",
     "gloss_en": "you (instrumental)",
     "pos": "pronoun",
@@ -2582,7 +2582,7 @@
   {
     "id": 259,
     "cyrillic": "свои",
-    "stressed": "свои",
+    "stressed": "свои́",
     "translit": "svoi",
     "gloss_en": "one's own",
     "pos": "pronoun",
@@ -2602,7 +2602,7 @@
   {
     "id": 261,
     "cyrillic": "говорит",
-    "stressed": "говорит",
+    "stressed": "говори́т",
     "translit": "govorits",
     "gloss_en": "says, speaks",
     "pos": "verb",
@@ -2612,7 +2612,7 @@
   {
     "id": 262,
     "cyrillic": "несколько",
-    "stressed": "несколько",
+    "stressed": "не́сколько",
     "translit": "neskolko",
     "gloss_en": "several, a few",
     "pos": "numeral",
@@ -2622,7 +2622,7 @@
   {
     "id": 263,
     "cyrillic": "должно",
-    "stressed": "должно",
+    "stressed": "должно́",
     "translit": "dolzhno",
     "gloss_en": "must, should",
     "pos": "adverb",
@@ -2632,7 +2632,7 @@
   {
     "id": 264,
     "cyrillic": "про",
-    "stressed": "про",
+    "stressed": "про́",
     "translit": "pro",
     "gloss_en": "about, for",
     "pos": "preposition",
@@ -2642,7 +2642,7 @@
   {
     "id": 265,
     "cyrillic": "ваш",
-    "stressed": "ваш",
+    "stressed": "ва́ш",
     "translit": "vash",
     "gloss_en": "your, yours",
     "pos": "pronoun",
@@ -2652,7 +2652,7 @@
   {
     "id": 266,
     "cyrillic": "происходит",
-    "stressed": "происходит",
+    "stressed": "происхо́дит",
     "translit": "proiskhodit",
     "gloss_en": "happens, occurs",
     "pos": "verb",
@@ -2662,7 +2662,7 @@
   {
     "id": 267,
     "cyrillic": "жаль",
-    "stressed": "жаль",
+    "stressed": "жа́ль",
     "translit": "zhal",
     "gloss_en": "pity, too bad",
     "pos": "interjection",
@@ -2672,7 +2672,7 @@
   {
     "id": 268,
     "cyrillic": "туда",
-    "stressed": "туда",
+    "stressed": "туда́",
     "translit": "tuda",
     "gloss_en": "there (direction)",
     "pos": "adverb",
@@ -2682,7 +2682,7 @@
   {
     "id": 269,
     "cyrillic": "действительно",
-    "stressed": "действительно",
+    "stressed": "действи́тельно",
     "translit": "deystvitelno",
     "gloss_en": "really, actually",
     "pos": "adverb",
@@ -2702,7 +2702,7 @@
   {
     "id": 271,
     "cyrillic": "завтра",
-    "stressed": "завтра",
+    "stressed": "за́втра",
     "translit": "zavtra",
     "gloss_en": "tomorrow",
     "pos": "adverb",
@@ -2712,7 +2712,7 @@
   {
     "id": 272,
     "cyrillic": "оно",
-    "stressed": "оно",
+    "stressed": "оно́",
     "translit": "ono",
     "gloss_en": "it, that",
     "pos": "pronoun",
@@ -2722,7 +2722,7 @@
   {
     "id": 273,
     "cyrillic": "черт",
-    "stressed": "черт",
+    "stressed": "чёрт",
     "translit": "chert",
     "gloss_en": "devil, damn",
     "pos": "noun",
@@ -2732,7 +2732,7 @@
   {
     "id": 274,
     "cyrillic": "одна",
-    "stressed": "одна",
+    "stressed": "одна́",
     "translit": "odna",
     "gloss_en": "one (fem.)",
     "pos": "numeral",
@@ -2742,7 +2742,7 @@
   {
     "id": 275,
     "cyrillic": "перед",
-    "stressed": "перед",
+    "stressed": "перёд",
     "translit": "pered",
     "gloss_en": "in front of, before",
     "pos": "preposition",
@@ -2752,7 +2752,7 @@
   {
     "id": 276,
     "cyrillic": "наш",
-    "stressed": "наш",
+    "stressed": "на́ш",
     "translit": "nash",
     "gloss_en": "our",
     "pos": "pronoun",
@@ -2762,7 +2762,7 @@
   {
     "id": 277,
     "cyrillic": "уверен",
-    "stressed": "уверен",
+    "stressed": "уве́рен",
     "translit": "uveren",
     "gloss_en": "sure, confident",
     "pos": "adjective",
@@ -2772,7 +2772,7 @@
   {
     "id": 278,
     "cyrillic": "отсюда",
-    "stressed": "отсюда",
+    "stressed": "отсю́да",
     "translit": "otsyuda",
     "gloss_en": "from here, hence",
     "pos": "adverb",
@@ -2782,7 +2782,7 @@
   {
     "id": 279,
     "cyrillic": "нужна",
-    "stressed": "нужна",
+    "stressed": "нужна́",
     "translit": "nuzhna",
     "gloss_en": "needed (fem.)",
     "pos": "adjective",
@@ -2792,7 +2792,7 @@
   {
     "id": 280,
     "cyrillic": "самом",
-    "stressed": "самом",
+    "stressed": "само́м",
     "translit": "samom",
     "gloss_en": "very, most, self",
     "pos": "adjective",
@@ -2802,7 +2802,7 @@
   {
     "id": 281,
     "cyrillic": "тех",
-    "stressed": "тех",
+    "stressed": "те́х",
     "translit": "tekh",
     "gloss_en": "those, them",
     "pos": "pronoun",
@@ -2812,7 +2812,7 @@
   {
     "id": 282,
     "cyrillic": "нужен",
-    "stressed": "нужен",
+    "stressed": "ну́жен",
     "translit": "nuzhen",
     "gloss_en": "needed (masc.)",
     "pos": "adjective",
@@ -2822,7 +2822,7 @@
   {
     "id": 283,
     "cyrillic": "свой",
-    "stressed": "свой",
+    "stressed": "сво́й",
     "translit": "svoy",
     "gloss_en": "own, one's own",
     "pos": "pronoun",
@@ -2832,7 +2832,7 @@
   {
     "id": 284,
     "cyrillic": "мою",
-    "stressed": "мою",
+    "stressed": "мою́",
     "translit": "moyu",
     "gloss_en": "my (fem. acc.)",
     "pos": "pronoun",
@@ -2842,7 +2842,7 @@
   {
     "id": 285,
     "cyrillic": "кого",
-    "stressed": "кого",
+    "stressed": "кого́",
     "translit": "kogo",
     "gloss_en": "whom, whose",
     "pos": "pronoun",
@@ -2852,7 +2852,7 @@
   {
     "id": 286,
     "cyrillic": "верно",
-    "stressed": "верно",
+    "stressed": "ве́рно",
     "translit": "verno",
     "gloss_en": "correctly, truly",
     "pos": "adverb",
@@ -2862,7 +2862,7 @@
   {
     "id": 287,
     "cyrillic": "работу",
-    "stressed": "работу",
+    "stressed": "рабо́ту",
     "translit": "rabotu",
     "gloss_en": "work (acc.)",
     "pos": "noun",
@@ -2872,7 +2872,7 @@
   {
     "id": 288,
     "cyrillic": "каждый",
-    "stressed": "каждый",
+    "stressed": "ка́ждый",
     "translit": "kazhdyy",
     "gloss_en": "every, each",
     "pos": "pronoun",
@@ -2882,7 +2882,7 @@
   {
     "id": 289,
     "cyrillic": "твоей",
-    "stressed": "твоей",
+    "stressed": "твое́й",
     "translit": "tvoey",
     "gloss_en": "your (fem. gen/dat/prep)",
     "pos": "pronoun",
@@ -2892,7 +2892,7 @@
   {
     "id": 290,
     "cyrillic": "будут",
-    "stressed": "будут",
+    "stressed": "бу́дут",
     "translit": "budut",
     "gloss_en": "they will be",
     "pos": "verb",
@@ -2902,7 +2902,7 @@
   {
     "id": 291,
     "cyrillic": "хватит",
-    "stressed": "хватит",
+    "stressed": "хва́тит",
     "translit": "khvatit",
     "gloss_en": "enough, suffice",
     "pos": "verb",
@@ -2912,7 +2912,7 @@
   {
     "id": 292,
     "cyrillic": "понял",
-    "stressed": "понял",
+    "stressed": "по́нял",
     "translit": "ponyol",
     "gloss_en": "understood (masc.)",
     "pos": "verb",
@@ -2922,7 +2922,7 @@
   {
     "id": 293,
     "cyrillic": "нее",
-    "stressed": "нее",
+    "stressed": "неё",
     "translit": "nee",
     "gloss_en": "her (with prepositions)",
     "pos": "pronoun",
@@ -2932,7 +2932,7 @@
   {
     "id": 294,
     "cyrillic": "уж",
-    "stressed": "уж",
+    "stressed": "у́ж",
     "translit": "uzh",
     "gloss_en": "indeed, really, already",
     "pos": "particle",
@@ -2942,7 +2942,7 @@
   {
     "id": 295,
     "cyrillic": "имя",
-    "stressed": "имя",
+    "stressed": "и́мя",
     "translit": "imya",
     "gloss_en": "name",
     "pos": "noun",
@@ -2952,7 +2952,7 @@
   {
     "id": 296,
     "cyrillic": "против",
-    "stressed": "против",
+    "stressed": "про́тив",
     "translit": "protiv",
     "gloss_en": "against, opposite",
     "pos": "preposition",
@@ -2962,7 +2962,7 @@
   {
     "id": 297,
     "cyrillic": "пор",
-    "stressed": "пор",
+    "stressed": "по́р",
     "translit": "por",
     "gloss_en": "pore",
     "pos": "noun",
@@ -2982,7 +2982,7 @@
   {
     "id": 299,
     "cyrillic": "раньше",
-    "stressed": "раньше",
+    "stressed": "ра́ньше",
     "translit": "ran'she",
     "gloss_en": "earlier, before",
     "pos": "adverb",
@@ -2992,7 +2992,7 @@
   {
     "id": 300,
     "cyrillic": "говорю",
-    "stressed": "говорю",
+    "stressed": "говорю́",
     "translit": "govoryu",
     "gloss_en": "I speak, I say",
     "pos": "verb",
@@ -3002,7 +3002,7 @@
   {
     "id": 301,
     "cyrillic": "более",
-    "stressed": "более",
+    "stressed": "бо́лее",
     "translit": "boleye",
     "gloss_en": "more",
     "pos": "adverb",
@@ -3012,7 +3012,7 @@
   {
     "id": 302,
     "cyrillic": "надеюсь",
-    "stressed": "надеюсь",
+    "stressed": "наде́юсь",
     "translit": "nadeyus'",
     "gloss_en": "I hope",
     "pos": "verb",
@@ -3022,7 +3022,7 @@
   {
     "id": 303,
     "cyrillic": "итак",
-    "stressed": "итак",
+    "stressed": "ита́к",
     "translit": "itak",
     "gloss_en": "thus, so",
     "pos": "conjunction",
@@ -3032,7 +3032,7 @@
   {
     "id": 304,
     "cyrillic": "при",
-    "stressed": "при",
+    "stressed": "при́",
     "translit": "pri",
     "gloss_en": "at, near, by, during",
     "pos": "preposition",
@@ -3042,7 +3042,7 @@
   {
     "id": 305,
     "cyrillic": "ваша",
-    "stressed": "ваша",
+    "stressed": "ва́ша",
     "translit": "vasha",
     "gloss_en": "your (feminine)",
     "pos": "pronoun",
@@ -3052,7 +3052,7 @@
   {
     "id": 306,
     "cyrillic": "вообще",
-    "stressed": "вообще",
+    "stressed": "вообще́",
     "translit": "voobshche",
     "gloss_en": "in general, at all",
     "pos": "adverb",
@@ -3062,7 +3062,7 @@
   {
     "id": 307,
     "cyrillic": "пошли",
-    "stressed": "пошли",
+    "stressed": "пошли́",
     "translit": "poshli",
     "gloss_en": "went, let's go",
     "pos": "verb",
@@ -3072,7 +3072,7 @@
   {
     "id": 308,
     "cyrillic": "мать",
-    "stressed": "мать",
+    "stressed": "ма́ть",
     "translit": "mat'",
     "gloss_en": "mother",
     "pos": "noun",
@@ -3082,7 +3082,7 @@
   {
     "id": 309,
     "cyrillic": "нельзя",
-    "stressed": "нельзя",
+    "stressed": "нельзя́",
     "translit": "nelzya",
     "gloss_en": "impossible, not allowed",
     "pos": "other",
@@ -3092,7 +3092,7 @@
   {
     "id": 310,
     "cyrillic": "наверное",
-    "stressed": "наверное",
+    "stressed": "наве́рное",
     "translit": "navernoe",
     "gloss_en": "probably, most likely",
     "pos": "adverb",
@@ -3102,7 +3102,7 @@
   {
     "id": 311,
     "cyrillic": "нами",
-    "stressed": "нами",
+    "stressed": "на́ми",
     "translit": "nami",
     "gloss_en": "us (instrumental plural)",
     "pos": "pronoun",
@@ -3112,7 +3112,7 @@
   {
     "id": 312,
     "cyrillic": "твои",
-    "stressed": "твои",
+    "stressed": "твои́",
     "translit": "tvoi",
     "gloss_en": "your (plural)",
     "pos": "pronoun",
@@ -3122,7 +3122,7 @@
   {
     "id": 313,
     "cyrillic": "могли",
-    "stressed": "могли",
+    "stressed": "могли́",
     "translit": "mogli",
     "gloss_en": "could, were able",
     "pos": "verb",
@@ -3132,7 +3132,7 @@
   {
     "id": 314,
     "cyrillic": "дай",
-    "stressed": "дай",
+    "stressed": "да́й",
     "translit": "dai",
     "gloss_en": "give, let",
     "pos": "verb",
@@ -3142,7 +3142,7 @@
   {
     "id": 315,
     "cyrillic": "ради",
-    "stressed": "ради",
+    "stressed": "ра́ди",
     "translit": "radi",
     "gloss_en": "for the sake of",
     "pos": "preposition",
@@ -3152,7 +3152,7 @@
   {
     "id": 316,
     "cyrillic": "всю",
-    "stressed": "всю",
+    "stressed": "всю́",
     "translit": "vsyu",
     "gloss_en": "all, whole (fem.)",
     "pos": "pronoun",
@@ -3162,7 +3162,7 @@
   {
     "id": 317,
     "cyrillic": "ребята",
-    "stressed": "ребята",
+    "stressed": "ребя́та",
     "translit": "rebyata",
     "gloss_en": "guys, children",
     "pos": "noun",
@@ -3172,7 +3172,7 @@
   {
     "id": 318,
     "cyrillic": "ко",
-    "stressed": "ко",
+    "stressed": "ко́",
     "translit": "ko",
     "gloss_en": "to, towards",
     "pos": "preposition",
@@ -3182,7 +3182,7 @@
   {
     "id": 319,
     "cyrillic": "хотя",
-    "stressed": "хотя",
+    "stressed": "хотя́",
     "translit": "xotya",
     "gloss_en": "although, though",
     "pos": "conjunction",
@@ -3192,7 +3192,7 @@
   {
     "id": 320,
     "cyrillic": "понимаешь",
-    "stressed": "понимаешь",
+    "stressed": "понима́ешь",
     "translit": "ponimaesh'",
     "gloss_en": "you understand, you know",
     "pos": "verb",
@@ -3202,7 +3202,7 @@
   {
     "id": 321,
     "cyrillic": "идти",
-    "stressed": "идти",
+    "stressed": "идти́",
     "translit": "idti",
     "gloss_en": "to go, to walk",
     "pos": "verb",
@@ -3212,7 +3212,7 @@
   {
     "id": 322,
     "cyrillic": "этих",
-    "stressed": "этих",
+    "stressed": "э́тих",
     "translit": "etikh",
     "gloss_en": "these",
     "pos": "pronoun",
@@ -3222,7 +3222,7 @@
   {
     "id": 323,
     "cyrillic": "откуда",
-    "stressed": "откуда",
+    "stressed": "отку́да",
     "translit": "otkuda",
     "gloss_en": "from where",
     "pos": "adverb",
@@ -3232,7 +3232,7 @@
   {
     "id": 324,
     "cyrillic": "такая",
-    "stressed": "такая",
+    "stressed": "така́я",
     "translit": "takaya",
     "gloss_en": "such a",
     "pos": "adjective",
@@ -3242,7 +3242,7 @@
   {
     "id": 325,
     "cyrillic": "ясно",
-    "stressed": "ясно",
+    "stressed": "я́сно",
     "translit": "yasno",
     "gloss_en": "clear, clearly",
     "pos": "adverb",
@@ -3252,7 +3252,7 @@
   {
     "id": 326,
     "cyrillic": "другой",
-    "stressed": "другой",
+    "stressed": "друго́й",
     "translit": "drugoy",
     "gloss_en": "other, another",
     "pos": "adjective",
@@ -3262,7 +3262,7 @@
   {
     "id": 327,
     "cyrillic": "извините",
-    "stressed": "извините",
+    "stressed": "извини́те",
     "translit": "izvinite",
     "gloss_en": "excuse me, sorry",
     "pos": "interjection",
@@ -3272,7 +3272,7 @@
   {
     "id": 328,
     "cyrillic": "вижу",
-    "stressed": "вижу",
+    "stressed": "ви́жу",
     "translit": "vizhu",
     "gloss_en": "I see",
     "pos": "verb",
@@ -3282,7 +3282,7 @@
   {
     "id": 329,
     "cyrillic": "видеть",
-    "stressed": "видеть",
+    "stressed": "ви́деть",
     "translit": "videt",
     "gloss_en": "to see",
     "pos": "verb",
@@ -3292,7 +3292,7 @@
   {
     "id": 330,
     "cyrillic": "над",
-    "stressed": "над",
+    "stressed": "на́д",
     "translit": "nad",
     "gloss_en": "above, over",
     "pos": "preposition",
@@ -3302,7 +3302,7 @@
   {
     "id": 331,
     "cyrillic": "могут",
-    "stressed": "могут",
+    "stressed": "мо́гут",
     "translit": "mogut",
     "gloss_en": "can, may",
     "pos": "verb",
@@ -3312,7 +3312,7 @@
   {
     "id": 332,
     "cyrillic": "равно",
-    "stressed": "равно",
+    "stressed": "равно́",
     "translit": "ravno",
     "gloss_en": "equally, equal",
     "pos": "adverb",
@@ -3322,7 +3322,7 @@
   {
     "id": 333,
     "cyrillic": "мисс",
-    "stressed": "мисс",
+    "stressed": "ми́сс",
     "translit": "miss",
     "gloss_en": "Miss",
     "pos": "noun",
@@ -3332,7 +3332,7 @@
   {
     "id": 334,
     "cyrillic": "скоро",
-    "stressed": "скоро",
+    "stressed": "ско́ро",
     "translit": "skoro",
     "gloss_en": "soon, quickly",
     "pos": "adverb",
@@ -3342,7 +3342,7 @@
   {
     "id": 335,
     "cyrillic": "будто",
-    "stressed": "будто",
+    "stressed": "бу́дто",
     "translit": "budto",
     "gloss_en": "as if, as though",
     "pos": "conjunction",
@@ -3352,7 +3352,7 @@
   {
     "id": 336,
     "cyrillic": "зовут",
-    "stressed": "зовут",
+    "stressed": "зову́т",
     "translit": "zovut",
     "gloss_en": "they call",
     "pos": "verb",
@@ -3362,7 +3362,7 @@
   {
     "id": 337,
     "cyrillic": "виду",
-    "stressed": "виду",
+    "stressed": "ви́ду",
     "translit": "vidu",
     "gloss_en": "appearance, view",
     "pos": "noun",
@@ -3372,7 +3372,7 @@
   {
     "id": 338,
     "cyrillic": "наши",
-    "stressed": "наши",
+    "stressed": "на́ши",
     "translit": "nashi",
     "gloss_en": "our, ours",
     "pos": "pronoun",
@@ -3382,7 +3382,7 @@
   {
     "id": 339,
     "cyrillic": "думала",
-    "stressed": "думала",
+    "stressed": "ду́мала",
     "translit": "dumala",
     "gloss_en": "thought",
     "pos": "verb",
@@ -3392,7 +3392,7 @@
   {
     "id": 340,
     "cyrillic": "послушай",
-    "stressed": "послушай",
+    "stressed": "послу́шай",
     "translit": "poslushay",
     "gloss_en": "listen",
     "pos": "verb",
@@ -3402,7 +3402,7 @@
   {
     "id": 341,
     "cyrillic": "между",
-    "stressed": "между",
+    "stressed": "ме́жду",
     "translit": "mezhdu",
     "gloss_en": "between, among",
     "pos": "preposition",
@@ -3412,7 +3412,7 @@
   {
     "id": 342,
     "cyrillic": "своего",
-    "stressed": "своего",
+    "stressed": "своего́",
     "translit": "svoego",
     "gloss_en": "one's own",
     "pos": "pronoun",
@@ -3422,7 +3422,7 @@
   {
     "id": 343,
     "cyrillic": "вопрос",
-    "stressed": "вопрос",
+    "stressed": "вопро́с",
     "translit": "vopros",
     "gloss_en": "question, issue",
     "pos": "noun",
@@ -3432,7 +3432,7 @@
   {
     "id": 344,
     "cyrillic": "этому",
-    "stressed": "этому",
+    "stressed": "э́тому",
     "translit": "etomu",
     "gloss_en": "to this, for this",
     "pos": "pronoun",
@@ -3442,7 +3442,7 @@
   {
     "id": 345,
     "cyrillic": "почти",
-    "stressed": "почти",
+    "stressed": "почти́",
     "translit": "pochti",
     "gloss_en": "almost, nearly",
     "pos": "adverb",
@@ -3452,7 +3452,7 @@
   {
     "id": 346,
     "cyrillic": "года",
-    "stressed": "года",
+    "stressed": "года́",
     "translit": "goda",
     "gloss_en": "years",
     "pos": "noun",
@@ -3462,7 +3462,7 @@
   {
     "id": 347,
     "cyrillic": "человека",
-    "stressed": "человека",
+    "stressed": "челове́ка",
     "translit": "cheloveka",
     "gloss_en": "person",
     "pos": "noun",
@@ -3472,7 +3472,7 @@
   {
     "id": 348,
     "cyrillic": "которая",
-    "stressed": "которая",
+    "stressed": "кото́рая",
     "translit": "kotoraya",
     "gloss_en": "which",
     "pos": "pronoun",
@@ -3482,7 +3482,7 @@
   {
     "id": 349,
     "cyrillic": "подожди",
-    "stressed": "подожди",
+    "stressed": "подожди́",
     "translit": "podozhdi",
     "gloss_en": "wait",
     "pos": "verb",
@@ -3492,7 +3492,7 @@
   {
     "id": 350,
     "cyrillic": "руки",
-    "stressed": "руки",
+    "stressed": "ру́ки",
     "translit": "ruki",
     "gloss_en": "hands",
     "pos": "noun",
@@ -3502,7 +3502,7 @@
   {
     "id": 351,
     "cyrillic": "нормально",
-    "stressed": "нормально",
+    "stressed": "норма́льно",
     "translit": "normalno",
     "gloss_en": "normal",
     "pos": "adverb",
@@ -3512,7 +3512,7 @@
   {
     "id": 352,
     "cyrillic": "такие",
-    "stressed": "такие",
+    "stressed": "таки́е",
     "translit": "takie",
     "gloss_en": "such",
     "pos": "determiner",
@@ -3522,7 +3522,7 @@
   {
     "id": 353,
     "cyrillic": "возьми",
-    "stressed": "возьми",
+    "stressed": "возьми́",
     "translit": "vozmi",
     "gloss_en": "take",
     "pos": "verb",
@@ -3532,7 +3532,7 @@
   {
     "id": 354,
     "cyrillic": "минут",
-    "stressed": "минут",
+    "stressed": "мину́т",
     "translit": "minut",
     "gloss_en": "minutes",
     "pos": "noun",
@@ -3542,7 +3542,7 @@
   {
     "id": 355,
     "cyrillic": "извини",
-    "stressed": "извини",
+    "stressed": "извини́",
     "translit": "izvini",
     "gloss_en": "excuse me",
     "pos": "verb",
@@ -3552,7 +3552,7 @@
   {
     "id": 356,
     "cyrillic": "вещи",
-    "stressed": "вещи",
+    "stressed": "ве́щи",
     "translit": "veshchi",
     "gloss_en": "things",
     "pos": "noun",
@@ -3562,7 +3562,7 @@
   {
     "id": 357,
     "cyrillic": "могла",
-    "stressed": "могла",
+    "stressed": "могла́",
     "translit": "mogla",
     "gloss_en": "could",
     "pos": "verb",
@@ -3572,7 +3572,7 @@
   {
     "id": 358,
     "cyrillic": "смотри",
-    "stressed": "смотри",
+    "stressed": "смотри́",
     "translit": "smotri",
     "gloss_en": "look",
     "pos": "verb",
@@ -3582,7 +3582,7 @@
   {
     "id": 359,
     "cyrillic": "хоть",
-    "stressed": "хоть",
+    "stressed": "хо́ть",
     "translit": "khot",
     "gloss_en": "at least",
     "pos": "particle",
@@ -3592,7 +3592,7 @@
   {
     "id": 360,
     "cyrillic": "работа",
-    "stressed": "работа",
+    "stressed": "рабо́та",
     "translit": "rabota",
     "gloss_en": "work",
     "pos": "noun",
@@ -3602,7 +3602,7 @@
   {
     "id": 361,
     "cyrillic": "пару",
-    "stressed": "пару",
+    "stressed": "па́ру",
     "translit": "paru",
     "gloss_en": "a couple",
     "pos": "noun",
@@ -3612,7 +3612,7 @@
   {
     "id": 362,
     "cyrillic": "сын",
-    "stressed": "сын",
+    "stressed": "сы́н",
     "translit": "syn",
     "gloss_en": "son",
     "pos": "noun",
@@ -3622,7 +3622,7 @@
   {
     "id": 363,
     "cyrillic": "ваше",
-    "stressed": "ваше",
+    "stressed": "ва́ше",
     "translit": "vashe",
     "gloss_en": "your",
     "pos": "pronoun",
@@ -3632,7 +3632,7 @@
   {
     "id": 364,
     "cyrillic": "дня",
-    "stressed": "дня",
+    "stressed": "дня́",
     "translit": "dnya",
     "gloss_en": "day",
     "pos": "noun",
@@ -3642,7 +3642,7 @@
   {
     "id": 365,
     "cyrillic": "пора",
-    "stressed": "пора",
+    "stressed": "пора́",
     "translit": "pora",
     "gloss_en": "it is time",
     "pos": "interjection",
@@ -3662,7 +3662,7 @@
   {
     "id": 367,
     "cyrillic": "жить",
-    "stressed": "жить",
+    "stressed": "жи́ть",
     "translit": "zhit",
     "gloss_en": "to live",
     "pos": "verb",
@@ -3672,7 +3672,7 @@
   {
     "id": 368,
     "cyrillic": "видишь",
-    "stressed": "видишь",
+    "stressed": "ви́дишь",
     "translit": "vidish",
     "gloss_en": "you see",
     "pos": "verb",
@@ -3682,7 +3682,7 @@
   {
     "id": 369,
     "cyrillic": "достаточно",
-    "stressed": "достаточно",
+    "stressed": "доста́точно",
     "translit": "dostatochno",
     "gloss_en": "enough",
     "pos": "adverb",
@@ -3692,7 +3692,7 @@
   {
     "id": 370,
     "cyrillic": "господи",
-    "stressed": "господи",
+    "stressed": "го́споди",
     "translit": "Gospodi",
     "gloss_en": "Oh my God!",
     "pos": "interjection",
@@ -3702,7 +3702,7 @@
   {
     "id": 371,
     "cyrillic": "быстро",
-    "stressed": "быстро",
+    "stressed": "бы́стро",
     "translit": "bystro",
     "gloss_en": "quickly",
     "pos": "adverb",
@@ -3712,7 +3712,7 @@
   {
     "id": 372,
     "cyrillic": "твою",
-    "stressed": "твою",
+    "stressed": "твою́",
     "translit": "tvoyu",
     "gloss_en": "your (fem. acc.)",
     "pos": "pronoun",
@@ -3722,7 +3722,7 @@
   {
     "id": 373,
     "cyrillic": "весь",
-    "stressed": "весь",
+    "stressed": "ве́сь",
     "translit": "ves'",
     "gloss_en": "whole, all",
     "pos": "pronoun",
@@ -3732,7 +3732,7 @@
   {
     "id": 374,
     "cyrillic": "убить",
-    "stressed": "убить",
+    "stressed": "уби́ть",
     "translit": "ubit'",
     "gloss_en": "to kill",
     "pos": "verb",
@@ -3742,7 +3742,7 @@
   {
     "id": 375,
     "cyrillic": "ночь",
-    "stressed": "ночь",
+    "stressed": "но́чь",
     "translit": "noch'",
     "gloss_en": "night",
     "pos": "noun",
@@ -3752,7 +3752,7 @@
   {
     "id": 376,
     "cyrillic": "говоришь",
-    "stressed": "говоришь",
+    "stressed": "говори́шь",
     "translit": "govorish'",
     "gloss_en": "you speak/say",
     "pos": "verb",
@@ -3762,7 +3762,7 @@
   {
     "id": 377,
     "cyrillic": "собой",
-    "stressed": "собой",
+    "stressed": "собо́й",
     "translit": "soboy",
     "gloss_en": "oneself, with oneself",
     "pos": "pronoun",
@@ -3772,7 +3772,7 @@
   {
     "id": 378,
     "cyrillic": "скажу",
-    "stressed": "скажу",
+    "stressed": "скажу́",
     "translit": "skazhu",
     "gloss_en": "I will say/tell",
     "pos": "verb",
@@ -3782,7 +3782,7 @@
   {
     "id": 379,
     "cyrillic": "готов",
-    "stressed": "готов",
+    "stressed": "гото́в",
     "translit": "gotov",
     "gloss_en": "ready",
     "pos": "adjective",
@@ -3792,7 +3792,7 @@
   {
     "id": 380,
     "cyrillic": "слышал",
-    "stressed": "слышал",
+    "stressed": "слы́шал",
     "translit": "slyshal",
     "gloss_en": "heard (masc. past)",
     "pos": "verb",
@@ -3802,7 +3802,7 @@
   {
     "id": 381,
     "cyrillic": "какая",
-    "stressed": "какая",
+    "stressed": "кака́я",
     "translit": "kakaya",
     "gloss_en": "what, which (fem.)",
     "pos": "pronoun",
@@ -3812,7 +3812,7 @@
   {
     "id": 382,
     "cyrillic": "посмотри",
-    "stressed": "посмотри",
+    "stressed": "посмотри́",
     "translit": "posmotri",
     "gloss_en": "look (imperative)",
     "pos": "verb",
@@ -3822,7 +3822,7 @@
   {
     "id": 383,
     "cyrillic": "первый",
-    "stressed": "первый",
+    "stressed": "пе́рвый",
     "translit": "pervyy",
     "gloss_en": "first",
     "pos": "numeral",
@@ -3842,7 +3842,7 @@
   {
     "id": 385,
     "cyrillic": "видела",
-    "stressed": "видела",
+    "stressed": "ви́дела",
     "translit": "videla",
     "gloss_en": "saw (fem. past)",
     "pos": "verb",
@@ -3852,7 +3852,7 @@
   {
     "id": 386,
     "cyrillic": "пусть",
-    "stressed": "пусть",
+    "stressed": "пу́сть",
     "translit": "pust'",
     "gloss_en": "let",
     "pos": "particle",
@@ -3862,7 +3862,7 @@
   {
     "id": 387,
     "cyrillic": "месте",
-    "stressed": "месте",
+    "stressed": "ме́сте",
     "translit": "meste",
     "gloss_en": "place (locative)",
     "pos": "noun",
@@ -3872,7 +3872,7 @@
   {
     "id": 388,
     "cyrillic": "нашли",
-    "stressed": "нашли",
+    "stressed": "нашли́",
     "translit": "nashli",
     "gloss_en": "found (pl. past)",
     "pos": "verb",
@@ -3882,7 +3882,7 @@
   {
     "id": 389,
     "cyrillic": "сказали",
-    "stressed": "сказали",
+    "stressed": "сказа́ли",
     "translit": "skazali",
     "gloss_en": "said (pl. past)",
     "pos": "verb",
@@ -3892,7 +3892,7 @@
   {
     "id": 390,
     "cyrillic": "плохо",
-    "stressed": "плохо",
+    "stressed": "пло́хо",
     "translit": "plokho",
     "gloss_en": "bad, badly",
     "pos": "adverb",
@@ -3902,7 +3902,7 @@
   {
     "id": 391,
     "cyrillic": "смогу",
-    "stressed": "смогу",
+    "stressed": "смогу́",
     "translit": "smogu",
     "gloss_en": "I will be able",
     "pos": "verb",
@@ -3912,7 +3912,7 @@
   {
     "id": 392,
     "cyrillic": "ваши",
-    "stressed": "ваши",
+    "stressed": "ва́ши",
     "translit": "vashi",
     "gloss_en": "your (pl.)",
     "pos": "pronoun",
@@ -3922,7 +3922,7 @@
   {
     "id": 393,
     "cyrillic": "отца",
-    "stressed": "отца",
+    "stressed": "отца́",
     "translit": "ottsa",
     "gloss_en": "father (gen/acc)",
     "pos": "noun",
@@ -3932,7 +3932,7 @@
   {
     "id": 394,
     "cyrillic": "детей",
-    "stressed": "детей",
+    "stressed": "дете́й",
     "translit": "detey",
     "gloss_en": "children (gen/acc)",
     "pos": "noun",
@@ -3942,7 +3942,7 @@
   {
     "id": 395,
     "cyrillic": "знаем",
-    "stressed": "знаем",
+    "stressed": "зна́ем",
     "translit": "znayem",
     "gloss_en": "we know",
     "pos": "verb",
@@ -3952,7 +3952,7 @@
   {
     "id": 396,
     "cyrillic": "рад",
-    "stressed": "рад",
+    "stressed": "ра́д",
     "translit": "rad",
     "gloss_en": "glad, happy",
     "pos": "adjective",
@@ -3962,7 +3962,7 @@
   {
     "id": 397,
     "cyrillic": "прав",
-    "stressed": "прав",
+    "stressed": "пра́в",
     "translit": "prav",
     "gloss_en": "right, correct",
     "pos": "adjective",
@@ -3972,7 +3972,7 @@
   {
     "id": 398,
     "cyrillic": "никаких",
-    "stressed": "никаких",
+    "stressed": "никаки́х",
     "translit": "nikakikh",
     "gloss_en": "no, none",
     "pos": "pronoun",
@@ -3982,7 +3982,7 @@
   {
     "id": 399,
     "cyrillic": "имею",
-    "stressed": "имею",
+    "stressed": "име́ю",
     "translit": "imeyu",
     "gloss_en": "I have",
     "pos": "verb",
@@ -3992,7 +3992,7 @@
   {
     "id": 400,
     "cyrillic": "миссис",
-    "stressed": "миссис",
+    "stressed": "ми́ссис",
     "translit": "missis",
     "gloss_en": "Mrs.",
     "pos": "noun",
@@ -4002,7 +4002,7 @@
   {
     "id": 401,
     "cyrillic": "иногда",
-    "stressed": "иногда",
+    "stressed": "иногда́",
     "translit": "inogda",
     "gloss_en": "sometimes",
     "pos": "adverb",
@@ -4012,7 +4012,7 @@
   {
     "id": 402,
     "cyrillic": "смерти",
-    "stressed": "смерти",
+    "stressed": "сме́рти",
     "translit": "smerti",
     "gloss_en": "death",
     "pos": "noun",
@@ -4022,7 +4022,7 @@
   {
     "id": 403,
     "cyrillic": "своих",
-    "stressed": "своих",
+    "stressed": "свои́х",
     "translit": "svoikh",
     "gloss_en": "one's own",
     "pos": "pronoun",
@@ -4032,7 +4032,7 @@
   {
     "id": 404,
     "cyrillic": "пойду",
-    "stressed": "пойду",
+    "stressed": "пойду́",
     "translit": "poydu",
     "gloss_en": "I will go",
     "pos": "verb",
@@ -4042,7 +4042,7 @@
   {
     "id": 405,
     "cyrillic": "брат",
-    "stressed": "брат",
+    "stressed": "бра́т",
     "translit": "brat",
     "gloss_en": "brother",
     "pos": "noun",
@@ -4052,7 +4052,7 @@
   {
     "id": 406,
     "cyrillic": "вроде",
-    "stressed": "вроде",
+    "stressed": "вро́де",
     "translit": "vrode",
     "gloss_en": "like, kind of",
     "pos": "preposition",
@@ -4062,7 +4062,7 @@
   {
     "id": 407,
     "cyrillic": "рядом",
-    "stressed": "рядом",
+    "stressed": "ря́дом",
     "translit": "ryadom",
     "gloss_en": "nearby, next to",
     "pos": "adverb",
@@ -4072,7 +4072,7 @@
   {
     "id": 408,
     "cyrillic": "мир",
-    "stressed": "мир",
+    "stressed": "ми́р",
     "translit": "mir",
     "gloss_en": "peace, world",
     "pos": "noun",
@@ -4082,7 +4082,7 @@
   {
     "id": 409,
     "cyrillic": "произошло",
-    "stressed": "произошло",
+    "stressed": "произошло́",
     "translit": "proizoshlo",
     "gloss_en": "happened, occurred",
     "pos": "verb",
@@ -4092,7 +4092,7 @@
   {
     "id": 410,
     "cyrillic": "которую",
-    "stressed": "которую",
+    "stressed": "кото́рую",
     "translit": "kotoruyu",
     "gloss_en": "which, whom",
     "pos": "pronoun",
@@ -4102,7 +4102,7 @@
   {
     "id": 411,
     "cyrillic": "сделала",
-    "stressed": "сделала",
+    "stressed": "сде́лала",
     "translit": "sdelala",
     "gloss_en": "made, did",
     "pos": "verb",
@@ -4112,7 +4112,7 @@
   {
     "id": 412,
     "cyrillic": "говорила",
-    "stressed": "говорила",
+    "stressed": "говори́ла",
     "translit": "govorila",
     "gloss_en": "spoke, said",
     "pos": "verb",
@@ -4122,7 +4122,7 @@
   {
     "id": 413,
     "cyrillic": "знала",
-    "stressed": "знала",
+    "stressed": "зна́ла",
     "translit": "znala",
     "gloss_en": "knew",
     "pos": "verb",
@@ -4132,7 +4132,7 @@
   {
     "id": 414,
     "cyrillic": "мое",
-    "stressed": "мое",
+    "stressed": "моё",
     "translit": "moye",
     "gloss_en": "my, mine",
     "pos": "pronoun",
@@ -4142,7 +4142,7 @@
   {
     "id": 415,
     "cyrillic": "одного",
-    "stressed": "одного",
+    "stressed": "одного́",
     "translit": "odnogo",
     "gloss_en": "one, a certain",
     "pos": "numeral",
@@ -4152,7 +4152,7 @@
   {
     "id": 416,
     "cyrillic": "таким",
-    "stressed": "таким",
+    "stressed": "таки́м",
     "translit": "takim",
     "gloss_en": "such, in this way",
     "pos": "determiner",
@@ -4162,7 +4162,7 @@
   {
     "id": 417,
     "cyrillic": "помощь",
-    "stressed": "помощь",
+    "stressed": "по́мощь",
     "translit": "pomoshch",
     "gloss_en": "help, assistance",
     "pos": "noun",
@@ -4172,7 +4172,7 @@
   {
     "id": 418,
     "cyrillic": "такого",
-    "stressed": "такого",
+    "stressed": "тако́го",
     "translit": "takogo",
     "gloss_en": "of such, such a",
     "pos": "determiner",
@@ -4182,7 +4182,7 @@
   {
     "id": 419,
     "cyrillic": "кем",
-    "stressed": "кем",
+    "stressed": "ке́м",
     "translit": "kem",
     "gloss_en": "whom, by whom",
     "pos": "pronoun",
@@ -4192,7 +4192,7 @@
   {
     "id": 420,
     "cyrillic": "насчет",
-    "stressed": "насчет",
+    "stressed": "насчёт",
     "translit": "naschet",
     "gloss_en": "about, concerning",
     "pos": "preposition",
@@ -4202,7 +4202,7 @@
   {
     "id": 421,
     "cyrillic": "вчера",
-    "stressed": "вчера",
+    "stressed": "вчера́",
     "translit": "vchera",
     "gloss_en": "yesterday",
     "pos": "adverb",
@@ -4212,7 +4212,7 @@
   {
     "id": 422,
     "cyrillic": "случае",
-    "stressed": "случае",
+    "stressed": "слу́чае",
     "translit": "sluchaye",
     "gloss_en": "case, event",
     "pos": "noun",
@@ -4222,7 +4222,7 @@
   {
     "id": 423,
     "cyrillic": "увидеть",
-    "stressed": "увидеть",
+    "stressed": "уви́деть",
     "translit": "uvidet",
     "gloss_en": "to see",
     "pos": "verb",
@@ -4232,7 +4232,7 @@
   {
     "id": 424,
     "cyrillic": "нашей",
-    "stressed": "нашей",
+    "stressed": "на́шей",
     "translit": "nashey",
     "gloss_en": "our",
     "pos": "pronoun",
@@ -4242,7 +4242,7 @@
   {
     "id": 425,
     "cyrillic": "говорят",
-    "stressed": "говорят",
+    "stressed": "говоря́т",
     "translit": "govoryat",
     "gloss_en": "they say",
     "pos": "verb",
@@ -4252,7 +4252,7 @@
   {
     "id": 426,
     "cyrillic": "правильно",
-    "stressed": "правильно",
+    "stressed": "пра́вильно",
     "translit": "pravilno",
     "gloss_en": "correctly, right",
     "pos": "adverb",
@@ -4262,7 +4262,7 @@
   {
     "id": 427,
     "cyrillic": "убил",
-    "stressed": "убил",
+    "stressed": "уби́л",
     "translit": "ubil",
     "gloss_en": "killed",
     "pos": "verb",
@@ -4272,7 +4272,7 @@
   {
     "id": 428,
     "cyrillic": "одно",
-    "stressed": "одно",
+    "stressed": "одно́",
     "translit": "odno",
     "gloss_en": "one",
     "pos": "numeral",
@@ -4282,7 +4282,7 @@
   {
     "id": 429,
     "cyrillic": "пойти",
-    "stressed": "пойти",
+    "stressed": "пойти́",
     "translit": "poyti",
     "gloss_en": "to go",
     "pos": "verb",
@@ -4292,7 +4292,7 @@
   {
     "id": 430,
     "cyrillic": "друга",
-    "stressed": "друга",
+    "stressed": "дру́га",
     "translit": "druga",
     "gloss_en": "friend",
     "pos": "noun",
@@ -4302,7 +4302,7 @@
   {
     "id": 431,
     "cyrillic": "сама",
-    "stressed": "сама",
+    "stressed": "сама́",
     "translit": "sama",
     "gloss_en": "herself, alone",
     "pos": "pronoun",
@@ -4312,7 +4312,7 @@
   {
     "id": 432,
     "cyrillic": "долго",
-    "stressed": "долго",
+    "stressed": "до́лго",
     "translit": "dolgo",
     "gloss_en": "long, for a long time",
     "pos": "adverb",
@@ -4322,7 +4322,7 @@
   {
     "id": 433,
     "cyrillic": "работать",
-    "stressed": "работать",
+    "stressed": "рабо́тать",
     "translit": "rabotat",
     "gloss_en": "to work",
     "pos": "verb",
@@ -4332,7 +4332,7 @@
   {
     "id": 434,
     "cyrillic": "дверь",
-    "stressed": "дверь",
+    "stressed": "две́рь",
     "translit": "dver",
     "gloss_en": "door",
     "pos": "noun",
@@ -4342,7 +4342,7 @@
   {
     "id": 435,
     "cyrillic": "делает",
-    "stressed": "делает",
+    "stressed": "де́лает",
     "translit": "delaet",
     "gloss_en": "does, makes",
     "pos": "verb",
@@ -4352,7 +4352,7 @@
   {
     "id": 436,
     "cyrillic": "женщина",
-    "stressed": "женщина",
+    "stressed": "же́нщина",
     "translit": "zhenshchina",
     "gloss_en": "woman",
     "pos": "noun",
@@ -4362,7 +4362,7 @@
   {
     "id": 437,
     "cyrillic": "важно",
-    "stressed": "важно",
+    "stressed": "ва́жно",
     "translit": "vazhno",
     "gloss_en": "important",
     "pos": "adverb",
@@ -4372,7 +4372,7 @@
   {
     "id": 438,
     "cyrillic": "кроме",
-    "stressed": "кроме",
+    "stressed": "кро́ме",
     "translit": "krome",
     "gloss_en": "except, besides",
     "pos": "preposition",
@@ -4382,7 +4382,7 @@
   {
     "id": 439,
     "cyrillic": "будь",
-    "stressed": "будь",
+    "stressed": "бу́дь",
     "translit": "bud",
     "gloss_en": "be",
     "pos": "verb",
@@ -4392,7 +4392,7 @@
   {
     "id": 440,
     "cyrillic": "собираюсь",
-    "stressed": "собираюсь",
+    "stressed": "собира́юсь",
     "translit": "sobirayus",
     "gloss_en": "I intend to, I am going to",
     "pos": "verb",
@@ -4402,7 +4402,7 @@
   {
     "id": 441,
     "cyrillic": "вашей",
-    "stressed": "вашей",
+    "stressed": "ва́шей",
     "translit": "vashey",
     "gloss_en": "your",
     "pos": "pronoun",
@@ -4412,7 +4412,7 @@
   {
     "id": 442,
     "cyrillic": "нужны",
-    "stressed": "нужны",
+    "stressed": "нужны́",
     "translit": "nuzhny",
     "gloss_en": "needed, necessary",
     "pos": "adjective",
@@ -4422,7 +4422,7 @@
   {
     "id": 443,
     "cyrillic": "здорово",
-    "stressed": "здорово",
+    "stressed": "здо́рово",
     "translit": "zdorovo",
     "gloss_en": "great, awesome",
     "pos": "adverb",
@@ -4432,7 +4432,7 @@
   {
     "id": 444,
     "cyrillic": "номер",
-    "stressed": "номер",
+    "stressed": "но́мер",
     "translit": "nomer",
     "gloss_en": "number, room",
     "pos": "noun",
@@ -4452,7 +4452,7 @@
   {
     "id": 446,
     "cyrillic": "проблемы",
-    "stressed": "проблемы",
+    "stressed": "пробле́мы",
     "translit": "problemy",
     "gloss_en": "problems, issues",
     "pos": "noun",
@@ -4462,7 +4462,7 @@
   {
     "id": 447,
     "cyrillic": "денег",
-    "stressed": "денег",
+    "stressed": "де́нег",
     "translit": "deneg",
     "gloss_en": "money",
     "pos": "noun",
@@ -4482,7 +4482,7 @@
   {
     "id": 449,
     "cyrillic": "хороший",
-    "stressed": "хороший",
+    "stressed": "хоро́ший",
     "translit": "khoroshiy",
     "gloss_en": "good, nice, fine",
     "pos": "adjective",
@@ -4492,7 +4492,7 @@
   {
     "id": 450,
     "cyrillic": "твоего",
-    "stressed": "твоего",
+    "stressed": "твоего́",
     "translit": "tvoego",
     "gloss_en": "your (genitive/accusative)",
     "pos": "pronoun",
@@ -4502,7 +4502,7 @@
   {
     "id": 451,
     "cyrillic": "одну",
-    "stressed": "одну",
+    "stressed": "одну́",
     "translit": "odnu",
     "gloss_en": "one (feminine accusative)",
     "pos": "numeral",
@@ -4512,7 +4512,7 @@
   {
     "id": 452,
     "cyrillic": "дальше",
-    "stressed": "дальше",
+    "stressed": "да́льше",
     "translit": "dalshe",
     "gloss_en": "further, next, then",
     "pos": "adverb",
@@ -4522,7 +4522,7 @@
   {
     "id": 453,
     "cyrillic": "вернуться",
-    "stressed": "вернуться",
+    "stressed": "верну́ться",
     "translit": "vernutsya",
     "gloss_en": "to return, come back",
     "pos": "verb",
@@ -4532,7 +4532,7 @@
   {
     "id": 454,
     "cyrillic": "давно",
-    "stressed": "давно",
+    "stressed": "давно́",
     "translit": "davno",
     "gloss_en": "long ago, for a long time",
     "pos": "adverb",
@@ -4542,7 +4542,7 @@
   {
     "id": 455,
     "cyrillic": "последний",
-    "stressed": "последний",
+    "stressed": "после́дний",
     "translit": "posledniy",
     "gloss_en": "last, final",
     "pos": "adjective",
@@ -4552,7 +4552,7 @@
   {
     "id": 456,
     "cyrillic": "ночи",
-    "stressed": "ночи",
+    "stressed": "но́чи",
     "translit": "nochi",
     "gloss_en": "night, nights",
     "pos": "noun",
@@ -4562,7 +4562,7 @@
   {
     "id": 457,
     "cyrillic": "узнать",
-    "stressed": "узнать",
+    "stressed": "узна́ть",
     "translit": "uznat",
     "gloss_en": "to find out, learn, recognize",
     "pos": "verb",
@@ -4572,7 +4572,7 @@
   {
     "id": 458,
     "cyrillic": "уверена",
-    "stressed": "уверена",
+    "stressed": "уве́рена",
     "translit": "uverena",
     "gloss_en": "sure, confident",
     "pos": "adjective",
@@ -4582,7 +4582,7 @@
   {
     "id": 459,
     "cyrillic": "машину",
-    "stressed": "машину",
+    "stressed": "маши́ну",
     "translit": "mashinu",
     "gloss_en": "car, machine (accusative)",
     "pos": "noun",
@@ -4592,7 +4592,7 @@
   {
     "id": 460,
     "cyrillic": "права",
-    "stressed": "права",
+    "stressed": "права́",
     "translit": "prava",
     "gloss_en": "rights, driving license",
     "pos": "noun",
@@ -4602,7 +4602,7 @@
   {
     "id": 461,
     "cyrillic": "пять",
-    "stressed": "пять",
+    "stressed": "пя́ть",
     "translit": "pyat",
     "gloss_en": "five",
     "pos": "numeral",
@@ -4612,7 +4612,7 @@
   {
     "id": 462,
     "cyrillic": "моих",
-    "stressed": "моих",
+    "stressed": "мои́х",
     "translit": "moikh",
     "gloss_en": "my, mine (genitive/accusative plural)",
     "pos": "pronoun",
@@ -4622,7 +4622,7 @@
   {
     "id": 463,
     "cyrillic": "также",
-    "stressed": "также",
+    "stressed": "та́кже",
     "translit": "takzhe",
     "gloss_en": "also, too, as well",
     "pos": "adverb",
@@ -4632,7 +4632,7 @@
   {
     "id": 464,
     "cyrillic": "тому",
-    "stressed": "тому",
+    "stressed": "тому́",
     "translit": "tomu",
     "gloss_en": "to that, that (dative)",
     "pos": "pronoun",
@@ -4642,7 +4642,7 @@
   {
     "id": 465,
     "cyrillic": "вечером",
-    "stressed": "вечером",
+    "stressed": "ве́чером",
     "translit": "vecherom",
     "gloss_en": "in the evening, tonight",
     "pos": "adverb",
@@ -4652,7 +4652,7 @@
   {
     "id": 466,
     "cyrillic": "дети",
-    "stressed": "дети",
+    "stressed": "де́ти",
     "translit": "deti",
     "gloss_en": "children",
     "pos": "noun",
@@ -4662,7 +4662,7 @@
   {
     "id": 467,
     "cyrillic": "опять",
-    "stressed": "опять",
+    "stressed": "опя́ть",
     "translit": "opyat",
     "gloss_en": "again, once more",
     "pos": "adverb",
@@ -4672,7 +4672,7 @@
   {
     "id": 468,
     "cyrillic": "серьезно",
-    "stressed": "серьезно",
+    "stressed": "серьёзно",
     "translit": "seryozno",
     "gloss_en": "seriously, gravely, indeed",
     "pos": "adverb",
@@ -4682,7 +4682,7 @@
   {
     "id": 469,
     "cyrillic": "работает",
-    "stressed": "работает",
+    "stressed": "рабо́тает",
     "translit": "rabotayet",
     "gloss_en": "works, operates",
     "pos": "verb",
@@ -4692,7 +4692,7 @@
   {
     "id": 470,
     "cyrillic": "своим",
-    "stressed": "своим",
+    "stressed": "свои́м",
     "translit": "svoim",
     "gloss_en": "one's own (instrumental/dative)",
     "pos": "pronoun",
@@ -4702,7 +4702,7 @@
   {
     "id": 471,
     "cyrillic": "сначала",
-    "stressed": "сначала",
+    "stressed": "снача́ла",
     "translit": "snachala",
     "gloss_en": "at first, initially",
     "pos": "adverb",
@@ -4712,7 +4712,7 @@
   {
     "id": 472,
     "cyrillic": "две",
-    "stressed": "две",
+    "stressed": "две́",
     "translit": "dve",
     "gloss_en": "two (feminine/neuter)",
     "pos": "numeral",
@@ -4722,7 +4722,7 @@
   {
     "id": 473,
     "cyrillic": "одной",
-    "stressed": "одной",
+    "stressed": "одно́й",
     "translit": "odnoy",
     "gloss_en": "one",
     "pos": "numeral",
@@ -4732,7 +4732,7 @@
   {
     "id": 474,
     "cyrillic": "моим",
-    "stressed": "моим",
+    "stressed": "мои́м",
     "translit": "moim",
     "gloss_en": "my",
     "pos": "pronoun",
@@ -4742,7 +4742,7 @@
   {
     "id": 475,
     "cyrillic": "те",
-    "stressed": "те",
+    "stressed": "те́",
     "translit": "te",
     "gloss_en": "those",
     "pos": "pronoun",
@@ -4752,7 +4752,7 @@
   {
     "id": 476,
     "cyrillic": "жена",
-    "stressed": "жена",
+    "stressed": "жена́",
     "translit": "zhena",
     "gloss_en": "wife",
     "pos": "noun",
@@ -4762,7 +4762,7 @@
   {
     "id": 477,
     "cyrillic": "думаете",
-    "stressed": "думаете",
+    "stressed": "ду́маете",
     "translit": "dumayete",
     "gloss_en": "you think",
     "pos": "verb",
@@ -4772,7 +4772,7 @@
   {
     "id": 478,
     "cyrillic": "помнишь",
-    "stressed": "помнишь",
+    "stressed": "по́мнишь",
     "translit": "pomnish",
     "gloss_en": "you remember",
     "pos": "verb",
@@ -4782,7 +4782,7 @@
   {
     "id": 479,
     "cyrillic": "глаза",
-    "stressed": "глаза",
+    "stressed": "глаза́",
     "translit": "glaza",
     "gloss_en": "eyes",
     "pos": "noun",
@@ -4792,7 +4792,7 @@
   {
     "id": 480,
     "cyrillic": "ними",
-    "stressed": "ними",
+    "stressed": "ни́ми",
     "translit": "nimi",
     "gloss_en": "them",
     "pos": "pronoun",
@@ -4802,7 +4802,7 @@
   {
     "id": 481,
     "cyrillic": "чувак",
-    "stressed": "чувак",
+    "stressed": "чува́к",
     "translit": "chuvak",
     "gloss_en": "dude",
     "pos": "noun",
@@ -4812,7 +4812,7 @@
   {
     "id": 482,
     "cyrillic": "ночью",
-    "stressed": "ночью",
+    "stressed": "но́чью",
     "translit": "nochyu",
     "gloss_en": "at night",
     "pos": "adverb",
@@ -4822,7 +4822,7 @@
   {
     "id": 483,
     "cyrillic": "чувствую",
-    "stressed": "чувствую",
+    "stressed": "чу́вствую",
     "translit": "chuvstvuyu",
     "gloss_en": "I feel",
     "pos": "verb",
@@ -4832,7 +4832,7 @@
   {
     "id": 484,
     "cyrillic": "взять",
-    "stressed": "взять",
+    "stressed": "взя́ть",
     "translit": "vzyat",
     "gloss_en": "to take",
     "pos": "verb",
@@ -4842,7 +4842,7 @@
   {
     "id": 485,
     "cyrillic": "сразу",
-    "stressed": "сразу",
+    "stressed": "сра́зу",
     "translit": "srazu",
     "gloss_en": "at once",
     "pos": "adverb",
@@ -4852,7 +4852,7 @@
   {
     "id": 486,
     "cyrillic": "утром",
-    "stressed": "утром",
+    "stressed": "у́тром",
     "translit": "utrom",
     "gloss_en": "in the morning",
     "pos": "adverb",
@@ -4862,7 +4862,7 @@
   {
     "id": 487,
     "cyrillic": "часть",
-    "stressed": "часть",
+    "stressed": "ча́сть",
     "translit": "chast",
     "gloss_en": "part",
     "pos": "noun",
@@ -4872,7 +4872,7 @@
   {
     "id": 488,
     "cyrillic": "придется",
-    "stressed": "придется",
+    "stressed": "придётся",
     "translit": "pridetsya",
     "gloss_en": "will have to",
     "pos": "verb",
@@ -4882,7 +4882,7 @@
   {
     "id": 489,
     "cyrillic": "стать",
-    "stressed": "стать",
+    "stressed": "ста́ть",
     "translit": "stat",
     "gloss_en": "to become",
     "pos": "verb",
@@ -4902,7 +4902,7 @@
   {
     "id": 491,
     "cyrillic": "дорогая",
-    "stressed": "дорогая",
+    "stressed": "дорога́я",
     "translit": "dorogaya",
     "gloss_en": "dear, expensive",
     "pos": "adjective",
@@ -4912,7 +4912,7 @@
   {
     "id": 492,
     "cyrillic": "прекрасно",
-    "stressed": "прекрасно",
+    "stressed": "прекра́сно",
     "translit": "prekrasno",
     "gloss_en": "beautifully, perfectly",
     "pos": "adverb",
@@ -4922,7 +4922,7 @@
   {
     "id": 493,
     "cyrillic": "слова",
-    "stressed": "слова",
+    "stressed": "слова́",
     "translit": "slova",
     "gloss_en": "words",
     "pos": "noun",
@@ -4932,7 +4932,7 @@
   {
     "id": 494,
     "cyrillic": "сделали",
-    "stressed": "сделали",
+    "stressed": "сде́лали",
     "translit": "sdelali",
     "gloss_en": "they did, made",
     "pos": "verb",
@@ -4942,7 +4942,7 @@
   {
     "id": 495,
     "cyrillic": "видели",
-    "stressed": "видели",
+    "stressed": "ви́дели",
     "translit": "videli",
     "gloss_en": "they saw",
     "pos": "verb",
@@ -4952,7 +4952,7 @@
   {
     "id": 496,
     "cyrillic": "наша",
-    "stressed": "наша",
+    "stressed": "на́ша",
     "translit": "nasha",
     "gloss_en": "our",
     "pos": "pronoun",
@@ -4962,7 +4962,7 @@
   {
     "id": 497,
     "cyrillic": "сердце",
-    "stressed": "сердце",
+    "stressed": "се́рдце",
     "translit": "serdtse",
     "gloss_en": "heart",
     "pos": "noun",
@@ -4972,7 +4972,7 @@
   {
     "id": 498,
     "cyrillic": "помню",
-    "stressed": "помню",
+    "stressed": "по́мню",
     "translit": "pomnyu",
     "gloss_en": "I remember",
     "pos": "verb",
@@ -4982,7 +4982,7 @@
   {
     "id": 499,
     "cyrillic": "парня",
-    "stressed": "парня",
+    "stressed": "па́рня",
     "translit": "parnya",
     "gloss_en": "guy's",
     "pos": "noun",
@@ -4992,7 +4992,7 @@
   {
     "id": 500,
     "cyrillic": "момент",
-    "stressed": "момент",
+    "stressed": "моме́нт",
     "translit": "moment",
     "gloss_en": "moment",
     "pos": "noun",

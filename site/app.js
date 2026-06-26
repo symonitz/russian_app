@@ -2,7 +2,7 @@ import { mergeProgress } from "./sync.js";
 const $ = (s) => document.querySelector(s);
 
 let currentView = "home";
-const CACHE_VERSION = "v4";
+const CACHE_VERSION = "v5";
 const TURNSTILE_SITE_KEY = "0x4AAAAAADoPWVdaOuApj71A";
 
 // Count-based spacing: a card's "due" is a value of the global card counter
@@ -72,9 +72,11 @@ const isKnown = (card) => !!card && card.state === "known";
 
 // ---------- audio (pre-rendered clips) ----------
 let currentAudio = null;
+const stripAccent = (s) => (s || "").replace(/́/g, "");
 function play(text, rate = 1) {
   if (!text) return;
-  const file = AUDIO[text] ?? AUDIO[text.toLowerCase()];
+  const key = stripAccent(text);
+  const file = AUDIO[key] ?? AUDIO[key.toLowerCase()];
   if (!file) return;
   if (currentAudio) currentAudio.pause();
   currentAudio = new Audio(file);
@@ -497,7 +499,7 @@ function renderPassage(data, nextWord) {
     el.onclick = () => {
       const w = el.dataset.w;
       play(w);
-      const g = glossary[w.toLowerCase()];
+      const g = glossary[stripAccent(w).toLowerCase()];
       const pop = $("#wordpop");
       pop.hidden = false;
       pop.innerHTML = `<b>${w}</b>${g ? " — " + g : ""} <span class="pop-speak">🔊</span>`;

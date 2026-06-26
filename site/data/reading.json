@@ -5,7 +5,7 @@
       "cyrillic": "я",
       "gloss": "I"
     },
-    "passage": "[[Я]] люблю читать книги.",
+    "passage": "[[Я]] люблю́ чита́ть кни́ги.",
     "glossary": {
       "я": "I",
       "люблю": "love",
@@ -24,7 +24,7 @@
       "cyrillic": "не",
       "gloss": "not"
     },
-    "passage": "Я [[не]] люблю зиму.",
+    "passage": "Я [[не]] люблю́ зи́му.",
     "glossary": {
       "я": "I",
       "не": "not",
@@ -43,7 +43,7 @@
       "cyrillic": "что",
       "gloss": "what, that"
     },
-    "passage": "Я не знаю, [[что]] это.",
+    "passage": "Я не зна́ю, [[что]] э́то.",
     "glossary": {
       "я": "I",
       "не": "not",
@@ -63,7 +63,7 @@
       "cyrillic": "в",
       "gloss": "in, at, into"
     },
-    "passage": "Я иду [[в]] магазин.",
+    "passage": "Я иду́ [[в]] магази́н.",
     "glossary": {
       "я": "I",
       "иду": "go",
@@ -82,7 +82,7 @@
       "cyrillic": "и",
       "gloss": "and"
     },
-    "passage": "Я люблю собак [[и]] кошек.",
+    "passage": "Я люблю́ соба́к [[и]] ко́шек.",
     "glossary": {
       "я": "I",
       "люблю": "love",
@@ -102,7 +102,7 @@
       "cyrillic": "ты",
       "gloss": "you"
     },
-    "passage": "[[Ты]] говоришь по-английски?",
+    "passage": "[[Ты́]] говори́шь по-англи́йски?",
     "glossary": {
       "ты": "you (informal)",
       "говоришь": "speak",
@@ -120,7 +120,7 @@
       "cyrillic": "это",
       "gloss": "this / it is"
     },
-    "passage": "[[Это]] очень интересная книга.",
+    "passage": "[[Э́то]] о́чень интере́сная кни́га.",
     "glossary": {
       "это": "this / it is",
       "очень": "very",
@@ -139,7 +139,7 @@
       "cyrillic": "на",
       "gloss": "on, at, to"
     },
-    "passage": "Положи книгу [[на]] стол.",
+    "passage": "Положи́ кни́гу [[на]] сто́л.",
     "glossary": {
       "положи": "put",
       "книгу": "book",
@@ -158,7 +158,7 @@
       "cyrillic": "с",
       "gloss": "with, from"
     },
-    "passage": "Я иду [[с]] тобой.",
+    "passage": "Я иду́ [[с]] тобо́й.",
     "glossary": {
       "я": "i",
       "иду": "go",
@@ -177,7 +177,7 @@
       "cyrillic": "он",
       "gloss": "he"
     },
-    "passage": "[[Он]] читает книгу.",
+    "passage": "[[О́н]] чита́ет кни́гу.",
     "glossary": {
       "он": "he",
       "читает": "reads",
@@ -195,7 +195,7 @@
       "cyrillic": "мы",
       "gloss": "we"
     },
-    "passage": "[[Мы]] идём домой.",
+    "passage": "[[Мы́]] идём домо́й.",
     "glossary": {
       "мы": "we",
       "идём": "go (we go, we are going)",
@@ -213,7 +213,7 @@
       "cyrillic": "как",
       "gloss": "how, as, like"
     },
-    "passage": "Я люблю Россию [[как]] свой дом.",
+    "passage": "Я люблю́ Росси́ю [[как]] сво́й до́м.",
     "glossary": {
       "я": "i",
       "люблю": "love",
@@ -234,7 +234,7 @@
       "cyrillic": "вы",
       "gloss": "you (formal/plural)"
     },
-    "passage": "Как [[вы]] поживаете?",
+    "passage": "Ка́к [[вы́]] пожива́ете?",
     "glossary": {
       "как": "how",
       "вы": "you (formal/plural)",
@@ -252,7 +252,7 @@
       "cyrillic": "да",
       "gloss": "yes"
     },
-    "passage": "[[Да]], это очень интересная книга.",
+    "passage": "[[Да́]], э́то о́чень интере́сная кни́га.",
     "glossary": {
       "да": "yes",
       "это": "this/it (is)",
@@ -272,7 +272,7 @@
       "cyrillic": "мне",
       "gloss": "to me, for me"
     },
-    "passage": "Мне нравится это.",
+    "passage": "Мне́ нра́вится э́то.",
     "glossary": {
       "мне": "to me",
       "нравится": "likes (is pleasing)",
@@ -290,7 +290,7 @@
       "cyrillic": "у",
       "gloss": "at, by, near"
     },
-    "passage": "[[У]] меня есть книга.",
+    "passage": "[[У]] меня́ е́сть кни́га.",
     "glossary": {
       "у": "at, by, near (indicating possession)",
       "меня": "me (genitive of я)",
@@ -309,7 +309,7 @@
       "cyrillic": "нет",
       "gloss": "no"
     },
-    "passage": "Извините, у меня [[нет]] времени.",
+    "passage": "Извини́те, у меня́ [[нет]] вре́мени.",
     "glossary": {
       "извините": "excuse me",
       "у": "at / by",
@@ -329,7 +329,7 @@
       "cyrillic": "меня",
       "gloss": "me, my"
     },
-    "passage": "У [[меня]] есть книга.",
+    "passage": "У [[меня́]] е́сть кни́га.",
     "glossary": {
       "у": "at, near",
       "меня": "me",
@@ -348,7 +348,7 @@
       "cyrillic": "так",
       "gloss": "so, thus, then"
     },
-    "passage": "Погода [[так]] хороша сегодня.",
+    "passage": "Пого́да [[так]] хороша́ сего́дня.",
     "glossary": {
       "погода": "weather",
       "так": "so",
@@ -367,7 +367,7 @@
       "cyrillic": "но",
       "gloss": "but"
     },
-    "passage": "Я хочу, [[но]] не могу.",
+    "passage": "Я хочу́, [[но]] не́ могу́.",
     "glossary": {
       "я": "I",
       "хочу": "want",
@@ -387,7 +387,7 @@
       "cyrillic": "а",
       "gloss": "and, but, while"
     },
-    "passage": "Я хочу кофе, [[а]] ты?",
+    "passage": "Я хочу́ ко́фе, [[а]] ты́?",
     "glossary": {
       "я": "I",
       "хочу": "want",
@@ -407,7 +407,7 @@
       "cyrillic": "его",
       "gloss": "his, him, its"
     },
-    "passage": "Это [[его]] книга.",
+    "passage": "Э́то [[его́]] кни́га.",
     "glossary": {
       "это": "this is",
       "его": "his",
@@ -425,9 +425,9 @@
       "cyrillic": "все",
       "gloss": "all, everyone"
     },
-    "passage": "[[Все]] хорошо.",
+    "passage": "[[Всё]] хорошо́.",
     "glossary": {
-      "все": "all, everything",
+      "всё": "all, everything",
       "хорошо": "good, well"
     },
     "new_words": [
@@ -442,7 +442,7 @@
       "cyrillic": "она",
       "gloss": "she"
     },
-    "passage": "[[Она]] очень любит читать.",
+    "passage": "[[Она́]] о́чень лю́бит чита́ть.",
     "glossary": {
       "она": "she",
       "очень": "very, really",
@@ -461,7 +461,7 @@
       "cyrillic": "тебя",
       "gloss": "you, your (accusative/genitive)"
     },
-    "passage": "Я люблю [[тебя]] очень.",
+    "passage": "Я люблю́ [[тебя́]] о́чень.",
     "glossary": {
       "я": "i",
       "люблю": "love",
@@ -480,7 +480,7 @@
       "cyrillic": "о",
       "gloss": "about, concerning"
     },
-    "passage": "Я думаю [[о]] тебе.",
+    "passage": "Я ду́маю [[о]] тебе́.",
     "glossary": {
       "я": "i",
       "думаю": "think",
@@ -499,7 +499,7 @@
       "cyrillic": "если",
       "gloss": "if"
     },
-    "passage": "[[Если]] хочешь, приходи в гости.",
+    "passage": "[[Е́сли]] хо́чешь, приходи́ в го́сти.",
     "glossary": {
       "если": "if",
       "хочешь": "you want",
@@ -519,7 +519,7 @@
       "cyrillic": "за",
       "gloss": "for, behind, beyond"
     },
-    "passage": "Он сидит [[за]] столом.",
+    "passage": "О́н сиди́т [[за]] столо́м.",
     "glossary": {
       "он": "he",
       "сидит": "sits",
@@ -538,11 +538,11 @@
       "cyrillic": "бы",
       "gloss": "would (particle)"
     },
-    "passage": "Я [[бы]] пошел в кино.",
+    "passage": "Я [[бы́]] пошёл в кино́.",
     "glossary": {
       "я": "I",
       "бы": "would (particle)",
-      "пошел": "went (male, past tense, here part of conditional)",
+      "пошёл": "went (male, past tense, here part of conditional)",
       "в": "to, into",
       "кино": "cinema, movie"
     },
@@ -558,7 +558,7 @@
       "cyrillic": "тебе",
       "gloss": "to you, for you"
     },
-    "passage": "Я хочу [[тебе]] помочь.",
+    "passage": "Я хочу́ [[тебе́]] помо́чь.",
     "glossary": {
       "я": "I",
       "хочу": "want",
@@ -577,7 +577,7 @@
       "cyrillic": "они",
       "gloss": "they"
     },
-    "passage": "[[Они]] читают книги.",
+    "passage": "[[Они́]] чита́ют кни́ги.",
     "glossary": {
       "они": "they",
       "читают": "read",
@@ -595,7 +595,7 @@
       "cyrillic": "чтобы",
       "gloss": "in order that, so that"
     },
-    "passage": "Я учусь, [[чтобы]] говорить по-русски.",
+    "passage": "Я учу́сь, [[что́бы]] говори́ть по-ру́сски.",
     "glossary": {
       "я": "I",
       "учусь": "learn",
@@ -615,7 +615,7 @@
       "cyrillic": "же",
       "gloss": "indeed, really (particle)"
     },
-    "passage": "Как [[же]] так?",
+    "passage": "Ка́к [[же]] та́к?",
     "glossary": {
       "как": "how",
       "же": "indeed (particle)",
@@ -633,7 +633,7 @@
       "cyrillic": "есть",
       "gloss": "is, am, are, to eat"
     },
-    "passage": "У меня [[есть]] книга.",
+    "passage": "У меня́ [[е́сть]] кни́га.",
     "glossary": {
       "у": "at, by",
       "меня": "me (genitive)",
@@ -652,7 +652,7 @@
       "cyrillic": "просто",
       "gloss": "simply, just, easy"
     },
-    "passage": "Я [[просто]] хочу кофе.",
+    "passage": "Я [[про́сто]] хочу́ ко́фе.",
     "glossary": {
       "я": "i",
       "просто": "just, simply",
@@ -671,7 +671,7 @@
       "cyrillic": "из",
       "gloss": "from, out of"
     },
-    "passage": "Я [[из]] России.",
+    "passage": "Я [[из]] Росси́и.",
     "glossary": {
       "я": "I",
       "из": "from",
@@ -689,7 +689,7 @@
       "cyrillic": "к",
       "gloss": "to, towards"
     },
-    "passage": "Я иду [[к]] дому.",
+    "passage": "Я иду́ [[к]] до́му.",
     "glossary": {
       "я": "I",
       "иду": "go",
@@ -708,7 +708,7 @@
       "cyrillic": "для",
       "gloss": "for"
     },
-    "passage": "Кофе [[для]] мамы.",
+    "passage": "Ко́фе [[для]] ма́мы.",
     "glossary": {
       "кофе": "coffee",
       "для": "for",
@@ -726,7 +726,7 @@
       "cyrillic": "ну",
       "gloss": "well, come on, so"
     },
-    "passage": "[[Ну]] как дела?",
+    "passage": "[[Ну]] ка́к дела́?",
     "glossary": {
       "ну": "well",
       "как": "how",
@@ -744,11 +744,11 @@
       "cyrillic": "когда",
       "gloss": "when"
     },
-    "passage": "[[Когда]] ты придешь домой?",
+    "passage": "[[Когда́]] ты́ придёшь домо́й?",
     "glossary": {
       "когда": "when",
       "ты": "you",
-      "придешь": "will come",
+      "придёшь": "will come",
       "домой": "home"
     },
     "new_words": [
@@ -763,7 +763,7 @@
       "cyrillic": "хорошо",
       "gloss": "good / well"
     },
-    "passage": "Как [[хорошо]]!",
+    "passage": "Ка́к [[хорошо́]]!",
     "glossary": {
       "как": "how",
       "хорошо": "good, well"
@@ -780,7 +780,7 @@
       "cyrillic": "здесь",
       "gloss": "here"
     },
-    "passage": "Я живу [[здесь]] давно.",
+    "passage": "Я живу́ [[здесь]] давно́.",
     "glossary": {
       "я": "I",
       "живу": "live",
@@ -799,7 +799,7 @@
       "cyrillic": "по",
       "gloss": "along, by, for"
     },
-    "passage": "Дай мне книгу [[по]] истории.",
+    "passage": "Да́й мне́ кни́гу [[по]] исто́рии.",
     "glossary": {
       "дай": "give",
       "мне": "me",
@@ -819,7 +819,7 @@
       "cyrillic": "был",
       "gloss": "was"
     },
-    "passage": "Он [[был]] дома.",
+    "passage": "О́н [[бы́л]] до́ма.",
     "glossary": {
       "он": "he",
       "был": "was",
@@ -837,7 +837,7 @@
       "cyrillic": "знаю",
       "gloss": "I know"
     },
-    "passage": "Я [[знаю]] этот город.",
+    "passage": "Я [[зна́ю]] э́тот го́род.",
     "glossary": {
       "я": "i",
       "знаю": "know",
@@ -856,7 +856,7 @@
       "cyrillic": "то",
       "gloss": "that, then"
     },
-    "passage": "Я хочу [[то]] яблоко.",
+    "passage": "Я хочу́ [[то]] я́блоко.",
     "glossary": {
       "я": "I",
       "хочу": "want",
@@ -875,7 +875,7 @@
       "cyrillic": "только",
       "gloss": "only, just"
     },
-    "passage": "Я [[только]] учу русский.",
+    "passage": "Я [[то́лько]] учу́ ру́сский.",
     "glossary": {
       "я": "I",
       "только": "only, just",
@@ -894,7 +894,7 @@
       "cyrillic": "всё",
       "gloss": "everything, all"
     },
-    "passage": "Как [[всё]] прошло вчера?",
+    "passage": "Как [[всё]] прошло́ вчера́?",
     "glossary": {
       "как": "how",
       "всё": "everything, all",
@@ -913,7 +913,7 @@
       "cyrillic": "было",
       "gloss": "it was"
     },
-    "passage": "[[Было]] очень холодно вчера.",
+    "passage": "[[Бы́ло]] о́чень хо́лодно вчера́.",
     "glossary": {
       "было": "was",
       "очень": "very",
@@ -932,7 +932,7 @@
       "cyrillic": "вас",
       "gloss": "you"
     },
-    "passage": "Как [[вас]] зовут?",
+    "passage": "Ка́к [[ва́с]] зову́т?",
     "glossary": {
       "как": "how",
       "вас": "you",
@@ -950,7 +950,7 @@
       "cyrillic": "может",
       "gloss": "can, maybe"
     },
-    "passage": "Он [[может]] прийти завтра.",
+    "passage": "О́н [[мо́жет]] прийти́ за́втра.",
     "glossary": {
       "он": "he",
       "может": "can",
@@ -969,9 +969,9 @@
       "cyrillic": "нас",
       "gloss": "us"
     },
-    "passage": "Пойдем с [[нас]]?",
+    "passage": "Пойдём с [[на́с]]?",
     "glossary": {
-      "пойдем": "let's go/will go",
+      "пойдём": "let's go/will go",
       "с": "with",
       "нас": "us"
     },
@@ -987,7 +987,7 @@
       "cyrillic": "вот",
       "gloss": "here, there"
     },
-    "passage": "[[Вот]] моя новая книга.",
+    "passage": "[[Во́т]] моя́ но́вая кни́га.",
     "glossary": {
       "вот": "here is",
       "моя": "my",
@@ -1006,7 +1006,7 @@
       "cyrillic": "от",
       "gloss": "from"
     },
-    "passage": "Я иду [[от]] дома.",
+    "passage": "Я иду́ [[от]] до́ма.",
     "glossary": {
       "я": "I",
       "иду": "go (walking)",
@@ -1025,7 +1025,7 @@
       "cyrillic": "быть",
       "gloss": "to be"
     },
-    "passage": "Я хочу [[быть]] учителем.",
+    "passage": "Я хочу́ [[быть]] учи́телем.",
     "glossary": {
       "я": "i",
       "хочу": "want",
@@ -1044,7 +1044,7 @@
       "cyrillic": "кто",
       "gloss": "who"
     },
-    "passage": "Кто там?",
+    "passage": "Кто́ та́м?",
     "glossary": {
       "кто": "who",
       "там": "there"
@@ -1061,7 +1061,7 @@
       "cyrillic": "будет",
       "gloss": "will be"
     },
-    "passage": "Завтра [[будет]] холодно.",
+    "passage": "За́втра [[бу́дет]] хо́лодно.",
     "glossary": {
       "завтра": "tomorrow",
       "будет": "will be",
@@ -1079,7 +1079,7 @@
       "cyrillic": "почему",
       "gloss": "why"
     },
-    "passage": "[[Почему]] ты здесь?",
+    "passage": "[[Почему́]] ты зде́сь?",
     "glossary": {
       "почему": "why",
       "ты": "you (singular, informal)",
@@ -1097,7 +1097,7 @@
       "cyrillic": "вам",
       "gloss": "to you"
     },
-    "passage": "Я могу [[вам]] помочь.",
+    "passage": "Я могу́ [[ва́м]] помо́чь.",
     "glossary": {
       "я": "I",
       "могу": "can",
@@ -1116,7 +1116,7 @@
       "cyrillic": "их",
       "gloss": "them, their"
     },
-    "passage": "Я вижу [[их]] машину.",
+    "passage": "Я ви́жу [[и́х]] маши́ну.",
     "glossary": {
       "я": "I",
       "вижу": "see",
@@ -1135,7 +1135,7 @@
       "cyrillic": "очень",
       "gloss": "very, really"
     },
-    "passage": "Я [[очень]] люблю кофе.",
+    "passage": "Я [[о́чень]] люблю́ ко́фе.",
     "glossary": {
       "я": "I",
       "очень": "very, really",
@@ -1154,7 +1154,7 @@
       "cyrillic": "могу",
       "gloss": "I can"
     },
-    "passage": "Я [[могу]] говорить по-русски.",
+    "passage": "Я [[могу́]] говори́ть по-ру́сски.",
     "glossary": {
       "я": "I",
       "могу": "can",
@@ -1173,7 +1173,7 @@
       "cyrillic": "уже",
       "gloss": "already, by now"
     },
-    "passage": "Я [[уже]] дома.",
+    "passage": "Я [[уже́]] до́ма.",
     "glossary": {
       "я": "i",
       "уже": "already",
@@ -1191,7 +1191,7 @@
       "cyrillic": "спасибо",
       "gloss": "thank you"
     },
-    "passage": "Большое [[спасибо]] за помощь!",
+    "passage": "Большо́е [[спаси́бо]] за по́мощь!",
     "glossary": {
       "большое": "big, great",
       "спасибо": "thank you",
@@ -1210,7 +1210,7 @@
       "cyrillic": "или",
       "gloss": "or"
     },
-    "passage": "Чай [[или]] кофе?",
+    "passage": "Ча́й [[или]] ко́фе?",
     "glossary": {
       "чай": "tea",
       "или": "or",
@@ -1228,7 +1228,7 @@
       "cyrillic": "нам",
       "gloss": "to us, for us"
     },
-    "passage": "Нам [[нужно]] молоко.",
+    "passage": "На́м [[ну́жно]] молоко́.",
     "glossary": {
       "нам": "to us, for us",
       "нужно": "needed",
@@ -1246,10 +1246,10 @@
       "cyrillic": "еще",
       "gloss": "yet, still, more"
     },
-    "passage": "Я [[еще]] не завтракал.",
+    "passage": "Я [[ещё]] не за́втракал.",
     "glossary": {
       "я": "I",
-      "еще": "yet",
+      "ещё": "yet",
       "не": "not",
       "завтракал": "had breakfast"
     },
@@ -1265,7 +1265,7 @@
       "cyrillic": "там",
       "gloss": "there, over there"
     },
-    "passage": "Что [[там]]?",
+    "passage": "Что́ [[та́м]]?",
     "glossary": {
       "что": "what",
       "там": "there, over there"
@@ -1282,7 +1282,7 @@
       "cyrillic": "нужно",
       "gloss": "necessary, must, need"
     },
-    "passage": "Мне [[нужно]] идти домой.",
+    "passage": "Мне́ [[ну́жно]] идти́ домо́й.",
     "glossary": {
       "мне": "to me",
       "нужно": "necessary, need",
@@ -1301,7 +1301,7 @@
       "cyrillic": "сейчас",
       "gloss": "now, immediately"
     },
-    "passage": "Я [[сейчас]] читаю книгу.",
+    "passage": "Я [[сейча́с]] чита́ю кни́гу.",
     "glossary": {
       "я": "I",
       "сейчас": "now",
@@ -1320,7 +1320,7 @@
       "cyrillic": "где",
       "gloss": "where"
     },
-    "passage": "[[Где]] находится вокзал?",
+    "passage": "[[Где́]] нахо́дится вокза́л?",
     "glossary": {
       "где": "where",
       "находится": "is located",
@@ -1338,13 +1338,13 @@
       "cyrillic": "чем",
       "gloss": "than, instrumental \"what\""
     },
-    "passage": "Я люблю кофе больше, [[чем]] чай.",
+    "passage": "Я люблю́ кофе бо́льше, [[чем]] ча́й.",
     "glossary": {
       "я": "i",
       "люблю": "love",
       "кофе": "coffee",
       "больше": "more",
-      "чем": "than",
+      "чём": "than",
       "чай": "tea"
     },
     "new_words": [
@@ -1359,7 +1359,7 @@
       "cyrillic": "хочу",
       "gloss": "I want"
     },
-    "passage": "Я [[хочу]] пить.",
+    "passage": "Я [[хочу́]] пи́ть.",
     "glossary": {
       "я": "I",
       "хочу": "want",
@@ -1377,7 +1377,7 @@
       "cyrillic": "ничего",
       "gloss": "nothing, not bad"
     },
-    "passage": "Как дела? [[Ничего]], спасибо.",
+    "passage": "Ка́к дела́? [[Ничего́]], спаси́бо.",
     "glossary": {
       "как": "how",
       "дела": "things",
@@ -1396,7 +1396,7 @@
       "cyrillic": "этого",
       "gloss": "of this, of that"
     },
-    "passage": "Я не хочу [[этого]].",
+    "passage": "Я не хочу́ [[э́того]].",
     "glossary": {
       "я": "I",
       "не": "not",
@@ -1415,7 +1415,7 @@
       "cyrillic": "была",
       "gloss": "was (feminine)"
     },
-    "passage": "Погода вчера [[была]] хорошая.",
+    "passage": "Пого́да вчера́ [[была́]] хоро́шая.",
     "glossary": {
       "погода": "weather",
       "вчера": "yesterday",
@@ -1434,7 +1434,7 @@
       "cyrillic": "мой",
       "gloss": "my, mine"
     },
-    "passage": "Это [[мой]] дом.",
+    "passage": "Э́то [[мой]] до́м.",
     "glossary": {
       "это": "this",
       "мой": "my",
@@ -1452,11 +1452,11 @@
       "cyrillic": "ее",
       "gloss": "her, its"
     },
-    "passage": "Я люблю [[ее]] собаку.",
+    "passage": "Я люблю́ [[её]] соба́ку.",
     "glossary": {
       "я": "I",
       "люблю": "love",
-      "ее": "her",
+      "её": "her",
       "собаку": "dog"
     },
     "new_words": [
@@ -1471,7 +1471,7 @@
       "cyrillic": "ладно",
       "gloss": "okay, all right"
     },
-    "passage": "Ладно, увидимся завтра.",
+    "passage": "Ла́дно, уви́димся за́втра.",
     "glossary": {
       "ладно": "okay",
       "увидимся": "see each other",
@@ -1489,7 +1489,7 @@
       "cyrillic": "знаешь",
       "gloss": "you know"
     },
-    "passage": "Ты [[знаешь]] русский язык?",
+    "passage": "Ты́ [[зна́ешь]] ру́сский язы́к?",
     "glossary": {
       "ты": "you",
       "знаешь": "know",
@@ -1508,7 +1508,7 @@
       "cyrillic": "п",
       "gloss": "along, according to"
     },
-    "passage": "Мы гуляем [[по]] парку.",
+    "passage": "Мы́ гуля́ем [[по]] па́рку.",
     "glossary": {
       "мы": "we",
       "гуляем": "are walking",
@@ -1527,7 +1527,7 @@
       "cyrillic": "до",
       "gloss": "until, to, up to"
     },
-    "passage": "Я иду [[до]] магазина.",
+    "passage": "Я иду́ [[до]] магази́на.",
     "glossary": {
       "я": "I",
       "иду": "go",
@@ -1546,7 +1546,7 @@
       "cyrillic": "этом",
       "gloss": "this, that (prepositional)"
     },
-    "passage": "Мы говорили об [[этом]] вчера.",
+    "passage": "Мы́ говори́ли об [[э́том]] вчера́.",
     "glossary": {
       "мы": "we",
       "говорили": "talked",
@@ -1566,7 +1566,7 @@
       "cyrillic": "потому",
       "gloss": "therefore, because of that"
     },
-    "passage": "Было холодно, [[потому]] мы пошли домой.",
+    "passage": "Бы́ло хо́лодно, [[потому́]] мы пошли́ домо́й.",
     "glossary": {
       "было": "was",
       "холодно": "cold",
@@ -1587,7 +1587,7 @@
       "cyrillic": "теперь",
       "gloss": "now, at present"
     },
-    "passage": "Я [[теперь]] говорю по-русски.",
+    "passage": "Я [[тепе́рь]] говорю́ по-ру́сски.",
     "glossary": {
       "я": "i",
       "теперь": "now",
@@ -1606,7 +1606,7 @@
       "cyrillic": "думаю",
       "gloss": "I think, I believe"
     },
-    "passage": "Я [[думаю]], это хорошая идея.",
+    "passage": "Я [[ду́маю]], э́то хоро́шая иде́я.",
     "glossary": {
       "я": "I",
       "думаю": "think",
@@ -1626,7 +1626,7 @@
       "cyrillic": "больше",
       "gloss": "more, larger"
     },
-    "passage": "Я хочу [[больше]] кофе.",
+    "passage": "Я хочу́ [[бо́льше]] ко́фе.",
     "glossary": {
       "я": "I",
       "хочу": "want",
@@ -1645,7 +1645,7 @@
       "cyrillic": "её",
       "gloss": "her, its"
     },
-    "passage": "Это [[её]] машина.",
+    "passage": "Э́то [[её]] маши́на.",
     "glossary": {
       "это": "this is",
       "её": "her",
@@ -1663,7 +1663,7 @@
       "cyrillic": "со",
       "gloss": "with, from"
     },
-    "passage": "Я иду [[со]] своими друзьями.",
+    "passage": "Я иду́ [[со]] свои́ми друзья́ми.",
     "glossary": {
       "я": "I",
       "иду": "go",
@@ -1683,7 +1683,7 @@
       "cyrillic": "раз",
       "gloss": "time, once"
     },
-    "passage": "Я хочу ещё один [[раз]].",
+    "passage": "Я хочу́ ещё оди́н [[ра́з]].",
     "glossary": {
       "я": "I",
       "хочу": "want",
@@ -1703,7 +1703,7 @@
       "cyrillic": "ему",
       "gloss": "him, it"
     },
-    "passage": "Я дал [[ему]] книгу.",
+    "passage": "Я да́л [[ему́]] кни́гу.",
     "glossary": {
       "я": "I",
       "дал": "gave",
@@ -1722,7 +1722,7 @@
       "cyrillic": "надо",
       "gloss": "must, necessary"
     },
-    "passage": "Мне [[надо]] идти домой.",
+    "passage": "Мне́ [[на́до]] идти́ домо́й.",
     "glossary": {
       "мне": "to me (I)",
       "надо": "need, must, necessary",
@@ -1741,7 +1741,7 @@
       "cyrillic": "время",
       "gloss": "time"
     },
-    "passage": "У меня нет [[времени]].",
+    "passage": "У меня́ не́т [[вре́мени]].",
     "glossary": {
       "у": "at, by",
       "меня": "me",
@@ -1760,7 +1760,7 @@
       "cyrillic": "этот",
       "gloss": "this, these"
     },
-    "passage": "Я люблю [[этот]] город.",
+    "passage": "Я люблю́ [[этот]] го́род.",
     "glossary": {
       "я": "i",
       "люблю": "love",
@@ -1779,7 +1779,7 @@
       "cyrillic": "ли",
       "gloss": "if, whether"
     },
-    "passage": "Ты знаешь, придёт [[ли]] он?",
+    "passage": "Ты зна́ешь, придёт [[ли]] он?",
     "glossary": {
       "ты": "you",
       "знаешь": "know",
@@ -1799,7 +1799,7 @@
       "cyrillic": "ещё",
       "gloss": "still, yet, more"
     },
-    "passage": "Я хочу [[ещё]] кофе.",
+    "passage": "Я хочу́ [[ещё]] ко́фе.",
     "glossary": {
       "я": "I",
       "хочу": "want",
@@ -1818,7 +1818,7 @@
       "cyrillic": "пока",
       "gloss": "bye"
     },
-    "passage": "Ну всё, [[пока]]!",
+    "passage": "Ну всё, [[пока́]]!",
     "glossary": {
       "ну": "well",
       "всё": "all",
@@ -1836,7 +1836,7 @@
       "cyrillic": "даже",
       "gloss": "even"
     },
-    "passage": "Я [[даже]] не знаю.",
+    "passage": "Я [[да́же]] не зна́ю.",
     "glossary": {
       "я": "I",
       "даже": "even",
@@ -1855,7 +1855,7 @@
       "cyrillic": "привет",
       "gloss": "hi"
     },
-    "passage": "[[Привет]], как дела?",
+    "passage": "[[Приве́т]], как дела́?",
     "glossary": {
       "привет": "hi",
       "как": "how",
@@ -1873,7 +1873,7 @@
       "cyrillic": "сказал",
       "gloss": "said, told"
     },
-    "passage": "Он [[сказал]] привет.",
+    "passage": "О́н [[сказа́л]] приве́т.",
     "glossary": {
       "он": "he",
       "сказал": "said",
@@ -1891,7 +1891,7 @@
       "cyrillic": "себя",
       "gloss": "self"
     },
-    "passage": "Она чувствует [[себя]] хорошо.",
+    "passage": "Она́ чу́вствует [[себя́]] хорошо́.",
     "glossary": {
       "она": "she",
       "чувствует": "feels",
@@ -1910,7 +1910,7 @@
       "cyrillic": "должен",
       "gloss": "must, should, obligated"
     },
-    "passage": "Я [[должен]] идти домой.",
+    "passage": "Я [[до́лжен]] идти́ домо́й.",
     "glossary": {
       "я": "I",
       "должен": "must, should",
@@ -1929,7 +1929,7 @@
       "cyrillic": "тоже",
       "gloss": "also, too, as well"
     },
-    "passage": "Я [[тоже]] люблю кофе.",
+    "passage": "Я [[то́же]] люблю́ ко́фе.",
     "glossary": {
       "я": "i",
       "тоже": "also, too",
@@ -1948,7 +1948,7 @@
       "cyrillic": "хочешь",
       "gloss": "you want"
     },
-    "passage": "Ты [[хочешь]] кофе?",
+    "passage": "Ты́ [[хо́чешь]] ко́фе?",
     "glossary": {
       "ты": "you (informal)",
       "хочешь": "you want",
@@ -1966,7 +1966,7 @@
       "cyrillic": "давай",
       "gloss": "let's, come on"
     },
-    "passage": "[[Давай]] пойдём в кино.",
+    "passage": "[[Дава́й]] пойдём в кино́.",
     "glossary": {
       "давай": "let's/come on",
       "пойдём": "go (we will go)",
@@ -1985,7 +1985,7 @@
       "cyrillic": "никогда",
       "gloss": "never"
     },
-    "passage": "Я [[никогда]] не был в Москве.",
+    "passage": "Я [[никогда́]] не был в Москве́.",
     "glossary": {
       "я": "I",
       "никогда": "never",
@@ -2006,7 +2006,7 @@
       "cyrillic": "эй",
       "gloss": "hey, hi"
     },
-    "passage": "[[Эй]], как дела?",
+    "passage": "[[Эй]], как дела́?",
     "glossary": {
       "эй": "hey",
       "как": "how",
@@ -2024,7 +2024,7 @@
       "cyrillic": "того",
       "gloss": "of that, that"
     },
-    "passage": "Я не видел [[того]] человека давно.",
+    "passage": "Я не ви́дел [[того́]] челове́ка давно́.",
     "glossary": {
       "я": "I",
       "не": "not",
@@ -2045,7 +2045,7 @@
       "cyrillic": "тогда",
       "gloss": "then"
     },
-    "passage": "Сначала работа, [[тогда]] отдых.",
+    "passage": "Снача́ла рабо́та, [[тогда́]] о́тдых.",
     "glossary": {
       "сначала": "first",
       "работа": "work",
@@ -2064,7 +2064,7 @@
       "cyrillic": "него",
       "gloss": "him, it"
     },
-    "passage": "У [[него]] есть машина.",
+    "passage": "У [[него́]] е́сть маши́на.",
     "glossary": {
       "у": "at, by",
       "него": "him",
@@ -2083,7 +2083,7 @@
       "cyrillic": "ни",
       "gloss": "neither, nor"
     },
-    "passage": "У меня [[ни]] денег, [[ни]] времени.",
+    "passage": "У меня́ [[ни]] де́нег, ни вре́мени.",
     "glossary": {
       "у": "at, by (expressing possession)",
       "меня": "me (genitive of я)",
@@ -2103,7 +2103,7 @@
       "cyrillic": "тут",
       "gloss": "here, now"
     },
-    "passage": "Я [[тут]] жду тебя.",
+    "passage": "Я [[тут]] жду́ тебя́.",
     "glossary": {
       "я": "I",
       "тут": "here",
@@ -2122,7 +2122,7 @@
       "cyrillic": "были",
       "gloss": "were"
     },
-    "passage": "Мы [[были]] в парке.",
+    "passage": "Мы́ [[бы́ли]] в па́рке.",
     "glossary": {
       "мы": "we",
       "были": "were",
@@ -2141,7 +2141,7 @@
       "cyrillic": "конечно",
       "gloss": "of course, certainly"
     },
-    "passage": "Да, [[конечно]], я могу помочь.",
+    "passage": "Да́, [[коне́чно]], я могу́ помо́чь.",
     "glossary": {
       "да": "yes",
       "конечно": "of course",
@@ -2161,7 +2161,7 @@
       "cyrillic": "правда",
       "gloss": "truth"
     },
-    "passage": "Это [[правда]], что он приехал?",
+    "passage": "Это [[пра́вда]], что́ он прие́хал?",
     "glossary": {
       "это": "it",
       "правда": "truth",
@@ -2181,7 +2181,7 @@
       "cyrillic": "об",
       "gloss": "about, concerning"
     },
-    "passage": "Мы говорили [[об]] этом.",
+    "passage": "Мы́ говори́ли [[об]] э́том.",
     "glossary": {
       "мы": "we",
       "говорили": "talked",
@@ -2200,7 +2200,7 @@
       "cyrillic": "моя",
       "gloss": "my, mine"
     },
-    "passage": "[[Моя]] мама очень добрая.",
+    "passage": "[[Моя́]] ма́ма о́чень до́брая.",
     "glossary": {
       "моя": "my",
       "мама": "mom",
@@ -2219,7 +2219,7 @@
       "cyrillic": "пожалуйста",
       "gloss": "please, you're welcome"
     },
-    "passage": "Спасибо, [[пожалуйста]].",
+    "passage": "Спаси́бо, [[пожа́луйста]].",
     "glossary": {
       "спасибо": "thank you",
       "пожалуйста": "please, you're welcome"
@@ -2236,7 +2236,7 @@
       "cyrillic": "тобой",
       "gloss": "you (instrumental)"
     },
-    "passage": "Я горжусь [[тобой]].",
+    "passage": "Я горжу́сь [[тобо́й]].",
     "glossary": {
       "я": "I",
       "горжусь": "am proud",
@@ -2254,7 +2254,7 @@
       "cyrillic": "сказать",
       "gloss": "to say, to tell"
     },
-    "passage": "Пожалуйста, [[скажи]] мне правду.",
+    "passage": "Пожа́луйста, [[скажи́]] мне пра́вду.",
     "glossary": {
       "пожалуйста": "please",
       "скажи": "tell (imperative)",
