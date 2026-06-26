@@ -1,6 +1,8 @@
 """Stress + ё helpers: convert RUAccent '+'-format to our display/key forms."""
 from __future__ import annotations
 
+import regex  # supports \p{L}\p{M}; installed via ruaccent
+
 ACUTE = "́"  # combining acute accent (placed AFTER the stressed vowel)
 _VOWELS = set("аеёиоуыэюяАЕЁИОУЫЭЮЯ")
 
@@ -62,3 +64,45 @@ def accentize(text: str) -> str:
 def audio_key(text: str) -> str:
     """Lookup key for audio/glossary: ё kept, stress marks removed."""
     return strip_acute(accentize(text))
+
+
+_WORD = regex.compile(r"[\p{L}\p{M}]+")
+
+
+def _marked_index(passage: str):
+    i = passage.find("[[")
+    if i < 0:
+        return None
+    return len(_WORD.findall(passage[:i]))
+
+
+def accentize_passage(passage: str, accentize_fn=None) -> str:
+    fn = accentize_fn or accentize
+    idx = _marked_index(passage)
+    plain = passage.replace("[[", "").replace("]]", "")
+    acc = fn(plain)
+    if idx is None:
+        return acc
+    counter = {"n": -1}
+
+    def repl(m):
+        counter["n"] += 1
+        return f"[[{m.group(0)}]]" if counter["n"] == idx else m.group(0)
+
+    return _WORD.sub(repl, acc)
+
+
+def apply_accents(words, reading, patterns, accentize_fn=None, key_fn=None) -> None:
+    acc = accentize_fn or accentize
+    key = key_fn or audio_key
+    for w in words:
+        w["stressed"] = acc(w.get("cyrillic", w.get("stressed", "")))
+    for e in reading:
+        e["passage"] = accentize_passage(e["passage"], acc)
+        e["glossary"] = {key(k).lower(): v for k, v in (e.get("glossary") or {}).items()}
+    for p in patterns:
+        for item in p.get("items", []):
+            item["say"] = acc(item["say"])
+            item["answer"] = [key(x) for x in item.get("answer", [])]
+            item["gloss"] = [[key(ru), en] for ru, en in item.get("gloss", [])]
+        p["distractors"] = [key(d) for d in p.get("distractors", [])]
