@@ -4,11 +4,17 @@
   "type": "module",
   "scripts": {
     "test": "node --test tests/worker/*.mjs",
+    "test:e2e": "playwright test",
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
     "db:local": "wrangler d1 execute russian-app --local --file=migrations/0001_init.sql",
     "db:remote": "wrangler d1 execute russian-app --remote --file=migrations/0001_init.sql"
   },
-  "dependencies": { "jose": "^5.9.0" },
-  "devDependencies": { "wrangler": "^3.80.0" }
+  "dependencies": {
+    "jose": "^5.9.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "wrangler": "^3.80.0"
+  }
 }
