@@ -1,4 +1,5 @@
 import { mergeProgress } from "./sync.js";
+import { readableWords, miniTest } from "./learn.js";
 const $ = (s) => document.querySelector(s);
 
 let currentView = "home";
@@ -16,20 +17,23 @@ let ALPHABET = [];
 let READING = [];
 let AUDIO = {};
 let PATTERNS = [];
+let LESSONS = [];
 
 async function loadData() {
-  const [w, a, r, au, pat] = await Promise.all([
+  const [w, a, r, au, pat, les] = await Promise.all([
     fetch("data/words.json").then((x) => x.json()),
     fetch("data/alphabet.json").then((x) => x.json()),
     fetch("data/reading.json").then((x) => x.json()),
     fetch("data/audio.json").then((x) => x.json()),
     fetch("data/patterns.json").then((x) => x.json()).catch(() => []),
+    fetch("data/reading_lessons.json").then((x) => x.json()).catch(() => []),
   ]);
   WORDS = w.sort((p, q) => p.freq_rank - q.freq_rank);
   ALPHABET = a;
   READING = r;
   AUDIO = au;
   PATTERNS = pat || [];
+  LESSONS = les || [];
 }
 
 // ---------- progress (browser localStorage) ----------
@@ -94,7 +98,7 @@ function toast(msg) {
 // ---------- navigation ----------
 function show(view) {
   currentView = view;
-  for (const id of ["home", "reviews", "alphabet", "listen", "reading", "patterns"]) {
+  for (const id of ["home", "reviews", "alphabet", "listen", "reading", "patterns", "learn"]) {
     $(`#view-${id}`).hidden = id !== view;
   }
   $("#back").hidden = view === "home";
@@ -105,6 +109,7 @@ function show(view) {
   if (view === "listen") loadListen();
   if (view === "reading") loadReading();
   if (view === "patterns") loadPatterns();
+  if (view === "learn") loadLearn();
 }
 
 function refreshHome() {
@@ -649,6 +654,37 @@ function gradePattern(pat) {
   answer(P.patterns[pat.id], true);
   saveProgress();
   loadPatterns();
+}
+
+// ---------- Learn to Read ----------
+const ALPHA = {}; // cyrillic -> letter object, built on first use
+function alphaIndex() {
+  if (!Object.keys(ALPHA).length) for (const l of ALPHABET) ALPHA[l.cyrillic] = l;
+  return ALPHA;
+}
+
+function lettersKnownIn(lesson) {
+  return lesson.letters.filter((c) => isKnown(P.letters[c])).length;
+}
+
+function loadLearn() {
+  const stage = $("#learn-stage");
+  if (!LESSONS.length) {
+    stage.innerHTML = `<div class="empty">No lessons available yet.</div>`;
+    return;
+  }
+  stage.innerHTML =
+    `<h2 class="learn-h">Learn to Read</h2>` +
+    LESSONS.map((les) => {
+      const known = lettersKnownIn(les);
+      return `<button class="lesson-row" data-lesson="${les.id}">
+        <span class="lesson-ttl"><b>Lesson ${les.id}</b><i>${les.title}</i></span>
+        <span class="lesson-prog">${known}/${les.letters.length} letters</span>
+      </button>`;
+    }).join("");
+  stage.querySelectorAll(".lesson-row").forEach((b) => {
+    b.onclick = () => startLesson(LESSONS.find((l) => l.id === Number(b.dataset.lesson)));
+  });
 }
 
 // ---- account (Google sign-in) ----

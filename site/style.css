@@ -156,3 +156,19 @@ body {
 .fb-contact:focus { border-color:var(--indigo); }
 .fb-actions { display:flex; gap:10px; margin-top:12px; }
 #fb-ts { min-height:0; }
+
+/* Learn to Read */
+.learn-h { font-size:22px; margin:6px 0 14px; }
+.lesson-row { display:flex; align-items:center; width:100%; text-align:left; gap:12px;
+  background:var(--glass); border:1px solid var(--line); color:var(--ink);
+  border-radius:16px; padding:16px; margin:10px 0; cursor:pointer; }
+.lesson-ttl { display:flex; flex-direction:column; }
+.lesson-ttl i { font-style:normal; font-size:12px; color:var(--muted); }
+.lesson-prog { margin-left:auto; font-size:12px; color:var(--muted); }
+.letter-card .big { font-size:72px; }
+.letter-group { font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--amber); }
+.letter-hint { font-size:16px; margin-top:10px; }
+.letter-hint b { color:var(--ink); }
+.word-card .big { font-size:52px; letter-spacing:.04em; }
+.word-emoji { font-size:64px; margin:10px 0; }
+.mini-flag { font-size:12px; color:var(--amber); text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
