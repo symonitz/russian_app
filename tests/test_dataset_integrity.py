@@ -41,3 +41,18 @@ def test_reading_glossary_keys_are_accent_free():
     for e in _load("reading.json"):
         for k in (e.get("glossary") or {}):
             assert ACUTE not in k, f"glossary key has acute: {k!r}"
+
+
+def test_reading_lesson_words_have_emoji_and_audio():
+    audio = _load("audio.json")
+    lessons = _load("reading_lessons.json")
+    for lesson in lessons:
+        for w in lesson["words"]:
+            assert w.get("emoji"), f"word missing emoji: {w}"
+            assert w["ru"] in audio, f"word missing audio: {w['ru']}"
+
+
+def test_every_letter_has_a_pronunciation_hint():
+    alphabet = _load("alphabet.json")
+    for l in alphabet:
+        assert l.get("hint_en") is not None and l.get("group"), f"letter missing hint/group: {l['cyrillic']}"
