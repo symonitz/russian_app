@@ -25,10 +25,10 @@ export async function seedProgress(page, state) {
   await page.addInitScript((s) => localStorage.setItem("ruslearn.v2", JSON.stringify(s)), full);
 }
 
-// Navigate + wait until the dataset has loaded (home badge shows "/ 33").
+// Navigate + wait until the dataset has loaded (home badge shows "Lesson 1").
 export async function gotoApp(page) {
   await page.goto("/");
-  await page.waitForFunction(() => /33/.test(document.querySelector("#b-alpha")?.textContent || ""));
+  await page.waitForFunction(() => /Lesson/.test(document.querySelector("#b-learn")?.textContent || ""));
 }
 
 // The first English alternate of a gloss (the app accepts comma/slash alternates).
