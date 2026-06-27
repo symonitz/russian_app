@@ -125,12 +125,10 @@ function refreshHome() {
       if (dueNow(c)) due++;
     }
   }
-  const al = ALPHABET.filter((l) => isKnown(P.letters[l.cyrillic])).length;
   $("#s-known").textContent = known;
   $("#s-due").textContent = due;
   $("#s-left").textContent = left;
   $("#b-rev").textContent = `${due} due`;
-  $("#b-alpha").textContent = `${al} / ${ALPHABET.length}`;
 }
 
 // ---------- Reviews (typed validation) ----------

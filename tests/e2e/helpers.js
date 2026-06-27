@@ -25,10 +25,14 @@ export async function seedProgress(page, state) {
   await page.addInitScript((s) => localStorage.setItem("ruslearn.v2", JSON.stringify(s)), full);
 }
 
-// Navigate + wait until the dataset has loaded (home badge shows "Lesson 1").
+// Navigate + wait until the dataset has loaded. #s-left ("to learn") is "0" in
+// static HTML and gets the real word count once data loads + refreshHome runs.
 export async function gotoApp(page) {
   await page.goto("/");
-  await page.waitForFunction(() => /Lesson/.test(document.querySelector("#b-learn")?.textContent || ""));
+  await page.waitForFunction(() => {
+    const t = document.querySelector("#s-left")?.textContent;
+    return t && t !== "0";
+  });
 }
 
 // The first English alternate of a gloss (the app accepts comma/slash alternates).
