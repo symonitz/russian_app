@@ -38,7 +38,7 @@ async function loadData() {
 
 // ---------- progress (browser localStorage) ----------
 const KEY = "ruslearn.v2"; // bumped: progress format changed to count-based
-const P = { vocab: {}, letters: {}, patterns: {}, counter: 0 };
+const P = { vocab: {}, letters: {}, patterns: {}, reading: {}, counter: 0 };
 function loadProgress() {
   try {
     const s = JSON.parse(localStorage.getItem(KEY));
@@ -46,6 +46,7 @@ function loadProgress() {
       P.vocab = s.vocab || {};
       P.letters = s.letters || {};
       P.patterns = s.patterns || {};
+      P.reading = s.reading || {};
       P.counter = s.counter || 0;
     }
   } catch {
@@ -55,7 +56,7 @@ function loadProgress() {
 function saveProgress() {
   localStorage.setItem(
     KEY,
-    JSON.stringify({ vocab: P.vocab, letters: P.letters, patterns: P.patterns, counter: P.counter })
+    JSON.stringify({ vocab: P.vocab, letters: P.letters, patterns: P.patterns, reading: P.reading, counter: P.counter })
   );
   schedulePush();
 }
@@ -685,6 +686,101 @@ function loadLearn() {
   stage.querySelectorAll(".lesson-row").forEach((b) => {
     b.onclick = () => startLesson(LESSONS.find((l) => l.id === Number(b.dataset.lesson)));
   });
+}
+
+let learnSession = null;
+
+function startLesson(lesson) {
+  // queue: all letters (intro), then readable words, then a mini-test subset
+  const words = readableWords(lesson.words, new Set(lesson.letters));
+  learnSession = {
+    lesson,
+    queue: [
+      ...lesson.letters.map((c) => ({ kind: "letter", cyrillic: c })),
+      ...words.map((w) => ({ kind: "word", word: w })),
+      ...miniTest(words, 6).map((w) => ({ kind: "word", word: w, mini: true })),
+    ],
+    i: 0,
+  };
+  nextLearn();
+}
+
+function nextLearn() {
+  const s = learnSession;
+  if (!s || s.i >= s.queue.length) {
+    $("#learn-stage").innerHTML =
+      `<div class="empty">Lesson complete! 🎉<div class="add"><button class="btn reveal" id="learn-done">Back to lessons</button></div></div>`;
+    $("#learn-done").onclick = loadLearn;
+    return;
+  }
+  const item = s.queue[s.i];
+  if (item.kind === "letter") renderLetterCard(item.cyrillic);
+  else renderWordCard(item.word, item.mini);
+}
+
+function advanceLearn() {
+  learnSession.i += 1;
+  nextLearn();
+}
+
+function renderLetterCard(cyrillic) {
+  const l = alphaIndex()[cyrillic] || { cyrillic, hint_en: "", hint_word: "", group: "" };
+  const groupLabel = { true: "True friend", false: "False friend", new: "New friend", stranger: "Stranger" }[l.group] || "";
+  const stage = $("#learn-stage");
+  stage.innerHTML = `
+    <div class="qcard letter-card">
+      <div class="letter-group">${groupLabel}</div>
+      <div class="big">${l.cyrillic}${l.cyrillic.toLowerCase()}</div>
+      <button class="speak" id="lc-speak" aria-label="Play audio">🔊</button>
+      <div class="letter-hint">like the sound in <b>${l.hint_en}</b> — ${l.hint_word}</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn r-again" id="lc-again">Again</button>
+      <button class="btn r-good" id="lc-got">Got it ✓</button>
+    </div>`;
+  play(l.hint_word); // letters DO play on intro
+  $("#lc-speak").onclick = () => play(l.hint_word);
+  const grade = (ok) => {
+    if (!P.letters[cyrillic]) P.letters[cyrillic] = newCard();
+    answer(P.letters[cyrillic], ok);
+    saveProgress();
+    advanceLearn();
+  };
+  $("#lc-again").onclick = () => grade(false);
+  $("#lc-got").onclick = () => grade(true);
+}
+
+function renderWordCard(word, mini) {
+  const stage = $("#learn-stage");
+  stage.innerHTML = `
+    ${mini ? `<div class="mini-flag">Mini-test</div>` : ""}
+    <div class="qcard word-card">
+      <div class="big">${word.ru}</div>
+      <div class="hint">Read it out loud, then tap to check.</div>
+      <div class="word-reveal" id="word-reveal" hidden>
+        <div class="word-emoji">${word.emoji}</div>
+      </div>
+      <button class="btn reveal" id="wc-check">Tap to check</button>
+    </div>
+    <div class="btn-row" id="wc-actions" hidden>
+      <button class="btn r-again" id="wc-again">Again</button>
+      <button class="btn r-good" id="wc-got">Got it ✓</button>
+    </div>`;
+  // NO autoplay. Audio + emoji only after the learner taps.
+  $("#wc-check").onclick = () => {
+    $("#word-reveal").hidden = false;
+    $("#wc-check").hidden = true;
+    $("#wc-actions").hidden = false;
+    play(word.ru);
+  };
+  const grade = (ok) => {
+    if (!P.reading[word.ru]) P.reading[word.ru] = newCard();
+    answer(P.reading[word.ru], ok);
+    saveProgress();
+    advanceLearn();
+  };
+  $("#wc-again").onclick = () => grade(false);
+  $("#wc-got").onclick = () => grade(true);
 }
 
 // ---- account (Google sign-in) ----
