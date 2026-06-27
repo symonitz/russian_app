@@ -842,12 +842,13 @@ async function pullAndMerge() {
   try {
     const { progress } = await fetch("/api/progress").then((r) => r.json());
     const merged = mergeProgress(
-      { vocab: P.vocab, letters: P.letters, patterns: P.patterns, counter: P.counter },
+      { vocab: P.vocab, letters: P.letters, patterns: P.patterns, reading: P.reading, counter: P.counter },
       progress
     );
     P.vocab = merged.vocab;
     P.letters = merged.letters;
     P.patterns = merged.patterns || {};
+    P.reading = merged.reading || {};
     P.counter = merged.counter;
     localStorage.setItem(KEY, JSON.stringify(merged)); // local cache
     await pushProgress(); // write the merged result back up
@@ -863,7 +864,7 @@ function pushProgress() {
   return fetch("/api/progress", {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ vocab: P.vocab, letters: P.letters, patterns: P.patterns, counter: P.counter }),
+    body: JSON.stringify({ vocab: P.vocab, letters: P.letters, patterns: P.patterns, reading: P.reading, counter: P.counter }),
   }).catch(() => {});
 }
 function schedulePush() {

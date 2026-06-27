@@ -16,9 +16,10 @@ export function mergeProgress(local, server) {
     vocab: {},
     letters: {},
     patterns: {},
+    reading: {},
     counter: Math.max(local.counter || 0, server.counter || 0),
   };
-  for (const key of ["vocab", "letters", "patterns"]) {
+  for (const key of ["vocab", "letters", "patterns", "reading"]) {
     const a = local[key] || {}, b = server[key] || {};
     for (const id of new Set([...Object.keys(a), ...Object.keys(b)])) {
       out[key][id] = pickCard(a[id], b[id]);

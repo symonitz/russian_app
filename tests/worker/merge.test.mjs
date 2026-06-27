@@ -32,3 +32,10 @@ test("pattern progress merges like vocab (known beats learning)", () => {
   const m = mergeProgress(local, server);
   assert.equal(m.patterns[3].state, "known");
 });
+
+test("reading progress merges and is preserved across sync", () => {
+  const local = { vocab: {}, letters: {}, patterns: {}, reading: { "кот": { state: "learning", reps: 1, due: 0 } }, counter: 0 };
+  const server = { vocab: {}, letters: {}, patterns: {}, reading: { "кот": { state: "known", reps: 2, due: 0 } }, counter: 0 };
+  const m = mergeProgress(local, server);
+  assert.equal(m.reading["кот"].state, "known");
+});
